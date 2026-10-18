@@ -1,0 +1,13 @@
+# 72  IMG_20261016_155112.jpg  (4064x3048)
+索引里存的是一张“位置到worker"的地图
+为了判断 prefix 是否连续，Flash Indexer 不能只看 block 内容，还要看它在第几个位置。
+请求被切成blocks  key -> value
+h5  h6  h7  (0, ho)  Worker A, C, D
+(1,h1)  Worker A,C
+每个block有两个信息  WorkerC
+(2,h2)
+position：第几块
+block_hash：内容指纹  (3,h3)  WorkerC
+为  要有position  同一个block_hash可能在不同位置出现；只有位置也一致，才说明这段
+prefix真的连续。
+nVIDIA

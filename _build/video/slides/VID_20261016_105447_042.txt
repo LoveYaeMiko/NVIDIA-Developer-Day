@@ -1,0 +1,25 @@
+# VID_20261016_105447_042
+是一项非常具有挑战性的技术。
+软件
+Accelerated Computing
+Firstprincipleacceleratingbeyondthe.
+Numerics and Sparsity-pretrain inNVFP4
+·Interconnects-NVL72
+.Neural net architectures
+.Optimizers
+HybridM,MoE-trainingdatasets
+是一项非常具有挑
+·Brevity of LLMresponse
+·Post-training for agentic workloads
+软件
+Accelerated C
+nVIDIA
+One of Nemotron's twojobr
+First principles,
+.Interconne
+.Neuraln
+Numerics
+·Hybrid
+·Pos1
+ndo.
+·Brevity

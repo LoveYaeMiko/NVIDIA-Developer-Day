@@ -1,0 +1,43 @@
+# 084 hi-res re-OCR of IMG_20261016_160627.jpg (4064x3048)
+[0.98] Observability - Dynamo Provider Plugin
+[0.82] 00:02:20
+[0.92] 00:03:00
+[0.95] 00:03:10
+[0.93] 00:04.00
+[0.79] 102.0
+[0.93] 00:02:30
+[0.92] 0:03.00
+[0.92] YDelaukWorkspace
+[0.88] Aswebench_pL8taskcpl-batch-1780049..
+[0.92] traj-astropy_astropy-693_（maln thread)
+[0.91] traj-django_django-109(main thread)
+[0.93] swebench_pl_8taskcpl-batch-1780049..
+[0.94] tool:bash
+[0.92] ebench_pl8taskpi-batch-1780049.
+[0.92] traj-astropy_astropy-774_（maln thread)
+[0.92] toolbash
+[0.91] swebench.pL8taskpi-batch-1780049...
+[0.96] traj-astropy
+[0.86] toolbash
+[0.91] Qwen3.5-27B(21491ok)
+[0.89] tool:bash
+[0.92] Aswebench_pi8tr
+[0.94] 1780049.
+[0.93] traj-astropy_astro
+[0.88] nthread
+[0.96] tool:bash
+[0.90] lool:bash
+[0.97] toolbash
+[0.91] tool:bash
+[0.90] Aswebench_pL8task
+[0.76] 58s344ms299ua100Lbagh
+[0.87] tura-astropy_astro
+[0.90] tool:bash
+[0.92] tool:bash
+[0.90] Category tool
+[0.76] swcbench_pLains
+[0.95] traj-django_django
+[0.89] swebench_pi_Btoski
+[0.98] stropy
+[0.86] astrop
+[0.87] ②nVIDIA

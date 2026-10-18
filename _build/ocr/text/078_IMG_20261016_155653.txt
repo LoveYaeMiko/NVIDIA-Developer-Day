@@ -1,0 +1,20 @@
+# 78  IMG_20261016_155653.jpg  (4064x3048)
+Standalone KV Indexer:架构
+ZMQ事件面负责ingest，HTTP请求面负责注册，查询和观测。
+管理类API
+Worker 1  Standalone Indexer
+·GET/health
+ZMQPUB  -PosT/register/unregister
+·GET/workers
+KV events  Worker Registry
+Worker 2  查询类API
+ZMQPUB  ZMQ SUB Listeners
+·POST/query
+·POST/query_by_hash
+(model, tenant) -> Radix Tree
+HTTPAPI  恢复类API
+·GET/dump
+·PosT/register_peer /deregister_peer
+查询结果按mato  ·GET/peers
+返回，并可拆分gpu/cpu/disktier
+NVIDIA

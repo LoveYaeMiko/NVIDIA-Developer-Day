@@ -1,0 +1,1190 @@
+{
+ "1": {
+  "start_time": 210,
+  "end_time": 1960,
+  "original_subtitle": "Retraining by a factor of four",
+  "translated_subtitle": ""
+ },
+ "2": {
+  "start_time": 1970,
+  "end_time": 3240,
+  "original_subtitle": "because our pre training data",
+  "translated_subtitle": ""
+ },
+ "3": {
+  "start_time": 3250,
+  "end_time": 6160,
+  "original_subtitle": "set got more intelligent.",
+  "translated_subtitle": ""
+ },
+ "4": {
+  "start_time": 6170,
+  "end_time": 8160,
+  "original_subtitle": "We um did so much work on our",
+  "translated_subtitle": ""
+ },
+ "5": {
+  "start_time": 8170,
+  "end_time": 9920,
+  "original_subtitle": "pre training data set to filter",
+  "translated_subtitle": ""
+ },
+ "6": {
+  "start_time": 9930,
+  "end_time": 11760,
+  "original_subtitle": "it, throw out the bad parts of",
+  "translated_subtitle": ""
+ },
+ "7": {
+  "start_time": 11770,
+  "end_time": 13480,
+  "original_subtitle": "of our uh Free training data",
+  "translated_subtitle": ""
+ },
+ "8": {
+  "start_time": 13490,
+  "end_time": 14480,
+  "original_subtitle": "set, make sure that we're",
+  "translated_subtitle": ""
+ },
+ "9": {
+  "start_time": 14490,
+  "end_time": 15160,
+  "original_subtitle": "showing the model.",
+  "translated_subtitle": ""
+ },
+ "10": {
+  "start_time": 15250,
+  "end_time": 16880,
+  "original_subtitle": "Only the most important things",
+  "translated_subtitle": ""
+ },
+ "11": {
+  "start_time": 16890,
+  "end_time": 18440,
+  "original_subtitle": "that the time that it takes the",
+  "translated_subtitle": ""
+ },
+ "12": {
+  "start_time": 18450,
+  "end_time": 19600,
+  "original_subtitle": "amount of compute that it takes",
+  "translated_subtitle": ""
+ },
+ "13": {
+  "start_time": 19610,
+  "end_time": 21200,
+  "original_subtitle": "to do pre training was was",
+  "translated_subtitle": ""
+ },
+ "14": {
+  "start_time": 21210,
+  "end_time": 22440,
+  "original_subtitle": "accelerated by a factor of",
+  "translated_subtitle": ""
+ },
+ "15": {
+  "start_time": 22450,
+  "end_time": 23840,
+  "original_subtitle": "four. And that's one of the",
+  "translated_subtitle": ""
+ },
+ "16": {
+  "start_time": 23850,
+  "end_time": 24840,
+  "original_subtitle": "reasons why we put our pre",
+  "translated_subtitle": ""
+ },
+ "17": {
+  "start_time": 24850,
+  "end_time": 26600,
+  "original_subtitle": "training data set out publicly",
+  "translated_subtitle": ""
+ },
+ "18": {
+  "start_time": 26610,
+  "end_time": 28000,
+  "original_subtitle": "is to help everyone else",
+  "translated_subtitle": ""
+ },
+ "19": {
+  "start_time": 28010,
+  "end_time": 29680,
+  "original_subtitle": "accelerate their their work as",
+  "translated_subtitle": ""
+ },
+ "20": {
+  "start_time": 29690,
+  "end_time": 30000,
+  "original_subtitle": "well.",
+  "translated_subtitle": ""
+ },
+ "21": {
+  "start_time": 30190,
+  "end_time": 31380,
+  "original_subtitle": "you knowAnd that an accelerate",
+  "translated_subtitle": ""
+ },
+ "22": {
+  "start_time": 31390,
+  "end_time": 32660,
+  "original_subtitle": "computing is end to end.",
+  "translated_subtitle": ""
+ },
+ "23": {
+  "start_time": 33520,
+  "end_time": 35530,
+  "original_subtitle": "Optimizers also have an enormous",
+  "translated_subtitle": ""
+ },
+ "24": {
+  "start_time": 35540,
+  "end_time": 38010,
+  "original_subtitle": "effect on on the efficiency of",
+  "translated_subtitle": ""
+ },
+ "25": {
+  "start_time": 38020,
+  "end_time": 40010,
+  "original_subtitle": "training and uh these models",
+  "translated_subtitle": ""
+ },
+ "26": {
+  "start_time": 40020,
+  "end_time": 41410,
+  "original_subtitle": "and and the systems that we",
+  "translated_subtitle": ""
+ },
+ "27": {
+  "start_time": 41420,
+  "end_time": 42580,
+  "original_subtitle": "used to train them.",
+  "translated_subtitle": ""
+ },
+ "28": {
+  "start_time": 43040,
+  "end_time": 44670,
+  "original_subtitle": "um These days post training uh",
+  "translated_subtitle": ""
+ },
+ "29": {
+  "start_time": 44680,
+  "end_time": 47390,
+  "original_subtitle": "just absolutely gargantuan uh",
+  "translated_subtitle": ""
+ },
+ "30": {
+  "start_time": 47400,
+  "end_time": 48950,
+  "original_subtitle": "accelerated computing problem.",
+  "translated_subtitle": ""
+ },
+ "31": {
+  "start_time": 48960,
+  "end_time": 50590,
+  "original_subtitle": "you knowHow are we going build",
+  "translated_subtitle": ""
+ },
+ "32": {
+  "start_time": 50600,
+  "end_time": 52550,
+  "original_subtitle": "um the right infrastructure so",
+  "translated_subtitle": ""
+ },
+ "33": {
+  "start_time": 52560,
+  "end_time": 55230,
+  "original_subtitle": "that uh agents can be trained",
+  "translated_subtitle": ""
+ },
+ "34": {
+  "start_time": 55240,
+  "end_time": 57230,
+  "original_subtitle": "in um you know millions of",
+  "translated_subtitle": ""
+ },
+ "35": {
+  "start_time": 57240,
+  "end_time": 57990,
+  "original_subtitle": "sandboxes or",
+  "translated_subtitle": ""
+ },
+ "36": {
+  "start_time": 58070,
+  "end_time": 59180,
+  "original_subtitle": "all sorts of different kinds of",
+  "translated_subtitle": ""
+ },
+ "37": {
+  "start_time": 59190,
+  "end_time": 60020,
+  "original_subtitle": "environments,",
+  "translated_subtitle": ""
+ },
+ "38": {
+  "start_time": 60030,
+  "end_time": 61940,
+  "original_subtitle": "some of which may need to have",
+  "translated_subtitle": ""
+ },
+ "39": {
+  "start_time": 61950,
+  "end_time": 63820,
+  "original_subtitle": "um their own simulators in them",
+  "translated_subtitle": ""
+ },
+ "40": {
+  "start_time": 63830,
+  "end_time": 65060,
+  "original_subtitle": "so that you know these models",
+  "translated_subtitle": ""
+ },
+ "41": {
+  "start_time": 65070,
+  "end_time": 66180,
+  "original_subtitle": "can be better at understanding",
+  "translated_subtitle": ""
+ },
+ "42": {
+  "start_time": 66190,
+  "end_time": 67300,
+  "original_subtitle": "the world and interacting with",
+  "translated_subtitle": ""
+ },
+ "43": {
+  "start_time": 67310,
+  "end_time": 68780,
+  "original_subtitle": "it, just an enormous uh",
+  "translated_subtitle": ""
+ },
+ "44": {
+  "start_time": 68790,
+  "end_time": 69620,
+  "original_subtitle": "problem.",
+  "translated_subtitle": ""
+ },
+ "45": {
+  "start_time": 69630,
+  "end_time": 70940,
+  "original_subtitle": "And then uh finally,",
+  "translated_subtitle": ""
+ },
+ "46": {
+  "start_time": 70950,
+  "end_time": 72860,
+  "original_subtitle": "we have the gravity of course",
+  "translated_subtitle": ""
+ },
+ "47": {
+  "start_time": 72930,
+  "end_time": 74400,
+  "original_subtitle": "thoughts. you know uh If you",
+  "translated_subtitle": ""
+ },
+ "48": {
+  "start_time": 74410,
+  "end_time": 75040,
+  "original_subtitle": "think about it,",
+  "translated_subtitle": ""
+ },
+ "49": {
+  "start_time": 75050,
+  "end_time": 77880,
+  "original_subtitle": "a model that um very quickly can",
+  "translated_subtitle": ""
+ },
+ "50": {
+  "start_time": 77890,
+  "end_time": 80000,
+  "original_subtitle": "compute tokens can could be",
+  "translated_subtitle": ""
+ },
+ "51": {
+  "start_time": 80010,
+  "end_time": 82000,
+  "original_subtitle": "actually fast because it's it's",
+  "translated_subtitle": ""
+ },
+ "52": {
+  "start_time": 82010,
+  "end_time": 82480,
+  "original_subtitle": "efficient,",
+  "translated_subtitle": ""
+ },
+ "53": {
+  "start_time": 82490,
+  "end_time": 84560,
+  "original_subtitle": "but it could be uh wasteful if",
+  "translated_subtitle": ""
+ },
+ "54": {
+  "start_time": 84570,
+  "end_time": 86000,
+  "original_subtitle": "it takes too many tokens to",
+  "translated_subtitle": ""
+ },
+ "55": {
+  "start_time": 86010,
+  "end_time": 87200,
+  "original_subtitle": "answer a questions.",
+  "translated_subtitle": ""
+ },
+ "56": {
+  "start_time": 87280,
+  "end_time": 89030,
+  "original_subtitle": "soThe number of tokens that it",
+  "translated_subtitle": ""
+ },
+ "57": {
+  "start_time": 89040,
+  "end_time": 90150,
+  "original_subtitle": "takes to answer a question is",
+  "translated_subtitle": ""
+ },
+ "58": {
+  "start_time": 90160,
+  "end_time": 91710,
+  "original_subtitle": "also fundamentally part of",
+  "translated_subtitle": ""
+ },
+ "59": {
+  "start_time": 91720,
+  "end_time": 93230,
+  "original_subtitle": "accelerated computing.",
+  "translated_subtitle": ""
+ },
+ "60": {
+  "start_time": 93240,
+  "end_time": 94430,
+  "original_subtitle": "And so when you think about",
+  "translated_subtitle": ""
+ },
+ "61": {
+  "start_time": 94440,
+  "end_time": 95190,
+  "original_subtitle": "things like this,",
+  "translated_subtitle": ""
+ },
+ "62": {
+  "start_time": 95200,
+  "end_time": 96390,
+  "original_subtitle": "you knowI'm just giving you a",
+  "translated_subtitle": ""
+ },
+ "63": {
+  "start_time": 96400,
+  "end_time": 97350,
+  "original_subtitle": "few examples here,",
+  "translated_subtitle": ""
+ },
+ "64": {
+  "start_time": 97360,
+  "end_time": 99030,
+  "original_subtitle": "but there are many examples.",
+  "translated_subtitle": ""
+ },
+ "65": {
+  "start_time": 99240,
+  "end_time": 100350,
+  "original_subtitle": "This is Nemo transfers,",
+  "translated_subtitle": ""
+ },
+ "66": {
+  "start_time": 100360,
+  "end_time": 102910,
+  "original_subtitle": "job help in video understand",
+  "translated_subtitle": ""
+ },
+ "67": {
+  "start_time": 102920,
+  "end_time": 104190,
+  "original_subtitle": "these issues so that we can",
+  "translated_subtitle": ""
+ },
+ "68": {
+  "start_time": 104200,
+  "end_time": 105990,
+  "original_subtitle": "make sure we accelerate the",
+  "translated_subtitle": ""
+ },
+ "69": {
+  "start_time": 106000,
+  "end_time": 107590,
+  "original_subtitle": "communities development of AI",
+  "translated_subtitle": ""
+ },
+ "70": {
+  "start_time": 107600,
+  "end_time": 108790,
+  "original_subtitle": "make it more efficient,",
+  "translated_subtitle": ""
+ },
+ "71": {
+  "start_time": 108800,
+  "end_time": 110030,
+  "original_subtitle": "therefore increase the amount of",
+  "translated_subtitle": ""
+ },
+ "72": {
+  "start_time": 110040,
+  "end_time": 111190,
+  "original_subtitle": "Intelligence that's available",
+  "translated_subtitle": ""
+ },
+ "73": {
+  "start_time": 111200,
+  "end_time": 112110,
+  "original_subtitle": "to all of us.",
+  "translated_subtitle": ""
+ },
+ "74": {
+  "start_time": 113710,
+  "end_time": 115740,
+  "original_subtitle": "Now, um the second job that Nemo",
+  "translated_subtitle": ""
+ },
+ "75": {
+  "start_time": 115750,
+  "end_time": 117900,
+  "original_subtitle": "trump has is to accelerate the",
+  "translated_subtitle": ""
+ },
+ "76": {
+  "start_time": 117910,
+  "end_time": 119660,
+  "original_subtitle": "ecosystem um to make it",
+  "translated_subtitle": ""
+ },
+ "77": {
+  "start_time": 119670,
+  "end_time": 121180,
+  "original_subtitle": "possible for companies,",
+  "translated_subtitle": ""
+ },
+ "78": {
+  "start_time": 121190,
+  "end_time": 122780,
+  "original_subtitle": "for organizations all around the",
+  "translated_subtitle": ""
+ },
+ "79": {
+  "start_time": 122790,
+  "end_time": 124460,
+  "original_subtitle": "world to build and deploy their",
+  "translated_subtitle": ""
+ },
+ "80": {
+  "start_time": 124470,
+  "end_time": 125100,
+  "original_subtitle": "own AI",
+  "translated_subtitle": ""
+ },
+ "81": {
+  "start_time": 125740,
+  "end_time": 127090,
+  "original_subtitle": "you know uh why is it so",
+  "translated_subtitle": ""
+ },
+ "82": {
+  "start_time": 127100,
+  "end_time": 128170,
+  "original_subtitle": "important that open",
+  "translated_subtitle": ""
+ },
+ "83": {
+  "start_time": 128180,
+  "end_time": 130250,
+  "original_subtitle": "technologies for AI exist and",
+  "translated_subtitle": ""
+ },
+ "84": {
+  "start_time": 130260,
+  "end_time": 131130,
+  "original_subtitle": "be excellent?",
+  "translated_subtitle": ""
+ },
+ "85": {
+  "start_time": 131580,
+  "end_time": 134010,
+  "original_subtitle": "um you knowIt and by the way,",
+  "translated_subtitle": ""
+ },
+ "86": {
+  "start_time": 134020,
+  "end_time": 137210,
+  "original_subtitle": "this is uh in video and and I we",
+  "translated_subtitle": ""
+ },
+ "87": {
+  "start_time": 137220,
+  "end_time": 139130,
+  "original_subtitle": "all love um other kinds of",
+  "translated_subtitle": ""
+ },
+ "88": {
+  "start_time": 139140,
+  "end_time": 140370,
+  "original_subtitle": "technologies as well.",
+  "translated_subtitle": ""
+ },
+ "89": {
+  "start_time": 140380,
+  "end_time": 143570,
+  "original_subtitle": "you know we um weI use um closed",
+  "translated_subtitle": ""
+ },
+ "90": {
+  "start_time": 143580,
+  "end_time": 145410,
+  "original_subtitle": "aiap is all the time",
+  "translated_subtitle": ""
+ },
+ "91": {
+  "start_time": 145530,
+  "end_time": 146280,
+  "original_subtitle": "and they're great.",
+  "translated_subtitle": ""
+ },
+ "92": {
+  "start_time": 146290,
+  "end_time": 147880,
+  "original_subtitle": "you know andAnd you know for for",
+  "translated_subtitle": ""
+ },
+ "93": {
+  "start_time": 147890,
+  "end_time": 149280,
+  "original_subtitle": "people that want to use those",
+  "translated_subtitle": ""
+ },
+ "94": {
+  "start_time": 149290,
+  "end_time": 150560,
+  "original_subtitle": "that's fantastic it's a it's a",
+  "translated_subtitle": ""
+ },
+ "95": {
+  "start_time": 150570,
+  "end_time": 152040,
+  "original_subtitle": "really great way to access",
+  "translated_subtitle": ""
+ },
+ "96": {
+  "start_time": 152050,
+  "end_time": 153520,
+  "original_subtitle": "amazing capabilities and and",
+  "translated_subtitle": ""
+ },
+ "97": {
+  "start_time": 153530,
+  "end_time": 154440,
+  "original_subtitle": "that's going to continue.",
+  "translated_subtitle": ""
+ },
+ "98": {
+  "start_time": 154450,
+  "end_time": 156640,
+  "original_subtitle": "But I think uh open technologies",
+  "translated_subtitle": ""
+ },
+ "99": {
+  "start_time": 156650,
+  "end_time": 157800,
+  "original_subtitle": "are really necessary.",
+  "translated_subtitle": ""
+ },
+ "100": {
+  "start_time": 158030,
+  "end_time": 159260,
+  "original_subtitle": "um And the reason for that is",
+  "translated_subtitle": ""
+ },
+ "101": {
+  "start_time": 159270,
+  "end_time": 162020,
+  "original_subtitle": "that, um AI is really about",
+  "translated_subtitle": ""
+ },
+ "102": {
+  "start_time": 162030,
+  "end_time": 163340,
+  "original_subtitle": "helping people solve their own",
+  "translated_subtitle": ""
+ },
+ "103": {
+  "start_time": 163350,
+  "end_time": 164660,
+  "original_subtitle": "problems, but everybody has",
+  "translated_subtitle": ""
+ },
+ "104": {
+  "start_time": 164670,
+  "end_time": 165900,
+  "original_subtitle": "different problems.",
+  "translated_subtitle": ""
+ },
+ "105": {
+  "start_time": 165910,
+  "end_time": 167620,
+  "original_subtitle": "Every company is built around",
+  "translated_subtitle": ""
+ },
+ "106": {
+  "start_time": 167630,
+  "end_time": 168540,
+  "original_subtitle": "the secret,",
+  "translated_subtitle": ""
+ },
+ "107": {
+  "start_time": 168660,
+  "end_time": 170330,
+  "original_subtitle": "a secret that makes them",
+  "translated_subtitle": ""
+ },
+ "108": {
+  "start_time": 170340,
+  "end_time": 172570,
+  "original_subtitle": "unique. And this is not just",
+  "translated_subtitle": ""
+ },
+ "109": {
+  "start_time": 172580,
+  "end_time": 173810,
+  "original_subtitle": "their intellectual property.",
+  "translated_subtitle": ""
+ },
+ "110": {
+  "start_time": 173820,
+  "end_time": 175130,
+  "original_subtitle": "It's not just the the special",
+  "translated_subtitle": ""
+ },
+ "111": {
+  "start_time": 175140,
+  "end_time": 176090,
+  "original_subtitle": "technologies they have,",
+  "translated_subtitle": ""
+ },
+ "112": {
+  "start_time": 176100,
+  "end_time": 178330,
+  "original_subtitle": "but it's also their platform,",
+  "translated_subtitle": ""
+ },
+ "113": {
+  "start_time": 178340,
+  "end_time": 179370,
+  "original_subtitle": "their customers and their",
+  "translated_subtitle": ""
+ },
+ "114": {
+  "start_time": 179380,
+  "end_time": 180410,
+  "original_subtitle": "orientation,",
+  "translated_subtitle": ""
+ },
+ "115": {
+  "start_time": 180420,
+  "end_time": 181530,
+  "original_subtitle": "the way that they think about",
+  "translated_subtitle": ""
+ },
+ "116": {
+  "start_time": 181540,
+  "end_time": 182530,
+  "original_subtitle": "problem solving,",
+  "translated_subtitle": ""
+ },
+ "117": {
+  "start_time": 182540,
+  "end_time": 183650,
+  "original_subtitle": "the way that they",
+  "translated_subtitle": ""
+ },
+ "118": {
+  "start_time": 183720,
+  "end_time": 185780,
+  "original_subtitle": "go out into the world to help",
+  "translated_subtitle": ""
+ },
+ "119": {
+  "start_time": 185790,
+  "end_time": 186300,
+  "original_subtitle": "people solve problems.",
+  "translated_subtitle": ""
+ },
+ "120": {
+  "start_time": 186490,
+  "end_time": 188430,
+  "original_subtitle": "um this thisThis is all secret",
+  "translated_subtitle": ""
+ },
+ "121": {
+  "start_time": 188440,
+  "end_time": 190100,
+  "original_subtitle": "and special for every company.",
+  "translated_subtitle": ""
+ },
+ "122": {
+  "start_time": 190440,
+  "end_time": 191860,
+  "original_subtitle": "And it's it's connected to the",
+  "translated_subtitle": ""
+ },
+ "123": {
+  "start_time": 191870,
+  "end_time": 193540,
+  "original_subtitle": "core value of a company and the",
+  "translated_subtitle": ""
+ },
+ "124": {
+  "start_time": 193550,
+  "end_time": 194980,
+  "original_subtitle": "and the core um",
+  "translated_subtitle": ""
+ },
+ "125": {
+  "start_time": 195230,
+  "end_time": 196920,
+  "original_subtitle": "ways that that the company uh",
+  "translated_subtitle": ""
+ },
+ "126": {
+  "start_time": 196930,
+  "end_time": 198720,
+  "original_subtitle": "thinks about itself and and and",
+  "translated_subtitle": ""
+ },
+ "127": {
+  "start_time": 198730,
+  "end_time": 199580,
+  "original_subtitle": "thinks about its work.",
+  "translated_subtitle": ""
+ },
+ "128": {
+  "start_time": 200180,
+  "end_time": 202330,
+  "original_subtitle": "Now, um in order to use AI to",
+  "translated_subtitle": ""
+ },
+ "129": {
+  "start_time": 202340,
+  "end_time": 203610,
+  "original_subtitle": "accelerate",
+  "translated_subtitle": ""
+ },
+ "130": {
+  "start_time": 203780,
+  "end_time": 205450,
+  "original_subtitle": "uh some work that a company has",
+  "translated_subtitle": ""
+ },
+ "131": {
+  "start_time": 205460,
+  "end_time": 206490,
+  "original_subtitle": "to do, it needs to be able to",
+  "translated_subtitle": ""
+ },
+ "132": {
+  "start_time": 206500,
+  "end_time": 208530,
+  "original_subtitle": "interact with all of those",
+  "translated_subtitle": ""
+ },
+ "133": {
+  "start_time": 208540,
+  "end_time": 211410,
+  "original_subtitle": "secrets um because AI is all",
+  "translated_subtitle": ""
+ },
+ "134": {
+  "start_time": 211420,
+  "end_time": 212170,
+  "original_subtitle": "about data.",
+  "translated_subtitle": ""
+ },
+ "135": {
+  "start_time": 212180,
+  "end_time": 214930,
+  "original_subtitle": "It's all about uh understanding",
+  "translated_subtitle": ""
+ },
+ "136": {
+  "start_time": 214940,
+  "end_time": 217210,
+  "original_subtitle": "um you know the truth about uh",
+  "translated_subtitle": ""
+ },
+ "137": {
+  "start_time": 217220,
+  "end_time": 218450,
+  "original_subtitle": "the problem that you're trying",
+  "translated_subtitle": ""
+ },
+ "138": {
+  "start_time": 218460,
+  "end_time": 218730,
+  "original_subtitle": "to solve.",
+  "translated_subtitle": ""
+ },
+ "139": {
+  "start_time": 218840,
+  "end_time": 221040,
+  "original_subtitle": "And then using that in order to",
+  "translated_subtitle": ""
+ },
+ "140": {
+  "start_time": 221050,
+  "end_time": 222000,
+  "original_subtitle": "solve the problem.",
+  "translated_subtitle": ""
+ },
+ "141": {
+  "start_time": 222010,
+  "end_time": 223600,
+  "original_subtitle": "And so companies need the",
+  "translated_subtitle": ""
+ },
+ "142": {
+  "start_time": 223610,
+  "end_time": 225520,
+  "original_subtitle": "ability to work with their most",
+  "translated_subtitle": ""
+ },
+ "143": {
+  "start_time": 225530,
+  "end_time": 226800,
+  "original_subtitle": "sensitive and secret and",
+  "translated_subtitle": ""
+ },
+ "144": {
+  "start_time": 226810,
+  "end_time": 227440,
+  "original_subtitle": "important data.",
+  "translated_subtitle": ""
+ },
+ "145": {
+  "start_time": 227450,
+  "end_time": 229360,
+  "original_subtitle": "The most valuable data is always",
+  "translated_subtitle": ""
+ },
+ "146": {
+  "start_time": 229370,
+  "end_time": 230570,
+  "original_subtitle": "gonna have the most",
+  "translated_subtitle": ""
+ },
+ "147": {
+  "start_time": 230580,
+  "end_time": 230780,
+  "original_subtitle": "restrictions.",
+  "translated_subtitle": ""
+ },
+ "148": {
+  "start_time": 230920,
+  "end_time": 232030,
+  "original_subtitle": "um They're going to need to be",
+  "translated_subtitle": ""
+ },
+ "149": {
+  "start_time": 232040,
+  "end_time": 233190,
+  "original_subtitle": "able to do that on their own",
+  "translated_subtitle": ""
+ },
+ "150": {
+  "start_time": 233200,
+  "end_time": 234550,
+  "original_subtitle": "terms independently.",
+  "translated_subtitle": ""
+ },
+ "151": {
+  "start_time": 234850,
+  "end_time": 235680,
+  "original_subtitle": "andIn order to do that,",
+  "translated_subtitle": ""
+ },
+ "152": {
+  "start_time": 235690,
+  "end_time": 238000,
+  "original_subtitle": "they need um open technologies",
+  "translated_subtitle": ""
+ },
+ "153": {
+  "start_time": 238010,
+  "end_time": 239240,
+  "original_subtitle": "for AI they need to be able to",
+  "translated_subtitle": ""
+ },
+ "154": {
+  "start_time": 239250,
+  "end_time": 240320,
+  "original_subtitle": "instantiate their own models.",
+  "translated_subtitle": ""
+ },
+ "155": {
+  "start_time": 240330,
+  "end_time": 241240,
+  "original_subtitle": "They need to be able to fine",
+  "translated_subtitle": ""
+ },
+ "156": {
+  "start_time": 241250,
+  "end_time": 242280,
+  "original_subtitle": "tune them on their own data",
+  "translated_subtitle": ""
+ },
+ "157": {
+  "start_time": 242290,
+  "end_time": 243840,
+  "original_subtitle": "sets, and they need to be able",
+  "translated_subtitle": ""
+ },
+ "158": {
+  "start_time": 243850,
+  "end_time": 245200,
+  "original_subtitle": "to run them in a way that they",
+  "translated_subtitle": ""
+ },
+ "159": {
+  "start_time": 245210,
+  "end_time": 247000,
+  "original_subtitle": "can guarantee all of their",
+  "translated_subtitle": ""
+ },
+ "160": {
+  "start_time": 247010,
+  "end_time": 249800,
+  "original_subtitle": "secrets stay within uh their",
+  "translated_subtitle": ""
+ },
+ "161": {
+  "start_time": 249870,
+  "end_time": 250490,
+  "original_subtitle": "their organization.",
+  "translated_subtitle": ""
+ },
+ "162": {
+  "start_time": 250500,
+  "end_time": 254210,
+  "original_subtitle": "Now. It's also the case that um",
+  "translated_subtitle": ""
+ },
+ "163": {
+  "start_time": 254220,
+  "end_time": 259050,
+  "original_subtitle": "AI is not just about um uh",
+  "translated_subtitle": ""
+ },
+ "164": {
+  "start_time": 259060,
+  "end_time": 259930,
+  "original_subtitle": "problem solving,",
+  "translated_subtitle": ""
+ },
+ "165": {
+  "start_time": 259940,
+  "end_time": 261730,
+  "original_subtitle": "but it's also about ideas.",
+  "translated_subtitle": ""
+ },
+ "166": {
+  "start_time": 261740,
+  "end_time": 264090,
+  "original_subtitle": "you knowWhen we interact with AI",
+  "translated_subtitle": ""
+ },
+ "167": {
+  "start_time": 264100,
+  "end_time": 265650,
+  "original_subtitle": "we're asking questions.",
+  "translated_subtitle": ""
+ },
+ "168": {
+  "start_time": 265870,
+  "end_time": 269100,
+  "original_subtitle": "and um We're trying to get help",
+  "translated_subtitle": ""
+ },
+ "169": {
+  "start_time": 269110,
+  "end_time": 270780,
+  "original_subtitle": "with our hardest questions",
+  "translated_subtitle": ""
+ },
+ "170": {
+  "start_time": 271420,
+  "end_time": 274420,
+  "original_subtitle": "and because each of us needs",
+  "translated_subtitle": ""
+ },
+ "171": {
+  "start_time": 274430,
+  "end_time": 276300,
+  "original_subtitle": "the ability to ask those",
+  "translated_subtitle": ""
+ },
+ "172": {
+  "start_time": 276310,
+  "end_time": 278180,
+  "original_subtitle": "questions without asking",
+  "translated_subtitle": ""
+ },
+ "173": {
+  "start_time": 278190,
+  "end_time": 279500,
+  "original_subtitle": "permission from somebody else",
+  "translated_subtitle": ""
+ },
+ "174": {
+  "start_time": 279510,
+  "end_time": 281660,
+  "original_subtitle": "um because AI is actually about",
+  "translated_subtitle": ""
+ },
+ "175": {
+  "start_time": 281670,
+  "end_time": 284350,
+  "original_subtitle": "ideas, open technologies for AI",
+  "translated_subtitle": ""
+ },
+ "176": {
+  "start_time": 284360,
+  "end_time": 285870,
+  "original_subtitle": "are more important than ever.",
+  "translated_subtitle": ""
+ },
+ "177": {
+  "start_time": 286210,
+  "end_time": 288120,
+  "original_subtitle": "um as anAs an example of this,",
+  "translated_subtitle": ""
+ },
+ "178": {
+  "start_time": 288130,
+  "end_time": 289760,
+  "original_subtitle": "I think you may have heard about",
+  "translated_subtitle": ""
+ },
+ "179": {
+  "start_time": 289770,
+  "end_time": 292240,
+  "original_subtitle": "the um incident where um a",
+  "translated_subtitle": ""
+ },
+ "180": {
+  "start_time": 292250,
+  "end_time": 295960,
+  "original_subtitle": "closed AI uh uh experiment when",
+  "translated_subtitle": ""
+ },
+ "181": {
+  "start_time": 295970,
+  "end_time": 297040,
+  "original_subtitle": "and um",
+  "translated_subtitle": ""
+ },
+ "182": {
+  "start_time": 297220,
+  "end_time": 299090,
+  "original_subtitle": "uh actually did some uh",
+  "translated_subtitle": ""
+ },
+ "183": {
+  "start_time": 299100,
+  "end_time": 301330,
+  "original_subtitle": "intrusion on another company,",
+  "translated_subtitle": ""
+ },
+ "184": {
+  "start_time": 301850,
+  "end_time": 303000,
+  "original_subtitle": "andthey needed to use AI to",
+  "translated_subtitle": ""
+ },
+ "185": {
+  "start_time": 303010,
+  "end_time": 304320,
+  "original_subtitle": "defend their systems.",
+  "translated_subtitle": ""
+ },
+ "186": {
+  "start_time": 304330,
+  "end_time": 307200,
+  "original_subtitle": "they and um They were only able",
+  "translated_subtitle": ""
+ },
+ "187": {
+  "start_time": 307210,
+  "end_time": 308720,
+  "original_subtitle": "to do that because of an",
+  "translated_subtitle": ""
+ },
+ "188": {
+  "start_time": 308730,
+  "end_time": 310920,
+  "original_subtitle": "excellent open model that they",
+  "translated_subtitle": ""
+ },
+ "189": {
+  "start_time": 310930,
+  "end_time": 312920,
+  "original_subtitle": "were able to instantiate to use",
+  "translated_subtitle": ""
+ },
+ "190": {
+  "start_time": 312930,
+  "end_time": 315240,
+  "original_subtitle": "um to protect their systems",
+  "translated_subtitle": ""
+ },
+ "191": {
+  "start_time": 315250,
+  "end_time": 316800,
+  "original_subtitle": "from uh this intrusion that",
+  "translated_subtitle": ""
+ },
+ "192": {
+  "start_time": 316910,
+  "end_time": 317520,
+  "original_subtitle": "what's happening.",
+  "translated_subtitle": ""
+ },
+ "193": {
+  "start_time": 318240,
+  "end_time": 320360,
+  "original_subtitle": "And um you know AI has this",
+  "translated_subtitle": ""
+ },
+ "194": {
+  "start_time": 320370,
+  "end_time": 321880,
+  "original_subtitle": "property that we all need to be",
+  "translated_subtitle": ""
+ },
+ "195": {
+  "start_time": 321890,
+  "end_time": 324160,
+  "original_subtitle": "able to use it um independently",
+  "translated_subtitle": ""
+ },
+ "196": {
+  "start_time": 324170,
+  "end_time": 325280,
+  "original_subtitle": "and we need to be able to use",
+  "translated_subtitle": ""
+ },
+ "197": {
+  "start_time": 325290,
+  "end_time": 327060,
+  "original_subtitle": "it without asking permission.",
+  "translated_subtitle": ""
+ },
+ "198": {
+  "start_time": 327060,
+  "end_time": 328000,
+  "original_subtitle": "Um",
+  "translated_subtitle": ""
+ }
+}

@@ -1,0 +1,12 @@
+# 20  IMG_20261016_134913.jpg  (4064x3048)
+Fp8 Quantization: per_tensor vs. blockwise
+per_tensor  blockwise (DeepGEMM style)
+activation  scalarFP32  per-tokenxK128block
+weight  per-expert scalar  128×128block
+FC2 activation  scalar(two-passprecompute)  per-tokenxK64（onlineinFC1epilogue)
+dequant  scalarmultiply in the epilogue  per-K-tilepromotein the mainloop
+accumulation  1xacc/2xacc（FP32promoteperKtile)  promotionbuiltin
+iprocal  blockwise online requant:register absmax → shuffle_sync_bfly quad reduction → single-lane STG of the scale → multiply by
+ckwisehalf-Ksplit:scaleloadsoverlap theotherhalf'sWGMMA
+n SF shares the TMA stage barrier with A/B (merged tx_count)—zero extra synchronization
+nVIDIA

@@ -1,0 +1,16 @@
+# VID_20261016_110133_002
+进行预训练所需的计算量所需的时间加快了4倍。
+就是我们公开预训练数据集的原因之一，就是为了帮助其他人
+使进
+erated Computing
+Acr
+ciples,acceleratingbeyond theGPu..
+One
+connects-NVL72
+ericsandSparsity-pretrain inNVFP4
+nVIDIA
+netarchitectures
+zers
+ssM,MoE-trainingdatasets
+ining foragenticworkloads
+fLLMresponse

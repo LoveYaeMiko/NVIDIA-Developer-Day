@@ -1,0 +1,1624 @@
+{
+  "source": "VID_20261016_110133.mp4",
+  "duration_ms": 328000,
+  "language": "autodialect",
+  "orders": [
+    "DKHJQ20261018150932023h1ZzVwSorMF6ZKTm"
+  ],
+  "chunks": [
+    {
+      "index": 1,
+      "offset_ms": 0,
+      "duration_ms": 328020,
+      "order_id": "DKHJQ20261018150932023h1ZzVwSorMF6ZKTm"
+    }
+  ],
+  "text": "Retraining by a factor of four because our pre training data set got more intelligent. We um did so much work on our pre training data set to filter it, throw out the bad parts of of our uh Free training data set, make sure that we're showing the model. Only the most important things that the time that it takes the amount of compute that it takes to do pre training was was accelerated by a factor of four. And that's one of the reasons why we put our pre training data set out publicly is to help everyone else accelerate their their work as well. you knowAnd that an accelerate computing is end to end. Optimizers also have an enormous effect on on the efficiency of training and uh these models and and the systems that we used to train them. um These days post training uh just absolutely gargantuan uh accelerated computing problem. you knowHow are we going build um the right infrastructure so that uh agents can be trained in um you know millions of sandboxes or all sorts of different kinds of environments, some of which may need to have um their own simulators in them so that you know these models can be better at understanding the world and interacting with it, just an enormous uh problem. And then uh finally, we have the gravity of course thoughts. you know uh If you think about it, a model that um very quickly can compute tokens can could be actually fast because it's it's efficient, but it could be uh wasteful if it takes too many tokens to answer a questions. soThe number of tokens that it takes to answer a question is also fundamentally part of accelerated computing. And so when you think about things like this, you knowI'm just giving you a few examples here, but there are many examples. This is Nemo transfers, job help in video understand these issues so that we can make sure we accelerate the communities development of AI make it more efficient, therefore increase the amount of Intelligence that's available to all of us. Now, um the second job that Nemo trump has is to accelerate the ecosystem um to make it possible for companies, for organizations all around the world to build and deploy their own AI you know uh why is it so important that open technologies for AI exist and be excellent? um you knowIt and by the way, this is uh in video and and I we all love um other kinds of technologies as well. you know we um weI use um closed aiap is all the time and they're great. you know andAnd you know for for people that want to use those that's fantastic it's a it's a really great way to access amazing capabilities and and that's going to continue. But I think uh open technologies are really necessary. um And the reason for that is that, um AI is really about helping people solve their own problems, but everybody has different problems. Every company is built around the secret, a secret that makes them unique. And this is not just their intellectual property. It's not just the the special technologies they have, but it's also their platform, their customers and their orientation, the way that they think about problem solving, the way that they go out into the world to help people solve problems. um this thisThis is all secret and special for every company. And it's it's connected to the core value of a company and the and the core um ways that that the company uh thinks about itself and and and thinks about its work. Now, um in order to use AI to accelerate uh some work that a company has to do, it needs to be able to interact with all of those secrets um because AI is all about data. It's all about uh understanding um you know the truth about uh the problem that you're trying to solve. And then using that in order to solve the problem. And so companies need the ability to work with their most sensitive and secret and important data. The most valuable data is always gonna have the most restrictions. um They're going to need to be able to do that on their own terms independently. andIn order to do that, they need um open technologies for AI they need to be able to instantiate their own models. They need to be able to fine tune them on their own data sets, and they need to be able to run them in a way that they can guarantee all of their secrets stay within uh their their organization. Now. It's also the case that um AI is not just about um uh problem solving, but it's also about ideas. you knowWhen we interact with AI we're asking questions. and um We're trying to get help with our hardest questions and because each of us needs the ability to ask those questions without asking permission from somebody else um because AI is actually about ideas, open technologies for AI are more important than ever. um as anAs an example of this, I think you may have heard about the um incident where um a closed AI uh uh experiment when and um uh actually did some uh intrusion on another company, andthey needed to use AI to defend their systems. they and um They were only able to do that because of an excellent open model that they were able to instantiate to use um to protect their systems from uh this intrusion that what's happening. And um you know AI has this property that we all need to be able to use it um independently and we need to be able to use it without asking permission. Um",
+  "segments": [
+    {
+      "index": 1,
+      "start": 0,
+      "end": 15220,
+      "speaker": "",
+      "text": "Retraining by a factor of four because our pre training data set got more intelligent. We um did so much work on our pre training data set to filter it, throw out the bad parts of of our uh Free training data set, make sure that we're showing the model."
+    },
+    {
+      "index": 2,
+      "start": 15240,
+      "end": 30080,
+      "speaker": "",
+      "text": "Only the most important things that the time that it takes the amount of compute that it takes to do pre training was was accelerated by a factor of four. And that's one of the reasons why we put our pre training data set out publicly is to help everyone else accelerate their their work as well."
+    },
+    {
+      "index": 3,
+      "start": 30100,
+      "end": 42610,
+      "speaker": "",
+      "text": "you knowAnd that an accelerate computing is end to end. Optimizers also have an enormous effect on on the efficiency of training and uh these models and and the systems that we used to train them."
+    },
+    {
+      "index": 4,
+      "start": 43030,
+      "end": 58040,
+      "speaker": "",
+      "text": "um These days post training uh just absolutely gargantuan uh accelerated computing problem. you knowHow are we going build um the right infrastructure so that uh agents can be trained in um you know millions of sandboxes or"
+    },
+    {
+      "index": 5,
+      "start": 58060,
+      "end": 69620,
+      "speaker": "",
+      "text": "all sorts of different kinds of environments, some of which may need to have um their own simulators in them so that you know these models can be better at understanding the world and interacting with it, just an enormous uh problem."
+    },
+    {
+      "index": 6,
+      "start": 69620,
+      "end": 72900,
+      "speaker": "",
+      "text": "And then uh finally, we have the gravity of course"
+    },
+    {
+      "index": 7,
+      "start": 72920,
+      "end": 87250,
+      "speaker": "",
+      "text": "thoughts. you know uh If you think about it, a model that um very quickly can compute tokens can could be actually fast because it's it's efficient, but it could be uh wasteful if it takes too many tokens to answer a questions."
+    },
+    {
+      "index": 8,
+      "start": 87270,
+      "end": 99090,
+      "speaker": "",
+      "text": "soThe number of tokens that it takes to answer a question is also fundamentally part of accelerated computing. And so when you think about things like this, you knowI'm just giving you a few examples here, but there are many examples."
+    },
+    {
+      "index": 9,
+      "start": 99230,
+      "end": 112330,
+      "speaker": "",
+      "text": "This is Nemo transfers, job help in video understand these issues so that we can make sure we accelerate the communities development of AI make it more efficient, therefore increase the amount of Intelligence that's available to all of us."
+    },
+    {
+      "index": 10,
+      "start": 113700,
+      "end": 125170,
+      "speaker": "",
+      "text": "Now, um the second job that Nemo trump has is to accelerate the ecosystem um to make it possible for companies, for organizations all around the world to build and deploy their own AI"
+    },
+    {
+      "index": 11,
+      "start": 125730,
+      "end": 131180,
+      "speaker": "",
+      "text": "you know uh why is it so important that open technologies for AI exist and be excellent?"
+    },
+    {
+      "index": 12,
+      "start": 131570,
+      "end": 145450,
+      "speaker": "",
+      "text": "um you knowIt and by the way, this is uh in video and and I we all love um other kinds of technologies as well. you know we um weI use um closed aiap is all the time"
+    },
+    {
+      "index": 13,
+      "start": 145520,
+      "end": 154440,
+      "speaker": "",
+      "text": "and they're great. you know andAnd you know for for people that want to use those that's fantastic it's a it's a really great way to access amazing capabilities and and that's going to continue."
+    },
+    {
+      "index": 14,
+      "start": 154440,
+      "end": 157860,
+      "speaker": "",
+      "text": "But I think uh open technologies are really necessary."
+    },
+    {
+      "index": 15,
+      "start": 158020,
+      "end": 168610,
+      "speaker": "",
+      "text": "um And the reason for that is that, um AI is really about helping people solve their own problems, but everybody has different problems. Every company is built around the secret,"
+    },
+    {
+      "index": 16,
+      "start": 168650,
+      "end": 183660,
+      "speaker": "",
+      "text": "a secret that makes them unique. And this is not just their intellectual property. It's not just the the special technologies they have, but it's also their platform, their customers and their orientation, the way that they think about problem solving, the way that they"
+    },
+    {
+      "index": 17,
+      "start": 183680,
+      "end": 195050,
+      "speaker": "",
+      "text": "go out into the world to help people solve problems. um this thisThis is all secret and special for every company. And it's it's connected to the core value of a company and the and the core um"
+    },
+    {
+      "index": 18,
+      "start": 195190,
+      "end": 199580,
+      "speaker": "",
+      "text": "ways that that the company uh thinks about itself and and and thinks about its work."
+    },
+    {
+      "index": 19,
+      "start": 199580,
+      "end": 203650,
+      "speaker": "",
+      "text": "Now, um in order to use AI to accelerate"
+    },
+    {
+      "index": 20,
+      "start": 203770,
+      "end": 218780,
+      "speaker": "",
+      "text": "uh some work that a company has to do, it needs to be able to interact with all of those secrets um because AI is all about data. It's all about uh understanding um you know the truth about uh the problem that you're trying to solve."
+    },
+    {
+      "index": 21,
+      "start": 218800,
+      "end": 234570,
+      "speaker": "",
+      "text": "And then using that in order to solve the problem. And so companies need the ability to work with their most sensitive and secret and important data. The most valuable data is always gonna have the most restrictions. um They're going to need to be able to do that on their own terms independently."
+    },
+    {
+      "index": 22,
+      "start": 234840,
+      "end": 249850,
+      "speaker": "",
+      "text": "andIn order to do that, they need um open technologies for AI they need to be able to instantiate their own models. They need to be able to fine tune them on their own data sets, and they need to be able to run them in a way that they can guarantee all of their secrets stay within uh their"
+    },
+    {
+      "index": 23,
+      "start": 249870,
+      "end": 250490,
+      "speaker": "",
+      "text": "their organization."
+    },
+    {
+      "index": 24,
+      "start": 250490,
+      "end": 265690,
+      "speaker": "",
+      "text": "Now. It's also the case that um AI is not just about um uh problem solving, but it's also about ideas. you knowWhen we interact with AI we're asking questions."
+    },
+    {
+      "index": 25,
+      "start": 265860,
+      "end": 270790,
+      "speaker": "",
+      "text": "and um We're trying to get help with our hardest questions"
+    },
+    {
+      "index": 26,
+      "start": 271380,
+      "end": 285890,
+      "speaker": "",
+      "text": "and because each of us needs the ability to ask those questions without asking permission from somebody else um because AI is actually about ideas, open technologies for AI are more important than ever."
+    },
+    {
+      "index": 27,
+      "start": 286200,
+      "end": 297090,
+      "speaker": "",
+      "text": "um as anAs an example of this, I think you may have heard about the um incident where um a closed AI uh uh experiment when and um"
+    },
+    {
+      "index": 28,
+      "start": 297210,
+      "end": 301330,
+      "speaker": "",
+      "text": "uh actually did some uh intrusion on another company,"
+    },
+    {
+      "index": 29,
+      "start": 301840,
+      "end": 316850,
+      "speaker": "",
+      "text": "andthey needed to use AI to defend their systems. they and um They were only able to do that because of an excellent open model that they were able to instantiate to use um to protect their systems from uh this intrusion that"
+    },
+    {
+      "index": 30,
+      "start": 316870,
+      "end": 327060,
+      "speaker": "",
+      "text": "what's happening. And um you know AI has this property that we all need to be able to use it um independently and we need to be able to use it without asking permission."
+    },
+    {
+      "index": 31,
+      "start": 327060,
+      "end": 328000,
+      "speaker": "",
+      "text": "Um"
+    }
+  ],
+  "cues": [
+    {
+      "index": 1,
+      "start": 210,
+      "end": 1960,
+      "speaker": "",
+      "text": "Retraining by a factor of four"
+    },
+    {
+      "index": 2,
+      "start": 1970,
+      "end": 3240,
+      "speaker": "",
+      "text": "because our pre training data"
+    },
+    {
+      "index": 3,
+      "start": 3250,
+      "end": 6160,
+      "speaker": "",
+      "text": "set got more intelligent."
+    },
+    {
+      "index": 4,
+      "start": 6170,
+      "end": 8160,
+      "speaker": "",
+      "text": "We um did so much work on our"
+    },
+    {
+      "index": 5,
+      "start": 8170,
+      "end": 9920,
+      "speaker": "",
+      "text": "pre training data set to filter"
+    },
+    {
+      "index": 6,
+      "start": 9930,
+      "end": 11760,
+      "speaker": "",
+      "text": "it, throw out the bad parts of"
+    },
+    {
+      "index": 7,
+      "start": 11770,
+      "end": 13480,
+      "speaker": "",
+      "text": "of our uh Free training data"
+    },
+    {
+      "index": 8,
+      "start": 13490,
+      "end": 14480,
+      "speaker": "",
+      "text": "set, make sure that we're"
+    },
+    {
+      "index": 9,
+      "start": 14490,
+      "end": 15160,
+      "speaker": "",
+      "text": "showing the model."
+    },
+    {
+      "index": 10,
+      "start": 15250,
+      "end": 16880,
+      "speaker": "",
+      "text": "Only the most important things"
+    },
+    {
+      "index": 11,
+      "start": 16890,
+      "end": 18440,
+      "speaker": "",
+      "text": "that the time that it takes the"
+    },
+    {
+      "index": 12,
+      "start": 18450,
+      "end": 19600,
+      "speaker": "",
+      "text": "amount of compute that it takes"
+    },
+    {
+      "index": 13,
+      "start": 19610,
+      "end": 21200,
+      "speaker": "",
+      "text": "to do pre training was was"
+    },
+    {
+      "index": 14,
+      "start": 21210,
+      "end": 22440,
+      "speaker": "",
+      "text": "accelerated by a factor of"
+    },
+    {
+      "index": 15,
+      "start": 22450,
+      "end": 23840,
+      "speaker": "",
+      "text": "four. And that's one of the"
+    },
+    {
+      "index": 16,
+      "start": 23850,
+      "end": 24840,
+      "speaker": "",
+      "text": "reasons why we put our pre"
+    },
+    {
+      "index": 17,
+      "start": 24850,
+      "end": 26600,
+      "speaker": "",
+      "text": "training data set out publicly"
+    },
+    {
+      "index": 18,
+      "start": 26610,
+      "end": 28000,
+      "speaker": "",
+      "text": "is to help everyone else"
+    },
+    {
+      "index": 19,
+      "start": 28010,
+      "end": 29680,
+      "speaker": "",
+      "text": "accelerate their their work as"
+    },
+    {
+      "index": 20,
+      "start": 29690,
+      "end": 30000,
+      "speaker": "",
+      "text": "well."
+    },
+    {
+      "index": 21,
+      "start": 30190,
+      "end": 31380,
+      "speaker": "",
+      "text": "you knowAnd that an accelerate"
+    },
+    {
+      "index": 22,
+      "start": 31390,
+      "end": 32660,
+      "speaker": "",
+      "text": "computing is end to end."
+    },
+    {
+      "index": 23,
+      "start": 33520,
+      "end": 35530,
+      "speaker": "",
+      "text": "Optimizers also have an enormous"
+    },
+    {
+      "index": 24,
+      "start": 35540,
+      "end": 38010,
+      "speaker": "",
+      "text": "effect on on the efficiency of"
+    },
+    {
+      "index": 25,
+      "start": 38020,
+      "end": 40010,
+      "speaker": "",
+      "text": "training and uh these models"
+    },
+    {
+      "index": 26,
+      "start": 40020,
+      "end": 41410,
+      "speaker": "",
+      "text": "and and the systems that we"
+    },
+    {
+      "index": 27,
+      "start": 41420,
+      "end": 42580,
+      "speaker": "",
+      "text": "used to train them."
+    },
+    {
+      "index": 28,
+      "start": 43040,
+      "end": 44670,
+      "speaker": "",
+      "text": "um These days post training uh"
+    },
+    {
+      "index": 29,
+      "start": 44680,
+      "end": 47390,
+      "speaker": "",
+      "text": "just absolutely gargantuan uh"
+    },
+    {
+      "index": 30,
+      "start": 47400,
+      "end": 48950,
+      "speaker": "",
+      "text": "accelerated computing problem."
+    },
+    {
+      "index": 31,
+      "start": 48960,
+      "end": 50590,
+      "speaker": "",
+      "text": "you knowHow are we going build"
+    },
+    {
+      "index": 32,
+      "start": 50600,
+      "end": 52550,
+      "speaker": "",
+      "text": "um the right infrastructure so"
+    },
+    {
+      "index": 33,
+      "start": 52560,
+      "end": 55230,
+      "speaker": "",
+      "text": "that uh agents can be trained"
+    },
+    {
+      "index": 34,
+      "start": 55240,
+      "end": 57230,
+      "speaker": "",
+      "text": "in um you know millions of"
+    },
+    {
+      "index": 35,
+      "start": 57240,
+      "end": 57990,
+      "speaker": "",
+      "text": "sandboxes or"
+    },
+    {
+      "index": 36,
+      "start": 58070,
+      "end": 59180,
+      "speaker": "",
+      "text": "all sorts of different kinds of"
+    },
+    {
+      "index": 37,
+      "start": 59190,
+      "end": 60020,
+      "speaker": "",
+      "text": "environments,"
+    },
+    {
+      "index": 38,
+      "start": 60030,
+      "end": 61940,
+      "speaker": "",
+      "text": "some of which may need to have"
+    },
+    {
+      "index": 39,
+      "start": 61950,
+      "end": 63820,
+      "speaker": "",
+      "text": "um their own simulators in them"
+    },
+    {
+      "index": 40,
+      "start": 63830,
+      "end": 65060,
+      "speaker": "",
+      "text": "so that you know these models"
+    },
+    {
+      "index": 41,
+      "start": 65070,
+      "end": 66180,
+      "speaker": "",
+      "text": "can be better at understanding"
+    },
+    {
+      "index": 42,
+      "start": 66190,
+      "end": 67300,
+      "speaker": "",
+      "text": "the world and interacting with"
+    },
+    {
+      "index": 43,
+      "start": 67310,
+      "end": 68780,
+      "speaker": "",
+      "text": "it, just an enormous uh"
+    },
+    {
+      "index": 44,
+      "start": 68790,
+      "end": 69620,
+      "speaker": "",
+      "text": "problem."
+    },
+    {
+      "index": 45,
+      "start": 69630,
+      "end": 70940,
+      "speaker": "",
+      "text": "And then uh finally,"
+    },
+    {
+      "index": 46,
+      "start": 70950,
+      "end": 72860,
+      "speaker": "",
+      "text": "we have the gravity of course"
+    },
+    {
+      "index": 47,
+      "start": 72930,
+      "end": 74400,
+      "speaker": "",
+      "text": "thoughts. you know uh If you"
+    },
+    {
+      "index": 48,
+      "start": 74410,
+      "end": 75040,
+      "speaker": "",
+      "text": "think about it,"
+    },
+    {
+      "index": 49,
+      "start": 75050,
+      "end": 77880,
+      "speaker": "",
+      "text": "a model that um very quickly can"
+    },
+    {
+      "index": 50,
+      "start": 77890,
+      "end": 80000,
+      "speaker": "",
+      "text": "compute tokens can could be"
+    },
+    {
+      "index": 51,
+      "start": 80010,
+      "end": 82000,
+      "speaker": "",
+      "text": "actually fast because it's it's"
+    },
+    {
+      "index": 52,
+      "start": 82010,
+      "end": 82480,
+      "speaker": "",
+      "text": "efficient,"
+    },
+    {
+      "index": 53,
+      "start": 82490,
+      "end": 84560,
+      "speaker": "",
+      "text": "but it could be uh wasteful if"
+    },
+    {
+      "index": 54,
+      "start": 84570,
+      "end": 86000,
+      "speaker": "",
+      "text": "it takes too many tokens to"
+    },
+    {
+      "index": 55,
+      "start": 86010,
+      "end": 87200,
+      "speaker": "",
+      "text": "answer a questions."
+    },
+    {
+      "index": 56,
+      "start": 87280,
+      "end": 89030,
+      "speaker": "",
+      "text": "soThe number of tokens that it"
+    },
+    {
+      "index": 57,
+      "start": 89040,
+      "end": 90150,
+      "speaker": "",
+      "text": "takes to answer a question is"
+    },
+    {
+      "index": 58,
+      "start": 90160,
+      "end": 91710,
+      "speaker": "",
+      "text": "also fundamentally part of"
+    },
+    {
+      "index": 59,
+      "start": 91720,
+      "end": 93230,
+      "speaker": "",
+      "text": "accelerated computing."
+    },
+    {
+      "index": 60,
+      "start": 93240,
+      "end": 94430,
+      "speaker": "",
+      "text": "And so when you think about"
+    },
+    {
+      "index": 61,
+      "start": 94440,
+      "end": 95190,
+      "speaker": "",
+      "text": "things like this,"
+    },
+    {
+      "index": 62,
+      "start": 95200,
+      "end": 96390,
+      "speaker": "",
+      "text": "you knowI'm just giving you a"
+    },
+    {
+      "index": 63,
+      "start": 96400,
+      "end": 97350,
+      "speaker": "",
+      "text": "few examples here,"
+    },
+    {
+      "index": 64,
+      "start": 97360,
+      "end": 99030,
+      "speaker": "",
+      "text": "but there are many examples."
+    },
+    {
+      "index": 65,
+      "start": 99240,
+      "end": 100350,
+      "speaker": "",
+      "text": "This is Nemo transfers,"
+    },
+    {
+      "index": 66,
+      "start": 100360,
+      "end": 102910,
+      "speaker": "",
+      "text": "job help in video understand"
+    },
+    {
+      "index": 67,
+      "start": 102920,
+      "end": 104190,
+      "speaker": "",
+      "text": "these issues so that we can"
+    },
+    {
+      "index": 68,
+      "start": 104200,
+      "end": 105990,
+      "speaker": "",
+      "text": "make sure we accelerate the"
+    },
+    {
+      "index": 69,
+      "start": 106000,
+      "end": 107590,
+      "speaker": "",
+      "text": "communities development of AI"
+    },
+    {
+      "index": 70,
+      "start": 107600,
+      "end": 108790,
+      "speaker": "",
+      "text": "make it more efficient,"
+    },
+    {
+      "index": 71,
+      "start": 108800,
+      "end": 110030,
+      "speaker": "",
+      "text": "therefore increase the amount of"
+    },
+    {
+      "index": 72,
+      "start": 110040,
+      "end": 111190,
+      "speaker": "",
+      "text": "Intelligence that's available"
+    },
+    {
+      "index": 73,
+      "start": 111200,
+      "end": 112110,
+      "speaker": "",
+      "text": "to all of us."
+    },
+    {
+      "index": 74,
+      "start": 113710,
+      "end": 115740,
+      "speaker": "",
+      "text": "Now, um the second job that Nemo"
+    },
+    {
+      "index": 75,
+      "start": 115750,
+      "end": 117900,
+      "speaker": "",
+      "text": "trump has is to accelerate the"
+    },
+    {
+      "index": 76,
+      "start": 117910,
+      "end": 119660,
+      "speaker": "",
+      "text": "ecosystem um to make it"
+    },
+    {
+      "index": 77,
+      "start": 119670,
+      "end": 121180,
+      "speaker": "",
+      "text": "possible for companies,"
+    },
+    {
+      "index": 78,
+      "start": 121190,
+      "end": 122780,
+      "speaker": "",
+      "text": "for organizations all around the"
+    },
+    {
+      "index": 79,
+      "start": 122790,
+      "end": 124460,
+      "speaker": "",
+      "text": "world to build and deploy their"
+    },
+    {
+      "index": 80,
+      "start": 124470,
+      "end": 125100,
+      "speaker": "",
+      "text": "own AI"
+    },
+    {
+      "index": 81,
+      "start": 125740,
+      "end": 127090,
+      "speaker": "",
+      "text": "you know uh why is it so"
+    },
+    {
+      "index": 82,
+      "start": 127100,
+      "end": 128170,
+      "speaker": "",
+      "text": "important that open"
+    },
+    {
+      "index": 83,
+      "start": 128180,
+      "end": 130250,
+      "speaker": "",
+      "text": "technologies for AI exist and"
+    },
+    {
+      "index": 84,
+      "start": 130260,
+      "end": 131130,
+      "speaker": "",
+      "text": "be excellent?"
+    },
+    {
+      "index": 85,
+      "start": 131580,
+      "end": 134010,
+      "speaker": "",
+      "text": "um you knowIt and by the way,"
+    },
+    {
+      "index": 86,
+      "start": 134020,
+      "end": 137210,
+      "speaker": "",
+      "text": "this is uh in video and and I we"
+    },
+    {
+      "index": 87,
+      "start": 137220,
+      "end": 139130,
+      "speaker": "",
+      "text": "all love um other kinds of"
+    },
+    {
+      "index": 88,
+      "start": 139140,
+      "end": 140370,
+      "speaker": "",
+      "text": "technologies as well."
+    },
+    {
+      "index": 89,
+      "start": 140380,
+      "end": 143570,
+      "speaker": "",
+      "text": "you know we um weI use um closed"
+    },
+    {
+      "index": 90,
+      "start": 143580,
+      "end": 145410,
+      "speaker": "",
+      "text": "aiap is all the time"
+    },
+    {
+      "index": 91,
+      "start": 145530,
+      "end": 146280,
+      "speaker": "",
+      "text": "and they're great."
+    },
+    {
+      "index": 92,
+      "start": 146290,
+      "end": 147880,
+      "speaker": "",
+      "text": "you know andAnd you know for for"
+    },
+    {
+      "index": 93,
+      "start": 147890,
+      "end": 149280,
+      "speaker": "",
+      "text": "people that want to use those"
+    },
+    {
+      "index": 94,
+      "start": 149290,
+      "end": 150560,
+      "speaker": "",
+      "text": "that's fantastic it's a it's a"
+    },
+    {
+      "index": 95,
+      "start": 150570,
+      "end": 152040,
+      "speaker": "",
+      "text": "really great way to access"
+    },
+    {
+      "index": 96,
+      "start": 152050,
+      "end": 153520,
+      "speaker": "",
+      "text": "amazing capabilities and and"
+    },
+    {
+      "index": 97,
+      "start": 153530,
+      "end": 154440,
+      "speaker": "",
+      "text": "that's going to continue."
+    },
+    {
+      "index": 98,
+      "start": 154450,
+      "end": 156640,
+      "speaker": "",
+      "text": "But I think uh open technologies"
+    },
+    {
+      "index": 99,
+      "start": 156650,
+      "end": 157800,
+      "speaker": "",
+      "text": "are really necessary."
+    },
+    {
+      "index": 100,
+      "start": 158030,
+      "end": 159260,
+      "speaker": "",
+      "text": "um And the reason for that is"
+    },
+    {
+      "index": 101,
+      "start": 159270,
+      "end": 162020,
+      "speaker": "",
+      "text": "that, um AI is really about"
+    },
+    {
+      "index": 102,
+      "start": 162030,
+      "end": 163340,
+      "speaker": "",
+      "text": "helping people solve their own"
+    },
+    {
+      "index": 103,
+      "start": 163350,
+      "end": 164660,
+      "speaker": "",
+      "text": "problems, but everybody has"
+    },
+    {
+      "index": 104,
+      "start": 164670,
+      "end": 165900,
+      "speaker": "",
+      "text": "different problems."
+    },
+    {
+      "index": 105,
+      "start": 165910,
+      "end": 167620,
+      "speaker": "",
+      "text": "Every company is built around"
+    },
+    {
+      "index": 106,
+      "start": 167630,
+      "end": 168540,
+      "speaker": "",
+      "text": "the secret,"
+    },
+    {
+      "index": 107,
+      "start": 168660,
+      "end": 170330,
+      "speaker": "",
+      "text": "a secret that makes them"
+    },
+    {
+      "index": 108,
+      "start": 170340,
+      "end": 172570,
+      "speaker": "",
+      "text": "unique. And this is not just"
+    },
+    {
+      "index": 109,
+      "start": 172580,
+      "end": 173810,
+      "speaker": "",
+      "text": "their intellectual property."
+    },
+    {
+      "index": 110,
+      "start": 173820,
+      "end": 175130,
+      "speaker": "",
+      "text": "It's not just the the special"
+    },
+    {
+      "index": 111,
+      "start": 175140,
+      "end": 176090,
+      "speaker": "",
+      "text": "technologies they have,"
+    },
+    {
+      "index": 112,
+      "start": 176100,
+      "end": 178330,
+      "speaker": "",
+      "text": "but it's also their platform,"
+    },
+    {
+      "index": 113,
+      "start": 178340,
+      "end": 179370,
+      "speaker": "",
+      "text": "their customers and their"
+    },
+    {
+      "index": 114,
+      "start": 179380,
+      "end": 180410,
+      "speaker": "",
+      "text": "orientation,"
+    },
+    {
+      "index": 115,
+      "start": 180420,
+      "end": 181530,
+      "speaker": "",
+      "text": "the way that they think about"
+    },
+    {
+      "index": 116,
+      "start": 181540,
+      "end": 182530,
+      "speaker": "",
+      "text": "problem solving,"
+    },
+    {
+      "index": 117,
+      "start": 182540,
+      "end": 183650,
+      "speaker": "",
+      "text": "the way that they"
+    },
+    {
+      "index": 118,
+      "start": 183720,
+      "end": 185780,
+      "speaker": "",
+      "text": "go out into the world to help"
+    },
+    {
+      "index": 119,
+      "start": 185790,
+      "end": 186300,
+      "speaker": "",
+      "text": "people solve problems."
+    },
+    {
+      "index": 120,
+      "start": 186490,
+      "end": 188430,
+      "speaker": "",
+      "text": "um this thisThis is all secret"
+    },
+    {
+      "index": 121,
+      "start": 188440,
+      "end": 190100,
+      "speaker": "",
+      "text": "and special for every company."
+    },
+    {
+      "index": 122,
+      "start": 190440,
+      "end": 191860,
+      "speaker": "",
+      "text": "And it's it's connected to the"
+    },
+    {
+      "index": 123,
+      "start": 191870,
+      "end": 193540,
+      "speaker": "",
+      "text": "core value of a company and the"
+    },
+    {
+      "index": 124,
+      "start": 193550,
+      "end": 194980,
+      "speaker": "",
+      "text": "and the core um"
+    },
+    {
+      "index": 125,
+      "start": 195230,
+      "end": 196920,
+      "speaker": "",
+      "text": "ways that that the company uh"
+    },
+    {
+      "index": 126,
+      "start": 196930,
+      "end": 198720,
+      "speaker": "",
+      "text": "thinks about itself and and and"
+    },
+    {
+      "index": 127,
+      "start": 198730,
+      "end": 199580,
+      "speaker": "",
+      "text": "thinks about its work."
+    },
+    {
+      "index": 128,
+      "start": 200180,
+      "end": 202330,
+      "speaker": "",
+      "text": "Now, um in order to use AI to"
+    },
+    {
+      "index": 129,
+      "start": 202340,
+      "end": 203610,
+      "speaker": "",
+      "text": "accelerate"
+    },
+    {
+      "index": 130,
+      "start": 203780,
+      "end": 205450,
+      "speaker": "",
+      "text": "uh some work that a company has"
+    },
+    {
+      "index": 131,
+      "start": 205460,
+      "end": 206490,
+      "speaker": "",
+      "text": "to do, it needs to be able to"
+    },
+    {
+      "index": 132,
+      "start": 206500,
+      "end": 208530,
+      "speaker": "",
+      "text": "interact with all of those"
+    },
+    {
+      "index": 133,
+      "start": 208540,
+      "end": 211410,
+      "speaker": "",
+      "text": "secrets um because AI is all"
+    },
+    {
+      "index": 134,
+      "start": 211420,
+      "end": 212170,
+      "speaker": "",
+      "text": "about data."
+    },
+    {
+      "index": 135,
+      "start": 212180,
+      "end": 214930,
+      "speaker": "",
+      "text": "It's all about uh understanding"
+    },
+    {
+      "index": 136,
+      "start": 214940,
+      "end": 217210,
+      "speaker": "",
+      "text": "um you know the truth about uh"
+    },
+    {
+      "index": 137,
+      "start": 217220,
+      "end": 218450,
+      "speaker": "",
+      "text": "the problem that you're trying"
+    },
+    {
+      "index": 138,
+      "start": 218460,
+      "end": 218730,
+      "speaker": "",
+      "text": "to solve."
+    },
+    {
+      "index": 139,
+      "start": 218840,
+      "end": 221040,
+      "speaker": "",
+      "text": "And then using that in order to"
+    },
+    {
+      "index": 140,
+      "start": 221050,
+      "end": 222000,
+      "speaker": "",
+      "text": "solve the problem."
+    },
+    {
+      "index": 141,
+      "start": 222010,
+      "end": 223600,
+      "speaker": "",
+      "text": "And so companies need the"
+    },
+    {
+      "index": 142,
+      "start": 223610,
+      "end": 225520,
+      "speaker": "",
+      "text": "ability to work with their most"
+    },
+    {
+      "index": 143,
+      "start": 225530,
+      "end": 226800,
+      "speaker": "",
+      "text": "sensitive and secret and"
+    },
+    {
+      "index": 144,
+      "start": 226810,
+      "end": 227440,
+      "speaker": "",
+      "text": "important data."
+    },
+    {
+      "index": 145,
+      "start": 227450,
+      "end": 229360,
+      "speaker": "",
+      "text": "The most valuable data is always"
+    },
+    {
+      "index": 146,
+      "start": 229370,
+      "end": 230570,
+      "speaker": "",
+      "text": "gonna have the most"
+    },
+    {
+      "index": 147,
+      "start": 230580,
+      "end": 230780,
+      "speaker": "",
+      "text": "restrictions."
+    },
+    {
+      "index": 148,
+      "start": 230920,
+      "end": 232030,
+      "speaker": "",
+      "text": "um They're going to need to be"
+    },
+    {
+      "index": 149,
+      "start": 232040,
+      "end": 233190,
+      "speaker": "",
+      "text": "able to do that on their own"
+    },
+    {
+      "index": 150,
+      "start": 233200,
+      "end": 234550,
+      "speaker": "",
+      "text": "terms independently."
+    },
+    {
+      "index": 151,
+      "start": 234850,
+      "end": 235680,
+      "speaker": "",
+      "text": "andIn order to do that,"
+    },
+    {
+      "index": 152,
+      "start": 235690,
+      "end": 238000,
+      "speaker": "",
+      "text": "they need um open technologies"
+    },
+    {
+      "index": 153,
+      "start": 238010,
+      "end": 239240,
+      "speaker": "",
+      "text": "for AI they need to be able to"
+    },
+    {
+      "index": 154,
+      "start": 239250,
+      "end": 240320,
+      "speaker": "",
+      "text": "instantiate their own models."
+    },
+    {
+      "index": 155,
+      "start": 240330,
+      "end": 241240,
+      "speaker": "",
+      "text": "They need to be able to fine"
+    },
+    {
+      "index": 156,
+      "start": 241250,
+      "end": 242280,
+      "speaker": "",
+      "text": "tune them on their own data"
+    },
+    {
+      "index": 157,
+      "start": 242290,
+      "end": 243840,
+      "speaker": "",
+      "text": "sets, and they need to be able"
+    },
+    {
+      "index": 158,
+      "start": 243850,
+      "end": 245200,
+      "speaker": "",
+      "text": "to run them in a way that they"
+    },
+    {
+      "index": 159,
+      "start": 245210,
+      "end": 247000,
+      "speaker": "",
+      "text": "can guarantee all of their"
+    },
+    {
+      "index": 160,
+      "start": 247010,
+      "end": 249800,
+      "speaker": "",
+      "text": "secrets stay within uh their"
+    },
+    {
+      "index": 161,
+      "start": 249870,
+      "end": 250490,
+      "speaker": "",
+      "text": "their organization."
+    },
+    {
+      "index": 162,
+      "start": 250500,
+      "end": 254210,
+      "speaker": "",
+      "text": "Now. It's also the case that um"
+    },
+    {
+      "index": 163,
+      "start": 254220,
+      "end": 259050,
+      "speaker": "",
+      "text": "AI is not just about um uh"
+    },
+    {
+      "index": 164,
+      "start": 259060,
+      "end": 259930,
+      "speaker": "",
+      "text": "problem solving,"
+    },
+    {
+      "index": 165,
+      "start": 259940,
+      "end": 261730,
+      "speaker": "",
+      "text": "but it's also about ideas."
+    },
+    {
+      "index": 166,
+      "start": 261740,
+      "end": 264090,
+      "speaker": "",
+      "text": "you knowWhen we interact with AI"
+    },
+    {
+      "index": 167,
+      "start": 264100,
+      "end": 265650,
+      "speaker": "",
+      "text": "we're asking questions."
+    },
+    {
+      "index": 168,
+      "start": 265870,
+      "end": 269100,
+      "speaker": "",
+      "text": "and um We're trying to get help"
+    },
+    {
+      "index": 169,
+      "start": 269110,
+      "end": 270780,
+      "speaker": "",
+      "text": "with our hardest questions"
+    },
+    {
+      "index": 170,
+      "start": 271420,
+      "end": 274420,
+      "speaker": "",
+      "text": "and because each of us needs"
+    },
+    {
+      "index": 171,
+      "start": 274430,
+      "end": 276300,
+      "speaker": "",
+      "text": "the ability to ask those"
+    },
+    {
+      "index": 172,
+      "start": 276310,
+      "end": 278180,
+      "speaker": "",
+      "text": "questions without asking"
+    },
+    {
+      "index": 173,
+      "start": 278190,
+      "end": 279500,
+      "speaker": "",
+      "text": "permission from somebody else"
+    },
+    {
+      "index": 174,
+      "start": 279510,
+      "end": 281660,
+      "speaker": "",
+      "text": "um because AI is actually about"
+    },
+    {
+      "index": 175,
+      "start": 281670,
+      "end": 284350,
+      "speaker": "",
+      "text": "ideas, open technologies for AI"
+    },
+    {
+      "index": 176,
+      "start": 284360,
+      "end": 285870,
+      "speaker": "",
+      "text": "are more important than ever."
+    },
+    {
+      "index": 177,
+      "start": 286210,
+      "end": 288120,
+      "speaker": "",
+      "text": "um as anAs an example of this,"
+    },
+    {
+      "index": 178,
+      "start": 288130,
+      "end": 289760,
+      "speaker": "",
+      "text": "I think you may have heard about"
+    },
+    {
+      "index": 179,
+      "start": 289770,
+      "end": 292240,
+      "speaker": "",
+      "text": "the um incident where um a"
+    },
+    {
+      "index": 180,
+      "start": 292250,
+      "end": 295960,
+      "speaker": "",
+      "text": "closed AI uh uh experiment when"
+    },
+    {
+      "index": 181,
+      "start": 295970,
+      "end": 297040,
+      "speaker": "",
+      "text": "and um"
+    },
+    {
+      "index": 182,
+      "start": 297220,
+      "end": 299090,
+      "speaker": "",
+      "text": "uh actually did some uh"
+    },
+    {
+      "index": 183,
+      "start": 299100,
+      "end": 301330,
+      "speaker": "",
+      "text": "intrusion on another company,"
+    },
+    {
+      "index": 184,
+      "start": 301850,
+      "end": 303000,
+      "speaker": "",
+      "text": "andthey needed to use AI to"
+    },
+    {
+      "index": 185,
+      "start": 303010,
+      "end": 304320,
+      "speaker": "",
+      "text": "defend their systems."
+    },
+    {
+      "index": 186,
+      "start": 304330,
+      "end": 307200,
+      "speaker": "",
+      "text": "they and um They were only able"
+    },
+    {
+      "index": 187,
+      "start": 307210,
+      "end": 308720,
+      "speaker": "",
+      "text": "to do that because of an"
+    },
+    {
+      "index": 188,
+      "start": 308730,
+      "end": 310920,
+      "speaker": "",
+      "text": "excellent open model that they"
+    },
+    {
+      "index": 189,
+      "start": 310930,
+      "end": 312920,
+      "speaker": "",
+      "text": "were able to instantiate to use"
+    },
+    {
+      "index": 190,
+      "start": 312930,
+      "end": 315240,
+      "speaker": "",
+      "text": "um to protect their systems"
+    },
+    {
+      "index": 191,
+      "start": 315250,
+      "end": 316800,
+      "speaker": "",
+      "text": "from uh this intrusion that"
+    },
+    {
+      "index": 192,
+      "start": 316910,
+      "end": 317520,
+      "speaker": "",
+      "text": "what's happening."
+    },
+    {
+      "index": 193,
+      "start": 318240,
+      "end": 320360,
+      "speaker": "",
+      "text": "And um you know AI has this"
+    },
+    {
+      "index": 194,
+      "start": 320370,
+      "end": 321880,
+      "speaker": "",
+      "text": "property that we all need to be"
+    },
+    {
+      "index": 195,
+      "start": 321890,
+      "end": 324160,
+      "speaker": "",
+      "text": "able to use it um independently"
+    },
+    {
+      "index": 196,
+      "start": 324170,
+      "end": 325280,
+      "speaker": "",
+      "text": "and we need to be able to use"
+    },
+    {
+      "index": 197,
+      "start": 325290,
+      "end": 327060,
+      "speaker": "",
+      "text": "it without asking permission."
+    },
+    {
+      "index": 198,
+      "start": 327060,
+      "end": 328000,
+      "speaker": "",
+      "text": "Um"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+# 74  IMG_20261016_155304.jpg  (4064x3048)
+GEN04/06
+THROUGHPUT
+Radix Tree  4M block ps/
+第四版把prefx变成树。相同block内容只有在相同父前缀下才算同一路，碰撞问题被上下文约束住。
+树的父子关系就是prenxcontext：同样的localLhash，在不同父节点下是不同路径
+KVcache  解决了什么
+为什公费数用  碰撞不再只是hash层面的问题，而被放
+进“这段内容出现在什么前缀之后”的上下
+Radix Tree: prefix context scopes collisions  文里判断。
+Routerquestlon
+道命中联讯
+事件怎么处理
+root  Store/Remove事件用sequenco_hash
+快速定位节点；query则沿localLhash子
+Twohashes  节点往下走。
+便宜yB准睛
+event lookup  还没解决什么
+NostedDict  h1  h1  树本身更正确，但仍然在单线程actor之
+通个worker本  后，读写并发能力还没释放出来。
+worker
+seq_hash
+RustActor
+单队列保正销
+→node
+h3  h2
+InvertedIndex
+预s反量wker
+04  RadixTree
+用树表达前期  W1,W2  W3  W4
+Concurrent Radlx
+值并行，写风序
+dual-key design:local_hashfortraversal,seq_hash for events
+Flash Indexer  结约特点
+prefix traversal
+暂停  新质节类更慢：先讲3个背复，再训6代优化。空格播放/暂停，一/一切

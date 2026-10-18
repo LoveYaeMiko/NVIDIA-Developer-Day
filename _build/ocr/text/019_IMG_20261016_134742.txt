@@ -1,0 +1,21 @@
+# 19  IMG_20261016_134742.jpg  (4064x3048)
+The swapAB Variant: the Cure for Small Token Counts
+·Problem:SM90 WGMMA ism64nNk32-non-swap token tile is at least64;decode workloads waste most of it onpadding
+sWapAB:M=weight channels（128/256),N= tokens(8/16/32/64/128)
+WGMMA'sN dimension goesdown to8→token tileas small as8,up to8xbetter utilization
+·The M axis becomes the always-dense channel dimension,so even tiny token counts can fill the SMs
+Implementationhighlights:
+The swap is pure stride views,zero copy;the expert dim becomes GEMM-A's L mode,so the TMA descriptor is tile-invariant
+·The transpose moves into the epilogue:FC1 via R2S SMEM addressing;FC2 drops TMA store and emits BF16 straight from registers (STG)
+·The 8-row gate/up interleave lands exactly on register pairs of the same thread-folding needs zero shuffles
+·Shares theMMAmainloop andwarp topologywiththemainkernel-lowmaintenancecost
+non-swap:tokensonM-tileM64xN128  swapAB:tokensonN-tileM128/256xN8
+WGMMAm64nNk32:Misfixedat64peratom  Nisflexibledownto8-tokentile8/16/32/64/128
+8real tokens
+same8 tokens
+M= weight channels(always dense)
+badding-56of64tokenrowswasted  N=8 tokens.all useful
+up to 8xbetter tileutilization
+tchesleavemostofthetileempty
+ews;expert dimbecomes GEMM-A's Lmode (TMA descriptor tile-invariant)  IA
+nVIDIA  nVIDLA

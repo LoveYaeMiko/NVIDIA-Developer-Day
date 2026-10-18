@@ -1,0 +1,1281 @@
+{
+ "count": 96,
+ "total_chars": 60024,
+ "mean_score": 0.947,
+ "weak_pages": [
+  {
+   "index": 31,
+   "boxes": 12,
+   "chars": 701,
+   "mean_score": 0.76,
+   "heading": "Optimization 10: Scheduler Groups and the fc1_done Spin"
+  }
+ ],
+ "dups": [
+  [
+   4,
+   5,
+   0.912
+  ],
+  [
+   39,
+   40,
+   0.989
+  ],
+  [
+   41,
+   42,
+   0.99
+  ]
+ ],
+ "pages": [
+  {
+   "index": 1,
+   "file": "IMG_20261016_133219.jpg",
+   "heading": "MegaMoE recap",
+   "n_boxes": 41,
+   "chars": 449,
+   "mean_score": 0.969,
+   "low_score_boxes": 0,
+   "orig_size": [
+    3264,
+    2448
+   ]
+  },
+  {
+   "index": 2,
+   "file": "IMG_20261016_133323.jpg",
+   "heading": "MegaMoE support matrix",
+   "n_boxes": 15,
+   "chars": 267,
+   "mean_score": 0.959,
+   "low_score_boxes": 0,
+   "orig_size": [
+    3264,
+    2448
+   ]
+  },
+  {
+   "index": 3,
+   "file": "IMG_20261016_133406.jpg",
+   "heading": "MegaMoE on Blackwell",
+   "n_boxes": 31,
+   "chars": 450,
+   "mean_score": 0.973,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 4,
+   "file": "IMG_20261016_133511.jpg",
+   "heading": "MegaMoE on Blackwell",
+   "n_boxes": 15,
+   "chars": 396,
+   "mean_score": 0.964,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 5,
+   "file": "IMG_20261016_133516.jpg",
+   "heading": "MegaMoE on Blackwell",
+   "n_boxes": 15,
+   "chars": 411,
+   "mean_score": 0.948,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 6,
+   "file": "IMG_20261016_133541.jpg",
+   "heading": "MegaMoE on Blackwell",
+   "n_boxes": 10,
+   "chars": 203,
+   "mean_score": 0.981,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 7,
+   "file": "IMG_20261016_133624.jpg",
+   "heading": "MegaMoE on Blackwell",
+   "n_boxes": 16,
+   "chars": 347,
+   "mean_score": 0.953,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 8,
+   "file": "IMG_20261016_133702.jpg",
+   "heading": "From a 32x4 Trick to a Full TMEM Transpose",
+   "n_boxes": 34,
+   "chars": 965,
+   "mean_score": 0.958,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 9,
+   "file": "IMG_20261016_133758.jpg",
+   "heading": "CuteDSL MegaMoE on Blackwell",
+   "n_boxes": 30,
+   "chars": 443,
+   "mean_score": 0.959,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 10,
+   "file": "IMG_20261016_133919.jpg",
+   "heading": "CuteDSLMegaMoEonBlackwell",
+   "n_boxes": 32,
+   "chars": 472,
+   "mean_score": 0.963,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 11,
+   "file": "IMG_20261016_133933.jpg",
+   "heading": "CuteDSL MegaMoE on Blackwell",
+   "n_boxes": 25,
+   "chars": 426,
+   "mean_score": 0.972,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 12,
+   "file": "IMG_20261016_134013.jpg",
+   "heading": "MegaMoE on Blackwell",
+   "n_boxes": 26,
+   "chars": 467,
+   "mean_score": 0.973,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 13,
+   "file": "IMG_20261016_134107.jpg",
+   "heading": "MegaMoEonBlackwell",
+   "n_boxes": 54,
+   "chars": 547,
+   "mean_score": 0.975,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 14,
+   "file": "IMG_20261016_134143.jpg",
+   "heading": "MegaMoE on Blackwell",
+   "n_boxes": 20,
+   "chars": 284,
+   "mean_score": 0.95,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 15,
+   "file": "IMG_20261016_134320.jpg",
+   "heading": "CuteDSL MegaMoE on Blackwell",
+   "n_boxes": 19,
+   "chars": 370,
+   "mean_score": 0.929,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 16,
+   "file": "IMG_20261016_134421.jpg",
+   "heading": "MegaMoEonBlackwell",
+   "n_boxes": 27,
+   "chars": 512,
+   "mean_score": 0.966,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 17,
+   "file": "IMG_20261016_134505.jpg",
+   "heading": "Overall Architecture: One Kernel Does Everything",
+   "n_boxes": 29,
+   "chars": 954,
+   "mean_score": 0.958,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 18,
+   "file": "IMG_20261016_134614.jpg",
+   "heading": "Warp Specialization",
+   "n_boxes": 29,
+   "chars": 597,
+   "mean_score": 0.919,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 19,
+   "file": "IMG_20261016_134742.jpg",
+   "heading": "The swapAB Variant: the Cure for Small Token Counts",
+   "n_boxes": 25,
+   "chars": 1246,
+   "mean_score": 0.94,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 20,
+   "file": "IMG_20261016_134913.jpg",
+   "heading": "Fp8 Quantization: per_tensor vs. blockwise",
+   "n_boxes": 23,
+   "chars": 654,
+   "mean_score": 0.965,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 21,
+   "file": "IMG_20261016_135050.jpg",
+   "heading": "Optimization 1: Cooperative Warp-group Scheduling",
+   "n_boxes": 31,
+   "chars": 1171,
+   "mean_score": 0.953,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 22,
+   "file": "IMG_20261016_135216.jpg",
+   "heading": "Optimization 2: Task-tile Ping-pong",
+   "n_boxes": 25,
+   "chars": 994,
+   "mean_score": 0.955,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 23,
+   "file": "IMG_20261016_135339.jpg",
+   "heading": "Optimization 3:Multi-CTA CGA +TMA Multicast",
+   "n_boxes": 18,
+   "chars": 767,
+   "mean_score": 0.928,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 24,
+   "file": "IMG_20261016_135520.jpg",
+   "heading": "Optimization 4: Mainloop & Store Pipelines",
+   "n_boxes": 39,
+   "chars": 1373,
+   "mean_score": 0.945,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 25,
+   "file": "IMG_20261016_135654.jpg",
+   "heading": "Optimization 5: All-Register Epilogue Fusion Chain",
+   "n_boxes": 34,
+   "chars": 1158,
+   "mean_score": 0.952,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 26,
+   "file": "IMG_20261016_135815.jpg",
+   "heading": "Why Gate/Up Interleave = 8: the WGMMA Register Layout",
+   "n_boxes": 173,
+   "chars": 2317,
+   "mean_score": 0.868,
+   "low_score_boxes": 1,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 27,
+   "file": "IMG_20261016_140017.jpg",
+   "heading": "Optimization 6: A Single Active Dispatch Warp",
+   "n_boxes": 32,
+   "chars": 1126,
+   "mean_score": 0.962,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 28,
+   "file": "IMG_20261016_140037.jpg",
+   "heading": "Optimization 7: Folding the Producer Warpgroup + Register",
+   "n_boxes": 30,
+   "chars": 1006,
+   "mean_score": 0.963,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 29,
+   "file": "IMG_20261016_140152.jpg",
+   "heading": "Optimization 8: Early fc1_done Publish",
+   "n_boxes": 24,
+   "chars": 1090,
+   "mean_score": 0.958,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 30,
+   "file": "IMG_20261016_140322.jpg",
+   "heading": "Optimization9:BlockwiseFC2Dual-Accumulator Overlap",
+   "n_boxes": 26,
+   "chars": 1302,
+   "mean_score": 0.949,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 31,
+   "file": "IMG_20261016_140546.jpg",
+   "heading": "Optimization 10: Scheduler Groups and the fc1_done Spin",
+   "n_boxes": 12,
+   "chars": 701,
+   "mean_score": 0.76,
+   "low_score_boxes": 4,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 32,
+   "file": "IMG_20261016_140802.jpg",
+   "heading": "Optimization 11: 16-byte FC2 Output Stores",
+   "n_boxes": 27,
+   "chars": 1375,
+   "mean_score": 0.935,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 33,
+   "file": "IMG_20261016_140940.jpg",
+   "heading": "Token Sweep Results",
+   "n_boxes": 52,
+   "chars": 1024,
+   "mean_score": 0.965,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 34,
+   "file": "IMG_20261016_141107.jpg",
+   "heading": "Summary",
+   "n_boxes": 10,
+   "chars": 319,
+   "mean_score": 0.902,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 35,
+   "file": "IMG_20261016_141318.jpg",
+   "heading": "Two Challenges Define Training at Scale",
+   "n_boxes": 18,
+   "chars": 411,
+   "mean_score": 0.95,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 36,
+   "file": "IMG_20261016_141551.jpg",
+   "heading": "One Playbook, Two Workloads",
+   "n_boxes": 12,
+   "chars": 294,
+   "mean_score": 0.958,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 37,
+   "file": "IMG_20261016_141647.jpg",
+   "heading": "DeepSeek-V4-Pro Overview",
+   "n_boxes": 38,
+   "chars": 434,
+   "mean_score": 0.891,
+   "low_score_boxes": 5,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 38,
+   "file": "IMG_20261016_141929.jpg",
+   "heading": "Model Features Drive Optimizations",
+   "n_boxes": 30,
+   "chars": 616,
+   "mean_score": 0.896,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 39,
+   "file": "IMG_20261016_142005.jpg",
+   "heading": "Choose the Parallel Layout",
+   "n_boxes": 12,
+   "chars": 581,
+   "mean_score": 0.939,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 40,
+   "file": "IMG_20261016_142038.jpg",
+   "heading": "Choose the Parallel Layout",
+   "n_boxes": 12,
+   "chars": 590,
+   "mean_score": 0.958,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 41,
+   "file": "IMG_20261016_142409.jpg",
+   "heading": "Context Length Drives Memory Policy",
+   "n_boxes": 13,
+   "chars": 338,
+   "mean_score": 0.947,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 42,
+   "file": "IMG_20261016_142509.jpg",
+   "heading": "Context Length Drives Memory Policy",
+   "n_boxes": 14,
+   "chars": 354,
+   "mean_score": 0.98,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 43,
+   "file": "IMG_20261016_142618.jpg",
+   "heading": "The Starting Points",
+   "n_boxes": 17,
+   "chars": 408,
+   "mean_score": 0.95,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 44,
+   "file": "IMG_20261016_142735.jpg",
+   "heading": "STEP 1: Runtime Overhead and Memory Trade-offs",
+   "n_boxes": 16,
+   "chars": 410,
+   "mean_score": 0.945,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 45,
+   "file": "IMG_20261016_143215.jpg",
+   "heading": "WheretheStepTime Goes",
+   "n_boxes": 18,
+   "chars": 212,
+   "mean_score": 0.931,
+   "low_score_boxes": 1,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 46,
+   "file": "IMG_20261016_143336.jpg",
+   "heading": "STEP 2:Optimize the Hybrid Attention",
+   "n_boxes": 53,
+   "chars": 1006,
+   "mean_score": 0.95,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 47,
+   "file": "IMG_20261016_143743.jpg",
+   "heading": "STEP 2: Optimize the Hybrid Attention",
+   "n_boxes": 13,
+   "chars": 364,
+   "mean_score": 0.966,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 48,
+   "file": "IMG_20261016_143826.jpg",
+   "heading": "STEP 3:Optimize the MoE",
+   "n_boxes": 28,
+   "chars": 650,
+   "mean_score": 0.929,
+   "low_score_boxes": 1,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 49,
+   "file": "IMG_20261016_144159.jpg",
+   "heading": "STEP 3: Optimize the MoE",
+   "n_boxes": 17,
+   "chars": 524,
+   "mean_score": 0.958,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 50,
+   "file": "IMG_20261016_144338.jpg",
+   "heading": "STEP 4:Balance CP Workloads",
+   "n_boxes": 26,
+   "chars": 258,
+   "mean_score": 0.98,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 51,
+   "file": "IMG_20261016_144455.jpg",
+   "heading": "STEP4I Balance CP Workloads",
+   "n_boxes": 32,
+   "chars": 610,
+   "mean_score": 0.921,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 52,
+   "file": "IMG_20261016_144928.jpg",
+   "heading": "Lessons for Scalable Training",
+   "n_boxes": 25,
+   "chars": 815,
+   "mean_score": 0.826,
+   "low_score_boxes": 1,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 53,
+   "file": "IMG_20261016_145841.jpg",
+   "heading": "Motivation: KV Cache as a Serving Bottleneck",
+   "n_boxes": 5,
+   "chars": 163,
+   "mean_score": 0.991,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 54,
+   "file": "IMG_20261016_145926.jpg",
+   "heading": "KV Cache Is a Serving Bottleneck",
+   "n_boxes": 25,
+   "chars": 484,
+   "mean_score": 0.955,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 55,
+   "file": "IMG_20261016_150308.jpg",
+   "heading": "KV Cache Compression Methods",
+   "n_boxes": 38,
+   "chars": 591,
+   "mean_score": 0.966,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 56,
+   "file": "IMG_20261016_150439.jpg",
+   "heading": "Where KV Compression Fits",
+   "n_boxes": 41,
+   "chars": 782,
+   "mean_score": 0.964,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 57,
+   "file": "IMG_20261016_150742.jpg",
+   "heading": "TurboQuant: Online KV Quantization",
+   "n_boxes": 41,
+   "chars": 802,
+   "mean_score": 0.965,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 58,
+   "file": "IMG_20261016_151001.jpg",
+   "heading": "TurboQuant: Layout Compressed KV for Decode",
+   "n_boxes": 44,
+   "chars": 575,
+   "mean_score": 0.977,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 59,
+   "file": "IMG_20261016_151154.jpg",
+   "heading": "TurboQuant: Tiled MMA Decode Attention on 4-bit KV",
+   "n_boxes": 30,
+   "chars": 669,
+   "mean_score": 0.938,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 60,
+   "file": "IMG_20261016_151529.jpg",
+   "heading": "TurboQuant:Decode Performance",
+   "n_boxes": 52,
+   "chars": 641,
+   "mean_score": 0.949,
+   "low_score_boxes": 1,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 61,
+   "file": "IMG_20261016_151721.jpg",
+   "heading": "KVTC: Compression for Storage and Transfer",
+   "n_boxes": 49,
+   "chars": 832,
+   "mean_score": 0.961,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 62,
+   "file": "IMG_20261016_152028.jpg",
+   "heading": "KVTC: Integration and Pipelined Decompression",
+   "n_boxes": 60,
+   "chars": 717,
+   "mean_score": 0.965,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 63,
+   "file": "IMG_20261016_152301.jpg",
+   "heading": "KVTC: Single-Request TTFT",
+   "n_boxes": 59,
+   "chars": 583,
+   "mean_score": 0.983,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 64,
+   "file": "IMG_20261016_152345.jpg",
+   "heading": "KVTC: Throughput Under Memory Pressure",
+   "n_boxes": 81,
+   "chars": 1312,
+   "mean_score": 0.968,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 65,
+   "file": "IMG_20261016_152532.jpg",
+   "heading": "nvCOMP-ANS: Lossless KV Cache Transfer",
+   "n_boxes": 35,
+   "chars": 647,
+   "mean_score": 0.971,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 66,
+   "file": "IMG_20261016_152740.jpg",
+   "heading": "nvCOMP-ANS: Compression and Serving Results  TTFTgains are strongestat low concurrency in thisbenchmark",
+   "n_boxes": 35,
+   "chars": 667,
+   "mean_score": 0.96,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 67,
+   "file": "IMG_20261016_152943.jpg",
+   "heading": "Takeaways",
+   "n_boxes": 13,
+   "chars": 529,
+   "mean_score": 0.929,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 68,
+   "file": "IMG_20261016_154557.jpg",
+   "heading": "What Dynamo can do today",
+   "n_boxes": 30,
+   "chars": 663,
+   "mean_score": 0.955,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 69,
+   "file": "IMG_20261016_154910.jpg",
+   "heading": "KVRouter在生产环境中被广泛验证",
+   "n_boxes": 13,
+   "chars": 300,
+   "mean_score": 0.978,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 70,
+   "file": "IMG_20261016_154929.jpg",
+   "heading": "请求进入后，KVRouter用两类信号为Worker打分",
+   "n_boxes": 25,
+   "chars": 270,
+   "mean_score": 0.976,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 71,
+   "file": "IMG_20261016_155023.jpg",
+   "heading": "Flash Indexer 在链路里做什么",
+   "n_boxes": 25,
+   "chars": 341,
+   "mean_score": 0.957,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 72,
+   "file": "IMG_20261016_155112.jpg",
+   "heading": "索引里存的是一张“位置到worker\"的地图",
+   "n_boxes": 23,
+   "chars": 295,
+   "mean_score": 0.972,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 73,
+   "file": "IMG_20261016_155209.jpg",
+   "heading": "GEN01/06  THROUGHPUT",
+   "n_boxes": 61,
+   "chars": 750,
+   "mean_score": 0.858,
+   "low_score_boxes": 5,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 74,
+   "file": "IMG_20261016_155304.jpg",
+   "heading": "GEN04/06",
+   "n_boxes": 53,
+   "chars": 690,
+   "mean_score": 0.91,
+   "low_score_boxes": 1,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 75,
+   "file": "IMG_20261016_155341.jpg",
+   "heading": "GEN06/06  THROUGHPUT",
+   "n_boxes": 58,
+   "chars": 866,
+   "mean_score": 0.924,
+   "low_score_boxes": 1,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 76,
+   "file": "IMG_20261016_155430.jpg",
+   "heading": "性能数据",
+   "n_boxes": 46,
+   "chars": 535,
+   "mean_score": 0.856,
+   "low_score_boxes": 3,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 77,
+   "file": "IMG_20261016_155614.jpg",
+   "heading": "Standalone KV Indexer: 定位",
+   "n_boxes": 15,
+   "chars": 300,
+   "mean_score": 0.982,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 78,
+   "file": "IMG_20261016_155653.jpg",
+   "heading": "Standalone KV Indexer:架构",
+   "n_boxes": 26,
+   "chars": 383,
+   "mean_score": 0.967,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 79,
+   "file": "IMG_20261016_155812.jpg",
+   "heading": "SLAs of New Agentic Era",
+   "n_boxes": 16,
+   "chars": 364,
+   "mean_score": 0.966,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 80,
+   "file": "IMG_20261016_160011.jpg",
+   "heading": "AgentX Trace",
+   "n_boxes": 27,
+   "chars": 279,
+   "mean_score": 0.968,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 81,
+   "file": "IMG_20261016_160122.jpg",
+   "heading": "Single AgentX Session Characteristics",
+   "n_boxes": 37,
+   "chars": 351,
+   "mean_score": 0.919,
+   "low_score_boxes": 1,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 82,
+   "file": "IMG_20261016_160315.jpg",
+   "heading": "3 Layer Software Stack of Agentic Inference",
+   "n_boxes": 52,
+   "chars": 874,
+   "mean_score": 0.953,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 83,
+   "file": "IMG_20261016_160511.jpg",
+   "heading": "AgentX Dashboard",
+   "n_boxes": 66,
+   "chars": 869,
+   "mean_score": 0.932,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 84,
+   "file": "IMG_20261016_160627.jpg",
+   "heading": "Observability - Dynamo Provider Plugin",
+   "n_boxes": 42,
+   "chars": 674,
+   "mean_score": 0.896,
+   "low_score_boxes": 1,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 85,
+   "file": "IMG_20261016_160740.jpg",
+   "heading": "How many tokens fit in 1 GB",
+   "n_boxes": 25,
+   "chars": 249,
+   "mean_score": 0.972,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 86,
+   "file": "IMG_20261016_161018.jpg",
+   "heading": "Goal 1: actual KV hit rate  theoretical max",
+   "n_boxes": 33,
+   "chars": 549,
+   "mean_score": 0.955,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 87,
+   "file": "IMG_20261016_161359.jpg",
+   "heading": "KV capacity for diff session cc",
+   "n_boxes": 57,
+   "chars": 736,
+   "mean_score": 0.963,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 88,
+   "file": "IMG_20261016_161625.jpg",
+   "heading": "Goal 2: decode concurrency must keep up",
+   "n_boxes": 63,
+   "chars": 716,
+   "mean_score": 0.864,
+   "low_score_boxes": 4,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 89,
+   "file": "IMG_20261016_161821.jpg",
+   "heading": "Hard affinity mode DEP 下的负载均衡问题",
+   "n_boxes": 21,
+   "chars": 388,
+   "mean_score": 0.958,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 90,
+   "file": "IMG_20261016_161943.jpg",
+   "heading": "Goal3: Agentic Routing Strategy",
+   "n_boxes": 33,
+   "chars": 482,
+   "mean_score": 0.961,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 91,
+   "file": "IMG_20261016_162206.jpg",
+   "heading": "Goal 4 - Clever Session Gateway - Thunder Agent",
+   "n_boxes": 25,
+   "chars": 316,
+   "mean_score": 0.968,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 92,
+   "file": "IMG_20261016_162300.jpg",
+   "heading": "ThunderAgent · how it decides",
+   "n_boxes": 41,
+   "chars": 586,
+   "mean_score": 0.959,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 93,
+   "file": "IMG_20261016_162412.jpg",
+   "heading": "Agentic Serving ThunderAgent Benchmarks",
+   "n_boxes": 31,
+   "chars": 326,
+   "mean_score": 0.957,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 94,
+   "file": "IMG_20261016_162454.jpg",
+   "heading": "ThunderAgent + KV offload",
+   "n_boxes": 29,
+   "chars": 336,
+   "mean_score": 0.965,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  },
+  {
+   "index": 95,
+   "file": "IMG_20261016_162604.jpg",
+   "heading": "Thunderagent in RL rollout - Dynamo VeRL Integration",
+   "n_boxes": 31,
+   "chars": 550,
+   "mean_score": 0.97,
+   "low_score_boxes": 0,
+   "orig_size": [
+    3264,
+    2448
+   ]
+  },
+  {
+   "index": 96,
+   "file": "IMG_20261016_162659.jpg",
+   "heading": "Assets & Future Work",
+   "n_boxes": 27,
+   "chars": 934,
+   "mean_score": 0.968,
+   "low_score_boxes": 0,
+   "orig_size": [
+    4064,
+    3048
+   ]
+  }
+ ]
+}

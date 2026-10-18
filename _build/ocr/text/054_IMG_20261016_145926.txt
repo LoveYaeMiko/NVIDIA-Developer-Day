@@ -1,0 +1,15 @@
+# 54  IMG_20261016_145926.jpg  (4064x3048)
+KV Cache Is a Serving Bottleneck
+KVmemorygrowslinearlywithcontextlength
+THREEBOTTLENECKS
+GPU capacity  HBM bandwidth  System l/o
+Every token rereads history  When capacity spills
+Fewer active requestsfit  KVmovesGPUCPUSSDremote
+active batch↓  moreHBMbytes-bandwidth-bound
+TPOT1  PrefillDecode notwork
+maxcontext↓
+SYSTEM TRADE-OFF
+Maintain concurrency  Maintain TTFT/ TPOT  Optimizes the global
+Fixed GPU budget  more GPUs· cost ↑  serving trade-off
+active requests ↓  offload / re-prefill ↑
+nVIDIA

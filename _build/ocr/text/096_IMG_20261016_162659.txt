@@ -1,0 +1,22 @@
+# 96  IMG_20261016_162659.jpg  (4064x3048)
+Assets & Future Work
+Assets  Ongoing Works
+Docs
+Flash Indexer-Dynamo Digest  -Simulation forAgenticInfra
+docs.nvidia.com/dynamo/digest/flash-indexer  Alsimulate,tuning engine,scheduling and kvmanagementbefore deploy
+ThunderAgentProgramScheduler-User Guide
+docs.nvidia.com/dynamo/user-guides/agents/thunder-agent-program-scheduler  ·Enhanceprogram awarerouting
+More advanced admission control:Thunderagentv2,deal with moderate cc
+PRs·ThunderAgent&SessionAware  Softaffinitymode +KVCR
+#11447 feat(router):ThunderAgent admission strategy
+#11787 refactor(router):policy-class admission  ProgrammaticKVblockhints(SGLang RFC#27574)etc.
+Dynamorouter 下发 Share/Prefetch/Demote/Pin/Retain softhint
+#11616 feat(admission):session-aware admission policy
+github.com/ai-dynamo/dynamo/pull/11447·/11787-/11616
+SS
+gin-agent-plugins
+com/ai-dynamo/agent-plugins/tree/main/pi-plugin
+t/verl-recipe/pul/126
+tecipe(verl-recipe)
+yerl-project/verl-recipe/tree/main/dynamo
+nVIDIA

@@ -1,0 +1,17 @@
+# 8  IMG_20261016_133702.jpg  (4064x3048)
+From a 32x4 Trick to a Full TMEM Transpose
+Human hardware intuitionxLLM-assisted mathematical modeling
+The observable starting point  The modeling leap- developed through iterative discussion with an LLM
+2xLDTM.16dp128b
++STTM.32dp32b  Treateach LDTM/registerpermutation /STTM asabitpermutation over
+16×8→32×4  thread bits,registerbits,TMEM-DPbits,and columnbits.
+Observe  Model with LLM  Search  Validate  Integrate
+16×8→32×4  bit permutations  Cayley/BFS  simulatorreplay  overlap-safe in-place
+copy-pattern trick  +generator constraints  32×32and16x32→32×16  +CuTe silicon kernels  component
++FC1epilogue
+hat the LLM contributed  What the developer contributed
+matical abstraction,search-statedesign,permutation generators,
+ematicexplorationbeyondwhatonedevelopercouldenumerate  Hardwareintuition,useful constraints,simulator/siliconvalidation,
+and thefinal overlap-awarekernel integration.
+Rec  t:16x32→32x16in4rounds/10TMEM instructionswithin thesearchedgeneratormodel.
+nVIDIA

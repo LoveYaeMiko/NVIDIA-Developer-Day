@@ -1,0 +1,18 @@
+# 51  IMG_20261016_144455.jpg  (4064x3048)
+STEP4I Balance CP Workloads
+Equal tokene Per rank does net mean egual werk on each rank  Througnput uplirtTIomSTEPA
+WHy? QK seore computatien seales quadratically with sequence length  (eempared witn the cenfig after STee 3)
+How;Balance the workloads with zigzag layout
+12.2%
+at IM context length
+R2  R3
+RO  RI  heavier  heaviest
+lightest  Hiahter
+indexer work per rank-R3 becomes the straggler and the others wait
+FTER  2xCP SEGMENTS.PAIRED DIAGONALL  NO measurable perf gain
+at64Kcontextlength
+R3  R2  R1  RO
+RO  R1  R2  R3
+RO takes thelightest and the heaviest
+HoWEVER:Thebalanceprocess also introduces extra overheads.
+DIA

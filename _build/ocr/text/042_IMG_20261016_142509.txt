@@ -1,0 +1,10 @@
+# 42  IMG_20261016_142509.jpg  (4064x3048)
+Context Length Drives Memory Policy
+More tokens per rank increase activation and buffer memory.
+64K Context  1M Context
+CP16  CP64
+4,096 tokens / rank  16,384 tokens / rank
+Fine-grained recompute + offload  Full recompute
+Moreheadroomfor CUDA Graphs  Higher activation pressure
+4x more tokens per rank at 1M, so we switch to a more aggressive memory policy.
+IDIA

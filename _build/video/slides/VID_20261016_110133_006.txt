@@ -1,0 +1,12 @@
+# VID_20261016_110133_006
+子，这就是NeMo TransFirstJob帮助NVIDIA了解这些问题，以便
+我们能够确保加速社区的AI开发让它
+Accelerated Computing
+One of Nemotron'stwo jobs
+Firstprinciples,acceleratingbeyond theGPu..
+·Interconnects-NVL72
+.Neuralnetarchitectures
+Hybrid sSM,MoE-training datasets
+.Optimizers
+·Post-training foragentic workloads
+·Brevity of LLMresponse

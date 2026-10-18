@@ -1,0 +1,21 @@
+# 91  IMG_20261016_162206.jpg  (4064x3048)
+Goal 4 - Clever Session Gateway - Thunder Agent
+Program状态机  全局控制回路每At=5s tick:resume→pause
+KVutil
+0.95pause國值
+97%  0.85resume上限
+REASONING
+0.80pausetarget
+toolcall  结果返回
+55%
+resume
+ACTING等tool
+标记，step未暂停
+pause
+Worker1  Worker2
+DKV已释放
+全局等待队列（paused）
+Resume:REASONING优先，装利余最大
+Pause最小ACTING优先  worker
+ACTING计入util时权重2（-t）等tool越久越先让位
+nVIDIA

@@ -1,0 +1,25 @@
+# 63  IMG_20261016_152301.jpg  (4064x3048)
+KVTC: Single-Request TTFT
+Smaller transfersreduceTTFTby5.5%to10.6%
+SETUP  GLM-5.1 FP8·8xHopper GPU,PCle Gen5·TP=8·vLLM+LMCache·Compression ratio:4.7x
+Prefill  VanillaPcletransfer  KVTCtransfer+decompression
+(sW)
+1000  -8.4%
+843ms
+800  773ms
+-5.5%
+600  591ms  558ms
+-7.4%  582
+407ms  514
+400  377ms
+-10.8%  390  355
+204ms  207  180
+200  182ms
+113  98
+200  197  201  203  261  259
+91  84
+uncompressed  KVTC  uncompressed  KVTC  uncompressed  KVTC
+baseline,  baseline  uncompressed  KVTC
+32K  64K  baseline  128K  baseline
+192K
+Prefill =TTFT-LMCache load latency, stacked components part  red wall-clock TTFT.

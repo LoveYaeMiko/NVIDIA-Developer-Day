@@ -1,0 +1,10 @@
+# 6  IMG_20261016_133541.jpg  (4064x3048)
+MegaMoE on Blackwell
+Largetilesize(256x256)
+Larger tile has more memory access budget
+Using256x256insteadof256x192
+Overlapping acc trick to achieve nearly 2-stage acc for 256x256
+512columns
+48  48forSF
+ACCO
+ACC1

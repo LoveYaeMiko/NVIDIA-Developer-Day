@@ -1,0 +1,20 @@
+# 86  IMG_20261016_161018.jpg  (4064x3048)
+Goal 1: actual KV hit rate  theoretical max
+GLM-5.2·AgentX replay·4 nodes/32 GPUs·DEP·concurrency 64/96/128
+KV hit rate (%)
+100  96.3  96.2  95.8
+Ideal vs actual hit rate
+Ideal =reusable ÷ input  91.9 (-3.9 pt)
+Actual =engine hits÷input  06
+Gap =recompute (capacity)
+80
+DEP·G22G1 retention=G2=37M
+G1 GPU·53GB/rank  30.6M(1,710GB)  70
+evict  refill
+37M(2,048GB)  60
+G2 Host·512GB/node  c64  c96  c128
+evict  refill  Ideal (o cache) Actual
+18M (1,024GB)
+c128: spills past G2 → G3 (1 TiB) holds 41 min of writes → L3 hit
+1.2%,recompute 8.2%→-3.9 pt·TTFT p95 290 s
+NVIDIA

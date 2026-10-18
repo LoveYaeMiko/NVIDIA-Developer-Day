@@ -1,0 +1,23 @@
+# 25  IMG_20261016_135654.jpg  (4064x3048)
+Optimization 5: All-Register Epilogue Fusion Chain
+WGMMAaccumulator(FP32)
+gate/updeinterleave
+WGMMAaCc(RMEM)→  interleave=8matches the acclayout-zero shuffle
+gate/up register deinterleave (interleave=8→ acc layout,zero shuffle —expanded  dequant
+nextslide)  scalarmultiply.readonce per tile
+·dequant(scalarmultiply,read once per task tile)  RMEM
+(registers)
+SwiGLU(exp2fastmath +rcp_approx-no slow exp/division)  SwiGLU
+exp2fastmath+rcp_approx-noslowexp/division
+optional:absorb topkweights(unlocks atomic-add combine)
+optional:absorb topk weight
+requant（precomputed reciprocal,multiply instead of divide)  unlocks the atomic-add combine
+·R2S (singlepass through SMEM)→TMA bulk store  requant toFP8
+Also on thispath  multiply byaprecomputedreciprocal
+wise amax:register accumulation+shuffle_sync_bfly quad reduction,no
+Mreduction  SMEM  R2S-—single pass through SMEM
+pressure:M=128 tile disabled due to spilling;swapABblockwise chunked;
+pert_shapefolded into compile-time constants  GMEM  TMA bulk store-fc1_output
+blockwise:per-token amax accumulated in registers+quad shuffle reduce -no SMEM reduction
+register pressure:M=128 tile disabled (spills): swapAB blockwise chunked
+DI

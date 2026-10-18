@@ -1,0 +1,209 @@
+{
+ "rows": [
+  {
+   "name": "NVIDIA DLI · 使用 OpenShell 和 NemoClaw 构建安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 47164,
+   "mtime": "2026-10-15 10:04"
+  },
+  {
+   "name": "NVIDIA DLI · 使用 OpenShell 和 NemoClaw 构建安全智能体_files",
+   "kind": "目录",
+   "files": 4,
+   "bytes": 301507,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "OpenClaw · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 647141,
+   "mtime": "2026-10-15 10:24"
+  },
+  {
+   "name": "OpenClaw · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "OpenShell · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 792403,
+   "mtime": "2026-10-15 10:24"
+  },
+  {
+   "name": "OpenShell · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "ReAct 循环 · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 418786,
+   "mtime": "2026-10-15 10:03"
+  },
+  {
+   "name": "ReAct 循环 · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "【原始字幕】录音机-20261015-0935-B 接口-英语.json",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 460386,
+   "mtime": "2026-10-15 23:54"
+  },
+  {
+   "name": "【原始字幕】录音机-20261015-1135-B 接口-英语.json",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 234602,
+   "mtime": "2026-10-18 12:38"
+  },
+  {
+   "name": "工作流 · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 930380,
+   "mtime": "2026-10-15 10:23"
+  },
+  {
+   "name": "工作流 · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "录音机-20261015-0935.wav",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 2073599276,
+   "mtime": "2026-10-15 23:10"
+  },
+  {
+   "name": "录音机-20261015-1135.wav",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 1026160172,
+   "mtime": "2026-10-15 23:07"
+  },
+  {
+   "name": "持续运行 · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 479614,
+   "mtime": "2026-10-15 10:24"
+  },
+  {
+   "name": "持续运行 · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "智能体 · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 759002,
+   "mtime": "2026-10-15 10:04"
+  },
+  {
+   "name": "智能体 · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "深入探索 · 安全智能体_files",
+   "kind": "目录",
+   "files": 14,
+   "bytes": 1064814,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "深度智能体 · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 706093,
+   "mtime": "2026-10-15 10:24"
+  },
+  {
+   "name": "深度智能体 · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "现代 CLI · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 493529,
+   "mtime": "2026-10-15 10:25"
+  },
+  {
+   "name": "现代 CLI · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "索引智能体 · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 971514,
+   "mtime": "2026-10-15 10:24"
+  },
+  {
+   "name": "索引智能体 · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "规模化工具 · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 892604,
+   "mtime": "2026-10-15 10:21"
+  },
+  {
+   "name": "规模化工具 · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  },
+  {
+   "name": "连接 NemoClaw · 安全智能体.html",
+   "kind": "文件",
+   "files": 1,
+   "bytes": 805995,
+   "mtime": "2026-10-15 10:24"
+  },
+  {
+   "name": "连接 NemoClaw · 安全智能体_files",
+   "kind": "目录",
+   "files": 12,
+   "bytes": 757083,
+   "mtime": "2026-10-18 12:18"
+  }
+ ],
+ "total_bytes": 3118092895,
+ "total_files": 166
+}

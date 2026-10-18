@@ -1,0 +1,14 @@
+# 59  IMG_20261016_151154.jpg  (4064x3048)
+TurboQuant: Tiled MMA Decode Attention on 4-bit KV
+Stream compressed tiles,build MmA operandson chip,carry softmax state
+GQA Q pack ·up to 16 heads  4-bit KV page fields  Double-buffered asyncload
+FWHT→FP16Qtile  codes + metadata  tilei:computeI tilei+1:load
+REPEATFOREACH64-TOKENKVTILE  one CTA handles one KV split
+K codes →centroid  QKT Tensor Core MMA  FP32 RUNNING STATE
+direct MMA fragment  Knorm correction  maxscore
+Online softmax·rescale across tiles  exp sum
+Vcodes + scale/zero  weighted output
+FP16 shared-memory tile  P x V Tensor Core MMA
+carried into the next tile
+KV split O  KV split1  KV split N  Stablemerge→BF16 output
+https://github.com/vlm-pro  /53060  nVIDIA

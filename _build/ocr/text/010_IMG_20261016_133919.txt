@@ -1,0 +1,14 @@
+# 10  IMG_20261016_133919.jpg  (4064x3048)
+CuteDSLMegaMoEonBlackwell
+MEMBAR Synchronization optimization-batch-commit
+The batch-commit:merging multiple MEMBARs into one
+MEMBAR canstall requests
+A tunable trade-offbetween fewer MEMBARs and higher latency
+Dispatch to FC1:batch of 2 flag update
+Dispatch  Load token&storelocal  Load token&storelocal  MEMBAR  REDG  REDG
+Computation  waitflag
+FC2 to Combine:batch of 4 flag update
+Act  STG  Act  STG  Act  STG  Act  STG  MEMBAR  REDG  REDG  REDG  REDG
+waitflag  Combine
+nVIDIA
+ese

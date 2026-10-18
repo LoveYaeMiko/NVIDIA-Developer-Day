@@ -1,0 +1,135 @@
+{
+ "source": "VID_20261016_110211.mp4",
+ "name": "VID_20261016_110211.mp4",
+ "size": 44774199,
+ "mtime": 1792119731,
+ "updated_at": "2026-10-18T15:11:10",
+ "chunks": [
+  {
+   "index": 0,
+   "path": "转写结果\\_chunks\\VID_20261016_110211\\VID_20261016_110211_part001.wav",
+   "offset_ms": 0,
+   "duration_ms": 7492,
+   "size": 239822,
+   "temp": true,
+   "order_id": "DKHJQ20261018150904444KetJ39IPNchKY4MD",
+   "sig_random": "lVwoNVz0sCjzroyD",
+   "status": "done",
+   "fail_reason": "",
+   "segments": [
+    {
+     "start": 0,
+     "end": 7470,
+     "speaker": "0",
+     "text": "To open technologies for AI NVIDIA is not building open technologies for AI uh just because it's fun or because.",
+     "words": [
+      {
+       "w": " To",
+       "s": 130,
+       "e": 400
+      },
+      {
+       "w": " open",
+       "s": 410,
+       "e": 880
+      },
+      {
+       "w": " technologies",
+       "s": 890,
+       "e": 1520
+      },
+      {
+       "w": " for",
+       "s": 1530,
+       "e": 1640
+      },
+      {
+       "w": " AI",
+       "s": 1650,
+       "e": 2440
+      },
+      {
+       "w": " NVIDIA",
+       "s": 2450,
+       "e": 2880
+      },
+      {
+       "w": " is",
+       "s": 2890,
+       "e": 3120
+      },
+      {
+       "w": " not",
+       "s": 3130,
+       "e": 3400
+      },
+      {
+       "w": " building",
+       "s": 3410,
+       "e": 3800
+      },
+      {
+       "w": " open",
+       "s": 3810,
+       "e": 4040
+      },
+      {
+       "w": " technologies",
+       "s": 4050,
+       "e": 4720
+      },
+      {
+       "w": " for",
+       "s": 4730,
+       "e": 4840
+      },
+      {
+       "w": " AI",
+       "s": 4850,
+       "e": 5480
+      },
+      {
+       "w": " uh",
+       "s": 5490,
+       "e": 5560
+      },
+      {
+       "w": " just",
+       "s": 5570,
+       "e": 6080
+      },
+      {
+       "w": " because",
+       "s": 6090,
+       "e": 6360
+      },
+      {
+       "w": " it's",
+       "s": 6370,
+       "e": 6600
+      },
+      {
+       "w": " fun",
+       "s": 6610,
+       "e": 7120
+      },
+      {
+       "w": " or",
+       "s": 7130,
+       "e": 7200
+      },
+      {
+       "w": " because. ",
+       "s": 7210,
+       "e": 7400
+      }
+     ]
+    }
+   ],
+   "language": ""
+  }
+ ],
+ "finished_at": "2026-10-18T15:11:10",
+ "segment_count": 1,
+ "duration_ms": 7659
+}

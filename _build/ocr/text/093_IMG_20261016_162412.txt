@@ -1,0 +1,16 @@
+# 93  IMG_20261016_162412.jpg  (4064x3048)
+Agentic Serving ThunderAgent Benchmarks
+SWE-Bench Lite·GLM 5.2·8x NVIDIA Hopper GPUs·session concurrency = 32
+TTFTp50(ms)↓  TPOTp50(ms)↓  gen吞吐均值（tok/s)↑
+e2e均值（s)↓
+116.3  502
+847  837  1866  112.5
+1729
+305
+55.9  241
+409
+250
+B·TA  A·LRU  SLRU  B·TA  A·LRU  SLRU  B·TA  A·LRU  SLRU  B·TA
+A·LRU
+时延：e2c均值-51%·TTFTp50-87%·TPOT减半|吞吐：均值×1.6
+nVIDIA

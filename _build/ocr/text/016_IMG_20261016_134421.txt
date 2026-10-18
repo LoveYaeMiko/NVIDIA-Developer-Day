@@ -1,0 +1,15 @@
+# 16  IMG_20261016_134421.jpg  (4064x3048)
+MegaMoEonBlackwell
+Support for low-precision combine data types
+·MXFP8andNVFP4toreduceNVLINK traffic  data  scale  block
+format
+Precision doesn'tregressonsomemodels  bf16  bf16
+baseline the only format the in-kernel REDGpath can atomic-add
+·Aseparate topKreductionkernel aftermegakernel  FP8E4M3  E8M0  32
+32e4m3xe8m0
+standard MxFP8-power-of-two scale
+16e2m1xbf16  NVFP4E2M1  bf16amax  16
+full-precision amaxper 16 elements -recovers accuracy the E8M0 rounding loses
+Mega Kernel  TopK Reduce
+Kernel
+ALDONOTDISTRIBUTE.  nVIDIA

@@ -1,0 +1,17 @@
+# 58  IMG_20261016_151001.jpg  (4064x3048)
+TurboQuant: Layout Compressed KV for Decode
+Quantize+packdirectly into alignedpagefieldsforMMA decode
+TOKEN-INTERLEAVED  PAGE-LOCALFIELDPLANES
+D=128·134Bpertoken  Field widths schematic  16tokens·2,144Bperpage/KVhead
+TokenO  K codes  16×64B=1,024B
+Kcodes  Knorm  Vcodes  Vscale  Vzero  Vcodes  16×64B=1,024B
+64B  2B  64B  2B  2B
+Knorms  16×2B=32B
+Token1
+K codes  Knorm  Vcodes  Vscale  Vzero  Vscales  16×2B=32B
+64B  2B  64B  2B  2B
+Vzeros  16×2B=32B
+134B stride·V codes begin atbyte 66
+NCU·Useful bytes per 32B load sector
+3.68B→29.75B
+https://github.com/vm-project/vilm/pull/53060  nVIDIA

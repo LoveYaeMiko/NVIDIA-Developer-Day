@@ -1,0 +1,22 @@
+# 38  IMG_20261016_141929.jpg  (4064x3048)
+Model Features Drive Optimizations
+MTP Modules  MTPLoSs  1.1.6T total/ 49B active:Model states limit memory
+headroom for faster execution.
+Prediction Head  IMton
+2.Hybrid attention:Different attention paths require
+TransformerDlockxL  tailored kernel optimizations.
+Post-block Mixing
+00000
+DeepSeekMot  3.Fine-grained MoE:Expert compute,communication,
+ResidualMixing  and buffers drive performance.
+Pre-DlockMixing  00000
+Post-DlockMiking  4.Causal long context:Equal token counts can still m
+unequal workloads.
+Indexer  CSA/HCA
+Reldual Midng
+Pre-DlockMixing
+Ermbedding
+InputTokens
+ThemodelgraphisfromDeepSeek-V4techreport.
+VIDIA
+nVIDIA

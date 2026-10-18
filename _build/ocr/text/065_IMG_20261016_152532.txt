@@ -1,0 +1,14 @@
+# 65  IMG_20261016_152532.jpg  (4064x3048)
+nvCOMP-ANS: Lossless KV Cache Transfer
+GPu compressionreduces data movement during offload and reload
+GPU  CPU memory  SSD
+D2H/H2D  Compressed  Write/read  Compressed
+Raw KV  nvCOMP ANS  KV Blocks
+BF16/FP16  Compress/  payload
+/FP8  decompress  Compressed  Host gather/  Fewerbytesperread/write
+bytes  Per-chunk size metadata  scatter  Fixed-size storage slots
+ExactKV recovery  Overlapped execution  FlexkV integration
+Lossless entropy coding  Batched GPUcodecwith  MHA/GQA/MLA/DSA
+restorestheoriginalvalues  double-bufferedtransfers  TP/DP support
+Fewer bytes move between tiers. CPU and SSD retain fixed-size cache slots.
+https://developer.nvidia.com/nvcom

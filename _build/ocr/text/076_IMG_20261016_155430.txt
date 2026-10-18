@@ -1,0 +1,21 @@
+# 76  IMG_20261016_155430.jpg  (4064x3048)
+性能数据
+ACHIEVEDVS.OFFERED THROUGHPUT (HIGHERIS BETTER)
+50ON  Naive  vO.1Radix
+200M  Concurrent Radi Tree  170M  385K  4M
+--Radn Troo
+-mertelnde
+100M  一一Nabe Nested Map
+GOIACMR
+50M
+Flash  提升
+LGM  170M  440x / 42x
+G.1A
+1.0M  810K  Benchmark setup
+500k  385K  ·24-core Arrow Lake 285Kdesktop
+200k  ·MooncakeFAsT'25 trace +mockengine
+·16,384 GPU blocks, prefix caching enabled
+100k  2e8k  5.0M  109  20M  Ser  100M  2009  508M  1.0G  2.0G  ·24 concurrent event-processing threads
+Ted Throughput(blockops/s)
+shIndexer的价值不只在“知道缓存在哪里”，还在“这个查询足够快”，足以支撑大规模请求
+NVIDIA

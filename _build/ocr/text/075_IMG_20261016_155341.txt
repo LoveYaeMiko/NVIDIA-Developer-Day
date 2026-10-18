@@ -1,0 +1,30 @@
+# 75  IMG_20261016_155341.jpg  (4064x3048)
+GEN06/06  THROUGHPUT
+Positional Indexer + Jump Search  170M  blockops/s
+第六版也就是FlashIndexer：不再沿树一层层走，而是按positlon随机访问，并用checkpoint跳过大片共享前缀。
+这就是最后的大院：如果第0、64、128个block邮还匹配，就不必检查中间每一个block  为什么更悦
+KVcache  index[potitionUocalhash]可以直接查
+为什公要复用  某个深度，不需要从root一路走到那个深
+度。
+Routerquestion  Flash Indexer: position -> local_hash -> SeqEntry
+碰撞怎么处理
+大多数slot是Single，直接命中；只有出
+现Multi碰撞时，才lazy计算
+Twohashes  sequence_hash消歧。
+便宜发调
+Vec  DashMap  SeqEntry.:Single  SeqEntry:Multi  lazy seq_hash  jumpsearch
+按Jump_size跳checkpoint。全员仍命
+NestedDict  中就跳过整段；有人掉队时，再回扫那一
+通个wer本  小段找掉队位置。
+RustActor
+单队列保正路  64  128  192  256  320  384  448  512  576  640
+Inverted Index
+按biock反置wrker
+Radlx Tree
+all active workers still match → skip the whole interval  lookback
+ConcurentRadlx
+课共行，写保厚
+eckpoints instead of D pointer hops;collision path stays lazy
+Flash Indexer  查询成本
+按位置旗赠置  O(D/J+W)
+暂停  新版节类更慢：先讲3个背最，再讲6代优化。空格播放/暂停，←/→切换。

@@ -1,0 +1,21 @@
+# 95  IMG_20261016_162604.jpg  (3264x2448)
+Thunderagent in RL rollout - Dynamo VeRL Integration
+Uni-Agent SWE-Bench·Qwen3-Coder-30B-A3B-Instruct 8xNVIDIA Hopper GPUs·rollout-only
++16.5%VSTA  +6.8%
+DefaultLB
+3000  DynamoPython TA
+DynamonativeSessionAware
+2500
+2000
+1500-
+1000
+DefaultLB
+collapse.
+500
+high-concurrencyregu
+80  96  128  256  384  512
+32  64
+Agent admissionconcurrency(cc)
+Dyna  SessionAware(TA based)canbe leveraged in agenticRLrollout:througnputdrivenbostticttpoihimit
+Deliver  er with VeRL:github.com/verl-project/verl-recipe/tree/main/dynamo
+Con  ingyi Yang,Jinyan Chen,Aichen Feng,Yilin Hou etc.

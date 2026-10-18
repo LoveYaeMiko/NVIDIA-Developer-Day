@@ -1,0 +1,10 @@
+# 34  IMG_20261016_141107.jpg  (4064x3048)
+Summary
+Whatwasbuilt
+·Onepersistentkernel fusing dispatch+FC1/SwiGLU+FC2+combine(sixmodes)
+·Two complementarykernel variants(non-swap / swapAB)+two quantization modes（per_tensor / blockwise)
+·30+kernel/communication/scheduling optimizations,with token-bucketheuristicsfreezing the sweep winners
+nVID
+nVIDIA  VIaIU
+NVIDIA
+nVIDIA

@@ -1,0 +1,16 @@
+# 28  IMG_20261016_140037.jpg  (4064x3048)
+Optimization 7: Folding the Producer Warpgroup + Register
+Refit
+wholewarpgroup(128threads)disappears
+Register refit: the 4 warps of a warpgroup share one setmaxnreg value — producer side unified to 48, everything left goes to the
+epilogue:224 with two.WGs,256with one
+· Effect: two-WG cooperative becomes viable; blockwise 512-32768 all switch to M64N256, +11..+30%, geomean +15.8%
+. Under the old layout the same tile was 14% slower: the layout, not register tuning, makes the two-WG mode usable
+producer warpgroup-128 threads+registers  dispatch warpgroup ——only warp O is active
+before  epilogue/WGMMAWGx1-2  TMA-A  TMA-B  sched  idle  dispo  disp1  disp2  disp3
+epilogue/WGMMA WGx1-2  dispO  TMA-A  -128threadsperCTA
+TMA-B  sched  registercap=65536/threads rises
+→epilogue gets 224(twoWGs) /256(oneWG)
+dispatch warpgroup now hosts the producers
+All 4 warps ofa warpgroup share one setmaxnreg value:producer side unified to48,everything left goes to the epilogue-this iswhatmakes two-WGcooperativeM64N256viable
+nVIDIA

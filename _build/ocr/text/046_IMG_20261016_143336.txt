@@ -1,0 +1,22 @@
+# 46  IMG_20261016_143336.jpg  (4064x3048)
+STEP 2:Optimize the Hybrid Attention
+OptimizeThreeImportantModules intheDeepSeek-V4Hybrid Attention
+Sparse Attention  Indexer  Group-O Projection
+Left-align thevalid indices.  Skip the invalid partfrom causal mask.  Fuse into a batchedGEMM.
+Thekernels skips invalid slots.  Use low-precision on theheavyQKmatmul.  EnableFP8computation.
+BEFORE-SCAN EVERY SLOT  BEFORE -MATERIALIZE,THEN SELECT  BEFORE-G SEPARATE LAUNCHES
+indexer  window  Top-K  Attention output[S,B,heads xdim],split into G groups
+Q·K
+40  BF16  second pass  GO  G1  G2  G3  G4  G5  G6  G7
+Full scorematrixS
+OnequeryrowofKVindices--1 is invalid  (S/4)-mostly
+unused  G=8 small GEMMs,one kernel launch each
+AFTER - SCAN THE FIRST LONLY  AFTER-ONE BATCHED GEMM
+AFTER- SCORE AND SELECT IN ONE KERNEL
+validprefixL  ignored
+Q·K  Fused score+  Candidates  AllG groupsmultiplied together-onekernel
+40
+quantized toFP8  Top-K  +top-k
+topk_length =L-no holes left to walk over  nothingelse
+materialized  Projectback to hidden
+Only the selected scores are ever written out

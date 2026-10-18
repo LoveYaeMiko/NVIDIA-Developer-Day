@@ -1,0 +1,10 @@
+# VID_20261016_110133_003
+Accelerated Computing
+Firstprinciplesacceleratingbeyond theG.
+nVIDIA
+·Interconnects-NVL72
+·Neuralnetarchitectures
+Hybrid sM,MoE-training datasets
+·Post-training foragentic workloads
+.Optimizers
+·Brevity of LLMresponse

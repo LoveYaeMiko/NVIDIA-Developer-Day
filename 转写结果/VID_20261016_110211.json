@@ -1,0 +1,56 @@
+{
+  "source": "VID_20261016_110211.mp4",
+  "duration_ms": 7470,
+  "language": "autodialect",
+  "orders": [
+    "DKHJQ20261018150904444KetJ39IPNchKY4MD"
+  ],
+  "chunks": [
+    {
+      "index": 1,
+      "offset_ms": 0,
+      "duration_ms": 7492,
+      "order_id": "DKHJQ20261018150904444KetJ39IPNchKY4MD"
+    }
+  ],
+  "text": "To open technologies for AI NVIDIA is not building open technologies for AI uh just because it's fun or because.",
+  "segments": [
+    {
+      "index": 1,
+      "start": 0,
+      "end": 7470,
+      "speaker": "",
+      "text": "To open technologies for AI NVIDIA is not building open technologies for AI uh just because it's fun or because."
+    }
+  ],
+  "cues": [
+    {
+      "index": 1,
+      "start": 130,
+      "end": 2440,
+      "speaker": "",
+      "text": "To open technologies for AI"
+    },
+    {
+      "index": 2,
+      "start": 2450,
+      "end": 4040,
+      "speaker": "",
+      "text": "NVIDIA is not building open"
+    },
+    {
+      "index": 3,
+      "start": 4050,
+      "end": 6080,
+      "speaker": "",
+      "text": "technologies for AI uh just"
+    },
+    {
+      "index": 4,
+      "start": 6090,
+      "end": 7400,
+      "speaker": "",
+      "text": "because it's fun or because."
+    }
+  ]
+}

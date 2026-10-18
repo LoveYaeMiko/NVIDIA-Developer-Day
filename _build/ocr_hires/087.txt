@@ -1,0 +1,59 @@
+# 087 hi-res re-OCR of IMG_20261016_161359.jpg (4064x3048)
+[0.93] KV capacity for diff session cc
+[0.95] GLM-5.2·AgentXworkload·4nodes/32GPUs·DEP
+[0.91] KV to keep = sessions x context xheadroom
+[0.92] retention moves to G3-in-flight  150K·session peak300k·57KB/token·headroom ≈1.5x·router sees G1 +G3only
+[0.96] G2 host·per node
+[0.96] G2 host·per node
+[0.98] externallinker·nohost
+[0.99] G3pool
+[0.87] In flight(HBM) ·
+[0.92] KVtokeep·300Kx
+[0.96] G2 host·per node
+[0.96] buffer_only.
+[0.90] holds KV to keep
+[0.98] Sessions cc
+[0.94] 150K each
+[1.00] 1.5
+[0.97] cache mode·today
+[0.99] staging only
+[0.99] tier
+[1.00] 2.4M
+[1.00] 7.2M
+[1.00] 460GB
+[0.93] ≈35GB
+[1.00] 400GB
+[1.00] 16
+[0.97] (in-flight /node)
+[0.95] DRAM-L3segment
+[0.91] (135GB)
+[0.90] (400GB)
+[1.00] 14.4M
+[0.98] 70GB
+[1.00] 810GB
+[1.00] 32
+[1.00] 4.8M
+[1.00] 490GB
+[0.94] (in-flight /node)
+[0.95] DRAM→L3 segment
+[0.92] OGB)
+[0.93] (810GB)
+[0.89] ≈135GB
+[1.00] 1610GB
+[1.00] 64
+[0.94] 6M
+[1.00] 28.8M
+[1.00] 550GB
+[0.96] (1,610GB)
+[0.96] (in-flight /node)
+[0.99] DRAM→L3segment
+[1.00] 57.6M
+[1.00] 650GB
+[0.89] ≈270GB
+[0.99] 3230GB
+[1.00] 128
+[0.92] (in-flight/node)
+[0.99] DRAM→L3segment
+[0.99] GB
+[0.89] (3,230 GB)
+[0.90] nVIDIA

@@ -1,0 +1,14 @@
+# 11  IMG_20261016_133933.jpg  (4064x3048)
+CuteDSL MegaMoE on Blackwell
+MEMBAR Synchronization optimization -aysnc UREDGR
+Async atomic add instruction with built-in MEMBAR
+MEMBARisblocking  red.async.release.gpu.global.add.u32 [addr], b;
+UREDGR is non-blocking
+Before
+Dispatch  Load token& store local  Load token&store local  MEMBAR  REDG  REDG
+Computation  waitflag  L2
+Aft
+patch  Load token&storelocal  Loadtoken&storelocal  Loadtoken&storelocal
+ion  waitflag
+AsyncUREDGR
+nVIDIA

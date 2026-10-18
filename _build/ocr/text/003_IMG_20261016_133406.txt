@@ -1,0 +1,16 @@
+# 3  IMG_20261016_133406.jpg  (4064x3048)
+MegaMoE on Blackwell
+Challenges from fusion
+·Fusion is not 'free
+· Communication and compute in the same SM
+Comm borrows smem from compute
+· Comm traffic can interfere mainloop TMA effiency.
+·NVFP4 halves L1/L2 time while combine data is always bf16, NVLink traffic will pay more cost
+Interferencebetween
+computeandcomm  GEMM
+Dietch  Dispatch  efficiency
+Compu ion  L1  L2  L2  L1  L2  L2
+Act  Act  Combine  Combine  Act  Act  Combine  Combine
+NVLINK
+efficiency
+nv

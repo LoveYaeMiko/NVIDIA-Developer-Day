@@ -1,0 +1,11 @@
+# 79  IMG_20261016_155812.jpg  (4064x3048)
+SLAs of New Agentic Era
+Traditional Inference  Agentic Inference
+TTFT-Time to First Token  Trajectory E2E latency
+TPoT -Time per Output Token  Time toFirstAnswerToken
+RequestE2Elatency  System throughput
+满足SLA的千卡QPS  AA-AgentPerf:SLo下最大并发agent数
+Global KVcache hitrate>90%
+以单次请求为中心  HiCache/FlexKV,P2PKVreuse
+API price一SLA 下并发session成本
+核心变化：单次请求指标→trajectory / session级系统SLA

@@ -1,0 +1,19 @@
+/* Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+ * SPDX-License-Identifier: Apache-2.0 */
+.activity-sync-details { border-top: 1px solid var(--bd, #555); padding-top: .8rem; }
+.activity-sync-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-top: 1rem; }
+.activity-sync-metrics > div { padding: .75rem; background: var(--e2, #222); border: 1px solid var(--bd, #555); border-radius: 8px; font-size: .8rem; }
+.activity-sync-metrics strong { display: block; margin-top: .3rem; font-size: 1.35rem; color: var(--tx, #eee); }
+.activity-sync-details dl { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; font-size: .8rem; }
+.activity-sync-details dd { margin: 0; overflow-wrap: anywhere; }
+.activity-sync-details ol { padding: 0; list-style: none; max-height: 13rem; overflow: auto; }
+.activity-sync-details li { border-bottom: 1px solid var(--bd, #555); padding: .5rem 0; }
+.activity-sync-details li strong, .activity-sync-details li span { display: block; font-size: .8rem; }
+.activity-sync-details li span { margin-top: .2rem; color: var(--td, #bbb); }
+.activity-sync-details li[data-outcome="rejected"], .activity-sync-details li[data-outcome="network"], .activity-sync-details li[data-outcome="timeout"], .activity-sync-details li[data-outcome="invalid"] { border-left: 3px solid var(--err, #ed8c80); padding-left: .5rem; }
+.activity-sync-details textarea { box-sizing: border-box; width: 100%; min-height: 12rem; margin-top: .5rem; background: var(--e2, #222); color: var(--tx, #eee); font: .75rem/1.5 monospace; }
+.activity-sync-details button { padding: 8px 10px; border: 1px solid var(--bd, #555); border-radius: 6px; background: transparent; color: var(--tx, #eee); font: inherit; font-weight: 600; cursor: pointer; }
+.activity-sync-details button:focus-visible, .activity-sync-details summary:focus-visible { outline: 2px solid var(--g, #76b900); outline-offset: 3px; }
+@media (max-width: 600px) {
+  .activity-control-panel { position: fixed; top: 4.25rem; left: 1rem; right: 1rem; width: auto; max-height: calc(100dvh - 5.25rem); box-sizing: border-box; }
+}

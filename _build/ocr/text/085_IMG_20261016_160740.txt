@@ -1,0 +1,13 @@
+# 85  IMG_20261016_160740.jpg  (4064x3048)
+How many tokens fit in 1 GB
+GLM-5.2·MLA+DSA·FP8KV·78layers·4nodes/32GPUs
+55.9 KB  MLA43.9  DSA9.8
+/token  2.3
+1GB  Per node·8 GPUs  4nodes
+577GB
+TP8  2.2K  1.26M  5.0M
+8xreplicated  ~33sessions
+427GB
+DEP  17.9K  7.6M  30.6M
+no replication  ~2o0 sessions
+nVIDIA

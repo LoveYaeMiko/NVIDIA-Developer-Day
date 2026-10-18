@@ -1,0 +1,32 @@
+# 83  IMG_20261016_160511.jpg  (4064x3048)
+AgentX Dashboard
+BENCHHARK CONFIG  CHART CONFIG
+MODE  XMETRIC  YMETRIC  logx
+BENCH  Output throughput (tok/s)
+agentpert  accuracy  AIl  Per-user speedp50 (tok/s/user)  logY
+agentx
+CONPARE HISTORY  Reset  Copy llink
+CONFIGURATION  RUN DATE  VALIDITY
+AIl  Latest per configuration and concurrency  Everything
+Performance  Trends  Capacity  Runs
+unknown·mvp·aff（1)
+unknown  ·official·aff(2)
+SGLang drect·agg·1xTP8·radix
+800  44c7ebac(2)
+c96  C64  c22a80c4(2)
+C48  Dynamo·agg·SGLang·4xTP8·
+600  c32  HiCacheL2+Mooncake L31Mctx·bigKV
+pool
+3c53ab66(2)
+3c53ab66·mvp·noaff (2)
+400  3c53ab66·official-aff（4)
+Dynamo·agg·SGLang·4xDEP8·
+HiCache L2+MooncakeL3 1Mctx-bigKV
+200  pool
+d22a02Ba·officlal·aff (7)
+Dynamo·disagg 2P2D·SGLang·
+4xDEP8·HiCache L2+Mooncake L3+
+rdma-rails 1Mctx·bigKV pool
+20  30  40  50  60  70  BO  213a5444·official·aff（4)
+Per-user speed p50 (tok/s/user)  092c10c0·official·aff (2)
+nVIDIA

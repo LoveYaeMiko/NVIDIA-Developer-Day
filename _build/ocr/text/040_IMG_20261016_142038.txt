@@ -1,0 +1,13 @@
+# 40  IMG_20261016_142038.jpg  (4064x3048)
+Choose the Parallel Layout
+General Guidance on Parallel Tuning
+1.Model size guides the initial layout.
+Wecan estimate the staticpartbudget and choose an initial layout.
+Reserve headroom for activations andbuffers.
+Prefer EP for experts, use PP across domains, and add TP if necessary.
+2.Context length guides CP.
+Context length affects the activation and buffer size.
+3.Topology guides placement.
+Keep communication-heavy groups (such as EP, TP, and CP) within NVLink domains where practical for better throughput.
+For our 256-GPU DeepSeek-V4-Pro runs, we use PP4 and EP64 as the initial layout.
+VIDIA

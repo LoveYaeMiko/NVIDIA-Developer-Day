@@ -1,0 +1,15 @@
+# 13  IMG_20261016_134107.jpg  (4064x3048)
+MegaMoEonBlackwell
+Threemodesforcombinetraffic
+Decouplecombinefrom epiloguewarps
+Backpressure from NVLINK still blocks the TMALDG issue
+Mode 2:reuse dispatch warp group(to smooth the combine traffic overkernel lifetime)
+Dispatch  Dispatch  Combine
+Computation  L2  L2  L2  L2  L2  L2
+Epilogue  Act  Act  STG  STG  Act  Act  STG  STG  Act  Act  STG  STG
+Mode standalone combine warp group (further overlap dispatch with combine)
+ispatch  Dispatch
+tion  L2  L2  L2  L2  L2  L2
+pgue  Act  Act  STG  STG  Act  Act  STG  STG  Act  Act  STG  STG
+bine  Combine
+nVIDIA

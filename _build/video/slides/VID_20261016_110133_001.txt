@@ -1,0 +1,13 @@
+# VID_20261016_110133_001
+用相同的硬件，我们将预训练加速了4倍，因为我们的预训练
+变得更加智能我们在预训练方面做了大量工作
+nVIDIA
+ated Computing
+or'stwojobo
+ples,accelerating beyond the G.
+connocts-NVL72
+erics and Sparsity-pretrain in NVFP4
+alnet architectures
+d ssM,MoE-training datasets
+training for agentle workloads
+Λityof LLMresponse

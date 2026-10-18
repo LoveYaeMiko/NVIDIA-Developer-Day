@@ -1,0 +1,11 @@
+# 71  IMG_20261016_155023.jpg  (4064x3048)
+Flash Indexer 在链路里做什么
+它不生成token，也不转发请求；它回答一个路由问题：哪里已经有缓存？
+1.请求输入  2.实时缓存地图  3.查询输出  4.Router决策
+promptblocks  Store/Removeevents  Worker C:4  优先选择缓存最长、负载
+block_hashes:hoh1h2  持续更新每个worker的  Worker A:2  合适的worker
+h3...  cached prefix  Worker B:0
+为什么这很关  FlashIndexer的目标
+查询慢，会按  伏态旧，会错过可复用的KV  在高并发读写下，仍然快速返回“谁命中最多”，让prefix
+cacheo  cache真正参与生产路由。
+nVIDIA

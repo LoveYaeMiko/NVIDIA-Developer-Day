@@ -1,0 +1,25 @@
+# VID_20261016_105447_041
+NeMoTron的第一项工作实际上是关于NVIDIA，而是我们如何思考
+加速人工智能的端到端问题，让我们来看几个例子
+AcceleratedComputing
+Firstprinciples,acceleratingbeyond the G..
+·Interconnects-NVL72
+NeMo Tron的？
+·Neural net architectures
+·Numerics and Sparsity-pretrain in NVFP4
+加速人工智
+.Optimizers
+Hybrid sSM,MoE-training datasets
+·Post-training foragenticworkloads
+One ofNemotror
+Accelera'
+·Brevity of LLM response
+nVIDIA
+First principi
+.Interconn
+.Numerics
+·Hybrid SSN
+·Neural net
+.Optimizers
+·Brevityof
+.Post-train

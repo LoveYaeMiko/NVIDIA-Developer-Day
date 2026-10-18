@@ -1,0 +1,15 @@
+# 22  IMG_20261016_135216.jpg  (4064x3048)
+Optimization 2: Task-tile Ping-pong
+·Two physical warpgroups consume alternating tasks from the task stream
+·Two PipelineOrder barrier sets: math_wg_order serializes WGMMA issue rights, epi_wg_order serializes epilogue ownership
+·While WG-A holds the tensor cores, WG-B runs the previous task's SwiGLU/quant/store - epilogue latency is fully hidden
+·Skipped peer tasks advance via advance_pipeline_state,pure state bookkeeping without touching mbarriers
+·Retire-handoff follows the CUTLASS order:tail async stores →publish done flag →hand over epilogue ownership→then wait for the  descriptortwo steps ahead
+time-
+WG-A  WGMMA tasko  epilogue tasko  WGMMAtask2
+wait  epilogue task2
+math order  epiorder
+wait(math order)  WGMMA task1  epilogue task1  wait  WGMMAtask3
+WGMMA never overlaps across the two WGs (the tensor core is exclusive);one WG's epilogue overlaps the other WG's WGMMA -epilogue latency is hidden
+PipelineOrderbarriers:mathorderserializesWGMMAissue,epi orderserializes  (swapABM=128),
+nVIDIA

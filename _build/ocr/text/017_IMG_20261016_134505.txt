@@ -1,0 +1,17 @@
+# 17  IMG_20261016_134505.jpg  (4064x3048)
+Overall Architecture: One Kernel Does Everything
+·Dispatch:4 dispatchwarpspull tokens from everyrank intoa localpool via theNvSHMEM symmetricheap
+·FC1: the pool's FP8 view is consumed directly as the GEMM activation -zero copy, zero intermediate kernels
+·FC2:consumes FCl output through a GMEM counter handshake
+Combine: Fc2 results are written back to the source rank (three executorsx two reduce placements = six modes)
+vs. baseline: communication warps and GEMM warps are co-resident and concurrent; tokens are computed as soon as they arrive
+4dispatchwarpspull  zero-copyFP8view  TMA store  fc1_done_counter
+handshake
+Peerranks  11_token_buffer  FC1WGMMA
+NVSHMEM  local FP8pool  +SWiGLU  fc1_output  FC2WGMMA
+symmetric heap  (GMEM)  +FP8requant  workspace(GMEM)  BF16 output
+NVLink
+Combine-writebacktosourcerank
+epi-warp STG/REDG or bulkpush
+es live in onepersistentkernel:dispatch/GEMM/ token-backwarps areco-resident-a token iscomputed as soon as itarrives
+nVIDIA

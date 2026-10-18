@@ -1,0 +1,26 @@
+# 60  IMG_20261016_151529.jpg  (4064x3048)
+TurboQuant:Decode Performance
+Higher throughput at long context lengths
+vLLMTurboQuant  FlashAttention(BF16KV)
+Ours  Blackwell·FA4
+Ampere·FA2  Hopper·FA3
+Shared y-axis·Decode throughput (tokens/s)  1.28x  FAOOM
+6,000  FAOOM  FAOOM
+FAOOM  FAOOM
+5,000
+3.27x
+4,000  1.25x
+1.27x
+3,00G  2.52x  4.54x
+2.74x  4.84x
+2,000  3.71x  4.03x
+3.99x  4.42x
+1,000
+16K  32K  128  4K  16K  32K
+4K  16K  32K  128  4K
+128  Cached contextlength
+Qwen3-8B,BS=32,cuda graph,decode only  128output tokens·excludes prefill,TTFTand firsttoken
+FA OOM=capacity-skipped·independent GPu/softwareruns,cross-GPU throughput directional
+nVIDIA
+https://lgithub.com/llm-project/vlm/pul/53060
+nVIDLA  nve

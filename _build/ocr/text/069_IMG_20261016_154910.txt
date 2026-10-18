@@ -1,0 +1,9 @@
+# 69  IMG_20261016_154910.jpg  (4064x3048)
+KVRouter在生产环境中被广泛验证
+FlashIndexer是支撑准确路由的基石
+Baseten  Meituan
+2XfasterTTFT&1.6XTPSwithKV  2xfasterTTFT&+2O%moreKVcache
+aware routing  hit with KV routing
+https://www.baseten.co/b  ow-baseten-achieved-2x-faster-inference-  https://www.nvidia.com/en-us/on-demand/session/gtc26-s81943/
+with-nvidia-dynamo/
+nVIDIA

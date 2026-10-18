@@ -1,0 +1,1214 @@
+{
+ "NVIDIA DLI · 使用 OpenShell 和 NemoClaw 构建安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "https://build.nvidia.com/nvidia/nemoclaw-for-openclaw/nemoclawcard?ncid=ref-dli-146986",
+   ""
+  ],
+  [
+   "https://build.nvidia.com/?ncid=ref-dli-146986",
+   "模型 build.nvidia.com 通过与 OpenAI 兼容的 API 使用由 NVIDIA 托管的 Nemotron 模型。调用时会使用 nvapi- 密钥和所选模型路由。"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "OpenClaw · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "✓ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "✓ Tools at Scale JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "✓ Workflows 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "✓ The Index Agent 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "✓ Deep Agents planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "✓ Connect NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "★ OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "持续运行 skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://arxiv.org/abs/2310.08560",
+   "两层"
+  ],
+  [
+   "https://build.nvidia.com/spark/nemoclaw-applications?ncid=ref-dli-146986",
+   "NemoClaw 设置指南"
+  ],
+  [
+   "https://developer.nvidia.com/topics/ai/agentic-ai-learning-path/how-to-build-safer-autonomous-agent-using-openclaw",
+   "NVIDIA, How to Build a Safer Autonomous Agent using OpenClaw"
+  ],
+  [
+   "https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills/overview",
+   "Anthropic, Claude Skills (docs)"
+  ],
+  [
+   "https://docs.anthropic.com/en/docs/claude-code/overview",
+   "Claude Code"
+  ],
+  [
+   "https://modelcontextprotocol.io/",
+   "Model Context Protocol (MCP)"
+  ],
+  [
+   "https://docs.kernel.org/userspace-api/landlock.html",
+   "Landlock LSM"
+  ],
+  [
+   "https://man7.org/linux/man-pages/man2/seccomp.2.html",
+   "seccomp (man 2)"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "OpenShell · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "✓ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "✓ Tools at Scale JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "✓ Workflows 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "✓ The Index Agent 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "✓ Deep Agents planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "✓ Connect NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "✓ OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "✓ Always-On skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "★ OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://developer.nvidia.com/topics/ai/agentic-ai-learning-path/how-to-build-safer-autonomous-agent-using-openclaw",
+   "Agentic AI Learning Path"
+  ],
+  [
+   "https://github.com/openclaw/openclaw",
+   "OpenClaw"
+  ],
+  [
+   "https://github.com/NVIDIA/openshell",
+   "OpenShell"
+  ],
+  [
+   "https://www.nvidia.com/en-us/ai/nemoclaw/",
+   "NemoClaw"
+  ],
+  [
+   "https://github.com/NousResearch/hermes-agent",
+   "Hermes"
+  ],
+  [
+   "https://github.com/langchain-ai/deepagents",
+   "LangChain deepagents"
+  ],
+  [
+   "https://arxiv.org/abs/2302.12173",
+   "对抗性检索内容"
+  ],
+  [
+   "https://csrc.nist.gov/pubs/sp/800/207/final",
+   "零信任"
+  ],
+  [
+   "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+   "提示词注入指南"
+  ],
+  [
+   "https://www.cs.virginia.edu/~evans/cs551/saltzer/",
+   "Saltzer 和 Schroeder"
+  ],
+  [
+   "https://en.wikipedia.org/wiki/Rice%27s_theorem",
+   "Rice 定理"
+  ],
+  [
+   "https://www.openpolicyagent.org/",
+   "Open Policy Agent（OPA）"
+  ],
+  [
+   "https://docs.kernel.org/userspace-api/landlock.html",
+   "Landlock"
+  ],
+  [
+   "https://docs.kernel.org/userspace-api/seccomp_filter.html",
+   "seccomp"
+  ],
+  [
+   "https://man7.org/linux/man-pages/man7/network_namespaces.7.html",
+   "network_namespaces(7)"
+  ],
+  [
+   "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/CONNECT",
+   "MDN CONNECT"
+  ],
+  [
+   "https://www.openpolicyagent.org/docs",
+   "OPA 文档"
+  ],
+  [
+   "https://man7.org/linux/man-pages/man2/mount.2.html",
+   "mount(2)"
+  ],
+  [
+   "https://man7.org/linux/man-pages/man7/symlink.7.html",
+   "symlink(7)"
+  ],
+  [
+   "https://man7.org/linux/man-pages/man3/errno.3.html",
+   "errno(3)"
+  ],
+  [
+   "https://man7.org/linux/man-pages/man7/capabilities.7.html",
+   "capabilities(7)"
+  ],
+  [
+   "https://man7.org/linux/man-pages/man2/ptrace.2.html",
+   "ptrace(2)"
+  ],
+  [
+   "https://man7.org/linux/man-pages/man2/setuid.2.html",
+   "setuid(2)"
+  ],
+  [
+   "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+   "OWASP Top 10 for Agentic Applications"
+  ],
+  [
+   "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+   "Simon Willison, The lethal trifecta (2025)"
+  ],
+  [
+   "https://www.openpolicyagent.org/docs/latest/",
+   "Open Policy Agent"
+  ],
+  [
+   "https://github.com/NVIDIA/NeMo-Guardrails",
+   "NeMo Guardrails"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "ReAct 循环 · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "★ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "规模化工具 JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "工作流 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "索引智能体 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "深度智能体 planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "连接 NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "持续运行 skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://arxiv.org/abs/2210.03629",
+   "Yao et al. (2022)"
+  ],
+  [
+   "https://docs.langchain.com/oss/javascript/langchain/agents",
+   "createReactAgent"
+  ],
+  [
+   "https://lilianweng.github.io/posts/2023-06-23-agent/",
+   "Lilian Weng 在 2023 年提出的"
+  ],
+  [
+   "https://arxiv.org/abs/2307.03172",
+   "Liu et al. (2023)"
+  ],
+  [
+   "https://arxiv.org/abs/2201.11903",
+   "Wei et al., Chain-of-Thought Prompting (2022)"
+  ],
+  [
+   "https://arxiv.org/abs/2305.18323",
+   "Xu et al., ReWOO: Decoupling Reasoning from Observations (2023)"
+  ],
+  [
+   "https://arxiv.org/abs/2302.04761",
+   "Schick et al., Toolformer (2023)"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "工作流 · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "✓ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "✓ Tools at Scale JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "★ Workflows 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "索引智能体 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "深度智能体 planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "连接 NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "持续运行 skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://arxiv.org/abs/2210.03629",
+   "Yao et al., 2022"
+  ],
+  [
+   "https://arxiv.org/abs/2305.18323",
+   "Xu et al., 2023"
+  ],
+  [
+   "https://arxiv.org/abs/2305.04091",
+   "Wang et al., Plan-and-Solve Prompting (2023)"
+  ],
+  [
+   "https://arxiv.org/abs/2303.17651",
+   "Madaan et al., Self-Refine: Iterative Refinement with Self-Feedback (2023)"
+  ],
+  [
+   "https://www.langchain.com/langgraph",
+   "LangGraph"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "持续运行 · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "✓ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "✓ Tools at Scale JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "✓ Workflows 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "✓ The Index Agent 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "✓ Deep Agents planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "✓ Connect NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "✓ OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "★ Always-On skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://en.wikipedia.org/wiki/Cron",
+   "cron"
+  ],
+  [
+   "https://docs.openclaw.ai/cron-vs-heartbeat",
+   "主会话、独立会话、当前会话或指定名称的会话"
+  ],
+  [
+   "https://github.com/NousResearch/hermes-agent",
+   "Hermes"
+  ],
+  [
+   "https://hermes-agent.nousresearch.com/docs/user-guide/security/",
+   "最新安全指南"
+  ],
+  [
+   "https://arxiv.org/abs/2305.16291",
+   "Wang et al., Voyager (2023)"
+  ],
+  [
+   "https://langchain-ai.github.io/langgraph/concepts/persistence/",
+   "LangGraph Persistence"
+  ],
+  [
+   "https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills/overview",
+   "Anthropic, Agent Skills"
+  ],
+  [
+   "https://arxiv.org/abs/2304.03442",
+   "Park et al., Generative Agents (2023)"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "智能体 · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "★ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "ReAct 循环 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "规模化工具 JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "工作流 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "索引智能体 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "深度智能体 planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "连接 NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "持续运行 skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://aima.cs.berkeley.edu/",
+   "Artificial Intelligence: A Modern Approach"
+  ],
+  [
+   "https://platform.openai.com/docs/api-reference/chat",
+   "Chat Completions API"
+  ],
+  [
+   "https://platform.openai.com/docs/api-reference/responses",
+   "Responses API"
+  ],
+  [
+   "https://en.wikipedia.org/wiki/Depth-first_search",
+   "DFS"
+  ],
+  [
+   "https://en.wikipedia.org/wiki/Breadth-first_search",
+   "BFS"
+  ],
+  [
+   "https://en.wikipedia.org/wiki/A*_search_algorithm",
+   "A*"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "深度智能体 · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "✓ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "✓ Tools at Scale JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "✓ Workflows 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "✓ The Index Agent 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "★ Deep Agents planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "连接 NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "持续运行 skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://arxiv.org/abs/2210.03629",
+   "ReAct"
+  ],
+  [
+   "https://arxiv.org/abs/2307.03172",
+   "Liu et al."
+  ],
+  [
+   "https://github.com/langchain-ai/deepagentsjs",
+   "deepagents"
+  ],
+  [
+   "https://blog.langchain.com/deep-agents/",
+   "LangChain，深度智能体"
+  ],
+  [
+   "https://developer.nvidia.com/blog/add-a-specialized-deep-research-skill-to-agent-harnesses/",
+   "NVIDIA AI-Q 深度研究技能"
+  ],
+  [
+   "https://github.com/NVIDIA-AI-Blueprints/aiq",
+   "blueprint"
+  ],
+  [
+   "https://developer.nvidia.com/case-studies/scientific-literature-ai-nvidia-nemotron",
+   "Kosmos"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "现代 CLI · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "✓ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "✓ Tools at Scale JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "✓ Workflows 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "✓ The Index Agent 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "✓ Deep Agents planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "✓ Connect NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "✓ OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "✓ Always-On skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "✓ OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "★ Modern CLIs Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://code.claude.com/docs/en/permissions",
+   "Claude Code"
+  ],
+  [
+   "https://learn.chatgpt.com/docs/agent-approvals-security",
+   "Codex CLI"
+  ],
+  [
+   "https://cursor.com/docs/agent/security",
+   "Cursor"
+  ],
+  [
+   "https://hermes-agent.nousresearch.com/docs/user-guide/security/",
+   "Hermes"
+  ],
+  [
+   "https://github.com/openclaw/openclaw",
+   "OpenClaw"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "索引智能体 · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "✓ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "✓ Tools at Scale JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "✓ Workflows 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "★ The Index Agent 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "深度智能体 planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "连接 NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "持续运行 skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://developer.nvidia.com/topics/ai/agentic-ai-learning-path/how-to-build-agentic-ai-rag",
+   "Agentic AI Learning Path"
+  ],
+  [
+   "https://arxiv.org/abs/2005.11401",
+   "Lewis 及其同事"
+  ],
+  [
+   "https://developer.nvidia.com/blog/rag-101-demystifying-retrieval-augmented-generation-pipelines/",
+   "Hayden Wolff, RAG 101"
+  ],
+  [
+   "https://developer.nvidia.com/blog/tips-for-building-a-rag-pipeline-with-nvidia-ai-langchain-ai-endpoints/",
+   "Amit Bleiweiss, 构建 RAG 工作流的建议"
+  ],
+  [
+   "https://opencypher.org/",
+   "Cypher"
+  ],
+  [
+   "https://en.wikipedia.org/wiki/Cosine_similarity",
+   "余弦相似度"
+  ],
+  [
+   "https://en.wikipedia.org/wiki/Okapi_BM25",
+   "BM25"
+  ],
+  [
+   "https://arxiv.org/abs/2212.10496",
+   "HyDE"
+  ],
+  [
+   "https://arxiv.org/abs/2404.16130",
+   "Edge et al. 2024"
+  ],
+  [
+   "https://en.wikipedia.org/wiki/Community_structure",
+   "社区"
+  ],
+  [
+   "https://arxiv.org/abs/2004.04906",
+   "Karpukhin et al., Dense Passage Retrieval (EMNLP 2020)"
+  ],
+  [
+   "https://arxiv.org/abs/1702.08734",
+   "Johnson, Douze &amp; Jégou, Billion-scale similarity search with GPUs (FAISS, 2017)"
+  ],
+  [
+   "https://arxiv.org/abs/2010.06467",
+   "Lin et al., Pretrained Transformers for Text Ranking (2020)"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "规模化工具 · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "✓ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "★ Tools at Scale JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "工作流 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "索引智能体 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "深度智能体 planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "连接 NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "持续运行 skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://platform.openai.com/docs/guides/function-calling",
+   "函数调用指南"
+  ],
+  [
+   "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices",
+   "MCP 安全指南"
+  ],
+  [
+   "https://www.jsonrpc.org/specification",
+   "JSON-RPC"
+  ],
+  [
+   "https://arxiv.org/abs/2302.04761",
+   "Schick et al., Toolformer: Language Models Can Teach Themselves to Use Tools (2023)"
+  ],
+  [
+   "https://modelcontextprotocol.io/specification",
+   "Model Context Protocol (MCP) 规范"
+  ],
+  [
+   "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use",
+   "Anthropic 工具使用参考"
+  ],
+  [
+   "https://python.langchain.com/",
+   "LangChain"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ]
+ ],
+ "连接 NemoClaw · 安全智能体": [
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/",
+   "NVIDIA 隐私政策"
+  ],
+  [
+   "https://www.nvidia.com/en-us/about-nvidia/privacy-center/",
+   "隐私选择与请求"
+  ],
+  [
+   "01a-loop.html",
+   "✓ The Agent 循环 · 将 LLM 作为函数"
+  ],
+  [
+   "01b-react.html",
+   "✓ The ReAct Loop 工具 · finish_reason"
+  ],
+  [
+   "01c-tools.html",
+   "✓ Tools at Scale JSON · MCP · 路由"
+  ],
+  [
+   "02a-routing.html",
+   "✓ Workflows 路由 · planner · ReWOO"
+  ],
+  [
+   "02b-rag.html",
+   "✓ The Index Agent 嵌入 · 检索 · 打包"
+  ],
+  [
+   "02c-deep.html",
+   "✓ Deep Agents planner · 子智能体 · VFS"
+  ],
+  [
+   "03a-kickstart.html",
+   "★ Connect NemoClaw 可启动 · 首次调用"
+  ],
+  [
+   "03b-openclaw.html",
+   "OpenClaw 文件即上下文 · 粘贴 URL"
+  ],
+  [
+   "03c-always-on.html",
+   "持续运行 skills · cron"
+  ],
+  [
+   "04a-safety.html",
+   "OpenShell 沙盒 · 策略 · CI 门控"
+  ],
+  [
+   "04b-modern-clis.html",
+   "现代 CLI Claude Code · Codex · Cursor"
+  ],
+  [
+   "04c-going-further.html",
+   "深入探索 Brev · NIMs · Blueprints"
+  ],
+  [
+   "https://build.nvidia.com/nvidia/nemoclaw-for-openclaw/nemoclawcard?ncid=ref-dli-146986",
+   "NemoClaw for OpenClaw 工作流"
+  ],
+  [
+   "https://developer.nvidia.com/topics/ai/agentic-ai-learning-path/how-to-build-safer-autonomous-agent-using-openclaw",
+   "Agentic AI Learning Path"
+  ],
+  [
+   "https://build.nvidia.com/?ncid=ref-dli-146986",
+   "build.nvidia.com"
+  ],
+  [
+   "https://modelcontextprotocol.io/",
+   "Model Context Protocol (MCP)"
+  ],
+  [
+   "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+   "/cli/gateway WebSocket"
+  ],
+  [
+   "https://www.jsonrpc.org/specification",
+   "JSON-RPC"
+  ],
+  [
+   "https://platform.openai.com/docs/api-reference/chat",
+   "OpenAI Chat Completions API"
+  ],
+  [
+   "https://docs.anthropic.com/en/docs/claude-code/overview",
+   "Anthropic， Claude Code（文档）"
+  ],
+  [
+   "https://arxiv.org/abs/2304.03442",
+   "Park et al., Generative Agents (2023)"
+  ],
+  [
+   "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "Apache-2.0"
+  ],
+  [
+   "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+   "NVIDIA API 试用条款"
+  ],
+  [
+   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+   "GitHub 托管隐私说明"
+  ],
+  [
+   "${NVIDIA_BUILD_URL}",
+   "build.nvidia.com"
+  ]
+ ]
+}

@@ -1,0 +1,350 @@
+{
+  "source": "VID_20261016_110316.mp4",
+  "duration_ms": 60970,
+  "language": "autodialect",
+  "orders": [
+    "DKHJQ20261018150930389JlsmphRxH2uUDsYy"
+  ],
+  "chunks": [
+    {
+      "index": 1,
+      "offset_ms": 0,
+      "duration_ms": 60987,
+      "order_id": "DKHJQ20261018150930389JlsmphRxH2uUDsYy"
+    }
+  ],
+  "text": "They're true and we do really enjoy the work and we love being in the community and working with developers like you. But we're actually doing it because we think it's necessary for our business. We're doing it because it's necessary for our future. andIt's important for developers to understand that. So they'll understand the depth of our commitment to this work. It's the same as the depth of our commitment to cuda and the other things that we've been building for years on the video. um uh When we understand you know that something is very important, then you know we were all in and we never give up that's how the video works and open technologies for AI is critical to uh in videos future and to many of uh of our features, even you know all around the industry. okayNow I want to get a little bit more specific about some of the things that we're doing um building a model is a distributed systems problem. um We have a whole bunch of stages. Each one of them is a distributed system. andThe accelerated computing problem for each of them is really important. We have data preparation where we need to.",
+  "segments": [
+    {
+      "index": 1,
+      "start": 0,
+      "end": 11940,
+      "speaker": "",
+      "text": "They're true and we do really enjoy the work and we love being in the community and working with developers like you. But we're actually doing it because we think it's necessary for our business. We're doing it because it's necessary for our future."
+    },
+    {
+      "index": 2,
+      "start": 11960,
+      "end": 23610,
+      "speaker": "",
+      "text": "andIt's important for developers to understand that. So they'll understand the depth of our commitment to this work. It's the same as the depth of our commitment to cuda and the other things that we've been building for years on the video."
+    },
+    {
+      "index": 3,
+      "start": 23720,
+      "end": 39870,
+      "speaker": "",
+      "text": "um uh When we understand you know that something is very important, then you know we were all in and we never give up that's how the video works and open technologies for AI is critical to uh in videos future and to many of uh of our features, even you know all around the industry."
+    },
+    {
+      "index": 4,
+      "start": 41140,
+      "end": 55050,
+      "speaker": "",
+      "text": "okayNow I want to get a little bit more specific about some of the things that we're doing um building a model is a distributed systems problem. um We have a whole bunch of stages. Each one of them is a distributed system."
+    },
+    {
+      "index": 5,
+      "start": 55070,
+      "end": 60970,
+      "speaker": "",
+      "text": "andThe accelerated computing problem for each of them is really important. We have data preparation where we need to."
+    }
+  ],
+  "cues": [
+    {
+      "index": 1,
+      "start": 130,
+      "end": 1600,
+      "speaker": "",
+      "text": "They're true and we do really"
+    },
+    {
+      "index": 2,
+      "start": 1610,
+      "end": 3040,
+      "speaker": "",
+      "text": "enjoy the work and we love"
+    },
+    {
+      "index": 3,
+      "start": 3050,
+      "end": 3960,
+      "speaker": "",
+      "text": "being in the community and"
+    },
+    {
+      "index": 4,
+      "start": 3970,
+      "end": 5320,
+      "speaker": "",
+      "text": "working with developers like"
+    },
+    {
+      "index": 5,
+      "start": 5330,
+      "end": 7040,
+      "speaker": "",
+      "text": "you. But we're actually doing"
+    },
+    {
+      "index": 6,
+      "start": 7050,
+      "end": 7880,
+      "speaker": "",
+      "text": "it because we think it's"
+    },
+    {
+      "index": 7,
+      "start": 7890,
+      "end": 9320,
+      "speaker": "",
+      "text": "necessary for our business."
+    },
+    {
+      "index": 8,
+      "start": 9330,
+      "end": 10240,
+      "speaker": "",
+      "text": "We're doing it because it's"
+    },
+    {
+      "index": 9,
+      "start": 10250,
+      "end": 11880,
+      "speaker": "",
+      "text": "necessary for our future."
+    },
+    {
+      "index": 10,
+      "start": 11970,
+      "end": 13360,
+      "speaker": "",
+      "text": "andIt's important for developers"
+    },
+    {
+      "index": 11,
+      "start": 13370,
+      "end": 14600,
+      "speaker": "",
+      "text": "to understand that."
+    },
+    {
+      "index": 12,
+      "start": 14610,
+      "end": 16080,
+      "speaker": "",
+      "text": "So they'll understand the depth"
+    },
+    {
+      "index": 13,
+      "start": 16090,
+      "end": 17120,
+      "speaker": "",
+      "text": "of our commitment to this"
+    },
+    {
+      "index": 14,
+      "start": 17130,
+      "end": 18800,
+      "speaker": "",
+      "text": "work. It's the same as the"
+    },
+    {
+      "index": 15,
+      "start": 18810,
+      "end": 20560,
+      "speaker": "",
+      "text": "depth of our commitment to cuda"
+    },
+    {
+      "index": 16,
+      "start": 20570,
+      "end": 21680,
+      "speaker": "",
+      "text": "and the other things that we've"
+    },
+    {
+      "index": 17,
+      "start": 21690,
+      "end": 22880,
+      "speaker": "",
+      "text": "been building for years on the"
+    },
+    {
+      "index": 18,
+      "start": 22890,
+      "end": 23400,
+      "speaker": "",
+      "text": "video."
+    },
+    {
+      "index": 19,
+      "start": 23760,
+      "end": 25250,
+      "speaker": "",
+      "text": "um uh When we understand you"
+    },
+    {
+      "index": 20,
+      "start": 25260,
+      "end": 26600,
+      "speaker": "",
+      "text": "know that something is very"
+    },
+    {
+      "index": 21,
+      "start": 26610,
+      "end": 26870,
+      "speaker": "",
+      "text": "important,"
+    },
+    {
+      "index": 22,
+      "start": 26880,
+      "end": 29030,
+      "speaker": "",
+      "text": "then you know we were all in and"
+    },
+    {
+      "index": 23,
+      "start": 29040,
+      "end": 30920,
+      "speaker": "",
+      "text": "we never give up that's how the"
+    },
+    {
+      "index": 24,
+      "start": 30930,
+      "end": 32540,
+      "speaker": "",
+      "text": "video works and open"
+    },
+    {
+      "index": 25,
+      "start": 32550,
+      "end": 34460,
+      "speaker": "",
+      "text": "technologies for AI is critical"
+    },
+    {
+      "index": 26,
+      "start": 34470,
+      "end": 36420,
+      "speaker": "",
+      "text": "to uh in videos future and to"
+    },
+    {
+      "index": 27,
+      "start": 36430,
+      "end": 38020,
+      "speaker": "",
+      "text": "many of uh of our features,"
+    },
+    {
+      "index": 28,
+      "start": 38030,
+      "end": 39180,
+      "speaker": "",
+      "text": "even you know all around the"
+    },
+    {
+      "index": 29,
+      "start": 39190,
+      "end": 39820,
+      "speaker": "",
+      "text": "industry."
+    },
+    {
+      "index": 30,
+      "start": 41150,
+      "end": 42460,
+      "speaker": "",
+      "text": "okayNow I want to get a little"
+    },
+    {
+      "index": 31,
+      "start": 42470,
+      "end": 43900,
+      "speaker": "",
+      "text": "bit more specific about some of"
+    },
+    {
+      "index": 32,
+      "start": 43910,
+      "end": 45940,
+      "speaker": "",
+      "text": "the things that we're doing um"
+    },
+    {
+      "index": 33,
+      "start": 45950,
+      "end": 47180,
+      "speaker": "",
+      "text": "building a model is a"
+    },
+    {
+      "index": 34,
+      "start": 47190,
+      "end": 49220,
+      "speaker": "",
+      "text": "distributed systems problem."
+    },
+    {
+      "index": 35,
+      "start": 49230,
+      "end": 51980,
+      "speaker": "",
+      "text": "um We have a whole bunch of"
+    },
+    {
+      "index": 36,
+      "start": 51990,
+      "end": 53740,
+      "speaker": "",
+      "text": "stages. Each one of them is a"
+    },
+    {
+      "index": 37,
+      "start": 53750,
+      "end": 54980,
+      "speaker": "",
+      "text": "distributed system."
+    },
+    {
+      "index": 38,
+      "start": 55080,
+      "end": 56390,
+      "speaker": "",
+      "text": "andThe accelerated computing"
+    },
+    {
+      "index": 39,
+      "start": 56400,
+      "end": 57430,
+      "speaker": "",
+      "text": "problem for each of them is"
+    },
+    {
+      "index": 40,
+      "start": 57440,
+      "end": 58310,
+      "speaker": "",
+      "text": "really important."
+    },
+    {
+      "index": 41,
+      "start": 58320,
+      "end": 60150,
+      "speaker": "",
+      "text": "We have data preparation where"
+    },
+    {
+      "index": 42,
+      "start": 60160,
+      "end": 60910,
+      "speaker": "",
+      "text": "we need to."
+    }
+  ]
+}

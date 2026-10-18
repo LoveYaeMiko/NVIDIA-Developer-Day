@@ -1,0 +1,20 @@
+# 68  IMG_20261016_154557.jpg  (4064x3048)
+What Dynamo can do today
+Allkinds of disaggregation  Fault tolerance
+Prefill / decode disaggregation  Frontend /KVrouter and Agg/ Disagg FT
+Attention / FFN disaggregation(GPU/LPU)  Model Express and Snapshot
+Multimodal E/P/Dpipeline  Wide-EPFT-NIXLelasticEP
+KV-aware router and Flash Indexer  Planner
+Online active scaling ofP/Dworkers
+Global KVmanagement  Grove-FindMost Ideal Worker
+FlexKV/KVCR  Digital twin of large-scale MaaS -high-fidelity
+Multi-nodedistributed P2PKVreusewithrouterhints
+projection
+aisimulate
+RL rollout acceleration and harness-based agentic
+inference
+ThunderAgent,nvext agenthints,etc.
+~8.3K  244K+  9,000+
+GitHub stars  pip installs  pull ro
+nVIDIA
+nVIDIA

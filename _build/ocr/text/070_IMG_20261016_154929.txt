@@ -1,0 +1,16 @@
+# 70  IMG_20261016_154929.jpg  (4064x3048)
+请求进入后，KVRouter用两类信号为Worker打分
+缓存命中减少重复计算；实时负载防止缓存丰富的Worker过载
+请求路径
+KV Indexer
+缓存前缀命中
+请求  Block  Cost Function  最低成本
+Token  Hash  综合成本  Worker
+Slot T-acker
+活跃的Prefll+Decode
+Cost=Prefil成本+Decode成本
++（可选）活跃请求成本
+缓存事件路径
+推理  KVEvents  为什么要两个信号？
+Wor  缓存新增/删除  缓存告诉我们“能省多少”，负载告诉我们“还能接多少”。
+nVIDIA

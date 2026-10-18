@@ -1,0 +1,3112 @@
+{
+ "if": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 2
+ },
+ "state": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 87
+ },
+ "helpers": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a"
+  ],
+  "count": 30
+ },
+ "helpers.randomId(prefix?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "getRandomValues": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.chat(opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.chatStream(opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.browserChatFetch()": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "x-stainless-*": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "fetch": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 115
+ },
+ "X-BILLING-INVOKE-ORIGIN": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "ChatOpenAI": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 58
+ },
+ "configuration.fetch": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.getConfig()": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 58
+ },
+ "helpers.getEmbeddingConfig()": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.getKey()": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "sessionStorage": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "null": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "nvapi-": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 59
+ },
+ "helpers.getModelApiBaseUrl()": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.setModelApiBaseUrl(url)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.isDefaultModelApiBaseUrl(url)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.mountModelEndpointProbe(target, opts?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.webSearch(q, {maxResults})": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "assets/materials_index.json": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "tier": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "cached": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "on_demand": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "href": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.instantAnswer(q)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "retrieval-augmented generation": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "deep agents": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "webSearch": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 172
+ },
+ "helpers.formatSearchResults(out)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "instantAnswer": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 58
+ },
+ "helpers.embed(text, {model, inputType})": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "numbers[]": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "inputType": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.cosineSim(a, b)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.contextWindow(model)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "helpers.estimateTokens(textOrMessages)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "usage_metadata": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.fetch(url, opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "Response": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.fetchRetry": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.fetchRetry(url, opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.fetch": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "Retry-After": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "cmd": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "send": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "relayWebSocket: true": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "output": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "exitCode": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "transport": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.courseShell(helpers, command)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.courseRead(helpers, path)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.evalSandboxFs(path, mode, policy?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "path": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.sandboxExec(command, {agent})": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "openshell sandbox exec": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 59
+ },
+ "command": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "agent": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 58
+ },
+ "helpers.evalSandboxNetwork": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "evalSandboxFs": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "helpers.policyGet(agent?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "evalSandboxNetwork": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.mountPolicyMap(target, opts?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.coursePage(id)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "id": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.coursePages()": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 171
+ },
+ "read_course_page": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 115
+ },
+ "enum": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.mountFigures(rootSel?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "rootSel": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "var(--gfx-*)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.openFigureLightbox(svg, trigger?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.wireFigureZoom(host, svg?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.mountChatUI(el, opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "el": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "opts": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 285
+ },
+ "showGreetingWithHistory:true": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "memory:true": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "ctx.history": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "respond": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "ctx.view": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "view.token(t)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "view.reasoning(t)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "view.tool(label, detail)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "view.usage({input, output})": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "view.html(h)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "view.error(msg)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "ctx": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "modules": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.mountAgentChat(el, opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "createReactAgent": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 60
+ },
+ "growLog:true": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "mountChatUI": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "helpers.mountConsole(target, opts?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.mountOpenClawCli(target)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.mountKeyPanel(el)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.diagramSVG(spec)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.viz.diagram": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "view.html(...)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "spec": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "helpers.viz.ganttBars": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "workers": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "wallSeconds": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.openclawBootstrapRequest(path)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "view": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "onToken(delta)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "onTool(name,{id,args})": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "session": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.openclawLoopbackProbe(path, opts?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.runOpenClawConnectionAudit(opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.redactOpenClawDiagnostic(value)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.refreshOpenClawGatewayToken(opts?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.getOpenClawConnection()": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.setOpenClawConnection(connection)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.filterOpenClawRuntimeNoise(text)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.filterOpenClawRuntimeValue(value)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.openclawMessageText(message)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.openclawResultText(result)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.signal": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "AbortSignal": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 114
+ },
+ "helpers.delay": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.chat": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "chatStream": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "WebSocket": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.delay(ms)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.trace(name, attrs)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "state.__trace": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.log(...args)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "log(...args)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "log.h(title)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "log.json(label?, value)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "log.kv(object)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "log.details(summary, body)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "log.html(html)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "log.svg(svgString)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "log.draw(W, H, body, opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "log.clear()": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.viz.*": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.viz.diagram(spec)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "x": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "y": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.viz.lineChart(values, opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.viz.scoreBarChart(scored, opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "scored": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.viz.messageList(messages, title)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "messages": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 59
+ },
+ "helpers.viz.retrievalBars(scored, topK, title)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.viz.diffTable(spec, opts)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "verdict({rows})": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "spec.rows": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "helpers.viz.chat(turns, opts?)": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "turns": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "opts.maxChars": {
+  "lessons": [
+   "01a",
+   "01b",
+   "01c",
+   "02a",
+   "02b",
+   "02c",
+   "03a",
+   "03b",
+   "03c",
+   "04a",
+   "04b"
+  ],
+  "count": 57
+ },
+ "state.env": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "state.agent": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "chat()": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 8
+ },
+ "reasoning_content": {
+  "lessons": [
+   "01a",
+   "01b"
+  ],
+  "count": 2
+ },
+ "content": {
+  "lessons": [
+   "01a",
+   "01b"
+  ],
+  "count": 2
+ },
+ "messages[]": {
+  "lessons": [
+   "01a",
+   "01b"
+  ],
+  "count": 3
+ },
+ "POST": {
+  "lessons": [
+   "01a",
+   "03a"
+  ],
+  "count": 2
+ },
+ "Authorization": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "model": {
+  "lessons": [
+   "01a",
+   "02b"
+  ],
+  "count": 3
+ },
+ "chatStream()": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "choose_direction": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 2
+ },
+ "state.runMaze": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "DIRECTIVE": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "advanced": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "doMove(...)": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "includeHistory:false": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "model:\"direct\"": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "model:\"reasoning\"": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "model:\"omni\"": {
+  "lessons": [
+   "01a"
+  ],
+  "count": 1
+ },
+ "finish_reason": {
+  "lessons": [
+   "01b",
+   "03a"
+  ],
+  "count": 7
+ },
+ "get_current_time": {
+  "lessons": [
+   "01b"
+  ],
+  "count": 2
+ },
+ "while": {
+  "lessons": [
+   "01b"
+  ],
+  "count": 1
+ },
+ "state.messages": {
+  "lessons": [
+   "01b"
+  ],
+  "count": 1
+ },
+ "tool_calls": {
+  "lessons": [
+   "01b",
+   "01c"
+  ],
+  "count": 2
+ },
+ "tool": {
+  "lessons": [
+   "01b"
+  ],
+  "count": 1
+ },
+ "tool_choice": {
+  "lessons": [
+   "01c"
+  ],
+  "count": 2
+ },
+ "description": {
+  "lessons": [
+   "01c"
+  ],
+  "count": 1
+ },
+ "glossary_search": {
+  "lessons": [
+   "01c"
+  ],
+  "count": 6
+ },
+ "web_search": {
+  "lessons": [
+   "01c"
+  ],
+  "count": 1
+ },
+ "nvidia_glossary_api": {
+  "lessons": [
+   "01c"
+  ],
+  "count": 1
+ },
+ "mountRunCell": {
+  "lessons": [
+   "01c"
+  ],
+  "count": 1
+ },
+ "tools/list": {
+  "lessons": [
+   "01c"
+  ],
+  "count": 2
+ },
+ "tools/call": {
+  "lessons": [
+   "01c"
+  ],
+  "count": 2
+ },
+ "calculate": {
+  "lessons": [
+   "01c"
+  ],
+  "count": 1
+ },
+ "Promise.all": {
+  "lessons": [
+   "02a"
+  ],
+  "count": 3
+ },
+ "helpers.webSearch": {
+  "lessons": [
+   "02a"
+  ],
+  "count": 1
+ },
+ "specialist.run(input)": {
+  "lessons": [
+   "02a"
+  ],
+  "count": 1
+ },
+ "helpers.embed": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 1
+ },
+ "input": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 1
+ },
+ "string[]": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 1
+ },
+ "string": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 1
+ },
+ "input_type": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 3
+ },
+ "data": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 1
+ },
+ "embedding": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 1
+ },
+ "number[]": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 1
+ },
+ "nvidia/nemotron-3-embed-1b": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 1
+ },
+ "retrieve(question, k)": {
+  "lessons": [
+   "02b"
+  ],
+  "count": 1
+ },
+ "Runnable": {
+  "lessons": [
+   "02c"
+  ],
+  "count": 1
+ },
+ "createReactAgent({llm, tools})": {
+  "lessons": [
+   "02c"
+  ],
+  "count": 1
+ },
+ "deepagents": {
+  "lessons": [
+   "02c"
+  ],
+  "count": 1
+ },
+ "sessionKey": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 2
+ },
+ "GET /api/agent": {
+  "lessons": [
+   "03a",
+   "03b"
+  ],
+  "count": 3
+ },
+ "integrate.api.nvidia.com": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 2
+ },
+ "NVIDIA_API_KEY": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 2
+ },
+ "agent.dashboardUrl": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 1
+ },
+ "operator.admin": {
+  "lessons": [
+   "03a",
+   "04a"
+  ],
+  "count": 2
+ },
+ "models.list": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 1
+ },
+ "cron.add": {
+  "lessons": [
+   "03a",
+   "03c"
+  ],
+  "count": 2
+ },
+ "chat.send": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 1
+ },
+ "tools.toolSearch=false": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 1
+ },
+ "tool_search_code": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 1
+ },
+ "exec": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 1
+ },
+ "toolSearch": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 1
+ },
+ "config.patch": {
+  "lessons": [
+   "03a"
+  ],
+  "count": 1
+ },
+ "memory/": {
+  "lessons": [
+   "03b"
+  ],
+  "count": 1
+ },
+ "MEMORY.md": {
+  "lessons": [
+   "03b"
+  ],
+  "count": 2
+ },
+ "helpers.terminal()": {
+  "lessons": [
+   "03b"
+  ],
+  "count": 1
+ },
+ "helpers.terminal(\"bash\")": {
+  "lessons": [
+   "03b"
+  ],
+  "count": 1
+ },
+ "openshell sandbox list": {
+  "lessons": [
+   "03b",
+   "04b"
+  ],
+  "count": 3
+ },
+ "HEARTBEAT.md": {
+  "lessons": [
+   "03c"
+  ],
+  "count": 1
+ },
+ "payload.message": {
+  "lessons": [
+   "03c"
+  ],
+  "count": 1
+ },
+ "cron.list": {
+  "lessons": [
+   "03c"
+  ],
+  "count": 1
+ },
+ "cron.remove": {
+  "lessons": [
+   "03c"
+  ],
+  "count": 1
+ },
+ "default: deny": {
+  "lessons": [
+   "03c"
+  ],
+  "count": 1
+ },
+ "netns": {
+  "lessons": [
+   "04a"
+  ],
+  "count": 2
+ },
+ "seccomp": {
+  "lessons": [
+   "04a"
+  ],
+  "count": 1
+ },
+ "EPERM": {
+  "lessons": [
+   "04a"
+  ],
+  "count": 2
+ },
+ "ptrace": {
+  "lessons": [
+   "04a",
+   "04b"
+  ],
+  "count": 3
+ },
+ "mount": {
+  "lessons": [
+   "04a",
+   "04b"
+  ],
+  "count": 3
+ },
+ "setuid": {
+  "lessons": [
+   "04a",
+   "04b"
+  ],
+  "count": 3
+ },
+ "sandbox": {
+  "lessons": [
+   "04a",
+   "04b"
+  ],
+  "count": 2
+ },
+ "EACCES": {
+  "lessons": [
+   "04a"
+  ],
+  "count": 1
+ },
+ "CAP_SYS_ADMIN": {
+  "lessons": [
+   "04a"
+  ],
+  "count": 1
+ },
+ "CAP_SETUID": {
+  "lessons": [
+   "04a"
+  ],
+  "count": 1
+ },
+ "helpers.policyGet()": {
+  "lessons": [
+   "04a"
+  ],
+  "count": 1
+ },
+ "openshell": {
+  "lessons": [
+   "04a"
+  ],
+  "count": 1
+ },
+ "CLAUDE.md": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 1
+ },
+ "AGENTS.md": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 1
+ },
+ "best_effort": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 1
+ },
+ "inference.local": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 2
+ },
+ "argv[0]": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 1
+ },
+ "js": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 1
+ },
+ "openshell status": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 2
+ },
+ "agent ls": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 2
+ },
+ "openclaw tui": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 2
+ },
+ "help": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 1
+ },
+ "openshell --help": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 1
+ },
+ "agent ls -a": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 1
+ },
+ "agent pwd": {
+  "lessons": [
+   "04b"
+  ],
+  "count": 1
+ }
+}

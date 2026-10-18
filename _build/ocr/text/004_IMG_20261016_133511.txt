@@ -1,0 +1,16 @@
+# 4  IMG_20261016_133511.jpg  (4064x3048)
+MegaMoE on Blackwell
+Optimizations
+·GEMM Perfoptimizations
+·Large tile size(256x256)
+·Dynamic tileN with swapA/B
+·In-TMEM epilogue transpose
+·Reduce interference between communication and compute
+·MEMBAR synchronization optimization
+o Batch-commit
+o Async UREDGR
+·Combine perf issues and optimizatio
+Three modes for combine traffic
+hase interleaving between FC1 anc
+tive traffic control
+rt for low-precision co

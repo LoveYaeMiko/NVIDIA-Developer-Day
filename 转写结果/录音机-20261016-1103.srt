@@ -1,0 +1,5963 @@
+1
+00:00:00,200 --> 00:00:00,960
+That data center.
+
+2
+00:00:01,790 --> 00:00:04,170
+Then we have um pre training
+
+3
+00:00:04,180 --> 00:00:05,490
+where we have huge runs,
+
+4
+00:00:05,500 --> 00:00:07,210
+where thousands of gp us are
+
+5
+00:00:07,220 --> 00:00:08,810
+working in lockstep for weeks.
+
+6
+00:00:08,820 --> 00:00:10,250
+In order to free train a model,
+
+7
+00:00:10,260 --> 00:00:12,050
+then we have post training rl
+
+8
+00:00:12,060 --> 00:00:13,130
+where we're going roll outs and
+
+9
+00:00:13,140 --> 00:00:14,650
+awards full scale.
+
+10
+00:00:14,920 --> 00:00:16,830
+Then we have evaluations where
+
+11
+00:00:16,840 --> 00:00:18,320
+we're figuring out um the
+
+12
+00:00:18,330 --> 00:00:19,680
+strength of the model and using
+
+13
+00:00:19,690 --> 00:00:20,480
+that to help guide the
+
+14
+00:00:20,490 --> 00:00:21,840
+development of the model.
+
+15
+00:00:21,850 --> 00:00:23,160
+And then finally inference where
+
+16
+00:00:23,170 --> 00:00:25,320
+the models deployed and uh is
+
+17
+00:00:25,330 --> 00:00:26,600
+used to generate the next data
+
+18
+00:00:26,610 --> 00:00:26,920
+set.
+
+19
+00:00:27,250 --> 00:00:29,040
+andThis is a continuous loop.
+
+20
+00:00:29,050 --> 00:00:29,960
+It's all happening,
+
+21
+00:00:29,970 --> 00:00:30,960
+all of these stages all the
+
+22
+00:00:30,970 --> 00:00:32,160
+time, and each one of them is
+
+23
+00:00:32,170 --> 00:00:33,880
+an enormous computational
+
+24
+00:00:33,890 --> 00:00:34,920
+challenge.
+
+25
+00:00:35,970 --> 00:00:38,690
+This is aa complicated picture
+
+26
+00:00:38,700 --> 00:00:40,530
+that describes the making of
+
+27
+00:00:40,540 --> 00:00:41,930
+nemotron ultra,
+
+28
+00:00:41,940 --> 00:00:44,090
+which is um a model that we
+
+29
+00:00:44,100 --> 00:00:46,250
+released in june 550 billion
+
+30
+00:00:46,260 --> 00:00:47,290
+parameters.
+
+31
+00:00:47,510 --> 00:00:48,640
+Um
+
+32
+00:00:49,410 --> 00:00:51,200
+We started with pre training on
+
+33
+00:00:51,210 --> 00:00:52,680
+20 trillion tokens.
+
+34
+00:00:52,690 --> 00:00:54,480
+um Those were sorted into
+
+35
+00:00:54,490 --> 00:00:56,720
+categories and blended um after
+
+36
+00:00:56,730 --> 00:00:58,040
+after a lot of experimentation
+
+37
+00:00:58,050 --> 00:00:59,400
+to figure out how to do that.
+
+38
+00:00:59,600 --> 00:01:01,830
+um We then did long context
+
+39
+00:01:01,840 --> 00:01:03,910
+extension to 1 million tokens
+
+40
+00:01:03,920 --> 00:01:05,510
+that gave us our base
+
+41
+00:01:05,520 --> 00:01:06,150
+checkpoint.
+
+42
+00:01:06,660 --> 00:01:08,090
+Then we went through supervised
+
+43
+00:01:08,100 --> 00:01:08,890
+fine tuning.
+
+44
+00:01:08,900 --> 00:01:10,890
+This is where um we use teacher
+
+45
+00:01:10,900 --> 00:01:12,610
+generated sft from a lot of
+
+46
+00:01:12,620 --> 00:01:13,290
+different models,
+
+47
+00:01:13,300 --> 00:01:15,370
+from a lot of um open models um
+
+48
+00:01:15,380 --> 00:01:18,210
+like deep seek gpt ossq in mini
+
+49
+00:01:18,220 --> 00:01:20,730
+max glm now we use these to
+
+50
+00:01:20,740 --> 00:01:21,490
+generate a lot of
+
+51
+00:01:21,690 --> 00:01:22,920
+factories that we can use to
+
+52
+00:01:22,930 --> 00:01:25,080
+help uh uh train the model.
+
+53
+00:01:25,090 --> 00:01:27,080
+uh We then added some to use
+
+54
+00:01:27,090 --> 00:01:28,360
+those to create synthetic more
+
+55
+00:01:28,370 --> 00:01:29,840
+synthetic data with the of data
+
+56
+00:01:29,850 --> 00:01:31,320
+designer, and that that became
+
+57
+00:01:31,330 --> 00:01:32,480
+our s of t data set.
+
+58
+00:01:32,910 --> 00:01:34,900
+uh Then we combine that uh all
+
+59
+00:01:34,910 --> 00:01:36,260
+together to get our rsft
+
+60
+00:01:36,270 --> 00:01:36,820
+checkpoint.
+
+61
+00:01:36,830 --> 00:01:39,260
+And then we went into our uh we
+
+62
+00:01:39,270 --> 00:01:41,940
+did unified rlvr so verifiable
+
+63
+00:01:41,950 --> 00:01:43,860
+rewards. uh I've got 15
+
+64
+00:01:43,870 --> 00:01:45,140
+different environments like
+
+65
+00:01:45,150 --> 00:01:46,180
+terminals or software
+
+66
+00:01:46,190 --> 00:01:47,820
+engineering search tool use.
+
+67
+00:01:48,260 --> 00:01:50,970
+um And then this um uh process
+
+68
+00:01:50,980 --> 00:01:52,450
+created our our student
+
+69
+00:01:52,460 --> 00:01:53,330
+checkpoints.
+
+70
+00:01:53,570 --> 00:01:55,880
+um We also then took those chis
+
+71
+00:01:55,890 --> 00:01:57,480
+those that checkpoint and
+
+72
+00:01:57,490 --> 00:01:59,720
+projected it into ten different
+
+73
+00:01:59,730 --> 00:02:02,480
+um domains uh in order to to uh
+
+74
+00:02:02,490 --> 00:02:05,000
+uh have teacher models that
+
+75
+00:02:05,010 --> 00:02:06,600
+were excellent at particular
+
+76
+00:02:06,610 --> 00:02:07,840
+parts of the problem.
+
+77
+00:02:07,990 --> 00:02:11,340
+and um uh you knowThis technique
+
+78
+00:02:11,350 --> 00:02:12,460
+of using teacher models,
+
+79
+00:02:12,470 --> 00:02:13,740
+many different teacher models
+
+80
+00:02:13,750 --> 00:02:15,340
+that are each good at part of
+
+81
+00:02:15,350 --> 00:02:16,860
+ai, but not the whole thing
+
+82
+00:02:16,870 --> 00:02:18,260
+really helps parallellyze the
+
+83
+00:02:18,270 --> 00:02:19,580
+work so that different teams
+
+84
+00:02:19,590 --> 00:02:21,020
+can make different teacher
+
+85
+00:02:21,030 --> 00:02:22,980
+models amazing at at umo
+
+86
+00:02:23,010 --> 00:02:24,030
+specific um tasks.
+
+87
+00:02:24,040 --> 00:02:26,410
+And then we can use a technique
+
+88
+00:02:26,420 --> 00:02:28,110
+called uh multi domain on
+
+89
+00:02:28,120 --> 00:02:29,810
+policy distillation to take all
+
+90
+00:02:29,820 --> 00:02:31,850
+of that um from these teacher
+
+91
+00:02:31,860 --> 00:02:34,230
+models and put it into one uh
+
+92
+00:02:34,460 --> 00:02:35,640
+final model.
+
+93
+00:02:36,080 --> 00:02:37,320
+nowOnce we did that,
+
+94
+00:02:37,330 --> 00:02:39,280
+then uh it was time to prepare
+
+95
+00:02:39,290 --> 00:02:40,480
+them all for deployment and
+
+96
+00:02:40,490 --> 00:02:41,720
+have our most of prediction
+
+97
+00:02:41,730 --> 00:02:43,200
+boo's, see which makes it uh
+
+98
+00:02:43,210 --> 00:02:45,640
+faster to uh station so that we
+
+99
+00:02:45,650 --> 00:02:47,200
+can we can deploy it in a very
+
+100
+00:02:47,210 --> 00:02:49,270
+low bit with um arithmetic,
+
+101
+00:02:49,280 --> 00:02:50,940
+making it to infirm.
+
+102
+00:02:51,640 --> 00:02:52,800
+soThis is kind of giving you a
+
+103
+00:02:52,810 --> 00:02:53,880
+sense of what it's to making
+
+104
+00:02:53,890 --> 00:02:54,600
+you all like this.
+
+105
+00:02:54,610 --> 00:02:56,560
+All right. Now let's talk about
+
+106
+00:02:56,570 --> 00:02:57,760
+the model themselves.
+
+107
+00:02:57,770 --> 00:02:59,120
+um We're currently in our new
+
+108
+00:02:59,130 --> 00:03:00,480
+and from three family.
+
+109
+00:03:00,490 --> 00:03:02,640
+We have um four models in this
+
+110
+00:03:02,650 --> 00:03:04,360
+family. We have I need model
+
+111
+00:03:04,370 --> 00:03:06,840
+all five released um just ab
+
+112
+00:03:06,850 --> 00:03:07,280
+offest. Yeah
+
+113
+00:03:07,840 --> 00:03:10,150
+um Our ultra model,
+
+114
+00:03:10,160 --> 00:03:12,870
+um and then and uh also we have
+
+115
+00:03:12,880 --> 00:03:14,510
+our bold model.
+
+116
+00:03:14,520 --> 00:03:16,470
+Now um the bold model,
+
+117
+00:03:16,480 --> 00:03:19,270
+ii kind of divided it here um to
+
+118
+00:03:19,280 --> 00:03:20,750
+show the purpose of these two
+
+119
+00:03:20,760 --> 00:03:21,950
+different kinds of models.
+
+120
+00:03:21,960 --> 00:03:22,790
+We have our data
+
+121
+00:03:22,870 --> 00:03:24,460
+center models which are trying
+
+122
+00:03:24,470 --> 00:03:26,140
+to maximize intelligence per
+
+123
+00:03:26,150 --> 00:03:28,860
+dollar uh when deployed in the
+
+124
+00:03:28,870 --> 00:03:31,700
+data center on a large uh uh
+
+125
+00:03:31,710 --> 00:03:33,260
+deployment platform like nbl
+
+126
+00:03:33,270 --> 00:03:33,900
+72.
+
+127
+00:03:34,480 --> 00:03:36,390
+and uh If you have a very large
+
+128
+00:03:36,400 --> 00:03:37,790
+computer to deploy large
+
+129
+00:03:37,800 --> 00:03:39,110
+model, you can use things like
+
+130
+00:03:39,120 --> 00:03:41,190
+expert parallelism to make it
+
+131
+00:03:41,200 --> 00:03:43,590
+much cheaper uh to deploy that
+
+132
+00:03:43,600 --> 00:03:45,430
+model. But that is a different
+
+133
+00:03:45,440 --> 00:03:46,510
+kind of problem than if you
+
+134
+00:03:46,520 --> 00:03:48,550
+want a model that runs locally
+
+135
+00:03:48,560 --> 00:03:49,430
+on device.
+
+136
+00:03:49,910 --> 00:03:52,180
+um and soOur both models are
+
+137
+00:03:52,190 --> 00:03:55,420
+designed for um the very most
+
+138
+00:03:55,430 --> 00:03:57,260
+intelligence that you can put
+
+139
+00:03:57,270 --> 00:03:59,140
+onto a small edge computer,
+
+140
+00:03:59,150 --> 00:04:00,180
+um like for example,
+
+141
+00:04:00,190 --> 00:04:00,860
+a laptop.
+
+142
+00:04:01,350 --> 00:04:03,380
+um we haveWe have the rtx spark
+
+143
+00:04:03,390 --> 00:04:04,300
+uh laptop.
+
+144
+00:04:04,310 --> 00:04:06,220
+soWe wanted to make a model that
+
+145
+00:04:06,230 --> 00:04:08,300
+could fit into less than 24
+
+146
+00:04:08,310 --> 00:04:10,620
+gigabytes of memory um to run
+
+147
+00:04:10,630 --> 00:04:11,540
+on rtx spark.
+
+148
+00:04:11,550 --> 00:04:12,460
+andSo to do that,
+
+149
+00:04:12,470 --> 00:04:13,700
+we took our super model.
+
+150
+00:04:13,710 --> 00:04:16,020
+um We compressed it.
+
+151
+00:04:16,030 --> 00:04:16,300
+soWe
+
+152
+00:04:16,380 --> 00:04:17,610
+went from 120 billion
+
+153
+00:04:17,620 --> 00:04:20,410
+parameters to 74 uh from 12
+
+154
+00:04:20,420 --> 00:04:21,490
+million active parameters to
+
+155
+00:04:21,500 --> 00:04:23,890
+nine, and then we quantize it
+
+156
+00:04:23,900 --> 00:04:26,850
+to 2 bit. soThis bolt um uh
+
+157
+00:04:26,860 --> 00:04:28,410
+checkpoint is actually shifted
+
+158
+00:04:28,420 --> 00:04:30,330
+to big arithmetic um because we
+
+159
+00:04:30,340 --> 00:04:31,130
+found that gi
+
+160
+00:04:31,270 --> 00:04:33,150
+us the very smartest model that
+
+161
+00:04:33,160 --> 00:04:35,390
+we could fit into 23 gigabytes
+
+162
+00:04:35,400 --> 00:04:35,660
+of memory.
+
+163
+00:04:36,160 --> 00:04:37,140
+soThat's the difference uh
+
+164
+00:04:37,150 --> 00:04:38,380
+between these these types of
+
+165
+00:04:38,390 --> 00:04:39,500
+models. We have our data center
+
+166
+00:04:39,510 --> 00:04:40,380
+models and we have our own
+
+167
+00:04:40,390 --> 00:04:41,340
+device models.
+
+168
+00:04:42,900 --> 00:04:44,650
+um soThe model that we just
+
+169
+00:04:44,660 --> 00:04:47,130
+released, uh it's uh 120 b
+
+170
+00:04:47,140 --> 00:04:48,290
+model told the active
+
+171
+00:04:48,300 --> 00:04:49,250
+parameters.
+
+172
+00:04:49,260 --> 00:04:50,010
+Um
+
+173
+00:04:50,250 --> 00:04:52,560
+It inherits the um architectural
+
+174
+00:04:52,570 --> 00:04:54,240
+advantages of the nemotron
+
+175
+00:04:54,250 --> 00:04:55,760
+three uh family,
+
+176
+00:04:55,770 --> 00:04:57,520
+uh but it's you know much better
+
+177
+00:04:57,530 --> 00:04:59,040
+than uh the ones we've released
+
+178
+00:04:59,050 --> 00:05:00,080
+before because our post
+
+179
+00:05:00,090 --> 00:05:01,400
+training has gotten stronger.
+
+180
+00:05:02,960 --> 00:05:04,390
+um So if we look at the
+
+181
+00:05:04,400 --> 00:05:06,670
+artificial analysis uh index
+
+182
+00:05:06,680 --> 00:05:07,510
+nemitron 3.
+
+183
+00:05:07,520 --> 00:05:09,230
+5 uh super,
+
+184
+00:05:09,240 --> 00:05:10,390
+uh we also has vision
+
+185
+00:05:10,400 --> 00:05:12,750
+capabilities comes in at 26,
+
+186
+00:05:12,950 --> 00:05:14,700
+um which is better than the
+
+187
+00:05:14,710 --> 00:05:15,860
+neutron three full truck,
+
+188
+00:05:15,870 --> 00:05:17,180
+even though it's a smaller model
+
+189
+00:05:17,190 --> 00:05:19,060
+um still got a ways to go.
+
+190
+00:05:19,070 --> 00:05:20,060
+There's a lot of excellent
+
+191
+00:05:20,070 --> 00:05:21,940
+models uh uh ahead of us.
+
+192
+00:05:21,950 --> 00:05:23,740
+and so you knowWe be continue to
+
+193
+00:05:23,750 --> 00:05:25,300
+push that as we make the models
+
+194
+00:05:25,310 --> 00:05:26,220
+bigger and smarter going
+
+195
+00:05:26,230 --> 00:05:27,780
+forward, but this is this is uh
+
+196
+00:05:27,790 --> 00:05:27,990
+one
+
+197
+00:05:27,970 --> 00:05:29,610
+what we released today.
+
+198
+00:05:30,090 --> 00:05:33,800
+um andIf you zoom in uh to look
+
+199
+00:05:33,810 --> 00:05:35,040
+at limited compute you know
+
+200
+00:05:35,050 --> 00:05:37,280
+models that can fit on on on
+
+201
+00:05:37,290 --> 00:05:39,040
+small hardware in the data
+
+202
+00:05:39,050 --> 00:05:40,040
+center, you know we'rewe're
+
+203
+00:05:40,050 --> 00:05:41,320
+pretty happy with the
+
+204
+00:05:41,330 --> 00:05:42,520
+intelligence that we're able to
+
+205
+00:05:42,530 --> 00:05:44,040
+get uh running on just one
+
+206
+00:05:44,050 --> 00:05:44,840
+black hole,
+
+207
+00:05:45,050 --> 00:05:46,530
+um as well as the speed.
+
+208
+00:05:46,540 --> 00:05:48,170
+so um Earlier,
+
+209
+00:05:48,180 --> 00:05:51,330
+I said that intelligence uh is
+
+210
+00:05:51,340 --> 00:05:52,010
+efficiency.
+
+211
+00:05:52,020 --> 00:05:53,250
+If he is intelligence,
+
+212
+00:05:53,260 --> 00:05:55,410
+sowe're able to make a model 5
+
+213
+00:05:55,420 --> 00:05:56,450
+times faster
+
+214
+00:05:56,630 --> 00:05:58,140
+um you know at the same
+
+215
+00:05:58,150 --> 00:05:58,700
+intelligence.
+
+216
+00:05:58,710 --> 00:06:00,020
+And that means that there's more
+
+217
+00:06:00,030 --> 00:06:00,980
+intelligence for every
+
+218
+00:06:01,600 --> 00:06:03,670
+and um I why I.
+
+219
+00:06:03,680 --> 00:06:05,630
+5 super is so much faster than
+
+220
+00:06:05,640 --> 00:06:07,510
+other models in its size class
+
+221
+00:06:07,520 --> 00:06:08,910
+and its intelligence classes to
+
+222
+00:06:08,920 --> 00:06:10,150
+do with the architecture as
+
+223
+00:06:10,160 --> 00:06:13,270
+well as the um software and the
+
+224
+00:06:13,280 --> 00:06:13,950
+um
+
+225
+00:06:14,090 --> 00:06:15,880
+uh speculative decoding methods
+
+226
+00:06:15,890 --> 00:06:16,720
+that we use,
+
+227
+00:06:16,730 --> 00:06:17,840
+um which we've worked really
+
+228
+00:06:17,850 --> 00:06:20,280
+hard uh uh to polish so that
+
+229
+00:06:20,290 --> 00:06:21,960
+again, we canwe can have a much
+
+230
+00:06:21,970 --> 00:06:23,760
+more efficient way of deploying
+
+231
+00:06:23,770 --> 00:06:24,600
+these models.
+
+232
+00:06:26,130 --> 00:06:27,960
+um If you look at the deject
+
+233
+00:06:27,970 --> 00:06:31,880
+spark um uh as a deployment
+
+234
+00:06:31,890 --> 00:06:33,080
+target and you're running a
+
+235
+00:06:33,090 --> 00:06:34,560
+model locally,
+
+236
+00:06:34,570 --> 00:06:36,360
+um you can create uh some
+
+237
+00:06:36,370 --> 00:06:38,600
+frontier plots that that uh
+
+238
+00:06:38,610 --> 00:06:40,440
+look at both accuracy for
+
+239
+00:06:40,450 --> 00:06:41,080
+different tasks
+
+240
+00:06:41,160 --> 00:06:43,350
+as well as uh the time it takes
+
+241
+00:06:43,360 --> 00:06:43,830
+to run them.
+
+242
+00:06:43,840 --> 00:06:45,310
+And this this was testing that
+
+243
+00:06:45,320 --> 00:06:47,070
+was done by local dot ai which
+
+244
+00:06:47,080 --> 00:06:48,710
+is um you know an external
+
+245
+00:06:48,720 --> 00:06:51,190
+company. um And they uh found
+
+246
+00:06:51,200 --> 00:06:52,350
+that neutron 3.
+
+247
+00:06:52,360 --> 00:06:54,510
+5 super is is on the frontier uh
+
+248
+00:06:54,520 --> 00:06:55,950
+in terms of uh
+
+249
+00:06:56,050 --> 00:06:58,180
+uh you know how long does it
+
+250
+00:06:58,190 --> 00:07:00,660
+take to solve a task uh and the
+
+251
+00:07:00,670 --> 00:07:02,520
+the um uh success rate of
+
+252
+00:07:02,530 --> 00:07:03,450
+solving that task.
+
+253
+00:07:03,460 --> 00:07:04,880
+uh So we're really,
+
+254
+00:07:04,890 --> 00:07:07,120
+really proud uh uh to to be
+
+255
+00:07:07,130 --> 00:07:08,400
+there along with um some of
+
+256
+00:07:08,410 --> 00:07:09,560
+these other great models.
+
+257
+00:07:10,930 --> 00:07:12,480
+One thing that we believe uh
+
+258
+00:07:12,490 --> 00:07:13,680
+with thematron is we're trying
+
+259
+00:07:13,690 --> 00:07:15,280
+to make it possible for other
+
+260
+00:07:15,290 --> 00:07:16,000
+companies,
+
+261
+00:07:16,010 --> 00:07:17,920
+other organizations to customize
+
+262
+00:07:17,930 --> 00:07:18,680
+the model.
+
+263
+00:07:18,690 --> 00:07:20,680
+So rather than uh this is just a
+
+264
+00:07:20,690 --> 00:07:22,120
+model you know to it and use
+
+265
+00:07:22,130 --> 00:07:22,680
+it, as it is,
+
+266
+00:07:22,690 --> 00:07:23,760
+we want people to be able to
+
+267
+00:07:23,770 --> 00:07:25,600
+take their own private data
+
+268
+00:07:25,680 --> 00:07:27,790
+and uh customize the model fine
+
+269
+00:07:27,800 --> 00:07:29,630
+tune it and then deploy it in a
+
+270
+00:07:29,640 --> 00:07:30,710
+way that you know they can
+
+271
+00:07:30,720 --> 00:07:31,870
+control so that all of their
+
+272
+00:07:31,880 --> 00:07:34,430
+data and and uh can stay within
+
+273
+00:07:34,440 --> 00:07:35,150
+the organization,
+
+274
+00:07:35,160 --> 00:07:36,590
+but you can then solve problems
+
+275
+00:07:36,600 --> 00:07:37,790
+in a much better way.
+
+276
+00:07:37,920 --> 00:07:39,830
+and uh So this is uh five
+
+277
+00:07:39,840 --> 00:07:41,110
+different case studies from
+
+278
+00:07:41,120 --> 00:07:43,910
+different companies uh uh scale
+
+279
+00:07:43,920 --> 00:07:47,550
+is using uh the nemitron uh 3.
+
+280
+00:07:47,560 --> 00:07:49,670
+5 super for document
+
+281
+00:07:49,680 --> 00:07:50,190
+intelligence.
+
+282
+00:07:50,200 --> 00:07:51,510
+This is basically understanding
+
+283
+00:07:51,520 --> 00:07:51,830
+p dfs.
+
+284
+00:07:52,530 --> 00:07:54,240
+and um you knowThey found that
+
+285
+00:07:54,250 --> 00:07:55,360
+they were able to increase
+
+286
+00:07:55,370 --> 00:07:56,960
+accuracy on their test set by
+
+287
+00:07:56,970 --> 00:07:59,360
+15% and beat quad opus five.
+
+288
+00:07:59,910 --> 00:08:02,660
+um Ai 21 uh and alice were able
+
+289
+00:08:02,670 --> 00:08:05,700
+to post train this model to uh
+
+290
+00:08:05,710 --> 00:08:07,620
+become better than gpt 6.
+
+291
+00:08:07,630 --> 00:08:09,660
+1 s soul at security attack
+
+292
+00:08:09,670 --> 00:08:10,700
+resilience.
+
+293
+00:08:10,810 --> 00:08:13,160
+um Ramp was able to post train
+
+294
+00:08:13,170 --> 00:08:15,680
+the model to bgp six lunar.
+
+295
+00:08:15,690 --> 00:08:18,800
+um uh Then we have lila which uh
+
+296
+00:08:18,810 --> 00:08:20,680
+is using nemotron 3.
+
+297
+00:08:20,690 --> 00:08:22,000
+5 super for scientific
+
+298
+00:08:22,010 --> 00:08:23,000
+experimentation.
+
+299
+00:08:23,010 --> 00:08:25,480
+They have labs where the labs
+
+300
+00:08:25,490 --> 00:08:25,720
+are in
+
+301
+00:08:25,810 --> 00:08:26,880
+interacting with um
+
+302
+00:08:26,890 --> 00:08:27,560
+experiments,
+
+303
+00:08:27,570 --> 00:08:29,080
+robot robotic labs and they want
+
+304
+00:08:29,090 --> 00:08:31,000
+to drive these with ai and they
+
+305
+00:08:31,010 --> 00:08:32,400
+found that those training this
+
+306
+00:08:32,410 --> 00:08:34,200
+model actually I able to be gpt
+
+307
+00:08:34,210 --> 00:08:36,440
+six astra on their task.
+
+308
+00:08:36,800 --> 00:08:39,010
+um And then finally we have um
+
+309
+00:08:39,020 --> 00:08:41,490
+another company that's uh using
+
+310
+00:08:41,500 --> 00:08:43,690
+uh fine tuning of this model to
+
+311
+00:08:43,700 --> 00:08:45,210
+become best in class of medical
+
+312
+00:08:45,220 --> 00:08:47,050
+medical insurance handling you
+
+313
+00:08:47,340 --> 00:08:48,760
+know by far better than than
+
+314
+00:08:48,770 --> 00:08:49,760
+cloud of the spire.
+
+315
+00:08:50,240 --> 00:08:51,990
+and so um you knowThis is all
+
+316
+00:08:52,000 --> 00:08:54,270
+coming from uh customization,
+
+317
+00:08:54,280 --> 00:08:55,910
+right again being able to
+
+318
+00:08:55,920 --> 00:08:57,750
+customize the model and with
+
+319
+00:08:57,760 --> 00:08:59,150
+the amazing efficiency of
+
+320
+00:08:59,160 --> 00:09:00,310
+nemotron, uh the nemitron
+
+321
+00:09:00,320 --> 00:09:01,430
+architecture running on the
+
+322
+00:09:01,440 --> 00:09:02,710
+video gp us,
+
+323
+00:09:02,720 --> 00:09:04,510
+they're able to um to deploy
+
+324
+00:09:04,520 --> 00:09:05,190
+these these
+
+325
+00:09:05,270 --> 00:09:06,620
+models, these solutions in ways
+
+326
+00:09:06,630 --> 00:09:08,420
+that are uh radically more cost
+
+327
+00:09:08,430 --> 00:09:10,100
+effective again making it
+
+328
+00:09:10,110 --> 00:09:11,180
+possible for there to be more
+
+329
+00:09:11,190 --> 00:09:12,380
+intelligence in the world.
+
+330
+00:09:14,080 --> 00:09:17,070
+um And then finally you know um
+
+331
+00:09:17,080 --> 00:09:18,910
+looking at at this is this is
+
+332
+00:09:18,920 --> 00:09:20,870
+another um uh test about
+
+333
+00:09:20,880 --> 00:09:21,470
+efficiency.
+
+334
+00:09:21,480 --> 00:09:22,790
+This is a swe bench pro,
+
+335
+00:09:22,800 --> 00:09:24,630
+so this is a agentic software
+
+336
+00:09:24,640 --> 00:09:25,390
+engineering
+
+337
+00:09:25,540 --> 00:09:27,570
+task that we're able to
+
+338
+00:09:27,580 --> 00:09:29,530
+dramatically reduce the time
+
+339
+00:09:29,540 --> 00:09:31,090
+that it takes to solve 10,000
+
+340
+00:09:31,100 --> 00:09:33,450
+tasks 4 times faster than a lot
+
+341
+00:09:33,460 --> 00:09:35,330
+of other great models with with
+
+342
+00:09:35,340 --> 00:09:36,450
+excellent accuracy.
+
+343
+00:09:38,920 --> 00:09:40,710
+andAll of this comes from the
+
+344
+00:09:40,720 --> 00:09:41,910
+the technology and nematron,
+
+345
+00:09:41,920 --> 00:09:43,510
+the way that we co designed the
+
+346
+00:09:43,520 --> 00:09:45,870
+model to fit the gpu um
+
+347
+00:09:46,060 --> 00:09:46,690
+latent timemo,
+
+348
+00:09:46,700 --> 00:09:49,290
+we um uh you know the the all
+
+349
+00:09:49,300 --> 00:09:49,930
+the all the different
+
+350
+00:09:49,940 --> 00:09:51,090
+technologies that we baked into
+
+351
+00:09:51,100 --> 00:09:51,370
+it.
+
+352
+00:09:52,180 --> 00:09:54,330
+okayIn the last little bit of my
+
+353
+00:09:54,340 --> 00:09:56,490
+talk, I want to um discuss
+
+354
+00:09:56,500 --> 00:09:59,170
+megatron. uh So megatron is
+
+355
+00:09:59,180 --> 00:10:00,810
+software that we built over the
+
+356
+00:10:00,820 --> 00:10:02,530
+years to support the
+
+357
+00:10:02,540 --> 00:10:03,810
+development and deployment of
+
+358
+00:10:03,820 --> 00:10:04,490
+ai
+
+359
+00:10:04,670 --> 00:10:05,860
+and it's open source,
+
+360
+00:10:05,870 --> 00:10:07,380
+it's on gi want to talk about
+
+361
+00:10:07,390 --> 00:10:09,020
+some of the new features uh
+
+362
+00:10:09,030 --> 00:10:10,100
+that a going into megatron
+
+363
+00:10:10,110 --> 00:10:11,940
+core, which is you know widely
+
+364
+00:10:11,950 --> 00:10:13,300
+used by many developers around
+
+365
+00:10:13,310 --> 00:10:14,140
+the industry to build and
+
+366
+00:10:14,150 --> 00:10:14,860
+deploy ai
+
+367
+00:10:15,490 --> 00:10:16,680
+one of one of them is called
+
+368
+00:10:16,690 --> 00:10:17,480
+generalized tensor
+
+369
+00:10:17,490 --> 00:10:18,440
+parallelism.
+
+370
+00:10:18,450 --> 00:10:19,520
+So there's lots of different
+
+371
+00:10:19,530 --> 00:10:21,120
+ways of slicing and dicing a
+
+372
+00:10:21,130 --> 00:10:22,280
+model. When you're training
+
+373
+00:10:22,290 --> 00:10:22,680
+it,
+
+374
+00:10:22,970 --> 00:10:25,080
+um we have data parallelism,
+
+375
+00:10:25,090 --> 00:10:26,200
+we have tensor parallelism,
+
+376
+00:10:26,210 --> 00:10:27,600
+we have pipeline parallelism,
+
+377
+00:10:27,610 --> 00:10:29,600
+we have fsdp which is fully we
+
+378
+00:10:29,610 --> 00:10:31,000
+charted data parallelism.
+
+379
+00:10:31,010 --> 00:10:33,200
+um andThen now we're at for what
+
+380
+00:10:33,210 --> 00:10:34,840
+we analyze to for parallelism.
+
+381
+00:10:35,020 --> 00:10:36,650
+and um You can think of
+
+382
+00:10:36,660 --> 00:10:38,370
+generalized wasn't as similar
+
+383
+00:10:38,380 --> 00:10:40,730
+to fsdp but more efficient
+
+384
+00:10:40,740 --> 00:10:42,850
+because the way that it wraps
+
+385
+00:10:42,860 --> 00:10:43,330
+parameters,
+
+386
+00:10:43,340 --> 00:10:44,570
+the way that the parameters are
+
+387
+00:10:44,580 --> 00:10:46,330
+charted is actually
+
+388
+00:10:46,770 --> 00:10:49,000
+better fit to the hardware.
+
+389
+00:10:49,010 --> 00:10:51,160
+um And then that uh ultimately
+
+390
+00:10:51,170 --> 00:10:51,920
+makes the system more
+
+391
+00:10:51,930 --> 00:10:52,720
+efficient.
+
+392
+00:10:53,670 --> 00:10:56,420
+soIf we have um modular fsdp it
+
+393
+00:10:56,430 --> 00:10:57,580
+kind of looks like this.
+
+394
+00:10:57,590 --> 00:10:59,420
+We've got um a bunch of weights
+
+395
+00:10:59,430 --> 00:11:00,260
+that are started.
+
+396
+00:11:00,270 --> 00:11:01,820
+There's some compute and where
+
+397
+00:11:01,830 --> 00:11:03,180
+we have this bubble or it this
+
+398
+00:11:03,190 --> 00:11:04,700
+weight, we actually have to
+
+399
+00:11:04,710 --> 00:11:06,060
+wait for some of the other
+
+400
+00:11:06,070 --> 00:11:07,500
+models to complete.
+
+401
+00:11:07,510 --> 00:11:08,460
+They're all gathered before we
+
+402
+00:11:08,470 --> 00:11:08,670
+can
+
+403
+00:11:08,730 --> 00:11:10,730
+start doing compute um or the
+
+404
+00:11:10,740 --> 00:11:12,130
+re reduced scatter uh in the
+
+405
+00:11:12,140 --> 00:11:12,770
+backward pass.
+
+406
+00:11:12,780 --> 00:11:14,160
+And what we'd like to do is
+
+407
+00:11:14,170 --> 00:11:16,880
+reduce that way um time by
+
+408
+00:11:16,890 --> 00:11:19,240
+using uh you know a different
+
+409
+00:11:19,250 --> 00:11:21,440
+technique for materialization
+
+410
+00:11:21,450 --> 00:11:22,600
+uh and generalized tensor
+
+411
+00:11:22,610 --> 00:11:23,480
+parallelism.
+
+412
+00:11:24,130 --> 00:11:26,400
+um and soThe flexibility we get
+
+413
+00:11:26,410 --> 00:11:27,280
+from generalized sense of
+
+414
+00:11:27,290 --> 00:11:28,640
+parallelism allows us to choose
+
+415
+00:11:28,650 --> 00:11:30,840
+expert charging uh separately,
+
+416
+00:11:30,850 --> 00:11:32,080
+independent charging sizes for
+
+417
+00:11:32,090 --> 00:11:33,840
+moe layers and dense layers
+
+418
+00:11:33,850 --> 00:11:35,080
+allow to pre fetch
+
+419
+00:11:35,090 --> 00:11:36,160
+recomputation.
+
+420
+00:11:36,170 --> 00:11:37,520
+So we have a dedicated
+
+421
+00:11:37,530 --> 00:11:39,080
+reecomputation prefect chain.
+
+422
+00:11:39,160 --> 00:11:40,870
+It allows uh for a weight
+
+423
+00:11:40,880 --> 00:11:42,830
+charting policy where fc one fc
+
+424
+00:11:42,840 --> 00:11:44,190
+two are always started.
+
+425
+00:11:44,200 --> 00:11:46,030
+A small friends are uncharted
+
+426
+00:11:46,040 --> 00:11:47,670
+otherrams you can opt in
+
+427
+00:11:48,010 --> 00:11:50,800
+um and uh because all of the
+
+428
+00:11:50,810 --> 00:11:52,280
+weights are started directly.
+
+429
+00:11:52,290 --> 00:11:53,800
+It's decoupled from distributed
+
+430
+00:11:53,810 --> 00:11:54,960
+data parallelism is decouple
+
+431
+00:11:54,970 --> 00:11:55,920
+from the optimizer and the
+
+432
+00:11:55,930 --> 00:11:57,480
+checkpoint that makes it a lot
+
+433
+00:11:57,490 --> 00:11:59,560
+more simpler to integrate uh
+
+434
+00:11:59,570 --> 00:12:01,480
+into the optimization loops.
+
+435
+00:12:01,480 --> 00:12:03,010
+soFor example, matrix wise.
+
+436
+00:12:03,040 --> 00:12:04,870
+Optimizers like muon or block
+
+437
+00:12:04,880 --> 00:12:06,910
+wise quantizations like nvfp
+
+438
+00:12:06,920 --> 00:12:10,150
+four or two dmxfpa uh can be
+
+439
+00:12:10,160 --> 00:12:11,790
+more. It's much simpler.
+
+440
+00:12:11,800 --> 00:12:13,030
+The software is much simpler.
+
+441
+00:12:13,460 --> 00:12:14,810
+um So really excited about
+
+442
+00:12:14,820 --> 00:12:16,410
+that. um It also has the
+
+443
+00:12:16,420 --> 00:12:18,690
+benefits. So this is um looking
+
+444
+00:12:18,700 --> 00:12:21,290
+at the neutron three ultra um
+
+445
+00:12:21,300 --> 00:12:23,130
+uh comparing against standard
+
+446
+00:12:23,140 --> 00:12:25,050
+three d decomposition,
+
+447
+00:12:25,060 --> 00:12:26,490
+uh you know uh
+
+448
+00:12:26,630 --> 00:12:27,150
+module modulularize,
+
+449
+00:12:27,160 --> 00:12:29,950
+fsdpi gets some amount of speed
+
+450
+00:12:29,960 --> 00:12:31,350
+up, but generalized sense of
+
+451
+00:12:31,360 --> 00:12:32,750
+parallelism is is even better
+
+452
+00:12:32,760 --> 00:12:33,310
+than that.
+
+453
+00:12:33,320 --> 00:12:34,100
+So this is,
+
+454
+00:12:34,110 --> 00:12:35,540
+again, um something that we're
+
+455
+00:12:35,550 --> 00:12:36,700
+developing on get hub.
+
+456
+00:12:36,710 --> 00:12:37,620
+And you can take a look,
+
+457
+00:12:37,630 --> 00:12:38,540
+if you like,
+
+458
+00:12:39,450 --> 00:12:40,880
+soI wanted to talk about megaton
+
+459
+00:12:40,890 --> 00:12:41,480
+inference,
+
+460
+00:12:41,490 --> 00:12:42,800
+which is a kind of an
+
+461
+00:12:42,810 --> 00:12:44,520
+experimental research project
+
+462
+00:12:44,530 --> 00:12:45,960
+where we're thinking about the
+
+463
+00:12:45,970 --> 00:12:47,280
+systems for reinforcement
+
+464
+00:12:47,290 --> 00:12:49,840
+learning. And we know that um
+
+465
+00:12:49,850 --> 00:12:51,840
+most systems for reinforcement
+
+466
+00:12:51,850 --> 00:12:53,120
+learning these days are built
+
+467
+00:12:53,130 --> 00:12:54,400
+by coupling up.
+
+468
+00:12:54,480 --> 00:12:57,190
+um A training loop may be using
+
+469
+00:12:57,200 --> 00:12:59,870
+megatron as its compute core
+
+470
+00:12:59,880 --> 00:13:01,190
+with an inference loop.
+
+471
+00:13:01,200 --> 00:13:03,670
+May b using vlm or sg length uh
+
+472
+00:13:03,680 --> 00:13:04,470
+to do rollouts?
+
+473
+00:13:04,480 --> 00:13:05,950
+And we asked the question,
+
+474
+00:13:05,960 --> 00:13:07,750
+well you knowdo we really need
+
+475
+00:13:07,760 --> 00:13:09,270
+to have uh this
+
+476
+00:13:09,340 --> 00:13:10,410
+complicated of a setup?
+
+477
+00:13:10,420 --> 00:13:11,730
+Could we make it simpler?
+
+478
+00:13:11,740 --> 00:13:12,770
+And we've actually found we can
+
+479
+00:13:12,780 --> 00:13:14,130
+do inference just as
+
+480
+00:13:14,140 --> 00:13:16,090
+efficiently uh just using
+
+481
+00:13:16,100 --> 00:13:17,610
+megatron directly.
+
+482
+00:13:17,620 --> 00:13:18,810
+um In order to do that,
+
+483
+00:13:18,820 --> 00:13:20,130
+we have to include some
+
+484
+00:13:20,140 --> 00:13:21,930
+optimization for the kind of
+
+485
+00:13:21,940 --> 00:13:23,010
+inference that you need in
+
+486
+00:13:23,020 --> 00:13:24,090
+reinforcement learning.
+
+487
+00:13:24,340 --> 00:13:25,570
+This is not a generalized
+
+488
+00:13:25,580 --> 00:13:26,370
+inference server.
+
+489
+00:13:26,380 --> 00:13:27,850
+Megatron inference is not trying
+
+490
+00:13:27,860 --> 00:13:29,250
+to be a way that you actually
+
+491
+00:13:29,260 --> 00:13:30,090
+deploy a model.
+
+492
+00:13:30,100 --> 00:13:31,850
+It's only for reinforcement
+
+493
+00:13:31,860 --> 00:13:32,370
+learning rollouts.
+
+494
+00:13:33,160 --> 00:13:35,230
+um so if you useIf you use
+
+495
+00:13:35,240 --> 00:13:36,590
+this, what you get is that you
+
+496
+00:13:36,600 --> 00:13:37,710
+don't need to convert the
+
+497
+00:13:37,720 --> 00:13:38,830
+checkpoints back and forth
+
+498
+00:13:38,840 --> 00:13:40,030
+between an inference framework
+
+499
+00:13:40,040 --> 00:13:40,910
+and a training framework.
+
+500
+00:13:40,920 --> 00:13:42,870
+During rl, um you have new
+
+501
+00:13:42,880 --> 00:13:44,230
+architectures that work in
+
+502
+00:13:44,240 --> 00:13:45,710
+inference on day zero.
+
+503
+00:13:45,720 --> 00:13:47,950
+soYou don't have to um implement
+
+504
+00:13:47,960 --> 00:13:48,160
+your
+
+505
+00:13:48,190 --> 00:13:49,340
+architecture twice in two
+
+506
+00:13:49,350 --> 00:13:50,700
+different frameworks and it
+
+507
+00:13:50,710 --> 00:13:52,420
+also helps um training and
+
+508
+00:13:52,430 --> 00:13:53,700
+inference stay in agreement you
+
+509
+00:13:53,710 --> 00:13:54,780
+know during reinforcement
+
+510
+00:13:54,790 --> 00:13:56,020
+learning. If you have
+
+511
+00:13:56,030 --> 00:13:57,060
+disagreements,
+
+512
+00:13:57,070 --> 00:13:58,860
+uh you can have log problem
+
+513
+00:13:58,870 --> 00:14:00,060
+mismatches between your
+
+514
+00:14:00,070 --> 00:14:01,260
+inference and your training
+
+515
+00:14:01,270 --> 00:14:02,940
+that can cause rl to
+
+516
+00:14:03,050 --> 00:14:04,800
+um struggle a little bit.
+
+517
+00:14:04,810 --> 00:14:06,440
+So you can make moral rl more
+
+518
+00:14:06,450 --> 00:14:07,760
+accurate and therefore more
+
+519
+00:14:07,770 --> 00:14:10,480
+efficient um uh by by uh using
+
+520
+00:14:10,490 --> 00:14:12,920
+the same software for both um
+
+521
+00:14:12,930 --> 00:14:13,800
+training as well as
+
+522
+00:14:13,810 --> 00:14:14,360
+inferences.
+
+523
+00:14:15,750 --> 00:14:18,300
+so um uh so that's uh That's a
+
+524
+00:14:18,310 --> 00:14:19,540
+project that's that's also
+
+525
+00:14:19,550 --> 00:14:19,900
+available.
+
+526
+00:14:19,910 --> 00:14:21,700
+it's notI wouldn't say it's not
+
+527
+00:14:21,710 --> 00:14:23,540
+uh that it's um you know being
+
+528
+00:14:23,550 --> 00:14:24,660
+used in production in a lot of
+
+529
+00:14:24,670 --> 00:14:25,180
+places yet.
+
+530
+00:14:25,190 --> 00:14:26,180
+It's something that that we're
+
+531
+00:14:26,190 --> 00:14:27,100
+excited about.
+
+532
+00:14:28,960 --> 00:14:30,670
+um And i'm gonna skip this in
+
+533
+00:14:30,680 --> 00:14:31,830
+the interest of time.
+
+534
+00:14:31,840 --> 00:14:33,310
+um Some other things that we're
+
+535
+00:14:33,320 --> 00:14:34,510
+putting into megatron,
+
+536
+00:14:34,520 --> 00:14:35,950
+uh one of them is with wise
+
+537
+00:14:35,960 --> 00:14:37,470
+reproducible training.
+
+538
+00:14:37,690 --> 00:14:39,600
+Megatron core is now
+
+539
+00:14:39,610 --> 00:14:40,760
+deterministic.
+
+540
+00:14:40,770 --> 00:14:43,800
+We validated that at um to about
+
+541
+00:14:43,810 --> 00:14:45,960
+2,000 uh Blackwell scale on a
+
+542
+00:14:45,970 --> 00:14:46,720
+trillion parameter,
+
+543
+00:14:46,730 --> 00:14:48,920
+you knowtron model and uh the
+
+544
+00:14:48,930 --> 00:14:49,760
+determinism taxs,
+
+545
+00:14:49,770 --> 00:14:51,640
+the slowdown that we got from
+
+546
+00:14:51,650 --> 00:14:52,640
+this determinism of
+
+547
+00:14:52,710 --> 00:14:53,990
+it was only2%.
+
+548
+00:14:54,510 --> 00:14:58,140
+Now, um the ability to replay a
+
+549
+00:14:58,150 --> 00:15:00,020
+computation has a lot of
+
+550
+00:15:00,030 --> 00:15:02,420
+benefits. um It makes training
+
+551
+00:15:02,430 --> 00:15:03,260
+more stable.
+
+552
+00:15:03,270 --> 00:15:05,100
+It also helps us diagnose issues
+
+553
+00:15:05,110 --> 00:15:06,100
+with hardware.
+
+554
+00:15:06,110 --> 00:15:07,460
+so Resilience is an
+
+555
+00:15:07,470 --> 00:15:09,140
+extraordinarily important part
+
+556
+00:15:09,150 --> 00:15:09,350
+of
+
+557
+00:15:09,540 --> 00:15:11,090
+training at scale and something
+
+558
+00:15:11,100 --> 00:15:12,370
+that factors into the
+
+559
+00:15:12,380 --> 00:15:14,010
+accelerated computing story.
+
+560
+00:15:14,020 --> 00:15:15,210
+You're trying to make uh
+
+561
+00:15:15,220 --> 00:15:16,290
+training and deploying these
+
+562
+00:15:16,300 --> 00:15:17,130
+models more efficient.
+
+563
+00:15:17,140 --> 00:15:18,090
+We have to pay attention to
+
+564
+00:15:18,100 --> 00:15:18,770
+resilience,
+
+565
+00:15:18,780 --> 00:15:20,250
+having a fully deterministic
+
+566
+00:15:20,260 --> 00:15:22,290
+mode makes that a lot easier.
+
+567
+00:15:22,810 --> 00:15:24,970
+um We plan to make Megatron for
+
+568
+00:15:24,980 --> 00:15:25,690
+deterministic.
+
+569
+00:15:25,700 --> 00:15:28,680
+By default.We've also put in a
+
+570
+00:15:28,690 --> 00:15:30,120
+lot of work on faster training
+
+571
+00:15:30,130 --> 00:15:31,560
+restarts, uh checkpoint save
+
+572
+00:15:31,570 --> 00:15:32,840
+and load optimization are
+
+573
+00:15:32,850 --> 00:15:34,760
+taking us from 300seconds.
+
+574
+00:15:35,110 --> 00:15:36,140
+The data will learn
+
+575
+00:15:36,150 --> 00:15:37,980
+initialization going from two
+
+576
+00:15:37,990 --> 00:15:39,380
+down to like five.
+
+577
+00:15:39,390 --> 00:15:41,020
+um Our first first iteration
+
+578
+00:15:41,030 --> 00:15:43,740
+time going from 225 seconds
+
+579
+00:15:43,750 --> 00:15:45,300
+down to about a hundred.
+
+580
+00:15:45,310 --> 00:15:46,540
+And this is all having to do
+
+581
+00:15:46,550 --> 00:15:48,220
+with a bunch of various
+
+582
+00:15:48,230 --> 00:15:49,980
+optimizations cachings uh
+
+583
+00:15:50,060 --> 00:15:51,610
+um checkpoint plans,
+
+584
+00:15:51,620 --> 00:15:53,450
+um skipping file system checks
+
+585
+00:15:53,460 --> 00:15:54,930
+uh that don't need to be
+
+586
+00:15:54,940 --> 00:15:57,250
+redundant, um deferring uh
+
+587
+00:15:57,260 --> 00:15:58,050
+indexing untilo,
+
+588
+00:15:58,060 --> 00:15:59,690
+you use them or using popled
+
+589
+00:15:59,700 --> 00:16:01,010
+kernels catching auto tune
+
+590
+00:16:01,020 --> 00:16:01,730
+results.
+
+591
+00:16:01,900 --> 00:16:04,050
+so All of this is is making um
+
+592
+00:16:04,060 --> 00:16:06,730
+it much faster to restart a job
+
+593
+00:16:06,740 --> 00:16:08,530
+which again accelerates
+
+594
+00:16:08,540 --> 00:16:10,290
+training at scale on a large
+
+595
+00:16:10,300 --> 00:16:10,810
+cluster.
+
+596
+00:16:12,330 --> 00:16:13,960
+Finally, um the the last thing I
+
+597
+00:16:13,970 --> 00:16:15,240
+wanted to point out is really
+
+598
+00:16:15,250 --> 00:16:17,320
+about um the the software
+
+599
+00:16:17,330 --> 00:16:18,520
+architecture maybe trying for
+
+600
+00:16:18,530 --> 00:16:20,680
+we're deprecating uh something
+
+601
+00:16:20,690 --> 00:16:21,640
+called GPT model.
+
+602
+00:16:21,650 --> 00:16:22,840
+If any of you have used that in
+
+603
+00:16:22,850 --> 00:16:23,440
+the past,
+
+604
+00:16:23,690 --> 00:16:25,120
+um we're moving to uh this
+
+605
+00:16:25,130 --> 00:16:27,080
+hybrid model um architecture
+
+606
+00:16:27,090 --> 00:16:28,320
+that that really combines
+
+607
+00:16:28,330 --> 00:16:29,240
+different kinds of layers.
+
+608
+00:16:29,250 --> 00:16:31,640
+Xs allows you to compose many
+
+609
+00:16:31,650 --> 00:16:33,200
+different kinds of attention um
+
+610
+00:16:33,210 --> 00:16:34,080
+linear attention,
+
+611
+00:16:34,090 --> 00:16:36,440
+denser and a we things like uh
+
+612
+00:16:36,450 --> 00:16:38,320
+themitron,qn three next and and
+
+613
+00:16:38,330 --> 00:16:38,600
+deepea
+
+614
+00:16:38,720 --> 00:16:40,830
+before can also be uh can all
+
+615
+00:16:40,840 --> 00:16:42,150
+be um expressed very
+
+616
+00:16:42,160 --> 00:16:43,470
+straightforwardly using hybrid
+
+617
+00:16:43,480 --> 00:16:44,150
+model.
+
+618
+00:16:44,160 --> 00:16:45,550
+um And then we're gonnaing to
+
+619
+00:16:45,560 --> 00:16:47,430
+refine that API to make it more
+
+620
+00:16:47,440 --> 00:16:48,230
+expressive,
+
+621
+00:16:48,240 --> 00:16:49,830
+make it easier for everyone to
+
+622
+00:16:49,840 --> 00:16:50,670
+experiment
+
+623
+00:16:50,780 --> 00:16:51,930
+in their model architecture so
+
+624
+00:16:51,940 --> 00:16:53,650
+that we can co design the model
+
+625
+00:16:53,660 --> 00:16:54,690
+with the hardware and and
+
+626
+00:16:54,700 --> 00:16:56,210
+therefore get more efficiency.
+
+627
+00:16:56,220 --> 00:16:57,250
+More efficiency is more
+
+628
+00:16:57,260 --> 00:16:58,250
+Intelligence.
+
+629
+00:16:58,970 --> 00:17:02,080
+Okay,so um uh that was a lot of
+
+630
+00:17:02,090 --> 00:17:03,600
+detail.Some of you might have
+
+631
+00:17:03,610 --> 00:17:04,840
+appreciated that some of you
+
+632
+00:17:04,850 --> 00:17:06,720
+may was a little bit um uh too
+
+633
+00:17:06,730 --> 00:17:07,880
+detailled,but II wanted to give
+
+634
+00:17:07,890 --> 00:17:08,960
+you a sense you know all the
+
+635
+00:17:08,970 --> 00:17:10,560
+way from the high high high
+
+636
+00:17:10,570 --> 00:17:11,960
+level scale of like,
+
+637
+00:17:11,970 --> 00:17:13,040
+what is nematron?
+
+638
+00:17:13,050 --> 00:17:13,920
+Why is in video
+
+639
+00:17:14,000 --> 00:17:15,230
+care about open technologies
+
+640
+00:17:15,240 --> 00:17:16,350
+for AI what are we going to
+
+641
+00:17:16,360 --> 00:17:17,310
+support that?
+
+642
+00:17:17,320 --> 00:17:19,150
+Why are we doing it um all the
+
+643
+00:17:19,160 --> 00:17:20,750
+way from uh from the high level
+
+644
+00:17:20,760 --> 00:17:22,030
+down to some of the low level
+
+645
+00:17:22,040 --> 00:17:23,470
+software details of what we're
+
+646
+00:17:23,480 --> 00:17:24,830
+doing um in some of our
+
+647
+00:17:24,840 --> 00:17:26,670
+software and with uh some of
+
+648
+00:17:26,680 --> 00:17:27,630
+our models to support the
+
+649
+00:17:27,640 --> 00:17:28,230
+community.
+
+650
+00:17:28,660 --> 00:17:30,330
+um It's really humbling for me
+
+651
+00:17:30,340 --> 00:17:32,370
+to be here and speak to you.
+
+652
+00:17:32,380 --> 00:17:34,850
+you know I think Chinese Chinese
+
+653
+00:17:34,860 --> 00:17:38,010
+developers are um inspiring.
+
+654
+00:17:38,020 --> 00:17:39,530
+um you know Everyone in the
+
+655
+00:17:39,540 --> 00:17:41,090
+world is is grateful for the
+
+656
+00:17:41,100 --> 00:17:42,730
+work that's happening here for
+
+657
+00:17:42,740 --> 00:17:43,610
+the amazing innovation,
+
+658
+00:17:43,690 --> 00:17:44,920
+and for the amazing artificial
+
+659
+00:17:44,930 --> 00:17:46,280
+Intelligence that people here
+
+660
+00:17:46,290 --> 00:17:47,320
+are creating.
+
+661
+00:17:47,330 --> 00:17:48,800
+um It's really humbling for me
+
+662
+00:17:48,810 --> 00:17:50,040
+um to be a part of that
+
+663
+00:17:50,050 --> 00:17:51,000
+community.And I want to say
+
+664
+00:17:51,010 --> 00:17:52,040
+thank you to all of you
+
+665
+00:17:52,050 --> 00:17:53,320
+developers for making such
+
+666
+00:17:53,330 --> 00:17:54,360
+amazing things.
+
+667
+00:17:54,370 --> 00:17:55,520
+you know All of us are working
+
+668
+00:17:55,530 --> 00:17:56,720
+together to create more
+
+669
+00:17:56,730 --> 00:17:58,240
+Intelligence on this planet and
+
+670
+00:17:58,250 --> 00:17:58,480
+there's an
+
+671
+00:17:58,580 --> 00:17:59,790
+nothing else that I would
+
+672
+00:17:59,800 --> 00:18:01,290
+rather be doing with my life's
+
+673
+00:18:01,300 --> 00:18:03,330
+work. um So thank you.
+
+674
+00:18:03,340 --> 00:18:04,610
+And um I hope that we're gonna
+
+675
+00:18:04,620 --> 00:18:05,890
+continue working together to
+
+676
+00:18:05,900 --> 00:18:08,540
+push technologies for AI
+
+677
+00:18:14,840 --> 00:18:15,040
+forwardrad.
+
+678
+00:18:19,020 --> 00:18:22,250
+我们了解了物理AI和开源大模型，
+
+679
+00:18:22,260 --> 00:18:28,090
+但真正让技术走进生产的是工程师们的实战选择。
+
+680
+00:18:28,090 --> 00:18:32,690
+接下来的圆桌我们请到了6位来自不同视角的嘉宾，
+
+681
+00:18:32,910 --> 00:18:40,430
+他们是赖俊杰，NVIDIA工程和解决方案副总裁韩晓d全站工程师吴
+
+682
+00:18:40,440 --> 00:18:45,540
+自华，NVIDIA GPU计算专家张家驹，
+
+683
+00:18:45,550 --> 00:18:47,920
+vllm社区大使
+
+684
+00:18:48,120 --> 00:18:52,630
+朱立根，nvi dse研究员姚勉，
+
+685
+00:18:52,640 --> 00:18:55,670
+三棒，阶跃星辰开放平台哈ness,
+
+686
+00:18:55,680 --> 00:19:01,470
+产品经理嘉宾们将围绕开放到可控这一话题展开讨论，
+
+687
+00:19:01,480 --> 00:19:03,070
+让我们有请六位嘉宾
+
+688
+00:19:03,140 --> 00:19:04,100
+上台。
+
+689
+00:19:33,250 --> 00:19:37,900
+啊大家上午好，非常欢迎大家来参加vdr的开发者日活动。
+
+690
+00:19:38,110 --> 00:19:44,660
+啊我们今天的话就是我们很多人啊实际上是呃都是可能头一次来参加这种
+
+691
+00:19:44,670 --> 00:19:49,260
+拍照的活动，所以我们今天的话我觉得更多的呃并不是并不见得是一定要
+
+692
+00:19:49,270 --> 00:19:53,060
+给大家一些问题的答案，我们今天更多的是一个这样的一个
+
+693
+00:19:53,130 --> 00:19:57,550
+探讨，啊所以就是我在准备这个拍nel的时候的话，就是
+
+694
+00:19:57,710 --> 00:20:02,020
+啊我我我我我在想怎么开场啊就在想怎么开场的时候的话，
+
+695
+00:20:02,030 --> 00:20:09,760
+我忽然啊想到了那个嗯一个小说里面的一一个开头一句话，
+
+696
+00:20:09,770 --> 00:20:10,960
+其实也很有名。
+
+697
+00:20:11,370 --> 00:20:17,270
+呃就是呃 Dicken斯的双城记里面的开头就是it was啊
+
+698
+00:20:17,280 --> 00:20:19,950
+the best of the times.
+
+699
+00:20:20,360 --> 00:20:22,740
+It was the worst of the times.
+
+700
+00:20:23,100 --> 00:20:26,410
+啊就是我们现在跟他这个很很像，
+
+701
+00:20:26,420 --> 00:20:31,850
+啊就是我们现在正处在一个最好的一个时代，
+
+702
+00:20:31,860 --> 00:20:34,490
+当然呢就是在某些意义上来说的话，
+
+703
+00:20:34,500 --> 00:20:38,050
+其实对于一些人啊他是也是有一定的这样
+
+704
+00:20:38,120 --> 00:20:45,750
+的一个呃阵痛的，或者说就是我们现在是红利与阵痛并存。
+
+705
+00:20:45,750 --> 00:20:51,380
+那么对于我们在座的开发者来说的话，就是我觉得我们还是非常幸运的，
+
+706
+00:20:51,910 --> 00:20:58,260
+就是因为我们啊正处在这样的一个AI啊飞速发展的这个阶段，
+
+707
+00:20:58,270 --> 00:21:00,820
+那么回到我们今天的这样的一个主题，
+
+708
+00:21:00,830 --> 00:21:06,140
+哈就是我们今天主题是从开放啊到可控，
+
+709
+00:21:06,150 --> 00:21:06,860
+啊我们今天
+
+710
+00:21:06,970 --> 00:21:12,760
+今天聊一聊在开源的技术站开源生态里面的这样一个harness的呃
+
+711
+00:21:12,770 --> 00:21:15,360
+可控之间的，我们还可以加一个可用，
+
+712
+00:21:15,370 --> 00:21:17,120
+从开到可用到可用。
+
+713
+00:21:17,640 --> 00:21:23,190
+啊就是我们都体会到也都观察到就是我们呃人工智能大模型agent的
+
+714
+00:21:23,200 --> 00:21:24,110
+话，在
+
+715
+00:21:24,350 --> 00:21:26,940
+啊不管是我们的生活还是工作中，
+
+716
+00:21:26,950 --> 00:21:32,180
+越来越得到了这样的一个多的使用啊和渗透，
+
+717
+00:21:32,190 --> 00:21:34,940
+好话不多说，啊就是我们今天呃接下来的话，
+
+718
+00:21:34,950 --> 00:21:38,580
+首先啊由我们的各位嘉宾简短的介绍一下自己，
+
+719
+00:21:38,590 --> 00:21:39,300
+啊并且
+
+720
+00:21:39,540 --> 00:21:43,890
+我们顺道简单的说一下，啊在大家各自的岗位上，
+
+721
+00:21:43,900 --> 00:21:45,810
+各自的理解上就是他们是意味着什么，
+
+722
+00:21:45,820 --> 00:21:48,000
+好吧，就是我们先从海啸开始。
+
+723
+00:21:48,330 --> 00:21:50,960
+好，大家好，我叫哈瑞韩晓，
+
+724
+00:21:50,970 --> 00:21:55,280
+我来自低费，然后我之前是ta也是全栈工程师，
+
+725
+00:21:55,290 --> 00:21:57,840
+嘛但其实我觉得现在an的时代，
+
+726
+00:21:57,850 --> 00:21:59,600
+我们应该叫全栈工程师。
+
+727
+00:21:59,750 --> 00:22:02,500
+嗯然后嗯说到这个哈尼斯，
+
+728
+00:22:02,510 --> 00:22:06,540
+吧我觉得嗯因为我日常是扣定的工作比较多，
+
+729
+00:22:06,550 --> 00:22:09,820
+嗯然后对于哈尼斯它到底是什么？
+
+730
+00:22:09,830 --> 00:22:13,060
+我觉得比较抽象的一个概念就是我让AI去完成一件事情，
+
+731
+00:22:13,070 --> 00:22:14,700
+比方说我让它盖一座城堡，
+
+732
+00:22:14,860 --> 00:22:17,690
+我是让他去从沙子去揉出来一个城堡，
+
+733
+00:22:17,700 --> 00:22:19,490
+还是让他去用积木拼出来，
+
+734
+00:22:19,500 --> 00:22:21,850
+我觉得后者肯定是明显去更快、
+
+735
+00:22:21,860 --> 00:22:26,490
+更高效、更可控，很容易让就很不容易让AI犯错的，
+
+736
+00:22:26,500 --> 00:22:29,650
+所以我觉得哈尼斯的意义就是到底他用什么去完成我的
+
+737
+00:22:29,740 --> 00:22:31,900
+或任务，这就是我对哈涅斯的理解。
+
+738
+00:22:31,900 --> 00:22:32,170
+啊
+
+739
+00:22:34,160 --> 00:22:38,350
+啊哈喽大家好，我是来自于n威利亚泰克的吴子华，
+
+740
+00:22:38,360 --> 00:22:43,150
+啊那我觉得我对哈那斯的理解现在可以归纳为一个词就是交互。
+
+741
+00:22:43,160 --> 00:22:47,750
+噢我觉得哈尼斯的本质实际上就是啊 interaction,
+
+742
+00:22:47,760 --> 00:22:49,110
+那么交互它包括
+
+743
+00:22:49,190 --> 00:22:53,620
+包括了三层的交互，包括了人与agent的交互，
+
+744
+00:22:53,630 --> 00:22:55,940
+agent的与agent的之间的交互，
+
+745
+00:22:55,950 --> 00:22:57,980
+以及agent的与外部世界，
+
+746
+00:22:57,990 --> 00:23:00,660
+当然主要是整个计算系统，
+
+747
+00:23:00,800 --> 00:23:05,470
+当然也衍生出来它通过啊比如说computer use,
+
+748
+00:23:05,480 --> 00:23:08,990
+通过一些外部的这样的一些装置，
+
+749
+00:23:09,000 --> 00:23:12,990
+它能够去接触到现实的世界这样的交互，
+
+750
+00:23:13,000 --> 00:23:15,710
+那么这三个交互合在一起，
+
+751
+00:23:15,810 --> 00:23:18,410
+这是我对现在harness斯的一个理解。
+
+752
+00:23:18,420 --> 00:23:23,530
+呃大家好，我是张家军，来自那个 vm社区，
+
+753
+00:23:23,540 --> 00:23:28,410
+那在过去的这两年里呢也是在国内组织了多次这些m社区一些活动，
+
+754
+00:23:28,420 --> 00:23:31,210
+在社区里面有一些这样的一些这个贡献。
+
+755
+00:23:31,340 --> 00:23:36,730
+那回到今天的这个这个演讲的这个或者今天我们圆桌的这个话题，
+
+756
+00:23:36,740 --> 00:23:42,570
+啊哈瑞斯呢我觉得它是呃大模型真正落地给这个
+
+757
+00:23:42,870 --> 00:23:45,660
+企业或者是给我们普通的用户，
+
+758
+00:23:45,670 --> 00:23:49,020
+让它真正产生价值的一个非常有效的这样一个方式。
+
+759
+00:23:49,030 --> 00:23:54,980
+当然我们的这个专长呢可能更多的是如何更快更好的产生出这个to肯
+
+760
+00:23:54,990 --> 00:23:56,860
+作为底层的这样基础设施，
+
+761
+00:23:56,870 --> 00:23:57,700
+ainf
+
+762
+00:23:57,930 --> 00:24:02,930
+很好的为上面的哈斯还是上面的这样一些agent的一些应用提供一个
+
+763
+00:24:02,940 --> 00:24:03,950
+很好的一个基础。
+
+764
+00:24:03,950 --> 00:24:07,010
+嗯
+
+765
+00:24:07,250 --> 00:24:10,880
+大家好，然后我是来自m research er 的朱立登，
+
+766
+00:24:10,890 --> 00:24:14,480
+然后我在MD research er 的话主要是带队做一些
+
+767
+00:24:14,490 --> 00:24:17,480
+agent策和token omxx相关的开发，
+
+768
+00:24:17,490 --> 00:24:19,000
+然后我是MV r research,
+
+769
+00:24:19,010 --> 00:24:21,640
+er 过去三个月的token e使用最多的了，
+
+770
+00:24:22,070 --> 00:24:26,180
+然后我现在在我们组看来的hardness斯的话，
+
+771
+00:24:26,190 --> 00:24:29,180
+就是我们会把它看作一种是agent的management,
+
+772
+00:24:29,190 --> 00:24:30,700
+agmomen大家可以想象一下，
+
+773
+00:24:30,710 --> 00:24:33,540
+就是在我们这片土地上对吧？
+
+774
+00:24:33,540 --> 00:24:37,030
+麦子熟了几千年，然后工业革命的机器响了几百年，
+
+775
+00:24:37,460 --> 00:24:42,890
+但是我们头一次也是人类历史上第一次我们拥有了这么多的智力，
+
+776
+00:24:42,900 --> 00:24:44,570
+就像Brian刚刚说的一样，
+
+777
+00:24:44,580 --> 00:24:48,370
+我们第一次有了可以把电批量变成智力的一个手段，
+
+778
+00:24:48,450 --> 00:24:52,330
+那当你有这么多智力的时候，你应该怎么去有效的管理它？
+
+779
+00:24:52,340 --> 00:24:54,130
+这个是我们理解的harness,
+
+780
+00:24:54,140 --> 00:24:56,930
+就像是你比如说现在大部分的同学，
+
+781
+00:24:56,940 --> 00:25:00,330
+就大部分agent策他其实都有一个清北本科生，
+
+782
+00:25:00,340 --> 00:25:03,370
+所以说硕博的能力，但是当你的公司一下子有
+
+783
+00:25:03,440 --> 00:25:06,630
+握100个1000个甚至1万个硕博生的时候，
+
+784
+00:25:06,640 --> 00:25:11,670
+你以一个什么样有效的方式可以把他们协同调动起来去做一件事情，
+
+785
+00:25:11,680 --> 00:25:14,590
+然后大家一起在同一件事情上同一个d direct e cion上
+
+786
+00:25:14,600 --> 00:25:18,190
+发力，这个东西就是一个能在人上的话叫m aanager,
+
+787
+00:25:18,420 --> 00:25:20,970
+在agent上的话，我们把它称之为harness,
+
+788
+00:25:20,980 --> 00:25:23,410
+然后我们认为在这个 harness斯的调度上，
+
+789
+00:25:23,420 --> 00:25:27,410
+你要把这个管理给做好，管理做好之后才能把agent t策和
+
+790
+00:25:27,420 --> 00:25:29,930
+tokens有效的s调l起来去做一些，
+
+791
+00:25:29,940 --> 00:25:33,090
+以前可能需要几年甚至几十年才做的事，
+
+792
+00:25:33,150 --> 00:25:35,540
+事情让它缩短到几个月甚至几周内完成。
+
+793
+00:25:37,190 --> 00:25:40,450
+呃大家好，我叫姚勉，是来自阶跃星辰，
+
+794
+00:25:40,460 --> 00:25:43,500
+在办开放平台的产品工程师，
+
+795
+00:25:43,810 --> 00:25:50,040
+然后我想从基础大模型公司的呃角度去谈一谈我对哈纳斯的理解。
+
+796
+00:25:50,500 --> 00:25:54,080
+呃我引用一个现在业界公认的公式，
+
+797
+00:25:54,090 --> 00:25:57,800
+就是agent等于harness斯加model odl并且
+
+798
+00:25:57,810 --> 00:25:59,400
+model ol和agent之间,
+
+799
+00:25:59,410 --> 00:26:01,600
+呃 model ol和harness之间的边界，
+
+800
+00:26:01,610 --> 00:26:05,230
+它是在不断的被打破的，呃
+
+801
+00:26:06,030 --> 00:26:11,070
+哈内斯层的很多东西会被慢慢随着模型的发展内化到模型内部去。
+
+802
+00:26:11,770 --> 00:26:15,900
+对，所以作为基础大模型的厂商去关注这个哈 n斯，
+
+803
+00:26:15,910 --> 00:26:19,440
+前沿哈开源的哈 n是非常重要的一件事情，
+
+804
+00:26:20,320 --> 00:26:23,690
+对，这是我的对harness斯的现在的理解。
+
+805
+00:26:23,820 --> 00:26:26,850
+好，啊大家可以看到我们今天看到的嘉宾的话，
+
+806
+00:26:26,860 --> 00:26:28,930
+实际上还是蛮有代表性的，
+
+807
+00:26:28,940 --> 00:26:34,130
+就是可以说是在不同的这个整个这样技术站的不同的这样的一个生态位，
+
+808
+00:26:34,140 --> 00:26:38,770
+啊就是由我们的啊模型框架啊然后应用，
+
+809
+00:26:38,850 --> 00:26:42,400
+也包括当然我们呃 NV这边就是从芯片层，
+
+810
+00:26:42,410 --> 00:26:45,640
+从平台层的这样的一些呃专家来一块跟大家分享，
+
+811
+00:26:45,650 --> 00:26:51,120
+啊那我们接下来的话我抛几个问题啊就是给我们啊不同的这样的一个嘉宾
+
+812
+00:26:51,130 --> 00:26:51,640
+分别回答。
+
+813
+00:26:51,640 --> 00:26:53,170
+就是首先的话我们还是从
+
+814
+00:26:53,420 --> 00:26:55,210
+啊结伟这边姚敏这边开始，
+
+815
+00:26:55,220 --> 00:27:00,250
+哈就是啊三f的话就是作为一个非常重要的这样一个开源模型的公司，
+
+816
+00:27:00,260 --> 00:27:03,650
+啊当你们发布一个呃新的模型的时候，
+
+817
+00:27:03,660 --> 00:27:08,370
+啊就是会对这种像上下游评测啊啊推理框架啊
+
+818
+00:27:08,450 --> 00:27:14,120
+啊去做哪些这种可以容易被驾驭这样的一些设计。
+
+819
+00:27:14,130 --> 00:27:17,400
+啊另外的话就是除了开放权重之外，
+
+820
+00:27:17,410 --> 00:27:23,240
+就是还会开放哪些信息能够更方便的像这种企业
+
+821
+00:27:23,300 --> 00:27:26,500
+来去啊落地你们的这样的一个新的模型。
+
+822
+00:27:26,500 --> 00:27:28,930
+嗯好的，我
+
+823
+00:27:29,570 --> 00:27:34,080
+我先谈一谈我对哈 N斯就刚才还没有完整说完的理解，
+
+824
+00:27:34,090 --> 00:27:40,000
+就是刚才说到的呃 harness s等于agent减去modl的
+
+825
+00:27:40,010 --> 00:27:44,520
+那一部分，然后我这里想引用一个国外呃比较前沿的
+
+826
+00:27:44,600 --> 00:27:49,150
+模型公司的一个观点，他可能比较极端，
+
+827
+00:27:49,160 --> 00:27:51,590
+就认为harness斯层终将消失，
+
+828
+00:27:51,600 --> 00:27:54,110
+会被慢慢内化到模型内部，
+
+829
+00:27:54,120 --> 00:27:56,110
+然后他举了
+
+830
+00:27:56,400 --> 00:28:00,270
+呃比较可靠，比如说呃 clau code,
+
+831
+00:28:00,280 --> 00:28:03,110
+它在某一次重大的更新过程中，
+
+832
+00:28:03,120 --> 00:28:06,750
+把它整体的系统提示词删减了非常大的一部分，
+
+833
+00:28:06,760 --> 00:28:08,950
+并且把外围的手脚架也都拆掉了，
+
+834
+00:28:08,960 --> 00:28:10,030
+并且发现
+
+835
+00:28:10,200 --> 00:28:14,790
+呃真实去执行任务的性能它是不降反升的。
+
+836
+00:28:15,150 --> 00:28:18,710
+嗯另外一些呃我在工程和产品上的实践，
+
+837
+00:28:18,720 --> 00:28:23,510
+比如说在前两年还没有哈那斯这个概念的时候，
+
+838
+00:28:23,520 --> 00:28:26,390
+其实一般叫提示词工程或者上下文工程，
+
+839
+00:28:26,400 --> 00:28:28,500
+那时候呃
+
+840
+00:28:28,930 --> 00:28:31,520
+agent的工程上有比较经典的范式，
+
+841
+00:28:31,530 --> 00:28:36,280
+叫做ra呃 agent的范式以及全thought,
+
+842
+00:28:36,290 --> 00:28:41,440
+这些一开始他们只是在提示词上做一些编排和手脚架，
+
+843
+00:28:41,450 --> 00:28:43,720
+但是随着模型把全
+
+844
+00:28:43,990 --> 00:28:46,950
+以这个act范式训训练进数据里面之后，
+
+845
+00:28:46,960 --> 00:28:49,380
+这些手脚架就被拆掉了。对，
+
+846
+00:28:49,390 --> 00:28:51,850
+呃然后接着
+
+847
+00:28:52,210 --> 00:28:57,560
+还说的这个问题，在基础模型公司开源了或者开放权重了之后，
+
+848
+00:28:57,570 --> 00:29:01,120
+我们还会有哪些开发者更能驾驭我们模型？
+
+849
+00:29:01,500 --> 00:29:09,210
+呃是我觉得从我的视角来讲比较重要的就是去开放我们模型厂商
+
+850
+00:29:09,220 --> 00:29:10,650
+自己的mol native的行业。
+
+851
+00:29:11,330 --> 00:29:16,400
+呃在这次step可q把我们公司的新模型开发成功之后，
+
+852
+00:29:16,410 --> 00:29:19,320
+我们也同时开源了s step e co o的harness s
+
+853
+00:29:19,330 --> 00:29:21,040
+作为我们公司自己的model,
+
+854
+00:29:21,050 --> 00:29:21,880
+道native I部的行业，
+
+855
+00:29:21,890 --> 00:29:24,240
+它是的目的就是为了
+
+856
+00:29:24,390 --> 00:29:31,660
+呃让har那层更大最大限度的发挥出我们模型的能力，
+
+857
+00:29:31,670 --> 00:29:37,780
+去能更呃以更高效的方式去完成实际任务的落地。
+
+858
+00:29:38,340 --> 00:29:44,090
+然后呃具体的交互方式上可能会分几种呃比较重要的就三种，
+
+859
+00:29:44,100 --> 00:29:48,050
+比如说提供呃哈斯的SDK,
+
+860
+00:29:48,060 --> 00:29:53,290
+呃也叫做a站的s DK去供开发者去集成到企业内部的
+
+861
+00:29:53,360 --> 00:29:56,660
+的已有的软件系统，或者说新的agent
+
+862
+00:29:56,910 --> 00:29:58,550
+呃自己的a子里面。
+
+863
+00:29:58,550 --> 00:30:02,430
+那么第二种就这种方式是最灵活度最高的方式。
+
+864
+00:30:02,430 --> 00:30:07,290
+那么第二种就是直接提供具体场景，就比如说口令口令场景
+
+865
+00:30:07,320 --> 00:30:14,670
+的开发工具，对以命令行以及桌面端的方式去让开发者能够更轻松的驾驭
+
+866
+00:30:14,680 --> 00:30:15,550
+我们
+
+867
+00:30:15,800 --> 00:30:17,560
+开源出来的新模型。
+
+868
+00:30:17,570 --> 00:30:20,640
+那么第三种也是我们现在正在探索，
+
+869
+00:30:20,650 --> 00:30:24,040
+也是今年比较前沿的一个哈那斯方向，
+
+870
+00:30:24,050 --> 00:30:26,040
+叫做m aanager的gent,
+
+871
+00:30:26,050 --> 00:30:31,470
+呃它的核心理念是把harness斯层被模型厂商自己
+
+872
+00:30:31,970 --> 00:30:38,320
+的云端基础设施托管了，那么对于开发者来说呃以及对于企业来说，
+
+873
+00:30:38,330 --> 00:30:43,640
+它不再需要关注哈那斯层具体的基础设施的维护，
+
+874
+00:30:43,650 --> 00:30:46,920
+呃可能更需要关注的是怎么把
+
+875
+00:30:47,160 --> 00:30:55,100
+模型厂商提供的哈那斯真正连接到企业内部的各种系统数据库平台上，
+
+876
+00:30:55,750 --> 00:30:59,100
+而省去了很多其他的管理管理，
+
+877
+00:30:59,110 --> 00:31:04,500
+但这种呃发展趋势它可能并不像刚才说的内化到模型测，
+
+878
+00:31:04,510 --> 00:31:08,220
+而是把一些基础设施都托管到呃模型厂商，
+
+879
+00:31:08,230 --> 00:31:10,660
+可能模型厂商以后做的就不仅是
+
+880
+00:31:10,810 --> 00:31:12,670
+Maas model as a service,
+
+881
+00:31:12,680 --> 00:31:17,610
+可能会更像agent as a service托管了很多云端的
+
+882
+00:31:17,620 --> 00:31:22,930
+基础设施，提供给企业以及开发者提供开箱即用的agent套件，
+
+883
+00:31:22,940 --> 00:31:25,840
+对，这是我的理解。
+
+884
+00:31:26,360 --> 00:31:29,900
+好谢谢杨敏，然后下面一个问题的话给到李工那边，吧
+
+885
+00:31:30,200 --> 00:31:32,550
+啊就是一个比较比较简单，
+
+886
+00:31:32,560 --> 00:31:34,630
+但是比较比较比较挑战的一个问题，
+
+887
+00:31:34,640 --> 00:31:40,030
+就是开发者当开发者设计这种大模型a证这的评测哈那的时候，
+
+888
+00:31:40,040 --> 00:31:43,430
+啊他最常犯的一些错误是什么？
+
+889
+00:31:43,440 --> 00:31:44,710
+您能分享一下吗？
+
+890
+00:31:46,010 --> 00:31:53,000
+噢这个问题问的非常好，因为其实很多时候只要就是很多时候大家哈那斯
+
+891
+00:31:53,010 --> 00:31:55,560
+之间比较的话，评测其实是最重要的一步，
+
+892
+00:31:55,570 --> 00:31:57,520
+如果你没有一个好的文创的话，
+
+893
+00:31:57,530 --> 00:32:00,960
+你做的再多，其实你很多时候你最终可能你
+
+894
+00:32:01,040 --> 00:32:05,070
+时间差的比较远，然后我在过去的半年里面，
+
+895
+00:32:05,080 --> 00:32:07,590
+我见到的harness斯评测的话，
+
+896
+00:32:07,600 --> 00:32:10,510
+大家可能就是会比较犯的比较多的几个错误。
+
+897
+00:32:10,510 --> 00:32:15,870
+第一件事情的话就是大家在跑harness斯的时候，大家会倾向于
+
+898
+00:32:15,900 --> 00:32:19,770
+就是他们不会少很多一些主观的bench Mark,
+
+899
+00:32:19,780 --> 00:32:24,570
+就大家现在其实去给他们上搜一下关于哈 n斯的脚手架的框架其实有
+
+900
+00:32:24,580 --> 00:32:26,010
+非常非常非常多，
+
+901
+00:32:26,140 --> 00:32:28,130
+但其实你像这些脚手架框架里，
+
+902
+00:32:28,140 --> 00:32:31,130
+面对吧正儿八经的跑过swe半去，
+
+903
+00:32:31,140 --> 00:32:33,970
+然后跑过一些看到的一些例子，
+
+904
+00:32:33,980 --> 00:32:36,450
+或者跑过一些真正的跑的三测任务的话，
+
+905
+00:32:36,460 --> 00:32:38,450
+他正儿八经跑过这种颜色，
+
+906
+00:32:38,460 --> 00:32:39,850
+啊雷神的非常少，
+
+907
+00:32:39,940 --> 00:32:43,170
+他只是说就是很多时候一像哈尼斯框架，
+
+908
+00:32:43,180 --> 00:32:47,970
+它给大家一个感觉，就有点像那种在玩一个些role play,
+
+909
+00:32:47,980 --> 00:32:52,570
+对就比如说像比如非常经典的叫什么三省六部制哈ness斯对吧？
+
+910
+00:32:52,570 --> 00:32:54,930
+那 Ag斯扮演一大堆这个大臣，
+
+911
+00:32:54,960 --> 00:32:57,470
+给你体验一下这个当赛博皇帝的感觉，
+
+912
+00:32:57,480 --> 00:33:00,670
+就这种harness斯当然是可以帮助大家去做一些事情的，
+
+913
+00:33:00,680 --> 00:33:03,790
+但是问题是我们如果就是是做一个re research的角度的话，
+
+914
+00:33:03,800 --> 00:33:07,030
+我们会想知道一件事情，就是有了这个 harness斯和没有这个
+
+915
+00:33:07,040 --> 00:33:08,990
+harness斯，在一些具体的任务上，
+
+916
+00:33:09,000 --> 00:33:09,710
+它的性能差
+
+917
+00:33:09,820 --> 00:33:14,610
+差与它到底差几个点，有没有一些可量化的客观的数值可以比较，
+
+918
+00:33:14,620 --> 00:33:16,530
+然后呢我觉得在很多哈ness的时候，
+
+919
+00:33:16,540 --> 00:33:19,490
+就大家可能是更多是展示一些GI,
+
+920
+00:33:19,500 --> 00:33:22,370
+或者是我说做出一个很酷炫的一个效果，
+
+921
+00:33:22,380 --> 00:33:24,610
+但是实际验收这块的话把控的并不牢，
+
+922
+00:33:24,670 --> 00:33:26,350
+这是我见到的第一类错误。
+
+923
+00:33:26,360 --> 00:33:29,630
+然后呢第二类错误的话就是大家在跑这个 harness斯的时候，
+
+924
+00:33:29,640 --> 00:33:34,910
+因为现在大部分的大模型公司就是提供的endpoint它都不是那种
+
+925
+00:33:34,920 --> 00:33:37,910
+确定性的，就是它比如同样的prompt都喂进去，
+
+926
+00:33:37,920 --> 00:33:39,470
+然后不同时间内他给
+
+927
+00:33:39,540 --> 00:33:41,450
+的generation的token并不一样，
+
+928
+00:33:41,460 --> 00:33:45,490
+所以这导致了就是在一些真正的harness斯的一些测试场景里面，
+
+929
+00:33:45,500 --> 00:33:47,850
+它本身tak就会有一些variance,
+
+930
+00:33:47,860 --> 00:33:51,730
+然后呢这个 variance这个时候带出来的抖动可能会比框架本身
+
+931
+00:33:51,740 --> 00:33:54,330
+带来的更大，所以一个标准评测像
+
+932
+00:33:54,400 --> 00:33:56,750
+我们组最近iql投的几篇论文，
+
+933
+00:33:56,760 --> 00:34:01,550
+我们都尽量在每一组实验里面都是会把同样的赛t跑上5次，
+
+934
+00:34:01,560 --> 00:34:04,150
+然后避免它就是出现一些抖动，
+
+935
+00:34:04,160 --> 00:34:07,110
+然后让它尽可能的solid or的能够出现这个结果，
+
+936
+00:34:07,120 --> 00:34:09,190
+对然后第三个也是很多很有意思，
+
+937
+00:34:09,260 --> 00:34:12,650
+很有意思的地方就是大家在测评哈ness斯的时候，
+
+938
+00:34:12,660 --> 00:34:18,370
+就很多就是大家对前沿模型的能力的噢就是
+
+939
+00:34:19,010 --> 00:34:21,280
+认知可能还没有那么到位，
+
+940
+00:34:21,290 --> 00:34:24,280
+比如说这是在我们自己测评中它发生过几个事情，
+
+941
+00:34:24,290 --> 00:34:29,680
+就是如果你直接去像一评测一个比如说像一个gpoc一样去评测一个
+
+942
+00:34:29,690 --> 00:34:30,520
+哈ness斯，
+
+943
+00:34:30,640 --> 00:34:33,830
+然后你会发现比如说像现在的一些比如说像deep VC个
+
+944
+00:34:33,840 --> 00:34:37,030
+哈ness,斯啊 t扣o的啊或者co o dex ex他们那的
+
+945
+00:34:37,040 --> 00:34:42,070
+哈尼他们的coa工具其实是会去看你整个根目录文件里的其他s
+
+946
+00:34:42,080 --> 00:34:42,630
+tssion n的,
+
+947
+00:34:42,770 --> 00:34:45,400
+就他做着做着他可能去偷看前端答案了，
+
+948
+00:34:45,410 --> 00:34:47,640
+就导致你的评测会完全失灵，
+
+949
+00:34:47,650 --> 00:34:49,840
+更不用说像o VI和那个装者，
+
+950
+00:34:49,850 --> 00:34:52,960
+他们都已经报过报过很多次job break的一些事情。
+
+951
+00:34:53,060 --> 00:34:54,250
+然后呢像这种情况下的话，
+
+952
+00:34:54,260 --> 00:34:55,890
+就是你的评测体系会整个失灵，
+
+953
+00:34:55,900 --> 00:34:57,850
+就你以为你的哈ness斯很好，
+
+954
+00:34:57,860 --> 00:35:00,850
+但只是它可能是发现前面的一些结果的答案，
+
+955
+00:35:00,860 --> 00:35:03,650
+所以在评测的时候们要做好一个非常强的一个隔离，
+
+956
+00:35:03,660 --> 00:35:06,010
+像我们的话这边是一般会起一个容器，
+
+957
+00:35:06,020 --> 00:35:07,970
+然后把所有的那种流量
+
+958
+00:35:08,050 --> 00:35:10,240
+和那个链接都监测了起来，
+
+959
+00:35:10,250 --> 00:35:13,560
+然避免他们做出一些越狱或者说一些偷看的行为，
+
+960
+00:35:13,570 --> 00:35:16,080
+在这上面这个几个基础上加起来以后，
+
+961
+00:35:16,090 --> 00:35:20,240
+我们我觉得这样的话我们才能build得出一个可以信赖可以复现，
+
+962
+00:35:20,250 --> 00:35:22,800
+然后能够公平比较的一个评测系统。
+
+963
+00:35:24,780 --> 00:35:32,330
+刚才那个李根说的这个这个偷看答案这个事情我我我我这个呃有有有真的
+
+964
+00:35:32,340 --> 00:35:37,330
+是有这个共鸣，啊因为我们前面之前我们团队就是做一些这样的实验的
+
+965
+00:35:37,340 --> 00:35:39,170
+时候，也出现过类似这样的情况，
+
+966
+00:35:39,180 --> 00:35:39,770
+就是
+
+967
+00:35:39,880 --> 00:35:45,280
+啊就像林哥描述的他去跑了找了一个好结果，然后声称是自己做的。
+
+968
+00:35:45,280 --> 00:35:51,050
+Ok好，啊那我们下一个问题的话给到家居这边，啊就是
+
+969
+00:35:51,130 --> 00:35:56,760
+呃从AA这个的话，从这种呃单轮到这种呃多轮超长对话之后，
+
+970
+00:35:56,770 --> 00:35:59,720
+啊就是这种啊可以开始存储上下文存储，
+
+971
+00:35:59,730 --> 00:36:05,120
+啊它会变成一个呃就是很大的一个系统的一个瓶颈，
+
+972
+00:36:05,130 --> 00:36:06,080
+啊那么
+
+973
+00:36:06,160 --> 00:36:10,830
+就是在解决一些像记忆一致性啊状态管理啊啊上下文检索方面的话，
+
+974
+00:36:10,840 --> 00:36:13,030
+就是开源方案它是怎么解决的，
+
+975
+00:36:13,040 --> 00:36:18,270
+呢然后就是 harness的话就是又如何测评这些不同方面的一些
+
+976
+00:36:18,280 --> 00:36:19,030
+能力，呢
+
+977
+00:36:20,120 --> 00:36:21,830
+这也是这个很好的一个问题，
+
+978
+00:36:21,840 --> 00:36:27,030
+因为呃有了这个多轮对话啊呃长胜这长城任务这些有了之后，
+
+979
+00:36:27,040 --> 00:36:31,990
+呢实际上我们会发现啊之前我们的很多的就是
+
+980
+00:36:32,180 --> 00:36:36,370
+呃确实是系统整体上的这样的一些这个这个挑战，
+
+981
+00:36:36,380 --> 00:36:43,050
+那呃我们会外接的一些这样的一些这个存储的这样一些方式去解决呃对应
+
+982
+00:36:43,060 --> 00:36:45,290
+的这样的一些这个这个问题，
+
+983
+00:36:45,300 --> 00:36:47,130
+那呃因为我们
+
+984
+00:36:47,210 --> 00:36:49,600
+更多的实际上是立案的话，
+
+985
+00:36:49,610 --> 00:36:51,840
+我们先还是先简单的案例一下，
+
+986
+00:36:51,850 --> 00:36:58,200
+我们这个推理引擎主要是从把这个让模型更快更好的产生出大量的这样
+
+987
+00:36:58,210 --> 00:36:59,000
+一些这个 token,
+
+988
+00:36:59,300 --> 00:37:03,850
+同时在生产上呢我们可能会解决很多的这样的一些这个问题，
+
+989
+00:37:03,860 --> 00:37:06,250
+像呃用上这个场景里面的话，
+
+990
+00:37:06,260 --> 00:37:08,690
+一方面是说比如说我们在模型对外，
+
+991
+00:37:08,700 --> 00:37:09,530
+比如说像
+
+992
+00:37:09,620 --> 00:37:12,290
+这个呃提供服务离不开这个层面，
+
+993
+00:37:12,300 --> 00:37:15,450
+那随着这个这个时间的这个推移，
+
+994
+00:37:15,460 --> 00:37:18,810
+那会有更多的这样的一些能力加到这个模型里面，
+
+995
+00:37:18,820 --> 00:37:20,730
+所以说呢呃在
+
+996
+00:37:20,800 --> 00:37:26,040
+呃这个引擎这边会对模型的这样一些这个变化提供这样的一些这个视野。
+
+997
+00:37:26,050 --> 00:37:32,040
+再一个呢就是说像您提到的说呃这种上下文的这个呃一致性啊这样的一些
+
+998
+00:37:32,050 --> 00:37:35,760
+这个问题，那我们通过呃外部的这样的一些这个
+
+999
+00:37:35,840 --> 00:37:40,630
+这个啊存储的方式，以及跟安全系统很好的去配合，
+
+1000
+00:37:40,640 --> 00:37:43,470
+去解决这样的一些情况。
+
+1001
+00:37:45,320 --> 00:37:49,390
+呃好的，那我们下一个问题给到呃总华这边总行这边，
+
+1002
+00:37:49,400 --> 00:37:55,070
+然后啊如果我要说一个平台说一个一个行业就比较好，
+
+1003
+00:37:55,080 --> 00:38:00,270
+那他呃如何去区分一些这种有效的探索和一些
+
+1004
+00:38:00,350 --> 00:38:06,260
+一些昂贵的空转的，然后另外的话就是呃企业如何能够把一次次的这样的
+
+1005
+00:38:06,270 --> 00:38:10,460
+一个失败呃沉淀成一些可复用的这样一个资产？
+
+1006
+00:38:11,930 --> 00:38:13,840
+谢谢，这里I很好的问题，
+
+1007
+00:38:13,850 --> 00:38:19,440
+那呃如何区分有效的探索和昂贵的空转，
+
+1008
+00:38:19,450 --> 00:38:26,880
+啊其实这个就涉及到了我们做任何事情的一个最关键的就是它的奖励函数
+
+1009
+00:38:26,950 --> 00:38:28,020
+部的一个设计。
+
+1010
+00:38:28,280 --> 00:38:32,950
+那如果说我们把呃奖励函数设计偏了，
+
+1011
+00:38:32,960 --> 00:38:34,750
+那就会进入到昂贵的空转，
+
+1012
+00:38:34,760 --> 00:38:40,110
+比如说我们如果认为一个系统的一个软件系统的好，
+
+1013
+00:38:40,120 --> 00:38:42,790
+是说它的测试多么的全面，
+
+1014
+00:38:42,800 --> 00:38:43,230
+多么的
+
+1015
+00:38:43,310 --> 00:38:50,940
+完善，那么最终我们得到的就是一个用各种各样的组合去覆盖
+
+1016
+00:38:50,950 --> 00:38:56,180
+很多现实中根本不会出现的一些极端的s case as然后这样一个
+
+1017
+00:38:56,190 --> 00:38:58,060
+非常庞大的测试库，
+
+1018
+00:38:58,250 --> 00:39:01,660
+而可能我们真正需要的功能反而被拖累，
+
+1019
+00:39:01,670 --> 00:39:04,810
+或者说反而没有得到一个很好的实现，
+
+1020
+00:39:04,820 --> 00:39:07,660
+这就是一个典型的昂贵空转的例子。
+
+1021
+00:39:07,660 --> 00:39:13,930
+类似的啊如果说我们在用agent的去做一些数学定理的证明，
+
+1022
+00:39:14,050 --> 00:39:20,610
+我们把呃目标如果不能够在一开始做一个框架上的很好的规定，
+
+1023
+00:39:20,860 --> 00:39:24,130
+那最后我们可能得到的是几万个，
+
+1024
+00:39:24,140 --> 00:39:28,090
+加了各种不同限定条件的啊引理，
+
+1025
+00:39:28,100 --> 00:39:30,330
+这些引理每一个都是成立的，
+
+1026
+00:39:30,340 --> 00:39:35,810
+但是这几万个引理加起来可能也不能帮助我们朝最后要证明
+
+1027
+00:39:35,880 --> 00:39:40,170
+的这个整个的主要的结论去朝前推进一步，
+
+1028
+00:39:41,220 --> 00:39:45,670
+那回到说怎么样把这些失败啊都变成资产。
+
+1029
+00:39:45,870 --> 00:39:51,100
+啊这里其实啊关于就是说微政策或者说AI的这些记忆系统，
+
+1030
+00:39:51,110 --> 00:39:55,820
+呀相关的很多东西，啊有很多的研究方面的工作，
+
+1031
+00:39:55,830 --> 00:39:59,780
+有很多的呃企业方面在做相关的一些工作，
+
+1032
+00:39:59,790 --> 00:40:01,610
+但我觉得其实
+
+1033
+00:40:02,780 --> 00:40:04,970
+我的认识是有一个最本质的东西，
+
+1034
+00:40:04,980 --> 00:40:09,410
+也就是说在人类时代成立的很多东西，
+
+1035
+00:40:09,420 --> 00:40:11,930
+其实在AI或者说agent的时代，
+
+1036
+00:40:11,940 --> 00:40:13,370
+它仍然是成立的，
+
+1037
+00:40:13,520 --> 00:40:19,870
+只是说它的呈现的形式，或者说它的相关的基础设施需要一些升级，
+
+1038
+00:40:19,880 --> 00:40:23,950
+就比如说啊大家可能比较关注的，
+
+1039
+00:40:23,960 --> 00:40:28,470
+前段时间anthropic说他们要推倒GT
+
+1040
+00:40:28,580 --> 00:40:30,620
+要自己重新造一套版本管理，
+
+1041
+00:40:30,630 --> 00:40:34,430
+啊那这里，他们并不是说在AI时代，
+
+1042
+00:40:34,440 --> 00:40:37,630
+在agent的时代就不需要去做代码的版本管理，
+
+1043
+00:40:37,640 --> 00:40:42,990
+只是说在人类时代的这种公认的代码管理工具git,
+
+1044
+00:40:43,370 --> 00:40:46,160
+它到AI时代，它可能在设计上，
+
+1045
+00:40:46,170 --> 00:40:48,320
+啊在它的整个软件的架构上，
+
+1046
+00:40:48,330 --> 00:40:52,440
+或者说它的呈现形式上需要去做一定的改动和升级。
+
+1047
+00:40:53,000 --> 00:40:55,870
+那同样到这个知识积累这一块，
+
+1048
+00:40:55,880 --> 00:41:00,190
+我们人类这么多年来几千年来的知识的传承和积累，
+
+1049
+00:41:00,200 --> 00:41:07,110
+我们靠文字靠书籍，啊我们就能够去实现这样的知识的传承。
+
+1050
+00:41:07,230 --> 00:41:10,660
+那到了AI时代agent的时代其实也是一样，
+
+1051
+00:41:10,670 --> 00:41:17,100
+我们只要能够把所有的成功的经验和失败的教训都进行，
+
+1052
+00:41:17,280 --> 00:41:22,830
+啊就类似于像lmvp那样的去比较系统的把它归纳总结出来，
+
+1053
+00:41:22,840 --> 00:41:29,670
+形成这样一些啊可追溯可检索的这样的一种系统性的结构化的文档，
+
+1054
+00:41:29,960 --> 00:41:34,710
+我们就完全能够做到在后面继续去做新的任务，
+
+1055
+00:41:34,720 --> 00:41:37,710
+或者是说一些新的探索性的任务的时候，
+
+1056
+00:41:37,720 --> 00:41:40,950
+去复用到之前积累下来的这些东西。
+
+1057
+00:41:41,100 --> 00:41:46,050
+好谢谢策划啊最后一个问题给到这个啊韩晓这边，
+
+1058
+00:41:46,060 --> 00:41:50,490
+就是DK这边的话实际上是离呃用户最近的这样一层，
+
+1059
+00:41:50,500 --> 00:41:56,050
+哈就是你们是怎么把像模型推理框架啊可以开始存储，
+
+1060
+00:41:56,160 --> 00:41:58,760
+把那串成一个可用的产品，
+
+1061
+00:41:58,770 --> 00:42:05,200
+呢呃我觉得我们的嗯首先我们对one的时候就是
+
+1062
+00:42:05,420 --> 00:42:08,970
+我们也是想做，因为当时二3年的时候大模型非常火，
+
+1063
+00:42:08,980 --> 00:42:14,010
+嘛我们团队也想做自己的aiapp然后当时我们做的时候呢过程中就
+
+1064
+00:42:14,020 --> 00:42:18,810
+发现其实有就是从lm的 API到这个最终的APP中间其实还差了
+
+1065
+00:42:18,820 --> 00:42:19,810
+很多东西，
+
+1066
+00:42:20,210 --> 00:42:23,650
+比方说这个呃我们一定要有观测有推行对吧？
+
+1067
+00:42:23,650 --> 00:42:28,370
+我要知道我的这些lm它都运行了哪些数据，钱花在哪了，对吧？
+
+1068
+00:42:28,380 --> 00:42:32,730
+调用这些一篇I然后同时我还需要去连接一些企业里头也有已有的一些
+
+1069
+00:42:32,740 --> 00:42:33,410
+业务，
+
+1070
+00:42:33,570 --> 00:42:37,230
+一些数据库主要是外边来过去像这个知识库啊这些，
+
+1071
+00:42:37,380 --> 00:42:41,850
+呃就组织这个过程中，呢我发现就是有很多差的东西，
+
+1072
+00:42:41,860 --> 00:42:43,490
+那么我把它把它做出来之后，
+
+1073
+00:42:43,500 --> 00:42:48,810
+呢这就成了d费I然后呃我们d1开源也是因为我们觉得这个东西应该
+
+1074
+00:42:48,820 --> 00:42:52,330
+不是我们会需要用，吧应该整个世界可能都会需要用，
+
+1075
+00:42:52,500 --> 00:42:56,090
+所以就把它开源出去了，然后同时他的名字也是d费，
+
+1076
+00:42:56,100 --> 00:42:57,650
+就是do it for you.
+
+1077
+00:42:59,410 --> 00:43:03,280
+Okok好，那个非常非常好的一个一个一个解释，
+
+1078
+00:43:03,290 --> 00:43:07,520
+哈就是接下来的话我有几个问题啊可能分别有不同的嘉宾回答一下，
+
+1079
+00:43:07,530 --> 00:43:11,520
+就是呃接下问题的话给到那个靠我最近的三位嘉宾，
+
+1080
+00:43:11,530 --> 00:43:14,360
+哈就是我们从那个啊家居开始。
+
+1081
+00:43:14,440 --> 00:43:18,910
+就是问题是说话是说，呃假如说我们现在有一个团队，
+
+1082
+00:43:18,920 --> 00:43:20,830
+有可能我们在座的就有这样的团队，
+
+1083
+00:43:20,840 --> 00:43:21,230
+啊
+
+1084
+00:43:21,470 --> 00:43:26,260
+啊他现在的话要用开源模型做培训的应用，
+
+1085
+00:43:26,270 --> 00:43:30,660
+啊那我demo的效果可能比较惊艳比较好，
+
+1086
+00:43:30,670 --> 00:43:33,820
+啊就是现在的话我要准备上线了，
+
+1087
+00:43:34,040 --> 00:43:38,870
+啊那和我最近的三位嘉宾能不能每人啊给一条，
+
+1088
+00:43:38,880 --> 00:43:43,490
+我觉得最核心的一个建议就是这个团队啊应该注意什么，
+
+1089
+00:43:43,500 --> 00:43:45,990
+避免哪些坑好。家俊。
+
+1090
+00:43:46,780 --> 00:43:49,050
+好，那个如果是要上线的话，
+
+1091
+00:43:49,060 --> 00:43:54,130
+呢我们这边比如说也面向呃有一些比如说大规模生产上实践的这样一些
+
+1092
+00:43:54,140 --> 00:43:58,330
+经验，那如果在呃就是 demo的时候比较好，
+
+1093
+00:43:58,340 --> 00:44:00,890
+那可能很多时候功能性我觉得是ok了，
+
+1094
+00:44:00,900 --> 00:44:01,730
+再有就是说你
+
+1095
+00:44:01,840 --> 00:44:05,580
+你你进来的比如说你是一些呃一些这些ben Mark,
+
+1096
+00:44:05,590 --> 00:44:08,550
+可能不是跟真实的这个流量还是有差别的，
+
+1097
+00:44:08,560 --> 00:44:12,330
+那到真实的流量上去，一一方面呢是说这个功能性，
+
+1098
+00:44:12,340 --> 00:44:17,350
+另另外一方面呢就是说你可能考虑到潮汐啊考虑到这个不同的这个
+
+1099
+00:44:17,530 --> 00:44:23,480
+场景是不是能够完全满足serv有你的这个呃用户的这样一个需求，
+
+1100
+00:44:23,490 --> 00:44:28,680
+如果用户比如说这是有这个暴增啊这样的一些一些这个这个需求，
+
+1101
+00:44:28,690 --> 00:44:32,520
+是不是你现在设计的这个场景能够满足线上的环境
+
+1102
+00:44:32,550 --> 00:44:34,180
+环境那这个呢实际上是
+
+1103
+00:44:34,380 --> 00:44:37,250
+呃我们这边也有就大量的这一些这个经验，
+
+1104
+00:44:37,260 --> 00:44:40,570
+那如果是大家在这方面如果有什么问题的话，
+
+1105
+00:44:40,580 --> 00:44:42,810
+我们可以线下再去这个交流，
+
+1106
+00:44:42,820 --> 00:44:44,330
+很好有广告。
+
+1107
+00:44:45,940 --> 00:44:52,250
+呃呃我的想法是说就是呃一定要对于demo有一个很清醒的认识，
+
+1108
+00:44:52,260 --> 00:44:58,130
+就是呃包括这个 demo其实就有点类似于说啊去一些模型，
+
+1109
+00:44:58,140 --> 00:45:00,370
+它可能去在一些榜单上刷榜，
+
+1110
+00:45:00,380 --> 00:45:00,850
+啊
+
+1111
+00:45:00,970 --> 00:45:02,920
+或者是一些Parness斯agent的，
+
+1112
+00:45:02,930 --> 00:45:08,400
+他也可以去刷榜，那么刷榜他得到的这样的一个分数确实是可能是一个很
+
+1113
+00:45:08,410 --> 00:45:11,320
+惊艳的东西，但是他离
+
+1114
+00:45:11,460 --> 00:45:15,850
+实际的不管是工程师还是其他的一些办公用户，
+
+1115
+00:45:15,860 --> 00:45:20,290
+他们日常的使用其实还是会有很大的一个距离的，
+
+1116
+00:45:20,300 --> 00:45:24,450
+所以我觉得就是说从demo到真正推向生产之间，
+
+1117
+00:45:24,520 --> 00:45:27,750
+其实还有一个非常重要也非常关键的环节，
+
+1118
+00:45:27,760 --> 00:45:30,870
+就是内部的高强度的大量的使用，
+
+1119
+00:45:30,880 --> 00:45:34,070
+就一一个产品，不管是说一个模型，
+
+1120
+00:45:34,080 --> 00:45:36,310
+一个agent的harness斯，
+
+1121
+00:45:36,320 --> 00:45:37,910
+啊乃至于说是一个s still,
+
+1122
+00:45:37,920 --> 00:45:39,390
+I只有是
+
+1123
+00:45:39,500 --> 00:45:42,490
+当内部的用户都已经高强度的使用，
+
+1124
+00:45:42,500 --> 00:45:49,410
+在内部的生产当中表现出来了足够可靠足够稳定的这样的表现之后，
+
+1125
+00:45:49,420 --> 00:45:54,290
+我们才能说它具备了一个对外发布去上线做一个产
+
+1126
+00:45:54,350 --> 00:45:56,030
+产品的一个坚实的基础。
+
+1127
+00:45:56,040 --> 00:46:00,590
+嗯对，我非常同意前面两位老师说的，
+
+1128
+00:46:00,600 --> 00:46:05,910
+因为我们其实呃我们在低飞内部也希望去做一些新的产品的探索，
+
+1129
+00:46:06,150 --> 00:46:09,780
+然后我们其实在今年年初的时候做了一个桌面agent的叫think
+
+1130
+00:46:09,790 --> 00:46:14,180
+nks然后当时我们其实也面临同样就是这个问题所描述的情况，
+
+1131
+00:46:14,190 --> 00:46:16,220
+我们dmo效果非常好非常棒，
+
+1132
+00:46:16,230 --> 00:46:18,220
+然后我们想要把它沟通markt的时候，
+
+1133
+00:46:18,230 --> 00:46:18,740
+呢
+
+1134
+00:46:18,900 --> 00:46:23,010
+呃就遇见了一些挫折，那反思这些挫折其实我们得出来结论，
+
+1135
+00:46:23,020 --> 00:46:27,730
+啊就是嗯早期的时候我们最好是找一些好的场景，
+
+1136
+00:46:27,740 --> 00:46:33,810
+然后确保那个场景的那些用户呃一定用的好用的舒服了之后用的爽了。
+
+1137
+00:46:33,930 --> 00:46:38,680
+然后我们还要做这个奔驰m因为他们前期的这个呃推进啊还有各种数据
+
+1138
+00:46:38,690 --> 00:46:43,520
+记录一也很重要，后续用来做这个奔驰m数数据训练集数据集，
+
+1139
+00:46:43,530 --> 00:46:46,320
+这都是一个呃相当于积累的过程，
+
+1140
+00:46:46,510 --> 00:46:50,140
+然后再就是逐渐逐步的去推到各个领域，
+
+1141
+00:46:50,150 --> 00:46:55,180
+不是不要一上来就这个呃大大这种就是大规模的推广，
+
+1142
+00:46:55,190 --> 00:46:56,340
+而是要一步一步来。
+
+1143
+00:46:56,340 --> 00:46:56,850
+就是
+
+1144
+00:46:56,930 --> 00:46:59,470
+你每一步都要有详细的评估，
+
+1145
+00:46:59,480 --> 00:47:03,110
+然后包括其实早期我们都是呃限制就是新的用户加入的，
+
+1146
+00:47:03,120 --> 00:47:05,190
+我们都是去手动的先选择用户，
+
+1147
+00:47:05,200 --> 00:47:07,540
+然后把每个场景跑好了之后，
+
+1148
+00:47:07,550 --> 00:47:11,460
+才能去对这个领域这个领域的用户去做一些推荐这样子。
+
+1149
+00:47:12,620 --> 00:47:15,570
+我有一个小问题啊就是怎么去选择这个用户？呢
+
+1150
+00:47:16,110 --> 00:47:18,020
+嗯其实这个这个问题其实很好，
+
+1151
+00:47:18,030 --> 00:47:22,220
+啊就是呃我我们比方说自己先用爽自己先用爽，
+
+1152
+00:47:22,230 --> 00:47:25,020
+那我们都是coding就是程序员工程师背景的，
+
+1153
+00:47:25,030 --> 00:47:27,780
+所以我们肯定要把日常的开发工作做好，
+
+1154
+00:47:27,790 --> 00:47:31,060
+所以我们就是把这个产品的设计的prd然后
+
+1155
+00:47:31,140 --> 00:47:34,850
+再到这个研发实现，然后再到这个后续的验收，
+
+1156
+00:47:34,860 --> 00:47:39,010
+整个这个过程流程跑通，我们是用自己的产品去迭代自己的产品，
+
+1157
+00:47:39,020 --> 00:47:40,610
+就是它是一个自举的流程，
+
+1158
+00:47:40,620 --> 00:47:44,010
+那这个这一步其实是保证这个产品它是个有可用性的，
+
+1159
+00:47:44,020 --> 00:47:45,930
+达到一个可用的标准的，就
+
+1160
+00:47:46,000 --> 00:47:47,790
+没有什么太明显的bug,
+
+1161
+00:47:47,800 --> 00:47:49,550
+然后我们做到这一步之后，
+
+1162
+00:47:49,560 --> 00:47:51,150
+呢我们再推广给公司内部，
+
+1163
+00:47:51,160 --> 00:47:54,910
+我们先去呃当时先去找了一些像法务，
+
+1164
+00:47:54,920 --> 00:47:57,710
+他们每天要审核很多很多的合同，
+
+1165
+00:47:57,720 --> 00:48:00,150
+那这个场景他们合同也是有sop的，
+
+1166
+00:48:00,160 --> 00:48:00,790
+然后我们的中间
+
+1167
+00:48:00,860 --> 00:48:03,450
+面a阵的其实也是有一个类似我漏的东西，
+
+1168
+00:48:03,460 --> 00:48:05,890
+就是每个环节去审核的人，
+
+1169
+00:48:05,900 --> 00:48:10,570
+他负责就是相当于他的手机里有一个in boss然后他的上一个呃
+
+1170
+00:48:10,580 --> 00:48:14,250
+上游来了任务之后，呢他的agent的直接从ebo SS拿出任务，
+
+1171
+00:48:14,260 --> 00:48:15,610
+然后就自动化干完之后，
+
+1172
+00:48:15,730 --> 00:48:17,290
+然后呢他来去做一个审批，
+
+1173
+00:48:17,300 --> 00:48:22,400
+那啊这个就是这在他的这个过程中呢我们其实跟着用户陪跑，
+
+1174
+00:48:22,410 --> 00:48:27,480
+就是他每天在那用，然后我们在旁边会有个人看他哪里用的有问题，
+
+1175
+00:48:27,490 --> 00:48:29,040
+然后他会有各种各样的反馈给我们，
+
+1176
+00:48:29,050 --> 00:48:30,880
+然后我们逐渐去优化这个产品，
+
+1177
+00:48:31,300 --> 00:48:35,500
+这样就是首先把法务这块跑通，然后再推广到其他各种部门。
+
+1178
+00:48:35,510 --> 00:48:39,100
+好，那个这一块的话我感触也比较深，
+
+1179
+00:48:39,110 --> 00:48:42,500
+啊就是稍微提几位嘉宾刚才的讲的做一个简单总结，
+
+1180
+00:48:42,510 --> 00:48:46,260
+啊就是说我们需要啊由内到外对吧？
+
+1181
+00:48:46,330 --> 00:48:48,010
+逐步的去做一些推广。
+
+1182
+00:48:48,010 --> 00:48:55,110
+好，那我们呃下一个问题的话给到呃右侧的两位嘉宾，然后啊那个
+
+1183
+00:48:55,570 --> 00:49:00,360
+呃李刚和杨远这边啊就是他们斯的话它变得越来越越重要，
+
+1184
+00:49:00,370 --> 00:49:06,920
+啊就是他是否啊有可能呢就是把像模型啊推理框架、
+
+1185
+00:49:06,930 --> 00:49:10,520
+啊就是记忆上下文工具等等所有这些
+
+1186
+00:49:10,590 --> 00:49:13,610
+串起来的这样的一个控制面，
+
+1187
+00:49:13,740 --> 00:49:19,770
+啊然后它是会有成为一个这样的一个呃标准的这样的一个啊叫组件也好，
+
+1188
+00:49:19,780 --> 00:49:22,290
+或者是标准的这样的一个一个一个东西，
+
+1189
+00:49:22,300 --> 00:49:28,250
+然后呢来然后来大家啊一块来去接受的这样一个一个潜力。
+
+1190
+00:49:29,590 --> 00:49:30,860
+好，要不那个
+
+1191
+00:49:31,370 --> 00:49:33,720
+噢这呃这是一个很有意思的问题，
+
+1192
+00:49:33,730 --> 00:49:36,960
+然后至少我觉得在现在这个时间点，
+
+1193
+00:49:36,970 --> 00:49:41,200
+我们可能所就没有人有一个百分百确定的答案，
+
+1194
+00:49:41,210 --> 00:49:46,080
+因为整个模型尤其是今年模型发展速度是远超了大部分人的预期的，
+
+1195
+00:49:46,090 --> 00:49:46,320
+就
+
+1196
+00:49:46,400 --> 00:49:50,070
+尤其是看年初看年初大家一些讨论和不定视的话，
+
+1197
+00:49:50,080 --> 00:49:54,030
+就是可以发现当时可能的就是分激进派和保守派，
+
+1198
+00:49:54,040 --> 00:49:59,350
+然后现在回过头来看保守派就这个激进派不激进啊这个是今年发生的
+
+1199
+00:49:59,360 --> 00:49:59,990
+事情，嗯
+
+1200
+00:50:00,120 --> 00:50:04,230
+所以我觉得就是至少在比如说那就是回到哈斯这一层上的话，
+
+1201
+00:50:04,240 --> 00:50:06,430
+会不会有些就是标准化出来，
+
+1202
+00:50:06,440 --> 00:50:08,910
+然后大家后面都去follow这件事情，
+
+1203
+00:50:08,920 --> 00:50:11,190
+就这个的话可能各有各的说法，
+
+1204
+00:50:11,200 --> 00:50:15,030
+但是我跟嗯旁边这位杰位同学我们想法是有有一点不同
+
+1205
+00:50:15,100 --> 00:50:18,410
+是很同意的，就是模型的能力还在持续的变强，
+
+1206
+00:50:18,420 --> 00:50:21,370
+然后模型的skin它并没有停，
+
+1207
+00:50:21,380 --> 00:50:25,650
+那么如果有一些东西它真的会变成标准化，
+
+1208
+00:50:25,660 --> 00:50:28,410
+那它很快就会被基模的能力给吃进去，
+
+1209
+00:50:28,420 --> 00:50:29,890
+然后呢大家在上面呢又会去
+
+1210
+00:50:29,960 --> 00:50:35,790
+研研发出新的东西来，所以我感觉就是所谓的能成为标准化的东西，
+
+1211
+00:50:35,800 --> 00:50:40,950
+它会有，但是呢它在社区里面并不会去活跃很长的时间，
+
+1212
+00:50:41,040 --> 00:50:43,550
+就他可能比如活跃的可能2~3个月以后，
+
+1213
+00:50:43,560 --> 00:50:48,190
+比如说像一开始当时比较火的像recent的叫react范式，
+
+1214
+00:50:48,200 --> 00:50:52,030
+然后呢包括像现在coding的时候有叫TDD test的追ven
+
+1215
+00:50:52,040 --> 00:50:54,190
+题来development这些东西，
+
+1216
+00:50:54,200 --> 00:50:55,990
+呢就当时都曾经一度成为
+
+1217
+00:50:56,060 --> 00:51:00,650
+we过om engineering或者说哈 N斯的一个啊
+
+1218
+00:51:00,660 --> 00:51:02,370
+standard,n那重新审视一个标准，
+
+1219
+00:51:02,380 --> 00:51:05,050
+就大家所有写pom的时候都按这个模式来走，
+
+1220
+00:51:05,060 --> 00:51:08,770
+但是呢可以看到就现在的模型基本上把这些能力都已经内化了，
+
+1221
+00:51:08,780 --> 00:51:10,850
+对，然后像之后的话，
+
+1222
+00:51:10,920 --> 00:51:13,830
+我觉得像这种标准化的东西会很快会被内化，
+
+1223
+00:51:13,840 --> 00:51:16,470
+就是它并它并不会持续很长时间，
+
+1224
+00:51:16,480 --> 00:51:22,390
+但是在上面的话我觉得就是当啊所有的模型能力一旦成为一个通用的东西
+
+1225
+00:51:22,400 --> 00:51:25,070
+的时候，就是建模能力会越来越强，
+
+1226
+00:51:25,080 --> 00:51:25,710
+但是呢对于
+
+1227
+00:51:25,780 --> 00:51:29,970
+越来越强的模型的这个使用用使用更强模型的时候，
+
+1228
+00:51:29,980 --> 00:51:32,930
+大家的需求也会变得越来越多和越来越奇怪。
+
+1229
+00:51:32,940 --> 00:51:34,610
+然后这里有个很相关的比喻，
+
+1230
+00:51:34,620 --> 00:51:37,090
+我觉得可以拿我们大部分人可能都经历过的，
+
+1231
+00:51:37,100 --> 00:51:40,570
+就是从2g到3G到4G这个流量时代的对比，
+
+1232
+00:51:40,760 --> 00:51:45,550
+就可以看到我们手机的流量从一开始的就是翻盖机对吧？
+
+1233
+00:51:45,560 --> 00:51:49,230
+到现在这个大屏，然后到包括最近大家都有的这个折叠对吧？
+
+1234
+00:51:49,240 --> 00:51:51,390
+然后你也看到我们的流量其实越来越多，
+
+1235
+00:51:51,400 --> 00:51:53,470
+但是当流量越越来越多的时候，
+
+1236
+00:51:53,480 --> 00:51:55,430
+这并不意味着我们用不完
+
+1237
+00:51:55,500 --> 00:51:57,650
+流量或我们刷不完这个东西，
+
+1238
+00:51:57,660 --> 00:52:02,170
+而是我们可以看到一开始可能我们刷的是一些纯文字版的东西，
+
+1239
+00:52:02,180 --> 00:52:02,380
+对吧？
+
+1240
+00:52:02,380 --> 00:52:05,250
+然后到后面可能有图片，再到后面呢可能有视频，
+
+1241
+00:52:05,260 --> 00:52:07,690
+甚至像最近的话有一些云游戏的东西，
+
+1242
+00:52:07,700 --> 00:52:10,130
+就一旦当一个标准化的东西，
+
+1243
+00:52:10,140 --> 00:52:10,340
+它
+
+1244
+00:52:10,360 --> 00:52:14,310
+它的量越来越多的时候，我们可能会在上面开发出新的需求，
+
+1245
+00:52:14,320 --> 00:52:15,670
+所以我觉得这点对模型也类似，
+
+1246
+00:52:15,680 --> 00:52:18,710
+就是那种标准化的东西会不停的被模型吃进去，
+
+1247
+00:52:18,720 --> 00:52:21,870
+但是另外一边同时我们会对这种更强的模型，
+
+1248
+00:52:21,880 --> 00:52:25,110
+我们会在上面开出更多的一些想法和一些创意，
+
+1249
+00:52:25,210 --> 00:52:26,870
+噢这是我的想法。
+
+1250
+00:52:28,270 --> 00:52:30,900
+是的，那我发表一下我我的想法，
+
+1251
+00:52:30,910 --> 00:52:37,380
+就是其实这方面的尝试，这方面刚才说到他那次可能会作为一个比较标准
+
+1252
+00:52:37,390 --> 00:52:43,220
+的平台，涵盖的模型，可能以及呃 agent的运行运行时会
+
+1253
+00:52:43,290 --> 00:52:46,690
+对话管理上下文，这些呃
+
+1254
+00:52:46,820 --> 00:52:49,250
+东西都都会会不会变成一个平台，
+
+1255
+00:52:49,260 --> 00:52:56,050
+呢我觉得是会的，但是目前至少这两年我觉得还不没有达到那个程度，
+
+1256
+00:52:56,060 --> 00:53:01,130
+就是其实国外比较前沿的公司已经在做这种方面的探索，
+
+1257
+00:53:01,350 --> 00:53:03,950
+也想去定义这个标准。
+
+1258
+00:53:04,100 --> 00:53:10,730
+对，但我我自己的一个感觉就是跟呃这这位同学就是一样，
+
+1259
+00:53:10,740 --> 00:53:15,850
+就是现在变化太快了，很多呃能力都慢慢被变化到模型里面，
+
+1260
+00:53:15,860 --> 00:53:19,050
+没有人能提出来哪一些呃标准的
+
+1261
+00:53:19,160 --> 00:53:26,500
+被大部分人所接受，然后就提到我刚才讲的那个大家比较公认的公式，
+
+1262
+00:53:26,510 --> 00:53:28,960
+就是agent等于model加harness,
+
+1263
+00:53:28,970 --> 00:53:33,030
+然后我认为这个呃公式它呃
+
+1264
+00:53:33,300 --> 00:53:38,690
+这不不是定义的说呃 agent t呃 mmodel和哈那次是
+
+1265
+00:53:38,700 --> 00:53:45,690
+此消彼长的，我认为说就是他们更像一个同心圆的呃形状就是里面，
+
+1266
+00:53:45,700 --> 00:53:48,250
+那一个圆就是agent t呃 model外面，
+
+1267
+00:53:48,320 --> 00:53:51,970
+下面那个人就是harness斯，他们共共同构成了agent，
+
+1268
+00:53:52,200 --> 00:53:55,870
+并且我们可以看到在最近这些年来，
+
+1269
+00:53:55,880 --> 00:53:58,870
+随着基模呃这个推理能力的增强，
+
+1270
+00:53:58,880 --> 00:54:02,350
+整个agent的能做的事情会越来越多，
+
+1271
+00:54:02,360 --> 00:54:04,910
+也就是说这个同心圆它会越来越大，
+
+1272
+00:54:05,160 --> 00:54:12,230
+对，所以就是呃在这个同心圆内部的一些能力会被呃吸收到模型里面，
+
+1273
+00:54:12,240 --> 00:54:15,190
+但是它本身的半径也会在不断的变大，
+
+1274
+00:54:15,200 --> 00:54:20,110
+去真正通最后会我觉得最后可能就是通往真正的人通往人工智能
+
+1275
+00:54:20,270 --> 00:54:23,380
+这个方向去发展，所以现在还在一个膨胀的过程中，
+
+1276
+00:54:23,390 --> 00:54:26,490
+没有人能去定义这个标准。
+
+1277
+00:54:27,610 --> 00:54:29,440
+刚才两位嘉宾的意见很一致，
+
+1278
+00:54:29,450 --> 00:54:31,560
+啊就是说这些啊发展变化，
+
+1279
+00:54:31,570 --> 00:54:34,040
+我们正处还处在一个高速变化的这样一个阶段，
+
+1280
+00:54:34,050 --> 00:54:37,240
+暂时的话看不到变成一个通用标准的这样一个事情。
+
+1281
+00:54:37,240 --> 00:54:41,460
+好，那我们今天看到的最后一个问题啊就是问到我们每一位嘉宾，啊
+
+1282
+00:54:41,490 --> 00:54:44,320
+就是我们能不能就是刚才我们讲了很多的这样的现状，
+
+1283
+00:54:44,330 --> 00:54:49,680
+我稍微展望一下未来，哈就是未来的话比如说1~2年的这样一个时间，
+
+1284
+00:54:49,690 --> 00:54:52,840
+啊像模型推理、服务推理框架、
+
+1285
+00:54:52,850 --> 00:54:55,800
+啊上下文存储管理、啊测评、
+
+1286
+00:54:55,810 --> 00:54:56,240
+agent
+
+1287
+00:54:56,520 --> 00:55:00,750
+个框架之间啊它的边界会发生哪些变化，
+
+1288
+00:55:00,760 --> 00:55:03,990
+呢啊就是我们先从呃按下这边开始。
+
+1289
+00:55:03,990 --> 00:55:08,090
+嗯这个其实我们
+
+1290
+00:55:08,830 --> 00:55:15,100
+喂啊我在我们我们我们低费其实是一家非常跟进前沿的一个企业，
+
+1291
+00:55:15,110 --> 00:55:18,620
+就是我们的团队每天都在去摄取一些前沿的信息，
+
+1292
+00:55:18,630 --> 00:55:21,220
+啊然后其实就这些信息鱼龙混杂，
+
+1293
+00:55:21,230 --> 00:55:23,780
+然后像前前段时间不是有一个债务就火
+
+1294
+00:55:23,860 --> 00:55:29,850
+多了，然后各个这个每一个层的推理层啊模型层还是行业层各种东西
+
+1295
+00:55:29,860 --> 00:55:32,570
+千奇百怪的每天都在出一些新的东西。
+
+1296
+00:55:32,930 --> 00:55:38,280
+嗯但是我觉得比较惊艳，我们的还是前段时间就是dip SK k那个
+
+1297
+00:55:38,290 --> 00:55:40,640
+dsh它是有一个核心，
+
+1298
+00:55:40,650 --> 00:55:45,440
+就是让用户去自定义他所所需要什么对吧？
+
+1299
+00:55:45,440 --> 00:55:47,930
+就是它它是它是相当于
+
+1300
+00:55:47,990 --> 00:55:50,110
+比如他把这个软件彻底做活了，
+
+1301
+00:55:50,120 --> 00:55:53,620
+这是思想，我们不说它的实现到底是不是最终正确的，
+
+1302
+00:55:53,630 --> 00:55:58,900
+但是这是一种思想的，呃那我觉得我们最终的演化的未来的想，
+
+1303
+00:56:02,490 --> 00:56:07,880
+就最终的演化的形态会不会未来就是呃模型层它去负责这个内核，
+
+1304
+00:56:07,890 --> 00:56:12,000
+然后我们用户的这些需求呃会让给到模型，
+
+1305
+00:56:12,010 --> 00:56:14,360
+然后模型来自己改造自己的哈尔滨斯。
+
+1306
+00:56:15,290 --> 00:56:20,680
+包括现在很多模型厂，他们其实都是在说二si对不就是模型自己去训练
+
+1307
+00:56:20,690 --> 00:56:25,440
+自己自己提升自己，所以我觉得未来这种趋势应该是往会往这个方向
+
+1308
+00:56:25,450 --> 00:56:26,240
+发展。
+
+1309
+00:56:26,650 --> 00:56:28,840
+所以我们做哈ness斯这一层的话，
+
+1310
+00:56:28,850 --> 00:56:34,560
+只要提供好让模型给他一个呃自己d iy自己的哈斯的能力，
+
+1311
+00:56:34,570 --> 00:56:36,080
+能把这块开放出来，
+
+1312
+00:56:36,330 --> 00:56:39,040
+应该是一个呃就比较正确的选择，
+
+1313
+00:56:39,050 --> 00:56:43,800
+吧包括d费现在提供的d费corold费cli这些东西就是让模型
+
+1314
+00:56:43,810 --> 00:56:49,510
+能够自己去拖拽过时，说我自己去编排a这个是一个趋势，
+
+1315
+00:56:49,520 --> 00:56:50,350
+应该是
+
+1316
+00:56:51,250 --> 00:56:53,160
+噢就是我在开场的时候说，
+
+1317
+00:56:53,170 --> 00:56:56,200
+我说哈 n斯呃本质上是交互，
+
+1318
+00:56:56,210 --> 00:56:59,960
+啊那在结束的时候，我说顺着刚才哈瑞的说，
+
+1319
+00:56:59,970 --> 00:57:04,240
+啊那其实看到dsh去引领了这个插件化的趋势，
+
+1320
+00:57:04,370 --> 00:57:09,800
+那包括像现在这个呃派其实也是一个插件化的这样的一个a型 a型的
+
+1321
+00:57:09,810 --> 00:57:14,760
+part的斯体系，那么跟扣的他们最新改版也做了这种插件化的改造，
+
+1322
+00:57:14,770 --> 00:57:17,400
+那包括cloud扣的他们也引入了cloud帽子，
+
+1323
+00:57:17,410 --> 00:57:19,320
+啊那么这些种种的啊
+
+1324
+00:57:19,430 --> 00:57:26,230
+呃趋势啊让我觉得它最后的终局其实不止于一个插件化的系统，
+
+1325
+00:57:26,420 --> 00:57:29,740
+我觉得就是harness斯的终局实际上是OS,
+
+1326
+00:57:30,090 --> 00:57:34,080
+它会把整个操作系统所有的东西都包括进去，
+
+1327
+00:57:34,090 --> 00:57:38,400
+因为在我们今天其实已经很多时候发现啊瓶颈
+
+1328
+00:57:38,740 --> 00:57:42,920
+不是模型的吞吐，瓶颈是各种系统工具，
+
+1329
+00:57:42,930 --> 00:57:48,720
+我们的存储系统，我们CPU方面的很多的呃任务执行的能力，
+
+1330
+00:57:48,730 --> 00:57:51,180
+它跟不上模型发展的速度，
+
+1331
+00:57:51,290 --> 00:57:52,870
+他们占用了更多的时间。
+
+1332
+00:57:53,090 --> 00:57:55,720
+那在这种RSI的这样的一个背景下，
+
+1333
+00:57:55,730 --> 00:57:59,320
+我们肯定希望是说最后通过agent的能力，
+
+1334
+00:57:59,330 --> 00:58:02,520
+能把它的整个外围也就是整个操作系统
+
+1335
+00:58:02,990 --> 00:58:06,220
+都由它来进行一个完整的改造，
+
+1336
+00:58:06,230 --> 00:58:12,220
+全面的加速，那么实际上最后就有可能类似于说像现在的这个操作系统，
+
+1337
+00:58:12,230 --> 00:58:14,740
+它其实有内核层和用户层，
+
+1338
+00:58:15,060 --> 00:58:18,770
+那有可能未来的一个完整的操作系统，
+
+1339
+00:58:18,780 --> 00:58:22,370
+就是由一个AI agent个来驱动它的内核层，
+
+1340
+00:58:22,620 --> 00:58:27,160
+而所有的外围的设施，所有的与人的交互，
+
+1341
+00:58:27,170 --> 00:58:32,920
+它内部的程序之间的交互都是由这个内核的agent来驱动去不断的
+
+1342
+00:58:32,930 --> 00:58:35,950
+改进，不断去迭代的，这是我的想法。
+
+1343
+00:58:38,330 --> 00:58:41,640
+好，那个我简单说一下个人的这个观点，
+
+1344
+00:58:41,650 --> 00:58:44,480
+啊那个我觉得未来一两1~2年的话，
+
+1345
+00:58:44,490 --> 00:58:46,320
+这个时间可能就是很长了，
+
+1346
+00:58:46,330 --> 00:58:49,800
+现在变化太快了，我都不太敢做这样的一个预测，
+
+1347
+00:58:49,810 --> 00:58:52,560
+但是就我们所看到的呢是说，
+
+1348
+00:58:52,570 --> 00:58:53,280
+比如就最近这
+
+1349
+00:58:53,360 --> 00:58:55,510
+这几个月就以这比如vm为例，
+
+1350
+00:58:55,520 --> 00:59:02,310
+那我们其实很多的这个同事都已经这个基本上不用用手写这个代码了，
+
+1351
+00:59:02,320 --> 00:59:06,750
+那给给这个一些指令，包括比如说遇到一些这个系统问题，
+
+1352
+00:59:06,760 --> 00:59:08,150
+我们如何去这个
+
+1353
+00:59:08,270 --> 00:59:13,700
+就是都是给他指定什么让他那个 a着的去做那这样一个方式，
+
+1354
+00:59:13,710 --> 00:59:17,540
+那现在的话呢那我们回想几个月之前的那这个代码，
+
+1355
+00:59:17,550 --> 00:59:20,580
+可能大部分还是这个人去去手写的，
+
+1356
+00:59:20,590 --> 00:59:23,100
+所以说随着这个模型能力的增强，
+
+1357
+00:59:23,160 --> 00:59:28,030
+那么会发现呃我们人给这个 agent或者给他的这个指令，
+
+1358
+00:59:28,040 --> 00:59:33,030
+呢可能越来越从更细节的一些指令到一些更高阶的一些更抽象，
+
+1359
+00:59:33,040 --> 00:59:36,350
+或者说涵盖更大的这样一些这个这个指令，
+
+1360
+00:59:36,360 --> 00:59:37,950
+所以在一两再过一两年
+
+1361
+00:59:38,020 --> 00:59:42,610
+之后，呢我们觉得这个随着这个模型能力的进一步增强，
+
+1362
+00:59:42,620 --> 00:59:47,970
+那哈克这一块，呢它可能现在我们考虑的是这个上下文啊这样一些可能
+
+1363
+00:59:47,980 --> 00:59:50,250
+细节的东西，可能逐渐的把它的范围，
+
+1364
+00:59:50,260 --> 00:59:52,810
+就像刚才这位同事讲的就是这个通讯
+
+1365
+00:59:52,900 --> 00:59:58,730
+现在逐渐的这个扩大，嘛所以他可能可以做更高阶的这样的一些这个这个
+
+1366
+00:59:58,740 --> 01:00:06,130
+事情，所以这一点的话我是觉得呃就是是很很就是肯定是一个大的这样
+
+1367
+01:00:06,140 --> 01:00:07,130
+一个趋势的。
+
+1368
+01:00:07,280 --> 01:00:12,190
+那另外回到一点，因为今天比如说我们是在等于的这个这个场合里面，
+
+1369
+01:00:12,200 --> 01:00:15,390
+我们会看到其实底层的这个无论是算力是GPU这一块，
+
+1370
+01:00:15,400 --> 01:00:19,150
+还是CPU这一块，那基本的这样的一些呃能力，
+
+1371
+01:00:19,160 --> 01:00:22,230
+比如它的性能是不是这个呃 GP的能力能够
+
+1372
+01:00:22,310 --> 01:00:25,620
+能够打满，是不是跟CPU能够很好的去结合，
+
+1373
+01:00:25,630 --> 01:00:29,220
+那这一块呢应该是一个还是非常重要的一些点。
+
+1374
+01:00:29,230 --> 01:00:34,300
+那我个人有一点担忧，就是当我们人去操纵a阵的去做事情，
+
+1375
+01:00:34,310 --> 01:00:37,100
+你你的这个界面是更high level的
+
+1376
+01:00:37,170 --> 01:00:41,240
+一些这样界面，但是对底层可能我们逐渐的越来越不了解，
+
+1377
+01:00:41,250 --> 01:00:44,760
+但是如何呃你能够真正的了解是说，
+
+1378
+01:00:44,770 --> 01:00:49,000
+比如说你的系统这个性能是不是达到一个很好的这样的一个
+
+1379
+01:00:49,240 --> 01:00:54,670
+呃指标，现在我们的人可能你还有这样的一个ses能够感觉出来说这个
+
+1380
+01:00:54,680 --> 01:00:58,790
+东西我们怎么去去做，但是再过两年之后，
+
+1381
+01:00:58,800 --> 01:01:04,190
+大家都已经摆脱了呃底层的这样的一些这个 lowl我的一些客户
+
+1382
+01:01:04,270 --> 01:01:06,060
+定啊这样的一些这个实践，
+
+1383
+01:01:06,070 --> 01:01:08,420
+是不是我们还能够呃继续下去，
+
+1384
+01:01:08,430 --> 01:01:12,180
+所以这个可能也是大家需要呃考虑的一个问题。
+
+1385
+01:01:14,410 --> 01:01:18,880
+好，对，我特别同意刚刚前面两位嘉宾说的就是a这个时代以后，
+
+1386
+01:01:18,890 --> 01:01:22,040
+它会改变我们很多的生产方式，
+
+1387
+01:01:22,050 --> 01:01:24,800
+然后哈那斯里面会在里面就是产生非常重要的一环，
+
+1388
+01:01:24,810 --> 01:01:27,160
+然后呢我因为在威尔设时，
+
+1389
+01:01:27,170 --> 01:01:29,360
+然后我们想问题可能更加是前沿一些，
+
+1390
+01:01:29,440 --> 01:01:32,470
+也会考虑加息3~5年的一个趋势，
+
+1391
+01:01:32,480 --> 01:01:38,950
+然后呢我给一个比较可能啊就是聊一个MBA设计的一个预测，
+
+1392
+01:01:38,960 --> 01:01:42,230
+吧我觉得可能比如说到29年或30年的时候，
+
+1393
+01:01:42,240 --> 01:01:43,550
+我们会看到的东西是什么？
+
+1394
+01:01:43,550 --> 01:01:44,270
+呢我们会看到
+
+1395
+01:01:44,300 --> 01:01:49,650
+到三个1,第一个一呢是应该我们会那个时候会看到可能一个接近100
+
+1396
+01:01:49,660 --> 01:01:53,010
+t的一个模型，然后呢会有个1000的TPS,
+
+1397
+01:01:53,020 --> 01:01:54,450
+然后会有一million的agents,
+
+1398
+01:01:55,120 --> 01:01:59,670
+然后呢我们最终也完全会往那个方向去走s掉el然后你想在那个级别做
+
+1399
+01:01:59,680 --> 01:02:00,590
+skill il的时候，
+
+1400
+01:02:00,600 --> 01:02:03,470
+我们现在的很多的很多基建都会成为瓶颈，
+
+1401
+01:02:03,480 --> 01:02:05,630
+然后很多以前我们建立起来的，
+
+1402
+01:02:05,640 --> 01:02:08,430
+尤其是那种软件工程的护城河，
+
+1403
+01:02:08,440 --> 01:02:10,030
+他们的包头两个会进行转移。
+
+1404
+01:02:10,360 --> 01:02:13,230
+比如像我们啊我们TM是最近在做的事情，
+
+1405
+01:02:13,240 --> 01:02:19,710
+就是我们在用a证词在非常大规模的去重写qwl然后呢这件事情写
+
+1406
+01:02:19,720 --> 01:02:21,470
+cnl这件事情本来并不奇怪了，
+
+1407
+01:02:21,480 --> 01:02:24,910
+我想我想在座有很多专家都是写q到le出身的，
+
+1408
+01:02:24,980 --> 01:02:28,970
+嗯然后呢但是一个比较有意思的事情就是我们team里面的同学，
+
+1409
+01:02:28,980 --> 01:02:31,930
+其实尤其比如像我我很诚实的跟他讲，
+
+1410
+01:02:31,940 --> 01:02:37,090
+就是我大概可能上次真的一行一行手写q打已经是25年3月份的事情
+
+1411
+01:02:37,100 --> 01:02:37,330
+了，
+
+1412
+01:02:37,520 --> 01:02:40,790
+我差不多一年半时间内没有写手写过任何一个q大，
+
+1413
+01:02:40,800 --> 01:02:44,590
+但是呢现在的话我们使用agent的通过max的方式加上我们自己的
+
+1414
+01:02:44,600 --> 01:02:48,270
+harness斯，我们可以快速的把看到优化到human s塔
+
+1415
+01:02:48,280 --> 01:02:50,390
+级别，甚至比human s塔还要更好，
+
+1416
+01:02:50,400 --> 01:02:52,230
+然后呢同时呢我们不仅在做开
+
+1417
+01:02:52,690 --> 01:02:55,920
+我们还在做一些就是数学的一些大定理的一些证明，
+
+1418
+01:02:55,930 --> 01:02:59,840
+比如最近的话我们跟啊康奈尔那边我们做了一些合作，
+
+1419
+01:02:59,850 --> 01:03:04,080
+我们把那个几何版的庞加莱猜想进行了一个形式化，
+
+1420
+01:03:04,090 --> 01:03:07,520
+然后呢我们一整套哈斯system在三天内
+
+1421
+01:03:07,580 --> 01:03:10,530
+写完了270万行的另的形式化代码，
+
+1422
+01:03:10,540 --> 01:03:13,810
+完成了整个工作，然后呢就想一件事情就是以后，
+
+1423
+01:03:13,820 --> 01:03:16,970
+我们比如说真的要去做一件新的事情对吧？
+
+1424
+01:03:16,980 --> 01:03:19,930
+然后如果我们真的能有一个非常聪明的模型，
+
+1425
+01:03:19,940 --> 01:03:21,290
+有非常多的agents,
+
+1426
+01:03:21,300 --> 01:03:22,370
+然后我们基本上通过
+
+1427
+01:03:22,440 --> 01:03:25,470
+无限量来做，然后呢这个时候怎么有一个有效哈ness,
+
+1428
+01:03:25,480 --> 01:03:29,870
+s把你调动起来，然后呢如果你有一个有效哈 uns把调动起来以后，
+
+1429
+01:03:29,880 --> 01:03:34,150
+可能甚至比如说像现在一些大家用的一些软件想要的一些功能，
+
+1430
+01:03:34,160 --> 01:03:37,230
+甚至一些比如说生产的一些dmo o这个东西可能
+
+1431
+01:03:37,300 --> 01:03:39,050
+可能就真的是一个prompt下去，
+
+1432
+01:03:39,060 --> 01:03:41,970
+然后就几个agent军团帮我把这件事情给干了，
+
+1433
+01:03:41,980 --> 01:03:48,170
+然后那个时候的话就真的噢我们戏称之为就是那个时候最大的波特莱克，
+
+1434
+01:03:48,180 --> 01:03:51,650
+可能最后就不是会在那个人的空阶段，
+
+1435
+01:03:51,660 --> 01:03:52,090
+而是可能
+
+1436
+01:03:52,160 --> 01:03:57,950
+会回到卡和电，然后呢我们就我啊在一个好的哈业者的指引下，
+
+1437
+01:03:57,960 --> 01:04:01,990
+对以后可能大部分生产我们都牺牲可能就两件事对吧？
+
+1438
+01:04:02,000 --> 01:04:06,710
+电多加卡卡多加电，对，然后410打满接下去就可能是未来的一个
+
+1439
+01:04:06,720 --> 01:04:06,950
+趋势。
+
+1440
+01:04:07,020 --> 01:04:11,610
+是对，所以我觉得就是哈斯的一般处理最终是需要帮助大家往那个方向
+
+1441
+01:04:11,620 --> 01:04:13,410
+走，而且在这个方向走的路上，
+
+1442
+01:04:13,420 --> 01:04:16,810
+其实我们已经看到一些很多成功的sign道证明，
+
+1443
+01:04:16,820 --> 01:04:20,010
+我们只要把电和卡撕掉上去以后，
+
+1444
+01:04:20,020 --> 01:04:21,810
+它的效果它的结果
+
+1445
+01:04:21,870 --> 01:04:25,060
+是会比你去堆能力要更高效的。
+
+1446
+01:04:25,060 --> 01:04:32,110
+好的，呃刚才听到了前面几位老师发表的观点，也让我就是受
+
+1447
+01:04:32,330 --> 01:04:40,200
+学学到了很多东西，呃也让我能就是能表达一下我自己对哈那斯可能很长
+
+1448
+01:04:40,210 --> 01:04:41,760
+一段未来的一个
+
+1449
+01:04:41,960 --> 01:04:42,720
+猜想。
+
+1450
+01:04:42,730 --> 01:04:45,160
+就是刚才其实几个老师都提到了，
+
+1451
+01:04:45,170 --> 01:04:50,600
+说呃现在的基础设施，呃比如说呃操作系统，
+
+1452
+01:04:51,210 --> 01:04:54,040
+一开始其实这些操作系统是给人用的，
+
+1453
+01:04:54,050 --> 01:04:56,000
+它还是面向人的使用方式，
+
+1454
+01:04:56,010 --> 01:04:59,920
+并且我们训练的数据里面大部分人都是收集的使用方式，
+
+1455
+01:04:59,930 --> 01:05:02,840
+这些race去完成这个模型的变化训练，
+
+1456
+01:05:02,850 --> 01:05:06,160
+那有没有可能以后训练的数据已经不是
+
+1457
+01:05:06,230 --> 01:05:08,480
+是人产生的数据副院长。
+
+1458
+01:05:08,610 --> 01:05:13,480
+对那可能会对整个har那斯的形态都会产生比较大的冲击，
+
+1459
+01:05:13,490 --> 01:05:17,880
+可能会有新的操作系统专门给agent et用的，
+
+1460
+01:05:17,890 --> 01:05:21,560
+然后agent t你能在这个面向agent et训练的，
+
+1461
+01:05:21,570 --> 01:05:23,480
+或者说更更更适合自
+
+1462
+01:05:23,630 --> 01:05:29,740
+基础模型的去理解的操作系统上自己完成整个呃闭环的训练，
+
+1463
+01:05:29,750 --> 01:05:33,430
+对，就这就如果真到这一刻，
+
+1464
+01:05:33,440 --> 01:05:36,660
+就可能呃就不是现在这种模式去收集，
+
+1465
+01:05:36,670 --> 01:05:38,260
+很多人
+
+1466
+01:05:38,630 --> 01:05:44,580
+自然人去使用操作系统，啊使用编编程啊这些的race s而是模型自
+
+1467
+01:05:44,590 --> 01:05:46,260
+闭环去生成锤子。
+
+1468
+01:05:46,260 --> 01:05:51,690
+好，那个我我们的时间卡的非常非常的准，
+
+1469
+01:05:52,680 --> 01:05:57,350
+然后呃我们我们之前完全没有彩排过，
+
+1470
+01:05:57,360 --> 01:05:59,990
+然后呢就是我们第一次把这个问题抛出来，
+
+1471
+01:06:00,000 --> 01:06:03,230
+包括嘉宾第一次我听到嘉宾呃第一次听到嘉宾的这个回答，
+
+1472
+01:06:03,240 --> 01:06:04,510
+我不知道大家的感受怎么样，
+
+1473
+01:06:04,520 --> 01:06:07,590
+啊坦白讲我我感觉我今天感触非常深，
+
+1474
+01:06:07,700 --> 01:06:12,740
+很多我大家这边回答的话都感同身受，并且感觉学到了非常多的东西。
+
+1475
+01:06:12,750 --> 01:06:14,740
+啊那么回到今天的这个主题，
+
+1476
+01:06:14,750 --> 01:06:21,180
+啊就是啊我觉得像啊开放开源其实解决了很多我们的这样的一个企业
+
+1477
+01:06:21,190 --> 01:06:22,500
+用户，他用
+
+1478
+01:06:22,570 --> 01:06:28,160
+什么的问题，然后呢 r那斯的话它解决了就是我们这些用户啊敢不敢
+
+1479
+01:06:28,170 --> 01:06:30,240
+用，敢不敢上生产的这样的一个问题，
+
+1480
+01:06:30,250 --> 01:06:36,680
+啊希望那个我们今天的这样的一个拍乐的话能给大家啊一些一些启发，
+
+1481
+01:06:36,690 --> 01:06:37,360
+然后呢我们
+
+1482
+01:06:37,430 --> 01:06:43,580
+我们我们一道啊来去推动啊人工智能在我们更广泛的这样一个领域啊获得
+
+1483
+01:06:43,590 --> 01:06:44,020
+应用。
+
+1484
+01:06:44,030 --> 01:06:47,020
+啊最后再次感谢我们看到的各位嘉宾，
+
+1485
+01:06:47,030 --> 01:06:51,620
+啊包括感谢我们幕后的这准备这些问题的这样的一些同事啊非常好的
+
+1486
+01:06:51,630 --> 01:06:52,220
+问题，
+
+1487
+01:06:52,280 --> 01:06:56,270
+啊也感谢各位开发者来参加我们的这样的一个活动，好，谢谢大家。
+
+1488
+01:07:10,370 --> 01:07:15,760
+非常精彩的碰撞从开放到可控不是一条直线，
+
+1489
+01:07:15,770 --> 01:07:22,280
+而是一个需要社区平台工程师共同参与的生态协作过程，
+
+1490
+01:07:22,290 --> 01:07:25,240
+感谢6位嘉宾的真诚分享。
+
+1491
+01:07:25,520 --> 01:07:28,000
+各位上午主论坛的最后一个。

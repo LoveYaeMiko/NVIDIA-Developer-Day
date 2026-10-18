@@ -1,0 +1,28 @@
+# 33  IMG_20261016_140940.jpg  (4064x3048)
+Token Sweep Results
+. 4x H200, EP4, DeepSeek-V4-Pro shape, full MoE-layer forward; the number above each group = speedup (MegaMoE ÷ baseline)
+Baseline = the conventional four-stage flow:NCCL all-gather / reduce-scatter + CUTLASS grouped GEMM (fused finalize)
+Per-Tensor:MegaMoEleads atall13buckets-1.02-1.11xupto512,1.24-1.35xfrom 1024up（peak1.35xat8192),geomean 1.16x
+Both are close at small token counts- launch / communication dominated; the single-kernel advantage shows once the GEMM share grows
+MegaMoE-fusedsinglekemel(NVSHMEMdispatch/combine)  all-gather/reduce-scatter+CUTLASSgrouped GEMM
+4xH200-EP4·DeepSeek-V4-Proshape·fullMoE-layerforward,p50over theslowestrank
+Per-TensorFP8  BlockwiseFP8(DeepGEMM-style)
+1200
+ik（slowestrank,usefulFLOPs)  1.33×1.24x  1.72x
+1.35x
+1000  800  1.59x  1.51x
+1.29x
+800  1.27x  1.33x
+600  1.45x
+600
+1.24x  1.37x
+400
+400
+1.11x  1.31x
+200  200
+1.09x  1.24x
+1.06x  1.22x
+1.05x1.03x1.03x  1.02x  1.03×1.03x1.16x  1.18x
+16  32  64  64-428256
+tokensperrank  8  32  51210242048409681921638432768
+okensperrank  InVIDIA

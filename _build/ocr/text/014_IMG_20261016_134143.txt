@@ -1,0 +1,10 @@
+# 14  IMG_20261016_134143.jpg  (4064x3048)
+MegaMoE on Blackwell
+Phase interleaving between FCland FC2
+·FC1/FC2tileschedulematters
+Perfect overlap with L1 mainloop
+Dispatch
+L1  L2  L2  L2
+Act  Act  Act  Remote Store  Act  Remote Store  RS  RS
+Prologue state:consume some L1 tiles to  Steady state
+cutoff theL1/L2 dependencyinsteadystate

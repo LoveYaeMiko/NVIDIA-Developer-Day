@@ -1,0 +1,22 @@
+# 88  IMG_20261016_161625.jpg  (4064x3048)
+Goal 2: decode concurrency must keep up
+GLM-5.2· same AgentX load· 4 nodes /32 GPUs· X-axis = set session concurrency (lanes) · in-flight counts requests, incl., subagents
+TP8-KVreplicatedonall8GPUs  DEP(dp8+ep8)·noreplication
+KV  KV  KV  KV  KV  KV  KV  KV  KV  KV  KV  KV  KV  KV  KV  KV
+x1  x1  x1  x1  x]  #2  #3  #4  囍6  7
+1.26M tokens/node  7.6M tokens/node(6x)
+ceiling 33 requests in flight  scalesto 1o0+ sessions
+Output throughput (tok/s)  Requests in flightyssetsession concurrency
+900  158
+160
+615  20
+009
+53
+24
+101  6B  c16  C32
+C64  c96  c128
+C4B  C64  c95  c128  set sesaion concurenoy (lanes)
+esdion conourency (anes)
+DEP(op8+ep8)  +TP8  DEP·requestsinflight--Tpe·requestsin fighit
+set sesdions (1:1)  TP8 ceing多33
+nVIDIA

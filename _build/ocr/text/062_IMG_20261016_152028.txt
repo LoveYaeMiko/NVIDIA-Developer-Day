@@ -1,0 +1,26 @@
+# 62  IMG_20261016_152028.jpg  (4064x3048)
+KVTC: Integration and Pipelined Decompression
+A pluggable codecbackend for inference engines and KV cache management frameworks
+Pipelineddecompression
+Before
+PCleH2D  H2D  H2D
+H2D
+GPU compute  DQO  FullGEMMx8·CO  DQ1  FullGEMMx8·C1
+DQ2  FullGEMMx8·C2
+After  warm-up  M-shardedTP-GEMM·M/8perGPU
+PCleH2D  H2D  H2D  H2D
+GPU compute  DQO  TP-GEMM CO  DQ1  TP-GEMM C1  DQ2  TP-GEMM C2
+AllGather(M)  AGCO  AGC1
+AGC2  [M,D]/GPU
+Time  saved time
+Pluggable integration architecture  Current integration  Candidate adapter
+Inference
+Engines  VLLM  SGLang  TensorRT-LLM
+GPU Connector
+KV Cache  LMCache
+aement  HiCache  Dynamo
+Codec API
+KVTC  STORE/COMPRESS
+Algorithm  KV blocks  Layout&chunking  PCA/LRPCA
+Dp-plannedmixedprecision  Packed chunks
+nVIDIA

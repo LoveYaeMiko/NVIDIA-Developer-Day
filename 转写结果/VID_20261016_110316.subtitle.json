@@ -1,0 +1,254 @@
+{
+ "1": {
+  "start_time": 130,
+  "end_time": 1600,
+  "original_subtitle": "They're true and we do really",
+  "translated_subtitle": ""
+ },
+ "2": {
+  "start_time": 1610,
+  "end_time": 3040,
+  "original_subtitle": "enjoy the work and we love",
+  "translated_subtitle": ""
+ },
+ "3": {
+  "start_time": 3050,
+  "end_time": 3960,
+  "original_subtitle": "being in the community and",
+  "translated_subtitle": ""
+ },
+ "4": {
+  "start_time": 3970,
+  "end_time": 5320,
+  "original_subtitle": "working with developers like",
+  "translated_subtitle": ""
+ },
+ "5": {
+  "start_time": 5330,
+  "end_time": 7040,
+  "original_subtitle": "you. But we're actually doing",
+  "translated_subtitle": ""
+ },
+ "6": {
+  "start_time": 7050,
+  "end_time": 7880,
+  "original_subtitle": "it because we think it's",
+  "translated_subtitle": ""
+ },
+ "7": {
+  "start_time": 7890,
+  "end_time": 9320,
+  "original_subtitle": "necessary for our business.",
+  "translated_subtitle": ""
+ },
+ "8": {
+  "start_time": 9330,
+  "end_time": 10240,
+  "original_subtitle": "We're doing it because it's",
+  "translated_subtitle": ""
+ },
+ "9": {
+  "start_time": 10250,
+  "end_time": 11880,
+  "original_subtitle": "necessary for our future.",
+  "translated_subtitle": ""
+ },
+ "10": {
+  "start_time": 11970,
+  "end_time": 13360,
+  "original_subtitle": "andIt's important for developers",
+  "translated_subtitle": ""
+ },
+ "11": {
+  "start_time": 13370,
+  "end_time": 14600,
+  "original_subtitle": "to understand that.",
+  "translated_subtitle": ""
+ },
+ "12": {
+  "start_time": 14610,
+  "end_time": 16080,
+  "original_subtitle": "So they'll understand the depth",
+  "translated_subtitle": ""
+ },
+ "13": {
+  "start_time": 16090,
+  "end_time": 17120,
+  "original_subtitle": "of our commitment to this",
+  "translated_subtitle": ""
+ },
+ "14": {
+  "start_time": 17130,
+  "end_time": 18800,
+  "original_subtitle": "work. It's the same as the",
+  "translated_subtitle": ""
+ },
+ "15": {
+  "start_time": 18810,
+  "end_time": 20560,
+  "original_subtitle": "depth of our commitment to cuda",
+  "translated_subtitle": ""
+ },
+ "16": {
+  "start_time": 20570,
+  "end_time": 21680,
+  "original_subtitle": "and the other things that we've",
+  "translated_subtitle": ""
+ },
+ "17": {
+  "start_time": 21690,
+  "end_time": 22880,
+  "original_subtitle": "been building for years on the",
+  "translated_subtitle": ""
+ },
+ "18": {
+  "start_time": 22890,
+  "end_time": 23400,
+  "original_subtitle": "video.",
+  "translated_subtitle": ""
+ },
+ "19": {
+  "start_time": 23760,
+  "end_time": 25250,
+  "original_subtitle": "um uh When we understand you",
+  "translated_subtitle": ""
+ },
+ "20": {
+  "start_time": 25260,
+  "end_time": 26600,
+  "original_subtitle": "know that something is very",
+  "translated_subtitle": ""
+ },
+ "21": {
+  "start_time": 26610,
+  "end_time": 26870,
+  "original_subtitle": "important,",
+  "translated_subtitle": ""
+ },
+ "22": {
+  "start_time": 26880,
+  "end_time": 29030,
+  "original_subtitle": "then you know we were all in and",
+  "translated_subtitle": ""
+ },
+ "23": {
+  "start_time": 29040,
+  "end_time": 30920,
+  "original_subtitle": "we never give up that's how the",
+  "translated_subtitle": ""
+ },
+ "24": {
+  "start_time": 30930,
+  "end_time": 32540,
+  "original_subtitle": "video works and open",
+  "translated_subtitle": ""
+ },
+ "25": {
+  "start_time": 32550,
+  "end_time": 34460,
+  "original_subtitle": "technologies for AI is critical",
+  "translated_subtitle": ""
+ },
+ "26": {
+  "start_time": 34470,
+  "end_time": 36420,
+  "original_subtitle": "to uh in videos future and to",
+  "translated_subtitle": ""
+ },
+ "27": {
+  "start_time": 36430,
+  "end_time": 38020,
+  "original_subtitle": "many of uh of our features,",
+  "translated_subtitle": ""
+ },
+ "28": {
+  "start_time": 38030,
+  "end_time": 39180,
+  "original_subtitle": "even you know all around the",
+  "translated_subtitle": ""
+ },
+ "29": {
+  "start_time": 39190,
+  "end_time": 39820,
+  "original_subtitle": "industry.",
+  "translated_subtitle": ""
+ },
+ "30": {
+  "start_time": 41150,
+  "end_time": 42460,
+  "original_subtitle": "okayNow I want to get a little",
+  "translated_subtitle": ""
+ },
+ "31": {
+  "start_time": 42470,
+  "end_time": 43900,
+  "original_subtitle": "bit more specific about some of",
+  "translated_subtitle": ""
+ },
+ "32": {
+  "start_time": 43910,
+  "end_time": 45940,
+  "original_subtitle": "the things that we're doing um",
+  "translated_subtitle": ""
+ },
+ "33": {
+  "start_time": 45950,
+  "end_time": 47180,
+  "original_subtitle": "building a model is a",
+  "translated_subtitle": ""
+ },
+ "34": {
+  "start_time": 47190,
+  "end_time": 49220,
+  "original_subtitle": "distributed systems problem.",
+  "translated_subtitle": ""
+ },
+ "35": {
+  "start_time": 49230,
+  "end_time": 51980,
+  "original_subtitle": "um We have a whole bunch of",
+  "translated_subtitle": ""
+ },
+ "36": {
+  "start_time": 51990,
+  "end_time": 53740,
+  "original_subtitle": "stages. Each one of them is a",
+  "translated_subtitle": ""
+ },
+ "37": {
+  "start_time": 53750,
+  "end_time": 54980,
+  "original_subtitle": "distributed system.",
+  "translated_subtitle": ""
+ },
+ "38": {
+  "start_time": 55080,
+  "end_time": 56390,
+  "original_subtitle": "andThe accelerated computing",
+  "translated_subtitle": ""
+ },
+ "39": {
+  "start_time": 56400,
+  "end_time": 57430,
+  "original_subtitle": "problem for each of them is",
+  "translated_subtitle": ""
+ },
+ "40": {
+  "start_time": 57440,
+  "end_time": 58310,
+  "original_subtitle": "really important.",
+  "translated_subtitle": ""
+ },
+ "41": {
+  "start_time": 58320,
+  "end_time": 60150,
+  "original_subtitle": "We have data preparation where",
+  "translated_subtitle": ""
+ },
+ "42": {
+  "start_time": 60160,
+  "end_time": 60910,
+  "original_subtitle": "we need to.",
+  "translated_subtitle": ""
+ }
+}

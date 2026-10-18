@@ -1,0 +1,9 @@
+# 41  IMG_20261016_142409.jpg  (4064x3048)
+Context Length Drives Memory Policy
+More tokens per rankincrease activationand buffermemory.
+64K Context  IM Context
+CP16  CP64
+4,096 tokens/rank  16.384tokens/rank
+Fine-grained recompute +offload  Full recompute
+More headroom for CuDA Graphs  Higher activationpressure
+4xmore tokens perrankat 1M,so we switch to a more aggressive memory policy.

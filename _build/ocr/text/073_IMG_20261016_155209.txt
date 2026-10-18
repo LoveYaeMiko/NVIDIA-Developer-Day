@@ -1,0 +1,29 @@
+# 73  IMG_20261016_155209.jpg  (4064x3048)
+GEN01/06  THROUGHPUT
+Naive Nested Dict  385K  block ops/s
+第一版像一本按worker分册的账本：要找某个prenx，只能先翻W1，再翻W2，再翻w3。
+这质能工作，组查询路径很零：每个调求部要逐个Wo水or试一遍，看它的媛存能连续命中多深。
+KVcache  为什公慢
+为什公要复明  每个请求都要扫所有workor。worker越
+多、prompt越长，查询越像在全仓库逐柜
+翻找。
+Router question  Nested Dict:逐个worker 翻账本
+逾命中徽源  为什么还不够准
+locaLhash只代表block内容。相同内容
+出现在不同位置时，可能被误认为prefix
+Twohashes  qu  h1  h2  h3  h4  连续命中。
+这一代的价值
+Nested Dict  它暴露了两个核心问题：访问椅式不对，
+送个wvker  W1的缓存账本  W2的缓存账本  W3的缓存账本  以及locaLhash碰撞需要profix
+contoxt.
+RustActor  ponO  poso  POsO
+pOs1  PO81  pos1
+Inverted Index  pos2  Pou2  h3*  pos2
+w
+pos3  pos3  pos3
+Radlx Tree  match dopth =2  match depth =1  match dopth
+用树表达购票
+Concurrent Radix  慢的原因：外层扫 worker，内层扫 prefix depth。worker 越多、prompt 越长，翻得越久。
+h3*提醒：只看 locaLhash 还可能把“同内容、不同前爆位置”的 block 混滑。
+FlashIndexer
+O(WXD)

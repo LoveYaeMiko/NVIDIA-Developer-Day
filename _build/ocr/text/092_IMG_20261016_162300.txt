@@ -1,0 +1,19 @@
+# 92  IMG_20261016_162300.jpg  (4064x3048)
+ThunderAgent · how it decides
+one tick every 5 s·util =c of active programs ÷GPu KV pool
+admit·resume  pause
+0.80 target  0.95pause
+0.85resume ceiling
+Pause order S=1/c+1{ACTING}·ACTING weightx2^(-t)  State machine per program, transitions only at tool boundaries
+toolcall
+P2  ACTING  C=40K  1st
+REASONING  ACTING
+toolreturns
+P3  ACTING  c=120K  2nd
+resume  pause
+C=30K  3rd  util<0.85·S=1/c+  util>0.95
+P4  REASONING  IREASONING)
+P1  RE  ANG  c=180K  last  PAUSED
+waiting onat  lose·then smallest context →cheapest to recompute  resume -worker with most free Kv·wait >18o0 s→forced resume
+nVIDIA
+nVIDIA

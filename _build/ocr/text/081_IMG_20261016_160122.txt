@@ -1,0 +1,19 @@
+# 81  IMG_20261016_160122.jpg  (4064x3048)
+Single AgentX Session Characteristics
+单步时延分解  66a
+100s  tool / user gap（t顶60s)  47h  61a
+prell(TTFT)  devrvke  70g  120g
+75s  1808  1328
+50s
+25s
+20  30  40  50
+agent step →（59 steps,主线程请求，无 subagent)
+ISL增长曲线（累积输入 token，逐query）  峰值219K
+200K
+150K
+100K  第42步：间隔46.7小时后恢复
+代码上下文  KV早已被逐出，187K全量重算
+50K-
+10  20  30  40  50
+query序号→ ISL 从448单调增长到219K,每步新增 p50约 2K token
+nVIDIA

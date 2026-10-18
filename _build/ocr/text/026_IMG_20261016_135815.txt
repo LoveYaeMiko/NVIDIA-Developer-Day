@@ -1,0 +1,25 @@
+# 26  IMG_20261016_135815.jpg  (4064x3048)
+Why Gate/Up Interleave = 8: the WGMMA Register Layout
+RIC  2  4  6  7  8  10  11  12  13  14  15  N-8  N-7  N-6N-5N-4N-3  N-2N-1
+0  TO:(do,d1)  T1:(do,d1)  T2:(00,d1)  T3:(d0,d1)  TO:(d4,d5)  T1:(d4,d5)  T2:(d4,d5)  T3:(d4,d5)  T0:(dx.dY)  T1:(dXdY)  12:(dx.d  T3:(dx.d)
+Accumulator D fragment (m64nNk32)  T4:(d0,d1)  TS:(d0,d1)  T6:(d0,d1)  17:(d0,d1)  T4:(d4,d5)  TS:(d4,d5)  T6:(d4,d5)  17:(d4,d5)  T4:(dxd)  TS:(dx.dY)  T6:(dx.d)  17:(dx.d)
+· M: each warp owns 16 rows; each thread holds rows r
+and r+8  T31:(d0,d1)  T28:(d4,d5)  T29:(d4,d5)  T30:(d4,d5)  T31:(d4,d5)  T28:(dx,dY)  T29:(dxdY)  T30:[dx.dY)  T31:(dXdY)
+T28:(d0,d1)  T29:(d0,d1)  T30:(d0,d1)
+· N: registers advance in 8-column groups (4 regs per  B  TO:(d2,d3)  T1:(d2,d3)  T2:(d2,d3)  T3:(d2,d3)  T0:(d6,d7)  T1:(d6.d7)  T2:(d6.d7)  T3:(06.d7)  TO:(0ZdW  T1:(dZ,dW)  T2:(dZ,dW)  T3:(dZ,dW)
+group)
+Gate/up interleaved offline at 8  15  T28:(d2,d3)  T29:(d2,d3)  T30:(d2,d3)  T31:(02,d3)  128:(d6.d7)  T29:(d6.d7)  T30:(d6.d7)  T31:(d6.d7)  128:(dZ.dW)  T29:(dZ.dW)  T30:(dZ.dW)  T31:(dZ.dW)
+· non-swapAB (along N): gate in regs 8k..8k+3, paired  16  132:(d0,d1)  T33:(d0,d1)  T34:(d0,d1)  T35:(d0,d1)  T32:(d4,d5)  T33:(d4,dS)  T34:(d4,dS)  135:(d4,d5)  T32:(dXdY)  T33:(dxdY)  T34:(dxdY)  T35:(dXdY)
+up in 8k+4..8k+7
+swapAB (along M): row r = gate, row r+8 = up → regs  31  T60:(d2,d3)  T61:(d2,d3)  T62:(d2,d3)  T63:(d2,d3)  T60:(d6.d7)  T61:(d6,d7)  T62:(d6,d7)  T63:(d6,d7)  T60:(dZ,dW)  T61:(dz,dW)  T62:(dz,dW)  T63:(dZ.dW）
+0/1 vs 2/3
+32  T64:(do,d1)  T65:[d0,d1)  T66:(do,d1)  T67:(d0,d1)  T64:{d4,d5)  T65:(d4,d5)  T66:[d4,d5)  T67:(d4,d5)  T64:(dX,dY})  T65:(dx,dY)  T66:(dx,dY)  T67:(dx,dY)
+Why ex  y8
+· M reo  xactly 8 (row-pair spacing); smaller →  47  T92:(d2,d3)  T93:(d2,d3)  T94:[d2,d3)  T95:(d2,d3)  (P99):261  T93:(d6,d7)  T94:(d6,d7)  T95:(d6,d7)  T92:(dZ,dW}  T93:(dZ,dW)  T94:(dZ.dW)  T95:(dz,dW).
+cro  ffle, larger → cross-warp SMEM  (TP‘0P):961  T97:(d0,d1)  (1P0P):861  (tP0P):661
+48  T96:(d4,d5)  T97:(d4,dS)  T98:(d4,d5)  (SpP):661  T96:(dX,dY)  T97:(dxdY)  T98:(dxdY)  T99:(dXd)
+ltiple of 8 → 8 is the only granularity
+W  fle, zero-SMEM folding for both
+vari  63  T124:(d2,d3)  1125:{d2,d3）1126:(d2,d3)T127:(d2,d3}  T124:[d6,d7）T125:(d6,d7）T126:(d6,d7)  T127:(d6,d7)  T124:(dZ,dW)Y125:(dZ,dW）T126:(dZ,dW}T127:{dZ,dV）
+(tid % 128):fragments
+nVIDIA

@@ -1,0 +1,12 @@
+# 49  IMG_20261016_144159.jpg  (4064x3048)
+STEP 3: Optimize the MoE
+Mixture-of-Kittens(Mok) from Cursor
+1.Fused execution  Throughput uplift from STEP 3
+Combine expert computation and communication in one kernel.  (compared with the config after STEP2)
+2.Communication overlap
+Pipeline token transferswith expert computation.  +14.0%
+3.Bufferreuse
+Reuse fixed-size ring buffers toreduce memory usage and avoid  at64Kcontextlength
+CPU synchronization forbuffer allocation.
+MOK canbring 30%-40% speedup on the MoE part in the  +4.6%
+DeepSeek-V4-Pro setting.  at 1M context length

@@ -1,0 +1,16 @@
+# 2  IMG_20261016_133323.jpg  (3264x2448)
+MegaMoE support matrix
+Inference and training are both supported
+Compute data types
+W4A4
+·W8A8
+W16A16
+Mixed precisions (W4A8, W8A16 and more in progress)
+Architectures
+Hopper
+Blackwell
+Blackwell GeForce
+Rubin
+72andIBRDMAwithNCCLGIN(WIP)
+eworkintegration
+LLM,Flashinfer,CudnnFE(WIP)

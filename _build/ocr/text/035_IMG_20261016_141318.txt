@@ -1,0 +1,14 @@
+# 35  IMG_20261016_141318.jpg  (4064x3048)
+Two Challenges Define Training at Scale
+Frontier Models
+Make it fit:  Massive parameter counts
+Model states and HBM capacity  Long context windows
+Parallel layout and topology
+Feature compatibility
+This talkisbased on
+Make it fast:  PublicDeepSeek-V4-Promodel archite
+Kernel and launch overhead  ImplementationsinMegatron Core
+Recompute and offload costs  NVIDIABlackwell GPUs
+Communication and load imbalance
+nVIDIA
+nVIDIA

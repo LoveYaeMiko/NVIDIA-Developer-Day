@@ -1,0 +1,30 @@
+# 018 hi-res re-OCR of IMG_20261016_134614.jpg (4064x3048)
+[0.97] Warp Specialization
+[0.99] Duty
+[0.88] Role
+[0.98] Warps
+[0.98] setmaxnreg
+[0.90] cpi/WGMMAWG
+[0.81] 4x(1-2)
+[0.99] 200-2561
+[0.93] lssueWGMMA+SwiGLU / guant/store
+[0.83] 32↓
+[0.99] TMA-A
+[0.93] Load activation/ fcl_output;FC2'sfc1-donespin
+[0.99] TMA-B
+[0.81] 32↓
+[0.90] Load wgights (independent of FCl,never waits on the counten)
+[0.88] sched
+[0.75] 401
+[0.92] Publish work tiles +expertprefotch
+[0.86] diepatch
+[0.82] 481
+[0.94] Pull tokons across ranks (MegaMoE)
+[0.89] 32↓
+[0.96] tokon-back
+[0.82] 4(opt.)
+[0.90] Dedicatod push of Fc2rosults back to the sourcerank
+[0.93] 20 warps / 640 threads·sotmaxnreg rebalanced per role (epi maxed out at 256)
+[0.96] "cated MMA warpgroup - the epilogue WG issues WGMMA itself; accumulator lives in RMEM (acc stage = 1)
+[0.86] nVIDIA
+[0.75] nvID

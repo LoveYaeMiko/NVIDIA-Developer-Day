@@ -1,0 +1,9 @@
+# 31  IMG_20261016_140546.jpg  (4064x3048)
+Optimization 10: Scheduler Groups and the fc1_done Spin
+The scheduler dispatches by group: all FC1 tiles of a set of experts first,then their FC2 tiles;default group = one wave
+At smallbuckets each expert has 1 token tile but 48 FC1 tiles:a group holds only 1-3 experts,so FC2 tiles follow right behind their own FC1 tiles while  those are still running
+Consequence: the activation TMA producer spends ~25% of its time spinning on fc1_done (IKET)
+Group enlarged to 264 ≈6 experts:fc1_done is already complete when the FC2 tile arrives -the spin disappears
+Gepechoner(onegrowp=allengensFCities,then hsinFC2 liles)-wall ocket 1 ohen Mle buk sFCiles erenwen
+FCi mlee envetO(e）  FOM.e91  F02.801
+FOA/EPO  FO2/S01

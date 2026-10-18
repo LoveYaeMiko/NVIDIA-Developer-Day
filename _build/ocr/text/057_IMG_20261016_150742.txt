@@ -1,0 +1,19 @@
+# 57  IMG_20261016_150742.jpg  (4064x3048)
+TurboQuant: Online KV Quantization
+Low-bitvectors for the attention path
+Rotation  Codebook lookup →low-bit indices  3  Conceptual decode path
+InputK/V  Precomputed Lloyd-Maxcodebook
+vector
+00|10|01|111.
+-1.2  -0.4  +0.4  +1.2
+Nearest centroid →store its ID  Codebook lookup
+Random rotationn
+Rotated  00  10  01  10  00
+In high dimensions:smoother,nearly  Inverse rotate + rescale
+independentcoordinates  Optional inner-product correction:residual →QJL projection S→sign bits
+Stored per vector  Centroid indices  Residual sign bits  Scalar norms  4.5X
+main low-bitpayload  optional QJL correction  small per-vectormetadata  Compression ratio
+Shared-not stored per vector:rotation/projection matrices + codebook  50.06 LongBench-V1 aggregate =FP16
+Llama-3.1-8B·≥4.5xnominalpayload
+https://arxiv.org/abs/2504.19874
+nVIDIA

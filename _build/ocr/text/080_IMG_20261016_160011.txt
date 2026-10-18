@@ -1,0 +1,14 @@
+# 80  IMG_20261016_160011.jpg  (4064x3048)
+AgentX Trace
+393  98,827  1M  pareto curve
+真实会话（ClaudeCode轨迹）  请求数  原生上下文窗口1，048,576,trace  每GPUtok/svsTTFTp90
+请求p99近900K
+主线程请求输入长度分布（按请求数占比）：
+<32K2%
+32K-128K21%
+128K-256K27%
+256K-512K-30%
+>512K20%
+真实会话  固定seed  官方harness回放  每lane10条  帕累托
+393务  25-75%处切入  Nlane-1小时  warmup预热  吞吐vs交互性
+nVIDIA

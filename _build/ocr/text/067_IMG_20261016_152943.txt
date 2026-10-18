@@ -1,0 +1,13 @@
+# 67  IMG_20261016_152943.jpg  (4064x3048)
+Takeaways
+·Where compression runs determines what improves
+·Fused attention can reduce KV reads during decode.
+·Cache backends can extend cache residency and reduce transfers.
+The methods delivered different gains in these benchmarks
+·Optimized TurboQuant improved long-context decode;
+·KVTC preserved throughput under memory pressure;
+· nvCOMP-ANS reduced TTFT at low concurrency with exact KV recovery.
+Choose by end-to-end results
+· Measure quality, TTFT, TPOT, throughput, and cache hit rate after codec and integration  costs.
+nVID
+env

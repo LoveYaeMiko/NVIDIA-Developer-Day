@@ -1,0 +1,11 @@
+# 36  IMG_20261016_141551.jpg  (4064x3048)
+One Playbook, Two Workloads
+One Optimization Playbook  Measured throughput gains from the playbook
+1.Runtime Overhead and Memory Trade-offs
+2.Attention Compute Efficiency  +59%
+at 64k context length
+3.Expert Execution and Memory Footprint
++32%
+4.Context-Parallel Load Balance
+at 1M context length
+NVIDIA

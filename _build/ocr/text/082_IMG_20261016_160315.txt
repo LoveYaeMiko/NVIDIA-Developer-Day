@@ -1,0 +1,20 @@
+# 82  IMG_20261016_160315.jpg  (4064x3048)
+3 Layer Software Stack of Agentic Inference
+Dynamo Agentic Inference-System Architecture
+HARNESSLAYERS
+LayerO  ClaudeCode  Codex  OpenCode  OpenCode  Your Agent
+Coding Agent  OpenAl  Open Source  Open Source  Any agent that calls LLM
+(this tool)  Coding Agent  Coding Agent  Coding Agent  API
+HTTPAPI,next.agent_hints,cache_control
+ORCHESTRATORLAYER(Dynamo)
+FRONTEND  ROUTER  KVCACHE MGR
+Layer  Multi-protocol support  ·KV-Aware Placement  ·4-tier memory hierarchy
+vl/chatvl/responses  FlashIndexer 170Mops/s  ·Selective evict priority/TTL
+·vl/messages  ·BinaryHeappriority queue  ·Agent lifecycle awareness
+·Blockboundary  ereness  ThompsonSampling routing  <think>block auto-ephemeral
+RUNTIMEI
+Layer2  VLLM  NVIDIATRTLLM
+Priorityraax  KV Store(HiCache/KVBM)
+int  Priority eviction heap  TokenRangeRetentionConfig
+High throughput  Maxperformance  GPU-CPU-Disk-RDMASharedBlocks
+nVIDIA  DYIPIA

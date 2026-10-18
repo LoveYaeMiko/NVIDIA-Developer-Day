@@ -1,0 +1,15 @@
+# 43  IMG_20261016_142618.jpg  (4064x3048)
+The Starting Points
+We use a 4K-context sparse proxy model to basically verify the needed features, including:
+·Kernel fusions, packed sequence support, CUDA Graphs support, and others
+Use profiles to guide the following optimizations (both are within a 15oms window)
+64K
+CUDAHW(0008:06:00.0-N  Kemnel
+Memory
+[AllStreams]
+1M
+CUDAHW(0008:06:00.0-N  Kernel
+Memory
+nvjet_sm103_tst
+nvjetsm10...  nvjet_sm103_tss_
+[AllStreams]

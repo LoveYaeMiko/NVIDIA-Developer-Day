@@ -1,0 +1,20 @@
+# 87  IMG_20261016_161359.jpg  (4064x3048)
+KV capacity for diff session cc
+GLM-5.2·AgentXworkload·4nodes/32GPUs·DEP
+KV to keep = sessions x context x headroom
+retention moves to G3-in-flight  150K·session peak~300k·57KB/token·headroom 1.5x·router sees G1+G3only
+G2 host·per node  G2 host·per node
+G2 host·per node  buffer_only.  externallinker·nohost  G3pool
+In flight(HBM) ·  KVtokeep·300Kx  staging only  tier  holdsKV tokeep
+Sessions cc  150K each  1.5  cache mode·today
+2.4M  7.2M  460GB  ≈35GB  400GB
+16  （400GB)  (in-flight / node)  DRAM→L3segment
+(135GB)
+4.8M  14.4M  490GB  ≈70GB  810GB
+32  (810GB)  (in-flight /node)  DRAM→L3 segment
+OGB)
+6M  28.8M  550GB  135GB  1610GB
+64  (1,610GB)  DRAM→L3segment
+57.6M  650GB  270GB  3230GB
+128  GB  (3,230GB)  (in-flight/node)  DRAM→L3segment
+nVIDIA

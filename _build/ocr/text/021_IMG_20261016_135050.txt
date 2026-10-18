@@ -1,0 +1,17 @@
+# 21  IMG_20261016_135050.jpg  (4064x3048)
+Optimization 1: Cooperative Warp-group Scheduling
+·In cooperative mode the warpgroup countfollows the tile shape:
+·N=256(swapAB M=256): two warpgroups cooperatively split the same task tile -each owns an N=128(M=128) slice, issues its own  ·N=128(swapAB M=128):single-warpgroup lean configuration (8 warps);epi registers can max out at 256
+WGMMA and runs its own slice's epilogue
+·Taskboundary:CTA-level NamedBarrier;all epi warps enter the next tasktogether
+Characteristics& trade-offs:
+·WGMMA → epilogue serializes within a WG, exposing epilogue latency; but TMA warps are independent, so loads for the next task keep  ·Large tiles (N=256) amortize A/B loads and reduce task count →better for the GEMM-bound large batch
+·Many heuristic-table buckets are still won by cooperative(e.g.blockwise ≥512 always uses (64,128): per_tensor 16384 uses(64,256))  prefetching
+One task tile:M64xN256(sWapAB:M256x token N)
+WGO  WG1
+ownsN=0.127  ownsN=128.255
+WGMMA+epilogue  WGMMA+epilogue
+WGO  WGMMA taskO (own haln)  epilogue tasko  WGMMA task1  epilogue task1  CTA NamedBamier ateach task
+boundary-allepi warps advance
+WG1  WGMMA taskO(ownhai)  epilogue tasko  WGMMA task1  epilogue task1
+nVIDIA

@@ -1,0 +1,698 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>大模型训练与推理 · 全天技术讲义</title>
+<style>
+@page { size: A4; margin: 16mm 14mm 16mm 14mm; }
+* { box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 9.4pt; line-height: 1.58;
+       color: #1a1e24; margin: 0; }
+h1 { font-size: 14.5pt; color: #0d3548; margin: 0 0 7pt 0; padding: 3pt 0 4pt 8pt;
+     border-left: 6pt solid #0d3548; border-bottom: 0.8pt solid #b9c9d4; break-before: page;
+     background: #f1f6f9; }
+h2 { font-size: 11.4pt; color: #10506b; margin: 11pt 0 4pt; padding-left: 6pt;
+     border-left: 3.5pt solid #1f7fa8; }
+h3 { font-size: 10pt; color: #1d2b3a; margin: 9pt 0 3pt; }
+p { margin: 3.5pt 0; text-align: justify; }
+ul, ol { margin: 3pt 0 5pt; padding-left: 15pt; }
+li { margin: 1.6pt 0; }
+strong { color: #082a3a; }
+code { font-family: Consolas, monospace; font-size: 8.6pt; background: #eef3f6; padding: 0 2pt;
+       color: #8a2b52; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0 8pt; font-size: 8.5pt;
+        line-height: 1.45; }
+th, td { border: 0.5pt solid #a9b8c4; padding: 2.6pt 4pt; vertical-align: top; }
+th { background: #e3eef4; color: #0d3548; font-weight: 600; }
+tr { break-inside: avoid; }
+blockquote { margin: 6pt 0; padding: 5pt 8pt; background: #f4f8fa; border-left: 3pt solid #1f7fa8;
+             font-size: 8.8pt; color: #2c3a45; }
+blockquote p { margin: 1.5pt 0; }
+hr { border: none; border-top: 0.5pt solid #c9d2dd; margin: 9pt 0; }
+a { color: #10506b; text-decoration: none; }
+/* header block on first page */
+.hd { border-bottom: 2.5pt solid #0d3548; padding-bottom: 6pt; margin-bottom: 8pt; }
+.hd-bar { height: 5mm; background: #0d3548; margin-bottom: 8pt; }
+.hd-sub { font-size: 8.6pt; color: #5a7183; letter-spacing: 0.2pt; }
+h1.hd-t { font-size: 21pt; border: none; background: none; padding: 0; margin: 4pt 0 0 0;
+          color: #0d3548; break-before: auto; }
+.hd-en { font-size: 9.4pt; color: #1f7fa8; font-weight: 600; margin-top: 1pt; }
+.hd-meta { font-size: 8pt; color: #6b7785; margin-top: 5pt; line-height: 1.5; }
+
+h1.first { break-before: auto; margin-top: 10pt; }
+</style></head><body>
+
+<div class="hd">
+  <div class="hd-bar"></div>
+  <div class="hd-sub">NVIDIA 开发者日（Developer Day）中国站 · 大语言模型训练与推理分会场 · 2026-10-16</div>
+  <h1 class="hd-t">大模型训练与推理 · 全天技术讲义</h1>
+  <div class="hd-en">Training &amp; Inference for Large Models — A One-Sitting Handout</div>
+  <div class="hd-meta">上午主论坛 + 下午 4 场分享 / 5 位讲者（13:31–16:35）｜依据：96 张投影片照片 OCR + 现场录音转写（含 4 段补录视频）｜配套长文档：《内容整理与总结分析》《讲稿整理（录音对照）》</div>
+</div>
+
+<h1 class='first'>一页鸟瞰</h1>
+<h2>全天时间轴</h2>
+<table>
+<thead>
+<tr>
+<th>时段</th>
+<th>内容</th>
+<th>关键产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>09:45–12:10</td>
+<td>主论坛：开场致辞 → <strong>四大 scaling law</strong>（英文演讲）→ Cosmos / 世界模型 → Nemotron 3 / Megatron → 圆桌"从开放到可控"</td>
+<td>全天基调：<strong>算力 → 智能</strong>的四条 scaling law；"open = 权重 + 数据 + 环境 + 配方"</td>
+</tr>
+<tr>
+<td>13:31–14:11</td>
+<td><strong>第 1 场 MegaMoE</strong>（孙方宇 1–15 页、张毅 16–34 页）</td>
+<td>把 MoE 四段融进<strong>一个持久内核</strong>：理论上界 1.42× → <strong>1.92×</strong>，实测几何平均 <strong>1.16×/1.30×</strong></td>
+</tr>
+<tr>
+<td>14:12–15:00</td>
+<td><strong>第 2 场 大规模训练实践</strong>（白洪潇，NVIDIA Megatron）</td>
+<td>四步 playbook：<strong>64K +59%、1M +32%</strong></td>
+</tr>
+<tr>
+<td>15:00–15:44</td>
+<td><strong>第 3 场 KV Cache 压缩</strong>（徐文杰）</td>
+<td>三条路线：TurboQuant <strong>≥4.5×</strong>、KVTC <strong>8–64×</strong>、nvCOMP-ANS <strong>≈1.4×</strong></td>
+</tr>
+<tr>
+<td>15:44–16:27</td>
+<td><strong>第 4 场 Dynamo / 智能体推理</strong>（卢祥龙，NVIDIA 解决方案与工程）</td>
+<td>缓存感知路由 + 索引 <strong>170M ops/s</strong> + 会话网关：<strong>E2E −51%、TTFT p50 −87%</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>三句话抓住全天</h2>
+<ol>
+<li><strong>算子层不要划边界</strong>：MoE 的最优解不是"更快的通信"或"更快的 GEMM"，而是让 dispatch / FC1 / FC2 / combine 在同一个内核里按专家波次交织——再看清"融合税"（SMEM 借用、TMA 干扰、精度不对称），用 30+ 项微架构优化逐条偿还。</li>
+<li><strong>系统层压缩状态</strong>：长上下文时代，瓶颈从"算"转向"存"与"搬"。KV 压缩（在线量化 / PCA / 无损熵编码）+ 缓存感知路由 + 会话调度，是在<strong>不换硬件</strong>的前提下换性能的三件套。</li>
+<li><strong>度量层重写 SLA</strong>：当负载从"请求"变成"会话轨迹"，TTFT/TPOT 已不够；trajectory 级 E2E、首个答案 token 时间、满足 SLA 的并发 agent 数，才是新的优化目标函数。</li>
+</ol>
+<h2>一句话记住每位讲者</h2>
+<table>
+<thead>
+<tr>
+<th>讲者</th>
+<th>一句话判断（其口头的核心主张）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>孙方宇 / 张毅</td>
+<td>"<strong>融合不是免费的</strong>"——所以要先算清代价，再逐项还债；小 token 场景的关键是把 token 挪到 N 维（swapAB）。</td>
+</tr>
+<tr>
+<td>白洪潇</td>
+<td>"<strong>并行与显存策略共同决定可行性</strong>"；优化顺序比优化本身更重要；且<strong>训练侧的经验不能直接搬到推理</strong>。</td>
+</tr>
+<tr>
+<td>徐文杰</td>
+<td>选压缩先看<strong>精度</strong>、再看形态、最后看你要缓解哪一种压力；"<strong>免费的午餐（无损）也是有代价的</strong>"。</td>
+</tr>
+<tr>
+<td>卢祥龙</td>
+<td>把<strong>状态</strong>（KV）当作有位置的资源来调度；与其纠结淘汰策略，不如"把本地缓存设小、用一个大的共享池"。</td>
+</tr>
+</tbody>
+</table>
+<h1>二、上午：四条 scaling law 与"开放"的定义</h1>
+<h2>2.1 讲者提出的四个 scaling law（10:54–11:07 补录段）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>scaling law</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>预训练</strong></td>
+<td>用全互联网/全语言/全领域数据 + 用 AI 提纯数据；"<strong>数据变聪明，让预训练（同等硬件）快了 4 倍</strong>"，并把预训练数据集公开以加速生态</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>后训练</strong></td>
+<td>"巨大的加速计算问题"：智能体要在<strong>百万级 sandbox</strong> 与各类环境中训练，部分环境需<strong>内置模拟器</strong>，模型才能真正理解世界</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>测试时计算</strong></td>
+<td>回答一个问题<strong>需要多少 token</strong> 本身就是加速计算问题；算得快但用太多 token 就是浪费（提到受 GLM 5.2→5.3 启发）</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>数值/稀疏（推断）</strong></td>
+<td>第四条的完整表述落在素材缺口处；前后文为"20 年前几乎全是 FP32，如今大部分训练是 8 位算术，等于 4×"<code>(?)</code></td>
+</tr>
+</tbody>
+</table>
+<h2>2.2 "开放"到底开放什么</h2>
+<ul>
+<li><strong>不只是权重</strong>：Nemotron 同时给 <strong>weights + data + environments + software + recipes</strong>；"open = 权重 + 数据 + 配方"这一说法在上午两场中重复出现。</li>
+<li>讲者特别强调：做开放<strong>不是因为好玩</strong>，而是"<strong>对我们的业务和未来是必要的</strong>"，与他们对 CUDA 的长期承诺同一量级。</li>
+<li>一个具体的架构因果：<strong>NVLink-72（72 卡全速互通、低延迟）之所以这样设计，是因为判断 MoE 会改变 AI 的构建与部署方式</strong>——这条判断正是下午第 1 场"MoE 通信-计算融合"的硬件前提。</li>
+</ul>
+<h2>2.3 上午其余三条线索（对下午有用）</h2>
+<ol>
+<li><strong>CUDA tile programming</strong>：可以用 Python / C++ / Rust 写 tile 程序；"tile 正在成为一等公民"——下午第 1 场的 <code>256×256 tile</code>、<code>task tile</code>、<code>M64×N128</code> 等术语都建立在这个抽象之上。</li>
+<li><strong>Nemotron Ultra 的训练流水</strong>：550B 参数、20T token 预训练 → 扩展到 <strong>1M 上下文</strong>得 base → teacher 模型生成 SFT 数据 → 15 个可验证奖励环境做 RLVR → <strong>多域 on-policy 蒸馏</strong>合成最终模型。这条"数据飞轮"解释了下午为什么反复强调"measured / profile-driven"。</li>
+<li><strong>圆桌共识</strong>：harness（智能体执行框架）的终局可能是"<strong>OS</strong>"；对 2029–2030 的三个"1"（成本、能耗等）与"卡和电"的长期判断——与下午第 4 场的"每 token 成本"视角同源。</li>
+</ol>
+<h1>三、第 1 场 MegaMoE：让通信与计算住进同一个内核</h1>
+<h2>3.1 问题与上界</h2>
+<ul>
+<li>MoE 层天然四段：<strong>dispatch（all-to-all 发出）→ FC1 + SwiGLU → FC2 → combine（收回）</strong>；串联执行时通信与计算互不重叠。</li>
+<li>三条时间轴：朴素顺序 = <strong>1.00×</strong>；Comet 式"通信/计算两路流水" = <strong>1.42×</strong>；按<strong>专家波次</strong>把通信切段与 <code>L1/L2</code> 计算交替填满 = <strong>1.92×</strong>（理论上界）。</li>
+</ul>
+<h2>3.2 融合的三笔"税"</h2>
+<table>
+<thead>
+<tr>
+<th>税目</th>
+<th>具体表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>借 SMEM</td>
+<td>通信要占用计算的 shared memory，挤占主循环预算</td>
+</tr>
+<tr>
+<td>干扰 TMA</td>
+<td>通信流量压低主循环 TMA 效率（NVLink 利用率与 GEMM 效率互相牵制）</td>
+</tr>
+<tr>
+<td>精度不对称</td>
+<td>NVFP4 让 L1/L2 耗时减半，但 combine 仍是 <strong>bf16</strong> → NVLink 流量占比被放大；<strong>FP8 下 combine 还能藏进 L2 epilogue，FP4 下藏不进去</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>3.3 十项关键手段（按投影片编号）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手段</th>
+<th>关键点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GEMM</td>
+<td><strong>256×256 tile</strong>（原 256×192）</td>
+<td>TMEM 只有 512 列 → <strong>overlap ACC</strong> 技巧逼近两段式累加</td>
+</tr>
+<tr>
+<td>GEMM</td>
+<td><strong>swapAB 动态 tileN</strong></td>
+<td>WGMMA 形状 <code>m64nNk32</code>：非 swapAB 下 token tile 最小 64（<strong>8 个 token 浪费 56 行</strong>）；swap 后 <code>M=channels</code>、<code>N=tokens(8…128)</code>，<strong>tile 利用率最高 8×</strong>；swap 只是 stride view、零拷贝，expert 维变 <code>L</code> mode 使 TMA descriptor tile-invariant</td>
+</tr>
+<tr>
+<td>GEMM</td>
+<td><strong>TMEM 内 epilogue 转置</strong></td>
+<td>从 <code>16×8→32×4</code> 的小技巧出发，把 LDTM/置换/STTM 建模为<strong>位级置换</strong>，用 <strong>Cayley/BFS 搜索 + 模拟器验证</strong>得到完整转置（人 + LLM 协作）</td>
+</tr>
+<tr>
+<td>同步</td>
+<td><strong>batch-commit / async UREDGR</strong></td>
+<td>跨卡写 flag 需 fence + barrier 两条指令；合并提交、异步归约"不阻塞后续发射"</td>
+</tr>
+<tr>
+<td>调度</td>
+<td><strong>单 dispatch warp</strong></td>
+<td>实测<strong>1 个 &gt; 2 个 &gt; 4 个</strong>：约 <strong>132 行在飞</strong>已超过 NVLink 带宽时延积，队列更深反而拉长往返</td>
+</tr>
+<tr>
+<td>调度</td>
+<td><strong>折叠 producer warp-group</strong></td>
+<td>让双 WG 协作可行：blockwise 512–32768 全部切 <code>M64N256</code>，<strong>+11%~+30%，几何平均 +15.8%</strong></td>
+</tr>
+<tr>
+<td>同步</td>
+<td><strong>提前发布 <code>fc1_done</code></strong></td>
+<td>发布点上移，FC2 更早拿到就绪信号，缩短等待</td>
+</tr>
+<tr>
+<td>调度</td>
+<td><strong>调度分组 + 消除自旋</strong></td>
+<td>小组(1–3 专家)时 FC2 紧追 FC1 → producer <strong>约 25% 时间在自旋</strong>；把组扩到 <strong>264(≈6 专家)</strong> 后自旋消失</td>
+</tr>
+<tr>
+<td>epilogue</td>
+<td><strong>16 字节 FC2 写出</strong></td>
+<td>4×4 butterfly transpose（4 次 shuffle）让每条 lane 持 8 个连续列 → <code>8×STG.32</code> 变 <strong>1×<code>STG.128</code></strong></td>
+</tr>
+<tr>
+<td>架构</td>
+<td><strong>一个 kernel 做所有事</strong></td>
+<td>4 dispatch warp 经 NVSHMEM symmetric heap 拉 token → FP8 pool 零拷贝当激活 → GMEM counter 握手 → combine 写回；<strong>3 executor × 2 reduce 落点 = 6 种模式</strong>；20 warps / 640 threads，无独立 MMA warpgroup（epilogue WG 自己发 WGMMA，acc 常驻 RMEM）</td>
+</tr>
+</tbody>
+</table>
+<h2>3.4 数据与判断</h2>
+<table>
+<thead>
+<tr>
+<th>口径</th>
+<th>Per-Tensor FP8</th>
+<th>Blockwise FP8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小 token（≤512）</td>
+<td>1.02–1.11×</td>
+<td>差异很小</td>
+</tr>
+<tr>
+<td>大 token（≥1024）</td>
+<td>1.24–1.35×（峰值 <strong>1.35×</strong> @8192）</td>
+<td>1.33–1.72×（峰值 <strong>1.72×</strong> @32768）</td>
+</tr>
+<tr>
+<td>几何平均</td>
+<td><strong>1.16×</strong></td>
+<td><strong>1.30×</strong></td>
+</tr>
+<tr>
+<td>口头档位值</td>
+<td>小 token 约 <strong>3%</strong>、大 token <strong>24%</strong></td>
+<td>32768 档 <strong>72%</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>讲者的判断</strong>：小 token 时两者接近，因为 <strong>launch 与通信主导、两种配置都是 memory-bound</strong>；只有 GEMM 占比上升后，单内核"省 launch、省中间张量往返、通信与计算交织"的优势才显现。<strong>收益是形状相关的，不是普遍 1.9×</strong>。</p>
+</blockquote>
+<h1>四、第 2 场 大规模训练：装得下，再跑得快</h1>
+<h2>4.1 两个挑战与四步 playbook</h2>
+<table>
+<thead>
+<tr>
+<th>Make it fit（装得下）</th>
+<th>Make it fast（跑得快）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>超大参数量、模型状态与 HBM 容量、长上下文、并行布局与拓扑、特性兼容性</td>
+<td>kernel 与 launch 开销、重算与 offload 代价、通信与负载不均衡</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>做什么</th>
+<th>模块级</th>
+<th>端到端</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 运行开销</strong></td>
+<td>64K 的主要问题是"<strong>大量 GPU idle</strong>"：kernel fusion + <strong>CUDA Graphs</strong>（packed sequence 用 padding 变静态后捕获）</td>
+<td>—</td>
+<td>64K <strong>&gt;30%</strong>、1M <strong>&lt;3%</strong>（口头：1M 显存太紧开不了 CUDA Graphs）</td>
+</tr>
+<tr>
+<td><strong>2 混合注意力</strong></td>
+<td>①稀疏注意力"左对齐有效索引、只扫前 L 个 slot"；②Indexer <strong>一个内核内打分+选择</strong>（Q·K 量化 FP8）；③Group-O 的 <strong>8 个小 GEMM 合成一个 batched GEMM</strong></td>
+<td>稀疏 <strong>25–30%</strong>、FP8 Indexer <strong>25–35%</strong>、Group-O <strong>50–60%</strong></td>
+<td>64K <strong>+4.6%</strong>、1M <strong>+9.0%</strong></td>
+</tr>
+<tr>
+<td><strong>3 MoE</strong></td>
+<td>MoE 中 <strong>30–50%</strong> 是 EP 通信；跨 batch EP 重叠（跨 NVLink 域）或 <strong>megakernel 细粒度重叠</strong>；融合执行 + ring buffer 复用</td>
+<td>—</td>
+<td>64K <strong>+14.0%</strong>、1M <strong>+4.6%</strong></td>
+</tr>
+<tr>
+<td><strong>4 CP 负载均衡</strong></td>
+<td>QK score 随序列长度<strong>平方</strong>增长 → 512K/CP32 下同组 rank 工时为 <strong>53.1 → 18.4 ms</strong>；用 <strong>zigzag</strong> 把最轻段与最重段配到同一 rank</td>
+<td>—</td>
+<td>1M <strong>+12.2%</strong>；<strong>64K 无收益</strong>（均衡本身有开销）</td>
+</tr>
+</tbody>
+</table>
+<p>整条 playbook 叠加后：<strong>64K +59%、1M +32%</strong>。</p>
+<h2>4.2 起点与边界</h2>
+<ul>
+<li>模型：<strong>DeepSeek-V4-Pro，1.6T 总参数 / 49B 每 token 激活</strong>；结构含 <code>CSA/HCA</code> 混合注意力、<code>Indexer</code>、<code>MTP Modules</code>；预训练从 <code>4K→16K→64K→1M</code>，数据从 dense 过渡到 sparse。</li>
+<li>布局三原则：<strong>模型规模定初始布局</strong>（专家优先 EP、跨域 PP、必要时 TP）、<strong>上下文长度定 CP</strong>、<strong>拓扑定放置</strong>（EP/TP/CP 尽量收进 NVLink 域）；实例 <strong>PP4 + EP64</strong>；64K 用 <code>CP16</code>+细粒度重算+offload，1M 用 <code>CP64</code>+全量重算（每 rank token 4096 → 16384，4×）。</li>
+<li>先证后调：用 <strong>4K 上下文的 sparse 代理模型</strong>验证特性，再靠 profile 决策（"模型 80% 以上时间在 attention + MoE"）。</li>
+</ul>
+<blockquote>
+<p><strong>讲者的判断</strong>：① <strong>训练 ≠ 推理</strong>——"推理方向可能完全不一样，这些东西没法直接迁移过去"；② CUDA Graphs 有代价——"可能带来几 G 甚至十几 G 额外显存"，与卡型无关；③ FP8 Indexer 的精度损失<strong>长时训练未验证</strong>，DeepSeek 官方实现的精度"其实没说"，属不确定状态。</p>
+</blockquote>
+<h1>五、第 3 场 KV Cache：把状态压小，把底线守住</h1>
+<h2>5.1 三重瓶颈与两条集成路径</h2>
+<table>
+<thead>
+<tr>
+<th>瓶颈</th>
+<th>因果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPU 容量</strong></td>
+<td>能装下的活跃请求变少 → 有效 batch ↓、可用上下文 ↓</td>
+</tr>
+<tr>
+<td><strong>HBM 带宽</strong></td>
+<td>每生成一个 token 都要重读历史 → 每步读字节数 ↑</td>
+</tr>
+<tr>
+<td><strong>系统 I/O</strong></td>
+<td>溢出时 KV 在 GPU ↔ CPU/SSD/远端搬运 → <strong>TPOT ↑</strong>、prefill/decode 被拖慢</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>推理引擎内</strong>（vLLM/SGLang/TRT-LLM）：压缩后 KV 常驻 GPU、对引擎透明；挑战是需与 attention 融合、与引擎/模型强绑定。</li>
+<li><strong>KV 缓存后端</strong>（LMCache/FlexKV/Mooncake）：注意力前先还原；收益是存储/传输↓ + 前缀命中潜力；代价是<strong>解压开销、无直接 TPOT 收益</strong>。</li>
+<li><strong>判定规则</strong>：<code>KV-read savings &gt; decompression overhead</code> → 放推理引擎，<strong>否则退回后端</strong>。</li>
+</ul>
+<h2>5.2 三条路线与关键数字</h2>
+<table>
+<thead>
+<tr>
+<th>路线</th>
+<th>机制</th>
+<th>压缩/收益</th>
+<th>代价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TurboQuant</strong>（在线量化）</td>
+<td>随机旋转 → Lloyd-Max codebook（码心 −1.2/−0.4/+0.4/+1.2）→ 逆旋转 → 可选 QJL 修正；每向量只存质心索引 + 残差符号位 + 标量范数；布局改<strong>页内字段平面化</strong>（16 token/页、<strong>2,144 B/KV head</strong>），32 B 扇区有效字节 <strong>3.68 B → 29.75 B</strong>（≈8×）；解码用 64-token tile + FP32 running state</td>
+<td><strong>≥4.5×</strong> 名义载荷；解码吞吐短上下文 1.25–1.28×、长上下文 <strong>2.5–4.8×</strong>（峰值 <strong>4.84×</strong>）；生产甜点约 <strong>3.6×</strong></td>
+<td>需定制解码内核；基线在长上下文多处 <strong>FA OOM</strong></td>
+</tr>
+<tr>
+<td><strong>KVTC</strong>（存储/传输）</td>
+<td>跨层/头拼接 → PCA → 动态量化（重要主成分给更多比特）→ 可选 DEFLATE；压缩单元一个 token；<strong>流水化解压</strong> + 可插拔 codec</td>
+<td><strong>8×–64×</strong>；16× CR 精度损失 <strong>≤0.8 分</strong>（3 模型 × 5 基准）；单请求 TTFT <strong>−5.5% ~ −10.8%</strong>；96 GiB 压力下吞吐 <strong>2.49×</strong>、TTFT <strong>−64%</strong>、命中率 <strong>11.9% → 74.7%</strong></td>
+<td>粒度不匹配 + dequant/逆 PCA 太重；容量充足时几乎无开销也无收益</td>
+</tr>
+<tr>
+<td><strong>nvCOMP-ANS</strong>（无损）</td>
+<td>ANS 熵编码，可<strong>精确还原</strong></td>
+<td>TTFT <strong>≈1.4×(BF16) / ≈1.1×(FP8)</strong>；P90 最高 <strong>+18.7%</strong>、均值 <strong>+8.2%</strong>（低并发收益最大）</td>
+<td>无损 → 压缩率有限；<strong>解压占 SM</strong>、并发越高越不稳（波动约 −5.6% ~ +5%）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>讲者的判断</strong>：① 选型顺序是<strong>精度 → 形态（存储型/计算型、能否融合）→ 优化目标（HBM / 容量 / 系统 I/O）</strong>；② "<strong>免费的午餐（无损）也是有代价的</strong>"：解压要占 SM（解压带宽约 50 GB/s），高并发下系统稳态变复杂、TTFT 反而下降；③ 任何 codec 上线后都要<strong>重新度量质量、TTFT、TPOT、吞吐与命中率</strong>。</p>
+</blockquote>
+<h1>六、第 4 场 Dynamo 与智能体推理：从"算得快"到"找得准、排得开"</h1>
+<h2>6.1 路由：一个成本函数 + 一张位置地图</h2>
+<ul>
+<li>请求路径：<code>Token → Block Hash → KV Indexer(前缀命中) → Slot Tracker(活跃 prefill/decode) → Cost Function → 最低成本 worker</code>，worker 反向推 <code>KV Events</code> 更新索引。</li>
+<li><strong><code>Cost = Prefill 成本 + Decode 成本 +（可选）活跃请求成本</code></strong>；"缓存告诉我们能省多少，负载告诉我们还能接多少"。</li>
+<li>索引键是 <strong><code>(position, block_hash)</code></strong>（只比内容会误判前缀连续）；Flash Indexer 只回答"哪里有缓存"，但要同时满足<strong>查询快</strong>与<strong>状态新</strong>。</li>
+<li>六代演进：<code>Nested Dict 385K</code>（O(W×D)）→ RustActor → Inverted Index → <code>Radix Tree 4M</code>（tree = prefix context；双键 local_hash/seq_hash）→ Concurrent Radix → <strong><code>Positional Indexer + Jump Search 170M</code>（O(D/J+W)，checkpoint 跳段，Single 直接命中、Multi 才 lazy 算 seq_hash）</strong>；累计 <strong>440× / 42×</strong>。</li>
+</ul>
+<h2>6.2 容量归因：为什么是"存不下"而不是"算得慢"</h2>
+<table>
+<thead>
+<tr>
+<th>事实</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每 token KV</td>
+<td><strong>55.9 KB</strong>（MLA 43.9 + DSA 9.8 量级拆分）</td>
+</tr>
+<tr>
+<td>1 GB / 单节点 8 卡</td>
+<td>TP8 <strong>2.2K</strong> token/GB vs DEP <strong>17.9K</strong>；4 节点合计 <strong>5.0M vs 30.6M</strong></td>
+</tr>
+<tr>
+<td>会话并发上限</td>
+<td>TP8 8× 复制只能约 <strong>33 个会话</strong>；DEP 约 <strong>200 个</strong>；<strong>cc 过 32 就雪崩</strong>（口头）</td>
+</tr>
+<tr>
+<td>三级存储</td>
+<td>GPU G1 ≈1710 GB、主机 G2 ≈2048 GB、G3 ≈1024 GB；<strong>G3 只装得下约 41 分钟</strong>写入</td>
+</tr>
+<tr>
+<td>命中率</td>
+<td>理想 vs 实际差 <strong>−3.9 pt</strong>（<strong>95.8% → 91.9%</strong>）；重算占 <strong>8.2%</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>6.3 会话网关 ThunderAgent</h2>
+<ul>
+<li>全局控制回路：<strong>Δt = 5 s 一拍</strong>，<code>util = 活跃 program 上下文量 ÷ GPU KV 池</code>；门限 <strong>0.80 / 0.85 / 0.95</strong>；恢复顺序按"上下文最小、重算最便宜"；<strong>&gt;1800 s 强制恢复</strong>（防饿死）；暂停命中冷区则 offload（多 program 共享同一份 KV）。</li>
+<li>实测（SWE-Bench Lite、GLM-5.2、8×Hopper、并发 32）：<strong>E2E 均值 −51%、TTFT p50 −87%、TPOT 减半、吞吐 ×1.6</strong>；RL rollout 场景约 <strong>2.5×</strong>、而 rollout 占训练时间约 <strong>70%</strong>（口头）。实测节奏："<strong>一小时 pause 45 次、resume 77 次</strong>"（口头）。</li>
+</ul>
+<blockquote>
+<p><strong>讲者的判断</strong>：① 智能体时代的 SLA 必须换成 <strong>trajectory 级</strong>（trajectory E2E、首个答案 token 时间、AA-AgentPerf、全局命中率 &gt;90%）；② <strong>Hard affinity 会把某些 rank 长期顶到 90%+</strong>，缓存亲和必须与负载均衡联立求解；③ 落地建议——小版本门槛（开源 ≥1.5/1.5.1）、"把本地 L2 设小甚至 0、用大的共享 CPU/SSD 池让节点互相可见，就不会有不命中"。</p>
+</blockquote>
+<h1>七、速查：数字与出处</h1>
+<table>
+<thead>
+<tr>
+<th>数字</th>
+<th>含义</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1.42× / 1.92×</strong></td>
+<td>Comet 式 vs MegaMoE 式融合的理论上界</td>
+<td>页 1</td>
+</tr>
+<tr>
+<td><strong>256×256</strong>、<strong>8×</strong></td>
+<td>大 tile（原 256×192）；swapAB 的 tile 利用率上限</td>
+<td>页 6、19</td>
+</tr>
+<tr>
+<td><strong>20 warps / 640 threads</strong>、<strong>256</strong></td>
+<td>warp 编制；epilogue 寄存器上限</td>
+<td>页 18</td>
+</tr>
+<tr>
+<td><strong>132 行在飞</strong>、<strong>1&gt;2&gt;4</strong></td>
+<td>单 dispatch warp 的带宽时延积；warp 数实测排序</td>
+<td>页 27</td>
+</tr>
+<tr>
+<td><strong>+11%~+30% / +15.8%</strong></td>
+<td>折叠 producer WG 后的 blockwise 收益（区间/几何平均）</td>
+<td>页 28</td>
+</tr>
+<tr>
+<td><strong>≈25% → 0</strong></td>
+<td><code>fc1_done</code> 自旋占比（组扩到 264 后消失）</td>
+<td>页 31</td>
+</tr>
+<tr>
+<td><strong>1.16× / 1.35×；1.30× / 1.72×</strong></td>
+<td>token sweep 几何平均 / 峰值（per-tensor；blockwise）</td>
+<td>页 33</td>
+</tr>
+<tr>
+<td><strong>3% / 24% / 72%</strong></td>
+<td>口头档位加速比（小 token / 大 token / 32768）</td>
+<td>第 1 场口头</td>
+</tr>
+<tr>
+<td><strong>1.6T / 49B</strong></td>
+<td>DeepSeek-V4-Pro 总参数 / 激活参数</td>
+<td>页 37</td>
+</tr>
+<tr>
+<td><strong>PP4+EP64；CP16→CP64；4096→16384</strong></td>
+<td>初始并行布局；上下文切换；每 rank token</td>
+<td>页 39–42</td>
+</tr>
+<tr>
+<td><strong>+59% / +32%</strong></td>
+<td>整条 playbook 的吞吐提升（64K / 1M）</td>
+<td>页 36</td>
+</tr>
+<tr>
+<td><strong>25–30% / 25–35% / 50–60%</strong></td>
+<td>稀疏注意力 / FP8 Indexer / Group-O 的模块级加速</td>
+<td>页 47</td>
+</tr>
+<tr>
+<td><strong>+4.6% / +9.0%；+14.0% / +4.6%；+12.2%</strong></td>
+<td>STEP2 / STEP3 / STEP4 的端到端收益（64K / 1M）</td>
+<td>页 47、49、51</td>
+</tr>
+<tr>
+<td><strong>30%–50%</strong></td>
+<td>MoE 中 EP 通信的占比</td>
+<td>页 48</td>
+</tr>
+<tr>
+<td><strong>4.5× / 3.6×；29.75 B；4.84×</strong></td>
+<td>TurboQuant 极限/甜点；扇区有效字节；解码峰值</td>
+<td>页 57–60</td>
+</tr>
+<tr>
+<td><strong>8×–64×；≤0.8 pt；−5.5%~−10.8%；2.49×</strong></td>
+<td>KVTC 压缩率、精度、TTFT、压力下吞吐</td>
+<td>页 61–64</td>
+</tr>
+<tr>
+<td><strong>≈1.4×/1.1×；+18.7%/+8.2%</strong></td>
+<td>nvCOMP-ANS 的 TTFT 收益（峰值/均值）</td>
+<td>页 65–66</td>
+</tr>
+<tr>
+<td><strong>385K→4M→170M；440×/42×</strong></td>
+<td>Flash Indexer 六代吞吐与累计提升</td>
+<td>页 73–76</td>
+</tr>
+<tr>
+<td><strong>55.9 KB；33 vs 200；1.26M/7.6M</strong></td>
+<td>每 token KV；TP8 vs DEP 会话数；token 容量</td>
+<td>页 85</td>
+</tr>
+<tr>
+<td><strong>95.8%→91.9%；8.2%</strong></td>
+<td>实际命中率缺口；重算占比</td>
+<td>页 86</td>
+</tr>
+<tr>
+<td><strong>−51% / −87% / ×1.6</strong></td>
+<td>ThunderAgent 的 E2E / TTFT p50 / 吞吐</td>
+<td>页 93</td>
+</tr>
+<tr>
+<td><strong>393 会话 / 98,827 请求 / ISL 219K / p99≈900K</strong></td>
+<td>AgentX trace 规模</td>
+<td>页 80–81</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>标注"口头"的数字只出现在录音转写中，投影片上没有；其余为投影片印刷值。两处已知的口径差异见《讲稿整理》4.7 节。</p>
+</blockquote>
+<h1>八、术语速查与待验证问题</h1>
+<h2>8.1 术语（20 条）</h2>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MegaMoE</strong></td>
+<td>把 MoE 的 dispatch/FC1/FC2/combine 融进一个持久内核的实现</td>
+</tr>
+<tr>
+<td><strong>swapAB</strong></td>
+<td>交换 A/B 操作数，把 token 映射到 N 维，使小 token 也能填满 tile</td>
+</tr>
+<tr>
+<td><strong>WGMMA / TMEM / TMA</strong></td>
+<td>warp-group 级 MMA；Blackwell 张量存储；异步张量搬运</td>
+</tr>
+<tr>
+<td><strong>R2S</strong></td>
+<td>register → shared memory（epilogue 内的搬运）</td>
+</tr>
+<tr>
+<td><strong>NVFP4 / MXFP8</strong></td>
+<td>4 位 / 8 位缩放（block）浮点格式；combine 仍常需 bf16</td>
+</tr>
+<tr>
+<td><strong>EP / CP / PP / TP / DP</strong></td>
+<td>专家 / 上下文 / 流水 / 张量 / 数据并行</td>
+</tr>
+<tr>
+<td><strong>NVSHMEM</strong></td>
+<td>GPU 发起的一侧通信库（symmetric heap、dispatch/combine）</td>
+</tr>
+<tr>
+<td><strong>DeepGEMM / CUTLASS / CuTeDSL</strong></td>
+<td>量化 GEMM 库 / 内核模板库 / CuTe 的 Python DSL</td>
+</tr>
+<tr>
+<td><strong>TurboQuant</strong></td>
+<td>在线 KV 量化（旋转 + Lloyd-Max codebook + QJL 修正）</td>
+</tr>
+<tr>
+<td><strong>KVTC</strong></td>
+<td>面向存储/传输的 KV 压缩（跨层 PCA + 动态量化）</td>
+</tr>
+<tr>
+<td><strong>nvCOMP-ANS</strong></td>
+<td>无损熵编码的 KV 压缩/传输</td>
+</tr>
+<tr>
+<td><strong>Dynamo</strong></td>
+<td>NVIDIA 推理服务框架（KV Router、Indexer、provider plugin）</td>
+</tr>
+<tr>
+<td><strong>KV Router / Flash Indexer</strong></td>
+<td>缓存感知路由 / 前缀索引服务（位置→worker 地图）</td>
+</tr>
+<tr>
+<td><strong>DEP</strong></td>
+<td>与 KV offload/亲和路由一起出现的并行/部署形态</td>
+</tr>
+<tr>
+<td><strong>TTFT / TPOT / ISL</strong></td>
+<td>首 token 时间 / 每输出 token 时间 / 输入长度</td>
+</tr>
+<tr>
+<td><strong>AA-AgentPerf</strong></td>
+<td>满足 SLA 的最大并发 agent 数</td>
+</tr>
+<tr>
+<td><strong>ThunderAgent</strong></td>
+<td>会话网关（program 状态机 + 5 s 全局控制回路）</td>
+</tr>
+<tr>
+<td><strong>MoK</strong></td>
+<td>第 2 场引用的 Cursor 侧 MoE 工作（"Mixture-of-Kittens"，<code>(?)</code>）</td>
+</tr>
+<tr>
+<td><strong>FA OOM / capacity-skipped</strong></td>
+<td>基线 FlashAttention 因容量不足被跳过，不计入对比</td>
+</tr>
+<tr>
+<td><strong>trajectory SLA</strong></td>
+<td>以整条智能体会话轨迹为单位的服务等级目标</td>
+</tr>
+</tbody>
+</table>
+<h2>8.2 值得继续追问的 8 个问题</h2>
+<ol>
+<li>MegaMoE 在 Blackwell（SM100）与 Hopper（SM90）上的收益差多少？<code>swapAB</code> 在 SM100 上是否同样成立？</li>
+<li>1.92× 上界里"通信与计算可完全重叠"的假设有多强？实际重叠率是多少？</li>
+<li>per_tensor 与 blockwise 的选择准则是什么（专家数、token 分布、combine 精度）？</li>
+<li>"EP 通信占 MoE 30–50%" 随规模如何变化？到万卡是否仍成立？</li>
+<li>TurboQuant 的精度损失在大 batch 长上下文下如何累积？与 KVTC 的 PCA 路线能否叠加？</li>
+<li>KV Router 的两类信号权重怎么标定？负载突增时如何避免"缓存热节点雪崩"？</li>
+<li>ThunderAgent 的 5 s 控制周期与真实会话间隔（60 s–46.7 h）如何匹配？更长的暂停是否应直接 offload？</li>
+<li>轨迹级 SLA 在多租户下如何定价与配额？"满足 SLA 的并发 agent 数"会不会成为新的容量单位？</li>
+</ol>
+<h2>8.3 使用说明</h2>
+<ul>
+<li>本讲义是<strong>浓缩版</strong>，每条结论的原文、图表与不确定标记见两份长文档：<code>大模型训练与推理_内容整理与总结分析.pdf</code>（投影片整理）与 <code>大模型训练与推理_讲稿整理（录音对照）.pdf</code>（录音对照、逐页口头要点、四场问答）。</li>
+<li>数字口径：投影片印刷值以页号标注；只在录音中出现的以"口头"标注；OCR 存疑处标 <code>(?)</code>。</li>
+<li>会议身份、讲者姓名由现场录音确认：NVIDIA 开发者日（Developer Day）中国站，"大语言模型训练与推理"分会场，4 场分享 / 5 位讲者（孙方宇、张毅 / 白洪潇 / 徐文杰 / 卢祥龙）。</li>
+</ul>
+</body></html>

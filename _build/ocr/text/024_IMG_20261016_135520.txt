@@ -1,0 +1,23 @@
+# 24  IMG_20261016_135520.jpg  (4064x3048)
+Optimization 4: Mainloop & Store Pipelines
+Mainloop  Store path
+·WGMMA software pipelining (k_pipe_mmas=1):keep 1  FC2R2S+TMA storetwo-stagepipeline:two 4KiBSMEM
+WGMMAgroupinflightatsteadystate,defer  buffers per WG
+consumer_release-TMA refill fully overlapsWGMMA
+producer_acquire only reclaims the previous group's store→
+TMA producer try_acquire peek:probes the next stage's  while thecurrentTMA S2G isinflight,the nextsubtile'sR2S
+availability,skipping mostmbarrierwaits  writesthe other stage
+ABpipeline stage count dynamicallyfills the228KB SMEM  Deferred drain: keep one store group in flight; drain only at
+(miscbudget is just 1KB)  phaseboundaries/kernel tail/when visibility is required
+·SMEMreuse:FC1FP864x64andFC2BF1664x32areboth
+exactly 4KiBper stage → overlaid on the same WG-private ring
+TMA store issued onlyby warpo via elect_one; empty tiles are  skipped outright
+time→
+epi WG  R2S subtile0→stageo  R2S subtile1→stage1  R2Ssubtile2→stage0  R2S subtile3→stage1  SMEM stage0 (4KiB)
+TMA S2Gstage0(inflight)  TMA S2G stage1  SMEMstage1(4KiB)
+TMA S2G stageo
+producer_acquire  FC1/FC2sharethesame
+reclaims stageo  WG-private ring (both 4 KiB)
+producer_acquire onlyreclaims tho previous group'sstore (ring depth 2）:theR2Sof subtile i1overlaps thein-flightS2Gof subtilei.
+Deforred drain:keep one store group in flightdrain only at phase boundarios /kernel tailvisibility points.
+nVIDIA

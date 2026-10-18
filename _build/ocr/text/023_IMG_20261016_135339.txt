@@ -1,0 +1,15 @@
+# 23  IMG_20261016_135339.jpg  (4064x3048)
+Optimization 3:Multi-CTA CGA +TMA Multicast
+·Clusters (2,1) /(1,2) / (2,2);each CTA in the cluster runs an independent 1-CTAWGMMA
+·A multicast along cluster-N,B along cluster-M→L2/DRAM trafficfor the shared operand is halved
+The scheduler groups task tiles at cluster granularity
+·fcl_done_counter is slotted independently per CTA—no false-sharing waits among cluster peers
+Atile(GMEM/L2)  Btile(GMEM/L2)
+Amulicast (cluster-N)
+CTA(0,0)-1-CTAWGMMA  CTA(0.1)-1-CTAWGMMA
+Bmultcast (cluster-M)
+CTA(1.0)-1-CTAWGMMA  CTA(1.1)-1-CTAWGMMA
+CGAcluster2x2(also2x1/1x2)-scheduler groupstasktilespercluster
+One A load serves the CTAs along cluster-N:one B load serves the CTAs along cluster-ML2/DRAM traffic for the shared operand  one_counter stays per-CTA (no false sharing).
+nVIDIA
+Reserved

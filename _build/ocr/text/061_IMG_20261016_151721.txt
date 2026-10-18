@@ -1,0 +1,20 @@
+# 61  IMG_20261016_151721.jpg  (4064x3048)
+KVTC: Compression for Storage and Transfer
+PCA and dynamicquantization across layers and heads
+Cross-layer/head concat  PCA transform  Dynamic quantization  OPTIONAL  nvCOMP
+DEFLATE
+FP8  14  14  12
+layerxhead  concatenatedvector  LOSSLESS·VARIABLEBYTES
+Compression unit:one token  Rank principal components(PCs)  ImportantPcs→more bits
+by importance  Higher ratio·variable bytes
+Runtime Attention  Pure extra overhead vs.standard KV already in HBM
+KV Path  Load Compressed  KVTC decompress  Store standard KV
+KV from CPU  onSM  inHBM  StreamHBM→SM  Attention
+Why storage-  Granularity mismatch  Runtime overhead
+oriented?  Attention  perlayer/head  dequant+inverse PCA  8x-64x  ≤0.8 pt
+KVTC  cross layer/head  tooheavy for online decode  Compression ratio
+Maxaccuracy drop with 16xCR
+3modelsx5benchmarks
+https://arxiv.org/abs/2511.01815
+nVIDIA
+DVIDIA

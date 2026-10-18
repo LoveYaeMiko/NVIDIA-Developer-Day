@@ -1,0 +1,14 @@
+# 9  IMG_20261016_133758.jpg  (4064x3048)
+CuteDSL MegaMoE on Blackwell
+MEMBAR Synchronization optimization -batch-commit
+L2 flag is used for pipeline synchronization
+1.MEMBAR.GPU  Make sure prior in-flight GPu-scope memory traffic
+write flag  to reach Poc(L2 in thiscase)
+2.RED.ADD flag1  Atomicadd 1 to flag
+spatch  Load token&storelocal  write flag  Load token&storelocal  writeflag
+tation  wait flag  L2
+wait flag  L2
+ue  Act  STG  write flag
+Act  STG  write flag
+ine  wait flag  Combine
+NVIDIA

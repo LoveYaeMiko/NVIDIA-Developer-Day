@@ -1,0 +1,657 @@
+{
+ "navtags": {
+  "01a-loop.html": "The Agent 循环 · 将 LLM 作为函数",
+  "01b-react.html": "The ReAct Loop 工具 · finish_reason",
+  "01c-tools.html": "Tools at Scale JSON · MCP · 路由",
+  "02a-routing.html": "Workflows 路由 · planner · ReWOO",
+  "02b-rag.html": "The Index Agent 嵌入 · 检索 · 打包",
+  "02c-deep.html": "Deep Agents planner · 子智能体 · VFS",
+  "03a-kickstart.html": "Connect NemoClaw 可启动 · 首次调用",
+  "03b-openclaw.html": "OpenClaw 文件即上下文 · 粘贴 URL",
+  "03c-always-on.html": "持续运行 skills · cron",
+  "04a-safety.html": "OpenShell 沙盒 · 策略 · CI 门控",
+  "04b-modern-clis.html": "现代 CLI Claude Code · Codex · Cursor",
+  "04c-going-further.html": "深入探索 Brev · NIMs · Blueprints"
+ },
+ "refs": [
+  {
+   "href": "https://build.nvidia.com/?ncid=ref-dli-146986",
+   "text": "模型 build.nvidia.com 通过与 OpenAI 兼容的 API 使用由 NVIDIA 托管的 Nemotron 模型。调用时会使用 nvapi- 密钥和所选模型路由。",
+   "pages": [
+    "00",
+    "03a"
+   ]
+  },
+  {
+   "href": "https://build.nvidia.com/nvidia/nemoclaw-for-openclaw/nemoclawcard?ncid=ref-dli-146986",
+   "text": "",
+   "pages": [
+    "00",
+    "03a"
+   ]
+  },
+  {
+   "href": "https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE",
+   "text": "Apache-2.0",
+   "pages": [
+    "00",
+    "03b",
+    "04a",
+    "01b",
+    "02a",
+    "03c",
+    "01a",
+    "02c",
+    "04b",
+    "02b",
+    "01c",
+    "03a"
+   ]
+  },
+  {
+   "href": "https://aima.cs.berkeley.edu/",
+   "text": "Artificial Intelligence: A Modern Approach",
+   "pages": [
+    "01a"
+   ]
+  },
+  {
+   "href": "https://en.wikipedia.org/wiki/A*_search_algorithm",
+   "text": "A*",
+   "pages": [
+    "01a"
+   ]
+  },
+  {
+   "href": "https://en.wikipedia.org/wiki/Breadth-first_search",
+   "text": "BFS",
+   "pages": [
+    "01a"
+   ]
+  },
+  {
+   "href": "https://en.wikipedia.org/wiki/Depth-first_search",
+   "text": "DFS",
+   "pages": [
+    "01a"
+   ]
+  },
+  {
+   "href": "https://platform.openai.com/docs/api-reference/chat",
+   "text": "Chat Completions API",
+   "pages": [
+    "01a",
+    "03a"
+   ]
+  },
+  {
+   "href": "https://platform.openai.com/docs/api-reference/responses",
+   "text": "Responses API",
+   "pages": [
+    "01a"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2201.11903",
+   "text": "Wei et al., Chain-of-Thought Prompting (2022)",
+   "pages": [
+    "01b"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2210.03629",
+   "text": "Yao et al. (2022)",
+   "pages": [
+    "01b",
+    "02a",
+    "02c"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2302.04761",
+   "text": "Schick et al., Toolformer (2023)",
+   "pages": [
+    "01b",
+    "01c"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2305.18323",
+   "text": "Xu et al., ReWOO: Decoupling Reasoning from Observations (2023)",
+   "pages": [
+    "01b",
+    "02a"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2307.03172",
+   "text": "Liu et al. (2023)",
+   "pages": [
+    "01b",
+    "02c"
+   ]
+  },
+  {
+   "href": "https://docs.langchain.com/oss/javascript/langchain/agents",
+   "text": "createReactAgent",
+   "pages": [
+    "01b"
+   ]
+  },
+  {
+   "href": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+   "text": "Lilian Weng 在 2023 年提出的",
+   "pages": [
+    "01b"
+   ]
+  },
+  {
+   "href": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use",
+   "text": "Anthropic 工具使用参考",
+   "pages": [
+    "01c"
+   ]
+  },
+  {
+   "href": "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices",
+   "text": "MCP 安全指南",
+   "pages": [
+    "01c"
+   ]
+  },
+  {
+   "href": "https://modelcontextprotocol.io/specification",
+   "text": "Model Context Protocol (MCP) 规范",
+   "pages": [
+    "01c"
+   ]
+  },
+  {
+   "href": "https://platform.openai.com/docs/guides/function-calling",
+   "text": "函数调用指南",
+   "pages": [
+    "01c"
+   ]
+  },
+  {
+   "href": "https://python.langchain.com/",
+   "text": "LangChain",
+   "pages": [
+    "01c"
+   ]
+  },
+  {
+   "href": "https://www.jsonrpc.org/specification",
+   "text": "JSON-RPC",
+   "pages": [
+    "01c",
+    "03a"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2303.17651",
+   "text": "Madaan et al., Self-Refine: Iterative Refinement with Self-Feedback (2023)",
+   "pages": [
+    "02a"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2305.04091",
+   "text": "Wang et al., Plan-and-Solve Prompting (2023)",
+   "pages": [
+    "02a"
+   ]
+  },
+  {
+   "href": "https://www.langchain.com/langgraph",
+   "text": "LangGraph",
+   "pages": [
+    "02a"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/1702.08734",
+   "text": "Johnson, Douze &amp; Jégou, Billion-scale similarity search with GPUs (FAISS, 2017)",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2004.04906",
+   "text": "Karpukhin et al., Dense Passage Retrieval (EMNLP 2020)",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2005.11401",
+   "text": "Lewis 及其同事",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2010.06467",
+   "text": "Lin et al., Pretrained Transformers for Text Ranking (2020)",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2212.10496",
+   "text": "HyDE",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2404.16130",
+   "text": "Edge et al. 2024",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://developer.nvidia.com/blog/rag-101-demystifying-retrieval-augmented-generation-pipelines/",
+   "text": "Hayden Wolff, RAG 101",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://developer.nvidia.com/blog/tips-for-building-a-rag-pipeline-with-nvidia-ai-langchain-ai-endpoints/",
+   "text": "Amit Bleiweiss, 构建 RAG 工作流的建议",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://developer.nvidia.com/topics/ai/agentic-ai-learning-path/how-to-build-agentic-ai-rag",
+   "text": "Agentic AI Learning Path",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://en.wikipedia.org/wiki/Community_structure",
+   "text": "社区",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://en.wikipedia.org/wiki/Cosine_similarity",
+   "text": "余弦相似度",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://en.wikipedia.org/wiki/Okapi_BM25",
+   "text": "BM25",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://opencypher.org/",
+   "text": "Cypher",
+   "pages": [
+    "02b"
+   ]
+  },
+  {
+   "href": "https://blog.langchain.com/deep-agents/",
+   "text": "LangChain，深度智能体",
+   "pages": [
+    "02c"
+   ]
+  },
+  {
+   "href": "https://developer.nvidia.com/blog/add-a-specialized-deep-research-skill-to-agent-harnesses/",
+   "text": "NVIDIA AI-Q 深度研究技能",
+   "pages": [
+    "02c"
+   ]
+  },
+  {
+   "href": "https://developer.nvidia.com/case-studies/scientific-literature-ai-nvidia-nemotron",
+   "text": "Kosmos",
+   "pages": [
+    "02c"
+   ]
+  },
+  {
+   "href": "https://github.com/NVIDIA-AI-Blueprints/aiq",
+   "text": "blueprint",
+   "pages": [
+    "02c"
+   ]
+  },
+  {
+   "href": "https://github.com/langchain-ai/deepagentsjs",
+   "text": "deepagents",
+   "pages": [
+    "02c"
+   ]
+  },
+  {
+   "href": "${NVIDIA_BUILD_URL}",
+   "text": "build.nvidia.com",
+   "pages": [
+    "03a"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2304.03442",
+   "text": "Park et al., Generative Agents (2023)",
+   "pages": [
+    "03c",
+    "03a"
+   ]
+  },
+  {
+   "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+   "text": "/cli/gateway WebSocket",
+   "pages": [
+    "03a"
+   ]
+  },
+  {
+   "href": "https://developer.nvidia.com/topics/ai/agentic-ai-learning-path/how-to-build-safer-autonomous-agent-using-openclaw",
+   "text": "NVIDIA, How to Build a Safer Autonomous Agent using OpenClaw",
+   "pages": [
+    "03b",
+    "04a",
+    "03a"
+   ]
+  },
+  {
+   "href": "https://docs.anthropic.com/en/docs/claude-code/overview",
+   "text": "Claude Code",
+   "pages": [
+    "03b",
+    "03a"
+   ]
+  },
+  {
+   "href": "https://modelcontextprotocol.io/",
+   "text": "Model Context Protocol (MCP)",
+   "pages": [
+    "03b",
+    "03a"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2310.08560",
+   "text": "两层",
+   "pages": [
+    "03b"
+   ]
+  },
+  {
+   "href": "https://build.nvidia.com/spark/nemoclaw-applications?ncid=ref-dli-146986",
+   "text": "NemoClaw 设置指南",
+   "pages": [
+    "03b"
+   ]
+  },
+  {
+   "href": "https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills/overview",
+   "text": "Anthropic, Claude Skills (docs)",
+   "pages": [
+    "03b",
+    "03c"
+   ]
+  },
+  {
+   "href": "https://docs.kernel.org/userspace-api/landlock.html",
+   "text": "Landlock LSM",
+   "pages": [
+    "03b",
+    "04a"
+   ]
+  },
+  {
+   "href": "https://man7.org/linux/man-pages/man2/seccomp.2.html",
+   "text": "seccomp (man 2)",
+   "pages": [
+    "03b"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2305.16291",
+   "text": "Wang et al., Voyager (2023)",
+   "pages": [
+    "03c"
+   ]
+  },
+  {
+   "href": "https://docs.openclaw.ai/cron-vs-heartbeat",
+   "text": "主会话、独立会话、当前会话或指定名称的会话",
+   "pages": [
+    "03c"
+   ]
+  },
+  {
+   "href": "https://en.wikipedia.org/wiki/Cron",
+   "text": "cron",
+   "pages": [
+    "03c"
+   ]
+  },
+  {
+   "href": "https://github.com/NousResearch/hermes-agent",
+   "text": "Hermes",
+   "pages": [
+    "04a",
+    "03c"
+   ]
+  },
+  {
+   "href": "https://hermes-agent.nousresearch.com/docs/user-guide/security/",
+   "text": "最新安全指南",
+   "pages": [
+    "03c",
+    "04b"
+   ]
+  },
+  {
+   "href": "https://langchain-ai.github.io/langgraph/concepts/persistence/",
+   "text": "LangGraph Persistence",
+   "pages": [
+    "03c"
+   ]
+  },
+  {
+   "href": "https://arxiv.org/abs/2302.12173",
+   "text": "对抗性检索内容",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://csrc.nist.gov/pubs/sp/800/207/final",
+   "text": "零信任",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/CONNECT",
+   "text": "MDN CONNECT",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://docs.kernel.org/userspace-api/seccomp_filter.html",
+   "text": "seccomp",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://en.wikipedia.org/wiki/Rice%27s_theorem",
+   "text": "Rice 定理",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+   "text": "OWASP Top 10 for Agentic Applications",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+   "text": "提示词注入指南",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://github.com/NVIDIA/NeMo-Guardrails",
+   "text": "NeMo Guardrails",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://github.com/NVIDIA/openshell",
+   "text": "OpenShell",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://github.com/langchain-ai/deepagents",
+   "text": "LangChain deepagents",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://github.com/openclaw/openclaw",
+   "text": "OpenClaw",
+   "pages": [
+    "04a",
+    "04b"
+   ]
+  },
+  {
+   "href": "https://man7.org/linux/man-pages/man2/mount.2.html",
+   "text": "mount(2)",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://man7.org/linux/man-pages/man2/ptrace.2.html",
+   "text": "ptrace(2)",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://man7.org/linux/man-pages/man2/setuid.2.html",
+   "text": "setuid(2)",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://man7.org/linux/man-pages/man3/errno.3.html",
+   "text": "errno(3)",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://man7.org/linux/man-pages/man7/capabilities.7.html",
+   "text": "capabilities(7)",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://man7.org/linux/man-pages/man7/network_namespaces.7.html",
+   "text": "network_namespaces(7)",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://man7.org/linux/man-pages/man7/symlink.7.html",
+   "text": "symlink(7)",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+   "text": "Simon Willison, The lethal trifecta (2025)",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://www.cs.virginia.edu/~evans/cs551/saltzer/",
+   "text": "Saltzer 和 Schroeder",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://www.nvidia.com/en-us/ai/nemoclaw/",
+   "text": "NemoClaw",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://www.openpolicyagent.org/",
+   "text": "Open Policy Agent（OPA）",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://www.openpolicyagent.org/docs",
+   "text": "OPA 文档",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://www.openpolicyagent.org/docs/latest/",
+   "text": "Open Policy Agent",
+   "pages": [
+    "04a"
+   ]
+  },
+  {
+   "href": "https://code.claude.com/docs/en/permissions",
+   "text": "Claude Code",
+   "pages": [
+    "04b"
+   ]
+  },
+  {
+   "href": "https://cursor.com/docs/agent/security",
+   "text": "Cursor",
+   "pages": [
+    "04b"
+   ]
+  },
+  {
+   "href": "https://learn.chatgpt.com/docs/agent-approvals-security",
+   "text": "Codex CLI",
+   "pages": [
+    "04b"
+   ]
+  }
+ ]
+}

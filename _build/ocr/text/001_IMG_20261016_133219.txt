@@ -1,0 +1,17 @@
+# 1  IMG_20261016_133219.jpg  (3264x2448)
+MegaMoE recap
+WhatisMegaMoE
+Fine-grained pipeline to better overlap communication and compute
+(a) Naive Solution
+Dispatch  L1  Act  L2  combine
+(b)Comet
+Communication  Dispatch  combine
+Theoreticalspeedup:1.42x
+Computation  Act
+(c)Ours
+Disp  DispatchAll-to-All
+L1  L2  L1  L2  L1  L2  Theoreticalspeedup:1.92x  Linear 1GEMM
+SWiGLU+FP8Cast
+Act  Combine  Act  Combine  Act  Combine  Linear2GEMM
+Expert Wave 1  Expert Wave2  ExpertWave3  Combine All-to-All
+rom  Deeps

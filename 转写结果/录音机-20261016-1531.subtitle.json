@@ -1,0 +1,5690 @@
+{
+ "1": {
+  "start_time": 130,
+  "end_time": 4760,
+  "original_subtitle": "要考虑，啊所以说这就是我这次分享想跟大家传达的三个观点。",
+  "translated_subtitle": ""
+ },
+ "2": {
+  "start_time": 6870,
+  "end_time": 8900,
+  "original_subtitle": "Ok这就是我今天分享的全部内容，",
+  "translated_subtitle": ""
+ },
+ "3": {
+  "start_time": 8910,
+  "end_time": 12520,
+  "original_subtitle": "我看还有一点时间就是可把数据的大家可以提问。",
+  "translated_subtitle": ""
+ },
+ "4": {
+  "start_time": 15180,
+  "end_time": 15680,
+  "original_subtitle": "感谢",
+  "translated_subtitle": ""
+ },
+ "5": {
+  "start_time": 21310,
+  "end_time": 26610,
+  "original_subtitle": "两纳米刚才你那个前面两个算法都讲了，就是在那个呃",
+  "translated_subtitle": ""
+ },
+ "6": {
+  "start_time": 26860,
+  "end_time": 32010,
+  "original_subtitle": "在那个场景下，它那个前面两个算法就不仅仅在多个并发情况下讲的，",
+  "translated_subtitle": ""
+ },
+ "7": {
+  "start_time": 32020,
+  "end_time": 36050,
+  "original_subtitle": "那个它的呃 ttft的性能优化，",
+  "translated_subtitle": ""
+ },
+ "8": {
+  "start_time": 36060,
+  "end_time": 38010,
+  "original_subtitle": "然后第三个算法就无损压缩，",
+  "translated_subtitle": ""
+ },
+ "9": {
+  "start_time": 38020,
+  "end_time": 39570,
+  "original_subtitle": "那个他那个在",
+  "translated_subtitle": ""
+ },
+ "10": {
+  "start_time": 39710,
+  "end_time": 41460,
+  "original_subtitle": "就是不仅仅讲了并发情况下，",
+  "translated_subtitle": ""
+ },
+ "11": {
+  "start_time": 41470,
+  "end_time": 45900,
+  "original_subtitle": "还讲了它的那个呃上下文长度下面的情况变化。",
+  "translated_subtitle": ""
+ },
+ "12": {
+  "start_time": 45900,
+  "end_time": 51440,
+  "original_subtitle": "然后那那第三个算法的它那个在上下文长度下它变变变化是什么样的？",
+  "translated_subtitle": ""
+ },
+ "13": {
+  "start_time": 52680,
+  "end_time": 57960,
+  "original_subtitle": "这里是只有并发，对，然后他我这里我这里的测试只展示了一个长下文，",
+  "translated_subtitle": ""
+ },
+ "14": {
+  "start_time": 58430,
+  "end_time": 62680,
+  "original_subtitle": "就是我们的结论就是上下文越长越好，",
+  "translated_subtitle": ""
+ },
+ "15": {
+  "start_time": 62690,
+  "end_time": 66230,
+  "original_subtitle": "噢对上下文的话也是不太适合的，",
+  "translated_subtitle": ""
+ },
+ "16": {
+  "start_time": 66240,
+  "end_time": 67150,
+  "original_subtitle": "噢对。",
+  "translated_subtitle": ""
+ },
+ "17": {
+  "start_time": 67550,
+  "end_time": 72660,
+  "original_subtitle": "好，然后还有就我就是另外一个就是就是我就随便问一下老师了，",
+  "translated_subtitle": ""
+ },
+ "18": {
+  "start_time": 72670,
+  "end_time": 75820,
+  "original_subtitle": "因为另外一个是前面两个他是有损压缩，",
+  "translated_subtitle": ""
+ },
+ "19": {
+  "start_time": 75830,
+  "end_time": 80100,
+  "original_subtitle": "嘛然后他第一个是你说他是在极限是压4.",
+  "translated_subtitle": ""
+ },
+ "20": {
+  "start_time": 80110,
+  "end_time": 82500,
+  "original_subtitle": "5倍，然后3.6是甜心点，",
+  "translated_subtitle": ""
+ },
+ "21": {
+  "start_time": 82610,
+  "end_time": 85930,
+  "original_subtitle": "然后第二个是8~8倍到64倍，",
+  "translated_subtitle": ""
+ },
+ "22": {
+  "start_time": 85940,
+  "end_time": 88810,
+  "original_subtitle": "然后8倍是比较比较啊好比说比较好的，",
+  "translated_subtitle": ""
+ },
+ "23": {
+  "start_time": 88820,
+  "end_time": 91690,
+  "original_subtitle": "然后他这两个呢就两个甜心点的，",
+  "translated_subtitle": ""
+ },
+ "24": {
+  "start_time": 91700,
+  "end_time": 94640,
+  "original_subtitle": "它的大概大概这业务场景的需求是什么？",
+  "translated_subtitle": ""
+ },
+ "25": {
+  "start_time": 94640,
+  "end_time": 96970,
+  "original_subtitle": "我想了解一下，这个如果不知道那个",
+  "translated_subtitle": ""
+ },
+ "26": {
+  "start_time": 97330,
+  "end_time": 100920,
+  "original_subtitle": "对个ok我就是首先压缩，",
+  "translated_subtitle": ""
+ },
+ "27": {
+  "start_time": 100930,
+  "end_time": 105240,
+  "original_subtitle": "不管是什么压缩算法，它的初衷就是上下文越长越好，",
+  "translated_subtitle": ""
+ },
+ "28": {
+  "start_time": 105250,
+  "end_time": 112040,
+  "original_subtitle": "所以说他现在最性感的场景其实就是a9超长超长上下文的a9的场景。",
+  "translated_subtitle": ""
+ },
+ "29": {
+  "start_time": 112050,
+  "end_time": 112520,
+  "original_subtitle": "嗯",
+  "translated_subtitle": ""
+ },
+ "30": {
+  "start_time": 113110,
+  "end_time": 114500,
+  "original_subtitle": "嗯好好谢谢。",
+  "translated_subtitle": ""
+ },
+ "31": {
+  "start_time": 118190,
+  "end_time": 121570,
+  "original_subtitle": "好谢谢这位朋友，他呃具体数字都记得很清楚，",
+  "translated_subtitle": ""
+ },
+ "32": {
+  "start_time": 121580,
+  "end_time": 124010,
+  "original_subtitle": "哈不过那个这位朋友已经有一只龙虾了，",
+  "translated_subtitle": ""
+ },
+ "33": {
+  "start_time": 124020,
+  "end_time": 128650,
+  "original_subtitle": "我们还剩最后一只，那我们给接下来提问的朋友唉这位女生。",
+  "translated_subtitle": ""
+ },
+ "34": {
+  "start_time": 133210,
+  "end_time": 138730,
+  "original_subtitle": "唉老师您好，呃我想问就是之前有提到那个数据汇聚平台，",
+  "translated_subtitle": ""
+ },
+ "35": {
+  "start_time": 138740,
+  "end_time": 141330,
+  "original_subtitle": "它的访问率就会提高了差不多8倍，",
+  "translated_subtitle": ""
+ },
+ "36": {
+  "start_time": 141340,
+  "end_time": 145640,
+  "original_subtitle": "那么它这个优化会不会就是更加就是吃这个硬件，",
+  "translated_subtitle": ""
+ },
+ "37": {
+  "start_time": 145650,
+  "end_time": 147160,
+  "original_subtitle": "还有底层的这种实现？",
+  "translated_subtitle": ""
+ },
+ "38": {
+  "start_time": 147160,
+  "end_time": 147540,
+  "original_subtitle": "呢",
+  "translated_subtitle": ""
+ },
+ "39": {
+  "start_time": 147660,
+  "end_time": 151740,
+  "original_subtitle": "比如说我们换一种环境，它能不能还是直接出现对吧？",
+  "translated_subtitle": ""
+ },
+ "40": {
+  "start_time": 152570,
+  "end_time": 158130,
+  "original_subtitle": "呃首先换一种环境，如果是NV亚的GP啊换一种环境，",
+  "translated_subtitle": ""
+ },
+ "41": {
+  "start_time": 158140,
+  "end_time": 160210,
+  "original_subtitle": "它的提升的曲线基本是一样的，",
+  "translated_subtitle": ""
+ },
+ "42": {
+  "start_time": 160620,
+  "end_time": 162360,
+  "original_subtitle": "如果不是n你d的GPU的话，",
+  "translated_subtitle": ""
+ },
+ "43": {
+  "start_time": 162740,
+  "end_time": 166690,
+  "original_subtitle": "那么我们就需要根据具体数据的保存的特点来，",
+  "translated_subtitle": ""
+ },
+ "44": {
+  "start_time": 166700,
+  "end_time": 171170,
+  "original_subtitle": "因为我们1.2它呃呃那个那个 Sm t的编程的方式，",
+  "translated_subtitle": ""
+ },
+ "45": {
+  "start_time": 171180,
+  "end_time": 174330,
+  "original_subtitle": "它对于数据的访问和合并是很关键的，",
+  "translated_subtitle": ""
+ },
+ "46": {
+  "start_time": 174340,
+  "end_time": 176970,
+  "original_subtitle": "但是对于数据对齐也是很看重的，",
+  "translated_subtitle": ""
+ },
+ "47": {
+  "start_time": 176980,
+  "end_time": 177690,
+  "original_subtitle": "所以说我们",
+  "translated_subtitle": ""
+ },
+ "48": {
+  "start_time": 177770,
+  "end_time": 180680,
+  "original_subtitle": "需要的就是尽量让数据可合并数，",
+  "translated_subtitle": ""
+ },
+ "49": {
+  "start_time": 180690,
+  "end_time": 185480,
+  "original_subtitle": "啊把真的边界能够对齐，但如果说对于一些特殊的一些硬件架构，",
+  "translated_subtitle": ""
+ },
+ "50": {
+  "start_time": 185490,
+  "end_time": 188440,
+  "original_subtitle": "那么它具体有一些什么样特殊的一些指令，",
+  "translated_subtitle": ""
+ },
+ "51": {
+  "start_time": 188450,
+  "end_time": 192560,
+  "original_subtitle": "啊比如它支持该r啊支支持g啊或者它支持一些标量的",
+  "translated_subtitle": ""
+ },
+ "52": {
+  "start_time": 192660,
+  "end_time": 196520,
+  "original_subtitle": "高校的呃数据访问，啊那么他们展出来的情况表现不一样，",
+  "translated_subtitle": ""
+ },
+ "53": {
+  "start_time": 196530,
+  "end_time": 199380,
+  "original_subtitle": "所以说还是需要针对具体硬件做具体的分析。",
+  "translated_subtitle": ""
+ },
+ "54": {
+  "start_time": 200290,
+  "end_time": 203260,
+  "original_subtitle": "噢那关于那个 kv的压缩，",
+  "translated_subtitle": ""
+ },
+ "55": {
+  "start_time": 203270,
+  "end_time": 205940,
+  "original_subtitle": "就是我们放在推理引擎里面做的话，",
+  "translated_subtitle": ""
+ },
+ "56": {
+  "start_time": 205950,
+  "end_time": 208700,
+  "original_subtitle": "是放在kv后管理后端",
+  "translated_subtitle": ""
+ },
+ "57": {
+  "start_time": 209040,
+  "end_time": 212760,
+  "original_subtitle": "做，然后就是到真实的生产环境的话，",
+  "translated_subtitle": ""
+ },
+ "58": {
+  "start_time": 212770,
+  "end_time": 217530,
+  "original_subtitle": "是怎么样去选择就用哪一种方法去配搭配的？",
+  "translated_subtitle": ""
+ },
+ "59": {
+  "start_time": 218460,
+  "end_time": 225040,
+  "original_subtitle": "Ok就是我们比如说啊我还是以我们这里展示的三个三个算法",
+  "translated_subtitle": ""
+ },
+ "60": {
+  "start_time": 226000,
+  "end_time": 231640,
+  "original_subtitle": "来介绍吧通矿的和pptc这两个算法是很有特点的。",
+  "translated_subtitle": ""
+ },
+ "61": {
+  "start_time": 232890,
+  "end_time": 237070,
+  "original_subtitle": "通框t是很适合集成到推理的线上服务，",
+  "translated_subtitle": ""
+ },
+ "62": {
+  "start_time": 237580,
+  "end_time": 242220,
+  "original_subtitle": "而PC是很适合来集成到呃开始管理终端的，",
+  "translated_subtitle": ""
+ },
+ "63": {
+  "start_time": 242230,
+  "end_time": 243540,
+  "original_subtitle": "他们两个特点是什么？",
+  "translated_subtitle": ""
+ },
+ "64": {
+  "start_time": 244640,
+  "end_time": 249320,
+  "original_subtitle": "托框t它很轻量，所以说它能够替带来的提升更大，",
+  "translated_subtitle": ""
+ },
+ "65": {
+  "start_time": 249330,
+  "end_time": 256070,
+  "original_subtitle": "但是脱矿特的精度会不如pptc所以说我们首先我们在部署的时候需要",
+  "translated_subtitle": ""
+ },
+ "66": {
+  "start_time": 256080,
+  "end_time": 257870,
+  "original_subtitle": "考虑的第一要素一定是精度，",
+  "translated_subtitle": ""
+ },
+ "67": {
+  "start_time": 259080,
+  "end_time": 262760,
+  "original_subtitle": "我们验证了发现kbtc这算法它做了很重的计算，",
+  "translated_subtitle": ""
+ },
+ "68": {
+  "start_time": 262770,
+  "end_time": 266870,
+  "original_subtitle": "它这个计算很重，肯定是不可能全完全是代价，",
+  "translated_subtitle": ""
+ },
+ "69": {
+  "start_time": 266880,
+  "end_time": 268350,
+  "original_subtitle": "它肯定是能带来优势的优势，",
+  "translated_subtitle": ""
+ },
+ "70": {
+  "start_time": 268360,
+  "end_time": 270710,
+  "original_subtitle": "就是它的压缩率可以做得很大，",
+  "translated_subtitle": ""
+ },
+ "71": {
+  "start_time": 271060,
+  "end_time": 272810,
+  "original_subtitle": "然后它能带来更高的精度，",
+  "translated_subtitle": ""
+ },
+ "72": {
+  "start_time": 272820,
+  "end_time": 274570,
+  "original_subtitle": "别看它是8倍，但是它比3.",
+  "translated_subtitle": ""
+ },
+ "73": {
+  "start_time": 274580,
+  "end_time": 277730,
+  "original_subtitle": "6倍的脱矿图会带来它的精度是更高的。",
+  "translated_subtitle": ""
+ },
+ "74": {
+  "start_time": 278310,
+  "end_time": 281800,
+  "original_subtitle": "所以说第一步的部署一定是看我们的精度，",
+  "translated_subtitle": ""
+ },
+ "75": {
+  "start_time": 281810,
+  "end_time": 283540,
+  "original_subtitle": "哪个算法符合我们的精度，",
+  "translated_subtitle": ""
+ },
+ "76": {
+  "start_time": 283550,
+  "end_time": 285570,
+  "original_subtitle": "我们才能考虑到那个算法之后，",
+  "translated_subtitle": ""
+ },
+ "77": {
+  "start_time": 285580,
+  "end_time": 288760,
+  "original_subtitle": "我们将会根据这个算法它具体的r的特点，",
+  "translated_subtitle": ""
+ },
+ "78": {
+  "start_time": 289040,
+  "end_time": 291220,
+  "original_subtitle": "它是保存型的还是计算型的，",
+  "translated_subtitle": ""
+ },
+ "79": {
+  "start_time": 292000,
+  "end_time": 295570,
+  "original_subtitle": "他对呃然后它它它它重不重，",
+  "translated_subtitle": ""
+ },
+ "80": {
+  "start_time": 295750,
+  "end_time": 301880,
+  "original_subtitle": "它它能否跟嗯下呃家想探讯这些上目做融合，",
+  "translated_subtitle": ""
+ },
+ "81": {
+  "start_time": 301890,
+  "end_time": 305230,
+  "original_subtitle": "然后以及嗯他是否嗯",
+  "translated_subtitle": ""
+ },
+ "82": {
+  "start_time": 305770,
+  "end_time": 308610,
+  "original_subtitle": "是呃以及它我们以及我们优化的目标是什么，",
+  "translated_subtitle": ""
+ },
+ "83": {
+  "start_time": 308620,
+  "end_time": 313170,
+  "original_subtitle": "我们是要用它呃 hbm上的压力还是优化不存m位上的压力，",
+  "translated_subtitle": ""
+ },
+ "84": {
+  "start_time": 313180,
+  "end_time": 315570,
+  "original_subtitle": "还是优化整个系统io上的压力，",
+  "translated_subtitle": ""
+ },
+ "85": {
+  "start_time": 315850,
+  "end_time": 317600,
+  "original_subtitle": "我们需要综合考虑这些的因素，",
+  "translated_subtitle": ""
+ },
+ "86": {
+  "start_time": 317610,
+  "end_time": 320960,
+  "original_subtitle": "然后来选择合适的可以开始压缩的算法。",
+  "translated_subtitle": ""
+ },
+ "87": {
+  "start_time": 321640,
+  "end_time": 328100,
+  "original_subtitle": "嗯好的，我的问题就这些，最后那位朋友。",
+  "translated_subtitle": ""
+ },
+ "88": {
+  "start_time": 333200,
+  "end_time": 335000,
+  "original_subtitle": "啊老师你好，我有两个问题，",
+  "translated_subtitle": ""
+ },
+ "89": {
+  "start_time": 335320,
+  "end_time": 340460,
+  "original_subtitle": "是关于kvtc它PC对呃 PC上和我们的计算实际单位是什么样，",
+  "translated_subtitle": ""
+ },
+ "90": {
+  "start_time": 340470,
+  "end_time": 343130,
+  "original_subtitle": "那就这个啊就是这",
+  "translated_subtitle": ""
+ },
+ "91": {
+  "start_time": 343650,
+  "end_time": 346820,
+  "original_subtitle": "就是因为我们这个集成到了管理后端上面，",
+  "translated_subtitle": ""
+ },
+ "92": {
+  "start_time": 346830,
+  "end_time": 352700,
+  "original_subtitle": "吧就是当上层的应用就是推进引擎向下发送一个请求的时候，",
+  "translated_subtitle": ""
+ },
+ "93": {
+  "start_time": 353190,
+  "end_time": 357520,
+  "original_subtitle": "那么它会在后管理后端上面调用提c一个这个",
+  "translated_subtitle": ""
+ },
+ "94": {
+  "start_time": 357830,
+  "end_time": 360240,
+  "original_subtitle": "就那个范围就是整整个transform,",
+  "translated_subtitle": ""
+ },
+ "95": {
+  "start_time": 360250,
+  "end_time": 367630,
+  "original_subtitle": "错的这个映射都是在这个整个启动时间还是打mk做的啊就是动态的做，",
+  "translated_subtitle": ""
+ },
+ "96": {
+  "start_time": 367640,
+  "end_time": 371620,
+  "original_subtitle": "它是完全动态做，就完全不需要模型做任何的个配。",
+  "translated_subtitle": ""
+ },
+ "97": {
+  "start_time": 372380,
+  "end_time": 377420,
+  "original_subtitle": "对，不需要模型做，模型只需要对下层来发送一个处理或者概括的情求，",
+  "translated_subtitle": ""
+ },
+ "98": {
+  "start_time": 377430,
+  "end_time": 385370,
+  "original_subtitle": "啊那所以理论上可以扩展到比如说一些啊扩展到一些模型的。",
+  "translated_subtitle": ""
+ },
+ "99": {
+  "start_time": 385740,
+  "end_time": 387080,
+  "original_subtitle": "啊算了这个话题，另外说",
+  "translated_subtitle": ""
+ },
+ "100": {
+  "start_time": 388080,
+  "end_time": 391670,
+  "original_subtitle": "对我们可以下午我们可以讲啊下面开另外一个话题，",
+  "translated_subtitle": ""
+ },
+ "101": {
+  "start_time": 391680,
+  "end_time": 399080,
+  "original_subtitle": "那个 Kv TC拍的账度的",
+  "translated_subtitle": ""
+ },
+ "102": {
+  "start_time": 399090,
+  "end_time": 405190,
+  "original_subtitle": "after重叠的嗯包改的。",
+  "translated_subtitle": ""
+ },
+ "103": {
+  "start_time": 406450,
+  "end_time": 410680,
+  "original_subtitle": "那同意ok ok,他需要NB对吗？",
+  "translated_subtitle": ""
+ },
+ "104": {
+  "start_time": 412440,
+  "end_time": 416350,
+  "original_subtitle": "需要，他一定需要基本上1+1就就不太行，",
+  "translated_subtitle": ""
+ },
+ "105": {
+  "start_time": 416360,
+  "end_time": 420040,
+  "original_subtitle": "嗯最好就是不用想的问题，",
+  "translated_subtitle": ""
+ },
+ "106": {
+  "start_time": 421570,
+  "end_time": 428000,
+  "original_subtitle": "就是没有的话也可以直接也利用就是对对就是我们这么看就是该到的时间",
+  "translated_subtitle": ""
+ },
+ "107": {
+  "start_time": 428010,
+  "end_time": 433970,
+  "original_subtitle": "商品基本时间统计，吧然后我们可以根据具体的呃硬件不同有硬件的自身",
+  "translated_subtitle": ""
+ },
+ "108": {
+  "start_time": 433980,
+  "end_time": 434570,
+  "original_subtitle": "的一个",
+  "translated_subtitle": ""
+ },
+ "109": {
+  "start_time": 434950,
+  "end_time": 439070,
+  "original_subtitle": "那那个要写来，那就用起来不支持的话pce也可以传，",
+  "translated_subtitle": ""
+ },
+ "110": {
+  "start_time": 439080,
+  "end_time": 440670,
+  "original_subtitle": "因为进入时间总上去。",
+  "translated_subtitle": ""
+ },
+ "111": {
+  "start_time": 442840,
+  "end_time": 447670,
+  "original_subtitle": "嗯呃 Copa嗯在这也是这个 AP特e这部分，",
+  "translated_subtitle": ""
+ },
+ "112": {
+  "start_time": 447680,
+  "end_time": 450190,
+  "original_subtitle": "cop agent的数量也不一样，",
+  "translated_subtitle": ""
+ },
+ "113": {
+  "start_time": 451880,
+  "end_time": 453840,
+  "original_subtitle": "主呃是指哪一部分不东西，",
+  "translated_subtitle": ""
+ },
+ "114": {
+  "start_time": 453850,
+  "end_time": 458330,
+  "original_subtitle": "就是就是当时这张图整整个是整个是这样子，",
+  "translated_subtitle": ""
+ },
+ "115": {
+  "start_time": 458340,
+  "end_time": 460820,
+  "original_subtitle": "他靠编制的市量不一样，对应起样，",
+  "translated_subtitle": ""
+ },
+ "116": {
+  "start_time": 461480,
+  "end_time": 463880,
+  "original_subtitle": "嗯所以一个或者两个会有区别。",
+  "translated_subtitle": ""
+ },
+ "117": {
+  "start_time": 463880,
+  "end_time": 468470,
+  "original_subtitle": "嗯你指的后面这个指的是呃一一个",
+  "translated_subtitle": ""
+ },
+ "118": {
+  "start_time": 468660,
+  "end_time": 476360,
+  "original_subtitle": "每一级的抽象一一直数据我们我们我们嗯总体",
+  "translated_subtitle": ""
+ },
+ "119": {
+  "start_time": 476370,
+  "end_time": 482550,
+  "original_subtitle": "来说它的数据量是呃首先我们就想我们我们我我不好直接说这个影响，",
+  "translated_subtitle": ""
+ },
+ "120": {
+  "start_time": 482560,
+  "end_time": 485150,
+  "original_subtitle": "因为不同的我它不一样，我们可以算一下，",
+  "translated_subtitle": ""
+ },
+ "121": {
+  "start_time": 485920,
+  "end_time": 488280,
+  "original_subtitle": "比如说你是一个百万的上下游，",
+  "translated_subtitle": ""
+ },
+ "122": {
+  "start_time": 488290,
+  "end_time": 490160,
+  "original_subtitle": "然后就有一个创造的数据，",
+  "translated_subtitle": ""
+ },
+ "123": {
+  "start_time": 490170,
+  "end_time": 492190,
+  "original_subtitle": "一个的影选的一个匹配的，",
+  "translated_subtitle": ""
+ },
+ "124": {
+  "start_time": 492200,
+  "end_time": 495110,
+  "original_subtitle": "那么你可以大概算一下你用要用的那个模型，",
+  "translated_subtitle": ""
+ },
+ "125": {
+  "start_time": 495120,
+  "end_time": 498590,
+  "original_subtitle": "它在4k的情况下，它的可以看出这样的大小是多少，",
+  "translated_subtitle": ""
+ },
+ "126": {
+  "start_time": 498600,
+  "end_time": 500950,
+  "original_subtitle": "然后好我们现在压缩完了压缩到",
+  "translated_subtitle": ""
+ },
+ "127": {
+  "start_time": 501480,
+  "end_time": 505750,
+  "original_subtitle": "8倍，然后解压后以后的数据是会恢复成原来的大小的，",
+  "translated_subtitle": ""
+ },
+ "128": {
+  "start_time": 505760,
+  "end_time": 509590,
+  "original_subtitle": "然后我们算一下恢复以后的数据和你的",
+  "translated_subtitle": ""
+ },
+ "129": {
+  "start_time": 509910,
+  "end_time": 512860,
+  "original_subtitle": "后币安全能够提供的大的带宽，",
+  "translated_subtitle": ""
+ },
+ "130": {
+  "start_time": 512870,
+  "end_time": 516700,
+  "original_subtitle": "或者你来推理引擎平均它能展现出来的带宽是多少，",
+  "translated_subtitle": ""
+ },
+ "131": {
+  "start_time": 516710,
+  "end_time": 521020,
+  "original_subtitle": "然后做一个除法，而后看能不ooo这就行。",
+  "translated_subtitle": ""
+ },
+ "132": {
+  "start_time": 521310,
+  "end_time": 526950,
+  "original_subtitle": "啊我的意思是说它后边这本身是就是它它需要两个来运行还是一个其实也",
+  "translated_subtitle": ""
+ },
+ "133": {
+  "start_time": 526960,
+  "end_time": 531510,
+  "original_subtitle": "可以包括具体点，就是如果我用5090和赵六星比的话，",
+  "translated_subtitle": ""
+ },
+ "134": {
+  "start_time": 531520,
+  "end_time": 533350,
+  "original_subtitle": "他们会不会会不会有很明显的区别，",
+  "translated_subtitle": ""
+ },
+ "135": {
+  "start_time": 533360,
+  "end_time": 535820,
+  "original_subtitle": "假设比如呢是是同样的，嗯嗯",
+  "translated_subtitle": ""
+ },
+ "136": {
+  "start_time": 537690,
+  "end_time": 540400,
+  "original_subtitle": "我我我我我我不知道你我没有实际测过，",
+  "translated_subtitle": ""
+ },
+ "137": {
+  "start_time": 540410,
+  "end_time": 543160,
+  "original_subtitle": "我觉得我觉得影响应该不会很大。",
+  "translated_subtitle": ""
+ },
+ "138": {
+  "start_time": 543800,
+  "end_time": 547560,
+  "original_subtitle": "你到这个场景上，但是如果说它和上层的应用，",
+  "translated_subtitle": ""
+ },
+ "139": {
+  "start_time": 547570,
+  "end_time": 550640,
+  "original_subtitle": "因为它还有这因为PC要做的事情很多，",
+  "translated_subtitle": ""
+ },
+ "140": {
+  "start_time": 550650,
+  "end_time": 556200,
+  "original_subtitle": "它还需要嗯他他可能还有一些别的一些数据的搬运的一些开销，",
+  "translated_subtitle": ""
+ },
+ "141": {
+  "start_time": 556210,
+  "end_time": 557710,
+  "original_subtitle": "所以说呃",
+  "translated_subtitle": ""
+ },
+ "142": {
+  "start_time": 557970,
+  "end_time": 561540,
+  "original_subtitle": "可能越多越好吧，但是实际怎么样可能还得还得测一测。",
+  "translated_subtitle": ""
+ },
+ "143": {
+  "start_time": 561870,
+  "end_time": 563830,
+  "original_subtitle": "就是如果如果你对这个东西感兴趣的话，",
+  "translated_subtitle": ""
+ },
+ "144": {
+  "start_time": 563840,
+  "end_time": 566070,
+  "original_subtitle": "我们这边也可以，我们现在还没有开源，",
+  "translated_subtitle": ""
+ },
+ "145": {
+  "start_time": 566080,
+  "end_time": 567630,
+  "original_subtitle": "嘛我们可以定向的开源有代码，",
+  "translated_subtitle": ""
+ },
+ "146": {
+  "start_time": 567640,
+  "end_time": 569940,
+  "original_subtitle": "啊好的好的嗯好谢谢。",
+  "translated_subtitle": ""
+ },
+ "147": {
+  "start_time": 569940,
+  "end_time": 575050,
+  "original_subtitle": "刚才举手的是哪位来着？",
+  "translated_subtitle": ""
+ },
+ "148": {
+  "start_time": 581100,
+  "end_time": 583770,
+  "original_subtitle": "喂唉李姐你好，我有两个问题想问一下，",
+  "translated_subtitle": ""
+ },
+ "149": {
+  "start_time": 583780,
+  "end_time": 586090,
+  "original_subtitle": "就是一个是就是这三种算法，",
+  "translated_subtitle": ""
+ },
+ "150": {
+  "start_time": 586100,
+  "end_time": 589730,
+  "original_subtitle": "嘛那个我想问一下就是它带来的那个压缩的收益之后，",
+  "translated_subtitle": ""
+ },
+ "151": {
+  "start_time": 589740,
+  "end_time": 593050,
+  "original_subtitle": "它对于那个算力的那个开销是sm的开销，",
+  "translated_subtitle": ""
+ },
+ "152": {
+  "start_time": 593060,
+  "end_time": 594930,
+  "original_subtitle": "你们有做过定量一些测试吗？",
+  "translated_subtitle": ""
+ },
+ "153": {
+  "start_time": 595340,
+  "end_time": 597200,
+  "original_subtitle": "第二个问题是我想问一下就是",
+  "translated_subtitle": ""
+ },
+ "154": {
+  "start_time": 597730,
+  "end_time": 600040,
+  "original_subtitle": "n你看的你呃你提到就是说它是无损的，",
+  "translated_subtitle": ""
+ },
+ "155": {
+  "start_time": 600050,
+  "end_time": 603920,
+  "original_subtitle": "嘛另外两个其实是有损，无损的话就是免费的午餐嘛那它是",
+  "translated_subtitle": ""
+ },
+ "156": {
+  "start_time": 604500,
+  "end_time": 606380,
+  "original_subtitle": "在所有的场品下都是建议打开的，",
+  "translated_subtitle": ""
+ },
+ "157": {
+  "start_time": 606390,
+  "end_time": 608180,
+  "original_subtitle": "还是说它也有它自己的甜点区，",
+  "translated_subtitle": ""
+ },
+ "158": {
+  "start_time": 608190,
+  "end_time": 610100,
+  "original_subtitle": "然后也有不适合打开的场景，",
+  "translated_subtitle": ""
+ },
+ "159": {
+  "start_time": 610110,
+  "end_time": 612660,
+  "original_subtitle": "好谢谢，我觉很很专业的问题，",
+  "translated_subtitle": ""
+ },
+ "160": {
+  "start_time": 612670,
+  "end_time": 617920,
+  "original_subtitle": "啊第一个就是对大三的影响就是肯定是有影响的。",
+  "translated_subtitle": ""
+ },
+ "161": {
+  "start_time": 617920,
+  "end_time": 620190,
+  "original_subtitle": "就是这个",
+  "translated_subtitle": ""
+ },
+ "162": {
+  "start_time": 620380,
+  "end_time": 623320,
+  "original_subtitle": "解压缩这个算子本身是需要在sm,",
+  "translated_subtitle": ""
+ },
+ "163": {
+  "start_time": 623330,
+  "end_time": 626720,
+  "original_subtitle": "虽然它可能不能它可能不需要它渗透，",
+  "translated_subtitle": ""
+ },
+ "164": {
+  "start_time": 627070,
+  "end_time": 633850,
+  "original_subtitle": "但是它绝对是会要sm,并且我们在实际的测试中会发现它对sm的增强",
+  "translated_subtitle": ""
+ },
+ "165": {
+  "start_time": 633860,
+  "end_time": 634890,
+  "original_subtitle": "还是挺多的，",
+  "translated_subtitle": ""
+ },
+ "166": {
+  "start_time": 635250,
+  "end_time": 638840,
+  "original_subtitle": "也就是说当解压缩的这个算目在执行的时候，",
+  "translated_subtitle": ""
+ },
+ "167": {
+  "start_time": 638850,
+  "end_time": 641280,
+  "original_subtitle": "推理是会受到一定程度的阻碍的，",
+  "translated_subtitle": ""
+ },
+ "168": {
+  "start_time": 641290,
+  "end_time": 645170,
+  "original_subtitle": "自己o要多少怎么的卡的啊卡的类型的话，",
+  "translated_subtitle": ""
+ },
+ "169": {
+  "start_time": 645180,
+  "end_time": 649170,
+  "original_subtitle": "我们翻译部能在包括的卡里面可能有80%的",
+  "translated_subtitle": ""
+ },
+ "170": {
+  "start_time": 649790,
+  "end_time": 655790,
+  "original_subtitle": "国外的赞同，所以他会我我不能为国家比较多这个市场，但是",
+  "translated_subtitle": ""
+ },
+ "171": {
+  "start_time": 655960,
+  "end_time": 662460,
+  "original_subtitle": "好在这个解压很快，它基本上它的解压的带宽嗯基本上是在50GB的每",
+  "translated_subtitle": ""
+ },
+ "172": {
+  "start_time": 662470,
+  "end_time": 665760,
+  "original_subtitle": "秒后这个数据上，所以它解压会比较快。",
+  "translated_subtitle": ""
+ },
+ "173": {
+  "start_time": 665760,
+  "end_time": 670130,
+  "original_subtitle": "就以说这个时候就是说好在它真实它真实的场景下，",
+  "translated_subtitle": ""
+ },
+ "174": {
+  "start_time": 670520,
+  "end_time": 674480,
+  "original_subtitle": "它时间短，所以说它对于病的活量就会比较少，",
+  "translated_subtitle": ""
+ },
+ "175": {
+  "start_time": 674490,
+  "end_time": 677860,
+  "original_subtitle": "你就他这个就是并发高了以后，",
+  "translated_subtitle": ""
+ },
+ "176": {
+  "start_time": 677870,
+  "end_time": 679380,
+  "original_subtitle": "它的那个 Ttl就下降了，",
+  "translated_subtitle": ""
+ },
+ "177": {
+  "start_time": 679390,
+  "end_time": 682260,
+  "original_subtitle": "就是因为呃就是因为说呃",
+  "translated_subtitle": ""
+ },
+ "178": {
+  "start_time": 682930,
+  "end_time": 688450,
+  "original_subtitle": "它必然产有的一些干扰，然后导致整个推理系统的稳态会变得特别复杂，",
+  "translated_subtitle": ""
+ },
+ "179": {
+  "start_time": 688460,
+  "end_time": 695140,
+  "original_subtitle": "然后导致它下降，嗯所以说这就牵扯到了刚刚这位专家提的第二个问题，",
+  "translated_subtitle": ""
+ },
+ "180": {
+  "start_time": 695840,
+  "end_time": 698030,
+  "original_subtitle": "免费的午餐它也是有代价的。",
+  "translated_subtitle": ""
+ },
+ "181": {
+  "start_time": 698920,
+  "end_time": 704750,
+  "original_subtitle": "所以我们一直强调在一啊啊一就是你的存储如果是绝对的压力的话，",
+  "translated_subtitle": ""
+ },
+ "182": {
+  "start_time": 704760,
+  "end_time": 706730,
+  "original_subtitle": "那么你选的存储这绝对是最好的。",
+  "translated_subtitle": ""
+ },
+ "183": {
+  "start_time": 706730,
+  "end_time": 711730,
+  "original_subtitle": "二就是如果你要你你对存储不那么敏感，你关注的是性能的话，",
+  "translated_subtitle": ""
+ },
+ "184": {
+  "start_time": 711950,
+  "end_time": 716040,
+  "original_subtitle": "那就我们前面说的就是在低并发的情况下它是比较好的，",
+  "translated_subtitle": ""
+ },
+ "185": {
+  "start_time": 716050,
+  "end_time": 719440,
+  "original_subtitle": "但是并发越高，它就会变得越不稳定，",
+  "translated_subtitle": ""
+ },
+ "186": {
+  "start_time": 719450,
+  "end_time": 722720,
+  "original_subtitle": "因为嗯你这个时候他需要解压的东西多了，",
+  "translated_subtitle": ""
+ },
+ "187": {
+  "start_time": 722730,
+  "end_time": 724160,
+  "original_subtitle": "它比SS他的信息量大了，",
+  "translated_subtitle": ""
+ },
+ "188": {
+  "start_time": 724170,
+  "end_time": 726240,
+  "original_subtitle": "然后这时候会导致会业系统的太",
+  "translated_subtitle": ""
+ },
+ "189": {
+  "start_time": 727110,
+  "end_time": 729100,
+  "original_subtitle": "就是营销指标会有上下幅动，",
+  "translated_subtitle": ""
+ },
+ "190": {
+  "start_time": 729640,
+  "end_time": 731500,
+  "original_subtitle": "因为这里写的是负5.6%,",
+  "translated_subtitle": ""
+ },
+ "191": {
+  "start_time": 731510,
+  "end_time": 733660,
+  "original_subtitle": "当然也有可能会波动到正5%点，",
+  "translated_subtitle": ""
+ },
+ "192": {
+  "start_time": 734170,
+  "end_time": 735600,
+  "original_subtitle": "它属于一个很大的一个波动，",
+  "translated_subtitle": ""
+ },
+ "193": {
+  "start_time": 737130,
+  "end_time": 741520,
+  "original_subtitle": "有这个就是看有没有就是回答到你们的困惑，",
+  "translated_subtitle": ""
+ },
+ "194": {
+  "start_time": 741530,
+  "end_time": 741730,
+  "original_subtitle": "好",
+  "translated_subtitle": ""
+ },
+ "195": {
+  "start_time": 750750,
+  "end_time": 751340,
+  "original_subtitle": "好好。",
+  "translated_subtitle": ""
+ },
+ "196": {
+  "start_time": 755040,
+  "end_time": 757470,
+  "original_subtitle": "好，我看刚才大家问题还是很多，",
+  "translated_subtitle": ""
+ },
+ "197": {
+  "start_time": 757480,
+  "end_time": 760310,
+  "original_subtitle": "哈我们嗯威利的技术专家都在第一排，",
+  "translated_subtitle": ""
+ },
+ "198": {
+  "start_time": 760320,
+  "end_time": 762510,
+  "original_subtitle": "然后一会结束后大家还是可以继续提问，",
+  "translated_subtitle": ""
+ },
+ "199": {
+  "start_time": 762520,
+  "end_time": 768470,
+  "original_subtitle": "那我们进行到下一项，刚才我们讨论了如何减少对开始的存储开销，",
+  "translated_subtitle": ""
+ },
+ "200": {
+  "start_time": 768480,
+  "end_time": 769950,
+  "original_subtitle": "那接下来我们进一步挖",
+  "translated_subtitle": ""
+ },
+ "201": {
+  "start_time": 770070,
+  "end_time": 774220,
+  "original_subtitle": "关注整个智能体推理系统如何使用和管理这些缓存，",
+  "translated_subtitle": ""
+ },
+ "202": {
+  "start_time": 774230,
+  "end_time": 777460,
+  "original_subtitle": "那在智能体应用中上下文会持续增长，",
+  "translated_subtitle": ""
+ },
+ "203": {
+  "start_time": 777470,
+  "end_time": 780460,
+  "original_subtitle": "工具调用和模型生成会交替进行，",
+  "translated_subtitle": ""
+ },
+ "204": {
+  "start_time": 780470,
+  "end_time": 783860,
+  "original_subtitle": "那系统需要考虑一段会话该路由到哪里，",
+  "translated_subtitle": ""
+ },
+ "205": {
+  "start_time": 783980,
+  "end_time": 788970,
+  "original_subtitle": "怎样去复用已有的缓存，以及如何在资源紧张时候做好调度，",
+  "translated_subtitle": ""
+ },
+ "206": {
+  "start_time": 788980,
+  "end_time": 792610,
+  "original_subtitle": "这些决策都关系到了用户的体验和服务的成本。",
+  "translated_subtitle": ""
+ },
+ "207": {
+  "start_time": 792620,
+  "end_time": 797450,
+  "original_subtitle": "今天我们本场的最后一个分享将介绍维利亚的demo,",
+  "translated_subtitle": ""
+ },
+ "208": {
+  "start_time": 797460,
+  "end_time": 798890,
+  "original_subtitle": "面向智能体推理的",
+  "translated_subtitle": ""
+ },
+ "209": {
+  "start_time": 799000,
+  "end_time": 805560,
+  "original_subtitle": "基础设施能力和实践。那下面有请卢祥龙卢老师带来的v dmo为智能",
+  "translated_subtitle": ""
+ },
+ "210": {
+  "start_time": 805570,
+  "end_time": 807780,
+  "original_subtitle": "体推理基础设施加速，掌声欢迎。",
+  "translated_subtitle": ""
+ },
+ "211": {
+  "start_time": 814290,
+  "end_time": 820070,
+  "original_subtitle": "Ok好，喽大家好，那个最后一个非常感谢大家跟我们一起坚持到了现在",
+  "translated_subtitle": ""
+ },
+ "212": {
+  "start_time": 820550,
+  "end_time": 822420,
+  "original_subtitle": "啊自我介绍一下，我叫贝贝卢，",
+  "translated_subtitle": ""
+ },
+ "213": {
+  "start_time": 822430,
+  "end_time": 826100,
+  "original_subtitle": "卢晓龙啊来自于威利亚解决方案与工程啊团队，",
+  "translated_subtitle": ""
+ },
+ "214": {
+  "start_time": 826110,
+  "end_time": 828710,
+  "original_subtitle": "啊然后过去一年半的时间，",
+  "translated_subtitle": ""
+ },
+ "215": {
+  "start_time": 828720,
+  "end_time": 832750,
+  "original_subtitle": "我一直都在啊致力于做比利亚达我这样一个软件规模，",
+  "translated_subtitle": ""
+ },
+ "216": {
+  "start_time": 832760,
+  "end_time": 835190,
+  "original_subtitle": "啊也是一个开源的一个数据项目。",
+  "translated_subtitle": ""
+ },
+ "217": {
+  "start_time": 837260,
+  "end_time": 839980,
+  "original_subtitle": "今天我们会分几个三个方向介绍，",
+  "translated_subtitle": ""
+ },
+ "218": {
+  "start_time": 839990,
+  "end_time": 842740,
+  "original_subtitle": "啊就是第一个啊可能很多人知道dmo是什么，",
+  "translated_subtitle": ""
+ },
+ "219": {
+  "start_time": 842750,
+  "end_time": 844860,
+  "original_subtitle": "很多人不知道，我们做一个简单介绍。",
+  "translated_subtitle": ""
+ },
+ "220": {
+  "start_time": 845600,
+  "end_time": 846210,
+  "original_subtitle": "啊",
+  "translated_subtitle": ""
+ },
+ "221": {
+  "start_time": 846890,
+  "end_time": 853360,
+  "original_subtitle": "第二部分呢我们会一会带到我们的kv啊 Kvv有老和背后的这个索引",
+  "translated_subtitle": ""
+ },
+ "222": {
+  "start_time": 853370,
+  "end_time": 855280,
+  "original_subtitle": "是啊它的一些技术细节。",
+  "translated_subtitle": ""
+ },
+ "223": {
+  "start_time": 855290,
+  "end_time": 860800,
+  "original_subtitle": "然后第二第三大部分呢就是我们会讲讲基于ax我们把其实搭了一个啊最",
+  "translated_subtitle": ""
+ },
+ "224": {
+  "start_time": 860810,
+  "end_time": 861840,
+  "original_subtitle": "小的一个副本，我们用",
+  "translated_subtitle": ""
+ },
+ "225": {
+  "start_time": 861950,
+  "end_time": 865180,
+  "original_subtitle": "4个节点搭了1个啊北京的零法，",
+  "translated_subtitle": ""
+ },
+ "226": {
+  "start_time": 865190,
+  "end_time": 870810,
+  "original_subtitle": "啊然后做了一些测试，然后我想跟大家一起啊通过我们测试结果去看一下",
+  "translated_subtitle": ""
+ },
+ "227": {
+  "start_time": 870820,
+  "end_time": 873370,
+  "original_subtitle": "我们到底得到一些什么样的in s is.",
+  "translated_subtitle": ""
+ },
+ "228": {
+  "start_time": 874740,
+  "end_time": 878180,
+  "original_subtitle": "好，那咱们的话其实是一个o全选层，",
+  "translated_subtitle": ""
+ },
+ "229": {
+  "start_time": 878190,
+  "end_time": 880950,
+  "original_subtitle": "是一个编排层。我们知道有s希浪，",
+  "translated_subtitle": ""
+ },
+ "230": {
+  "start_time": 880960,
+  "end_time": 883390,
+  "original_subtitle": "有这样有像这样这样一些很好的安置，",
+  "translated_subtitle": ""
+ },
+ "231": {
+  "start_time": 883400,
+  "end_time": 886350,
+  "original_subtitle": "但是到我们实际的操作开属于一个慢的服务。",
+  "translated_subtitle": ""
+ },
+ "232": {
+  "start_time": 886580,
+  "end_time": 889690,
+  "original_subtitle": "我们需要首先我们要知道这么高并发的请求，",
+  "translated_subtitle": ""
+ },
+ "233": {
+  "start_time": 889700,
+  "end_time": 892570,
+  "original_subtitle": "每个品请求应该去绕到哪一个worker,",
+  "translated_subtitle": ""
+ },
+ "234": {
+  "start_time": 893180,
+  "end_time": 897330,
+  "original_subtitle": "因为我们要去管理它的负载的均衡和开始的命中，",
+  "translated_subtitle": ""
+ },
+ "235": {
+  "start_time": 897340,
+  "end_time": 899930,
+  "original_subtitle": "啊所以这个对我们的影响特别大。",
+  "translated_subtitle": ""
+ },
+ "236": {
+  "start_time": 900210,
+  "end_time": 901760,
+  "original_subtitle": "第二个就是PP态势的管理，",
+  "translated_subtitle": ""
+ },
+ "237": {
+  "start_time": 901770,
+  "end_time": 907440,
+  "original_subtitle": "对吧？我们现在有l一到l三cpmr到SSD多级的一个存储的管理，",
+  "translated_subtitle": ""
+ },
+ "238": {
+  "start_time": 907450,
+  "end_time": 911320,
+  "original_subtitle": "啊去提高你全局的一个配备的比重这个也很重要。",
+  "translated_subtitle": ""
+ },
+ "239": {
+  "start_time": 911650,
+  "end_time": 915600,
+  "original_subtitle": "然后刚刚我其实也提供了很多其他的啊重要的组件，",
+  "translated_subtitle": ""
+ },
+ "240": {
+  "start_time": 915610,
+  "end_time": 918080,
+  "original_subtitle": "比如说我们提供了非常多的容错机制，",
+  "translated_subtitle": ""
+ },
+ "241": {
+  "start_time": 918090,
+  "end_time": 921200,
+  "original_subtitle": "啊方便前端，然后包括外的一批，",
+  "translated_subtitle": ""
+ },
+ "242": {
+  "start_time": 921210,
+  "end_time": 925000,
+  "original_subtitle": "啊我们都可以通过你搜这样的一些方式去做它的容错。",
+  "translated_subtitle": ""
+ },
+ "243": {
+  "start_time": 925970,
+  "end_time": 932280,
+  "original_subtitle": "啊啊然后我们还做了很多的simulation o啊就比如说我们要",
+  "translated_subtitle": ""
+ },
+ "244": {
+  "start_time": 932290,
+  "end_time": 936480,
+  "original_subtitle": "一个模型，一个sku一个GPU那我们用什么样的并行方式，",
+  "translated_subtitle": ""
+ },
+ "245": {
+  "start_time": 936490,
+  "end_time": 939880,
+  "original_subtitle": "用什么样的性策略来帮到帮我们能取得一个很好的收益，",
+  "translated_subtitle": ""
+ },
+ "246": {
+  "start_time": 939890,
+  "end_time": 940920,
+  "original_subtitle": "啊那其实测试",
+  "translated_subtitle": ""
+ },
+ "247": {
+  "start_time": 941030,
+  "end_time": 943260,
+  "original_subtitle": "这的话我们会占用非常多的GPU RS,",
+  "translated_subtitle": ""
+ },
+ "248": {
+  "start_time": 943490,
+  "end_time": 946420,
+  "original_subtitle": "那我们想能不能用一个非常高保真的一个 c么I选o的方式，",
+  "translated_subtitle": ""
+ },
+ "249": {
+  "start_time": 946430,
+  "end_time": 950410,
+  "original_subtitle": "啊用大部分的CPU和一个很少的GPU去做到一个",
+  "translated_subtitle": ""
+ },
+ "250": {
+  "start_time": 950420,
+  "end_time": 950970,
+  "original_subtitle": "simulation.",
+  "translated_subtitle": ""
+ },
+ "251": {
+  "start_time": 952350,
+  "end_time": 959260,
+  "original_subtitle": "最后呢那其实我们今年有啊三四个月的时间一直转向到这个这个啊就是哈",
+  "translated_subtitle": ""
+ },
+ "252": {
+  "start_time": 959270,
+  "end_time": 961700,
+  "original_subtitle": "斯space斯的这种a整体的编排，",
+  "translated_subtitle": ""
+ },
+ "253": {
+  "start_time": 961940,
+  "end_time": 965650,
+  "original_subtitle": "因为它不光是去年呃去年我们有p的这个调度概念，",
+  "translated_subtitle": ""
+ },
+ "254": {
+  "start_time": 965660,
+  "end_time": 967250,
+  "original_subtitle": "那到现在我们有这个推战，",
+  "translated_subtitle": ""
+ },
+ "255": {
+  "start_time": 967260,
+  "end_time": 971650,
+  "original_subtitle": "有这种s选调度的概念，是一个完全新的一个一个时代，",
+  "translated_subtitle": ""
+ },
+ "256": {
+  "start_time": 971660,
+  "end_time": 974250,
+  "original_subtitle": "啊所以我们引入了很多相关的一些必须性。",
+  "translated_subtitle": ""
+ },
+ "257": {
+  "start_time": 976110,
+  "end_time": 981630,
+  "original_subtitle": "好那第一部分就是我们呃一会大夫一点到这个 kvv尔老和flash",
+  "translated_subtitle": ""
+ },
+ "258": {
+  "start_time": 981640,
+  "end_time": 985660,
+  "original_subtitle": "感这个索引，啊那为什么我们要一个老对吧？",
+  "translated_subtitle": ""
+ },
+ "259": {
+  "start_time": 985670,
+  "end_time": 987220,
+  "original_subtitle": "那我们用rn的Robin不好吗？",
+  "translated_subtitle": ""
+ },
+ "260": {
+  "start_time": 987230,
+  "end_time": 991450,
+  "original_subtitle": "我们允许去用不好呢对他r Robin就解决不了这种",
+  "translated_subtitle": ""
+ },
+ "261": {
+  "start_time": 991870,
+  "end_time": 998230,
+  "original_subtitle": "啊去同时保证我们的这个 Wker之间的负载均衡和啊让每个请求去",
+  "translated_subtitle": ""
+ },
+ "262": {
+  "start_time": 998240,
+  "end_time": 1002150,
+  "original_subtitle": "达到这个 kv命中最高的这样一wk这样的一个使呃一个使命，",
+  "translated_subtitle": ""
+ },
+ "263": {
+  "start_time": 1002160,
+  "end_time": 1007230,
+  "original_subtitle": "啊只有啊这样的比较精确的kv不要Ruter才能做到这一点，",
+  "translated_subtitle": ""
+ },
+ "264": {
+  "start_time": 1007730,
+  "end_time": 1012480,
+  "original_subtitle": "我们会对每一个worker啊他的这个 kv的命中啊有一个",
+  "translated_subtitle": ""
+ },
+ "265": {
+  "start_time": 1012490,
+  "end_time": 1015920,
+  "original_subtitle": "score,然后负载均衡啊有一个这个 lo score,",
+  "translated_subtitle": ""
+ },
+ "266": {
+  "start_time": 1015930,
+  "end_time": 1018200,
+  "original_subtitle": "然后我们会对它进行加权的一个打分，",
+  "translated_subtitle": ""
+ },
+ "267": {
+  "start_time": 1018210,
+  "end_time": 1022680,
+  "original_subtitle": "然后每一个request会落到他这个加权分数最低的一个一个",
+  "translated_subtitle": ""
+ },
+ "268": {
+  "start_time": 1022750,
+  "end_time": 1023810,
+  "original_subtitle": "到work上去。",
+  "translated_subtitle": ""
+ },
+ "269": {
+  "start_time": 1025160,
+  "end_time": 1028310,
+  "original_subtitle": "然后kpv尔router其实在生产环境中已经被广泛验证了，",
+  "translated_subtitle": ""
+ },
+ "270": {
+  "start_time": 1028320,
+  "end_time": 1033220,
+  "original_subtitle": "全球基本上应该有啊十几家客户在生产中直接使用了demo,",
+  "translated_subtitle": ""
+ },
+ "271": {
+  "start_time": 1033230,
+  "end_time": 1035660,
+  "original_subtitle": "呃 v尔router举两个典型的例子的话，",
+  "translated_subtitle": ""
+ },
+ "272": {
+  "start_time": 1035670,
+  "end_time": 1038900,
+  "original_subtitle": "一个是美国的贝森，一个是中国的美团，",
+  "translated_subtitle": ""
+ },
+ "273": {
+  "start_time": 1039330,
+  "end_time": 1044480,
+  "original_subtitle": "啊他们其实在这个 ttft啊和这个全局的kp开始图的通过，",
+  "translated_subtitle": ""
+ },
+ "274": {
+  "start_time": 1044490,
+  "end_time": 1048320,
+  "original_subtitle": "单单的这种啊 kv保险就取得了一个很好的一个新单结果。",
+  "translated_subtitle": ""
+ },
+ "275": {
+  "start_time": 1051450,
+  "end_time": 1054560,
+  "original_subtitle": "那我们可以看一下它是啊大概是怎么打分的，",
+  "translated_subtitle": ""
+ },
+ "276": {
+  "start_time": 1054570,
+  "end_time": 1058200,
+  "original_subtitle": "那首先我的这个请求进来我们要去这个做动这ization,",
+  "translated_subtitle": ""
+ },
+ "277": {
+  "start_time": 1058210,
+  "end_time": 1060840,
+  "original_subtitle": "还有一个博呃不开始一个",
+  "translated_subtitle": ""
+ },
+ "278": {
+  "start_time": 1061170,
+  "end_time": 1067240,
+  "original_subtitle": "啊一个分段，啊然后同时呢我我们是会维持一个索引，",
+  "translated_subtitle": ""
+ },
+ "279": {
+  "start_time": 1067250,
+  "end_time": 1074780,
+  "original_subtitle": "它其实是一个r啊它的索引就是会实时的更新我所有的wrk啊",
+  "translated_subtitle": ""
+ },
+ "280": {
+  "start_time": 1075290,
+  "end_time": 1078220,
+  "original_subtitle": "增加删除我们tb block这样的一些operation OS。",
+  "translated_subtitle": ""
+ },
+ "281": {
+  "start_time": 1079010,
+  "end_time": 1083450,
+  "original_subtitle": "它它的作用就是这个索引可以告诉每一个请求，",
+  "translated_subtitle": ""
+ },
+ "282": {
+  "start_time": 1083460,
+  "end_time": 1086610,
+  "original_subtitle": "我现在所有的wrk上有哪些好跟你是命中的，",
+  "translated_subtitle": ""
+ },
+ "283": {
+  "start_time": 1086620,
+  "end_time": 1088530,
+  "original_subtitle": "而且它的实时性是非常好的，",
+  "translated_subtitle": ""
+ },
+ "284": {
+  "start_time": 1089310,
+  "end_time": 1092590,
+  "original_subtitle": "所以这两个路的信息会同时到这个 l的进程里面，",
+  "translated_subtitle": ""
+ },
+ "285": {
+  "start_time": 1092600,
+  "end_time": 1096150,
+  "original_subtitle": "然后老出来去算刚才我们算的一个方式，",
+  "translated_subtitle": ""
+ },
+ "286": {
+  "start_time": 1096390,
+  "end_time": 1097060,
+  "original_subtitle": "解决掉了去了。",
+  "translated_subtitle": ""
+ },
+ "287": {
+  "start_time": 1103140,
+  "end_time": 1106470,
+  "original_subtitle": "然后我们来说一下这个索引对吧？",
+  "translated_subtitle": ""
+ },
+ "288": {
+  "start_time": 1106480,
+  "end_time": 1108230,
+  "original_subtitle": "我们的索引叫做flash ind",
+  "translated_subtitle": ""
+ },
+ "289": {
+  "start_time": 1109030,
+  "end_time": 1111960,
+  "original_subtitle": "那说的有点抽象，那它是个什么东西，",
+  "translated_subtitle": ""
+ },
+ "290": {
+  "start_time": 1111970,
+  "end_time": 1114520,
+  "original_subtitle": "那它其实是一种数据结构，",
+  "translated_subtitle": ""
+ },
+ "291": {
+  "start_time": 1114530,
+  "end_time": 1118320,
+  "original_subtitle": "啊呃我们可以理解为它就是一个c卡人的r tree,",
+  "translated_subtitle": ""
+ },
+ "292": {
+  "start_time": 1118720,
+  "end_time": 1123750,
+  "original_subtitle": "啊它会存在我们的那某服装店这的CP的memory的堆里边。",
+  "translated_subtitle": ""
+ },
+ "293": {
+  "start_time": 1124160,
+  "end_time": 1128520,
+  "original_subtitle": "啊随着啊随着你的KB电子的这个数量的增大，",
+  "translated_subtitle": ""
+ },
+ "294": {
+  "start_time": 1128530,
+  "end_time": 1134920,
+  "original_subtitle": "它的占用会变大，可能是几百兆到啊个别g这样一个一个占用，",
+  "translated_subtitle": ""
+ },
+ "295": {
+  "start_time": 1134930,
+  "end_time": 1137590,
+  "original_subtitle": "它里面就会存下",
+  "translated_subtitle": ""
+ },
+ "296": {
+  "start_time": 1137970,
+  "end_time": 1143700,
+  "original_subtitle": "所有w rker现在的负载情况和每一个work上啊 kvbl的",
+  "translated_subtitle": ""
+ },
+ "297": {
+  "start_time": 1143710,
+  "end_time": 1147860,
+  "original_subtitle": "存储情况，啊所以你请求来了你才能去做比对，",
+  "translated_subtitle": ""
+ },
+ "298": {
+  "start_time": 1150750,
+  "end_time": 1153470,
+  "original_subtitle": "所以这个也说了，所以它是一张啊",
+  "translated_subtitle": ""
+ },
+ "299": {
+  "start_time": 1153730,
+  "end_time": 1158650,
+  "original_subtitle": "位置到我的地图，我的请求进来，我就会去切成boss。",
+  "translated_subtitle": ""
+ },
+ "300": {
+  "start_time": 1159070,
+  "end_time": 1160940,
+  "original_subtitle": "然后右边我们是一个action ma,",
+  "translated_subtitle": ""
+ },
+ "301": {
+  "start_time": 1160950,
+  "end_time": 1166140,
+  "original_subtitle": "我们可以看到在第一个位置啊它有一个0,",
+  "translated_subtitle": ""
+ },
+ "302": {
+  "start_time": 1166150,
+  "end_time": 1170260,
+  "original_subtitle": "然后我们会去看worker哪一些worker他在同一个位置这个",
+  "translated_subtitle": ""
+ },
+ "303": {
+  "start_time": 1170270,
+  "end_time": 1170620,
+  "original_subtitle": "KB",
+  "translated_subtitle": ""
+ },
+ "304": {
+  "start_time": 1171920,
+  "end_time": 1174390,
+  "original_subtitle": "因为我们知道在做前缀缓存的时候，",
+  "translated_subtitle": ""
+ },
+ "305": {
+  "start_time": 1174400,
+  "end_time": 1175950,
+  "original_subtitle": "它跟位置是有很多关系的，",
+  "translated_subtitle": ""
+ },
+ "306": {
+  "start_time": 1175960,
+  "end_time": 1178310,
+  "original_subtitle": "就是你前面连续的所有包它都命中，",
+  "translated_subtitle": ""
+ },
+ "307": {
+  "start_time": 1178320,
+  "end_time": 1180870,
+  "original_subtitle": "你这一段的前缀才能被复用，",
+  "translated_subtitle": ""
+ },
+ "308": {
+  "start_time": 1180880,
+  "end_time": 1182110,
+  "original_subtitle": "你不能",
+  "translated_subtitle": ""
+ },
+ "309": {
+  "start_time": 1182200,
+  "end_time": 1186480,
+  "original_subtitle": "啊不同的位置去的，所以我们可以看到它是扫描这个表对吧？",
+  "translated_subtitle": ""
+ },
+ "310": {
+  "start_time": 1186480,
+  "end_time": 1189580,
+  "original_subtitle": "第零个位置有worker、ACD它都满足，",
+  "translated_subtitle": ""
+ },
+ "311": {
+  "start_time": 1189820,
+  "end_time": 1194130,
+  "original_subtitle": "但是到了request始的第一个啊第二个呃第二个开始log,",
+  "translated_subtitle": ""
+ },
+ "312": {
+  "start_time": 1194140,
+  "end_time": 1196050,
+  "original_subtitle": "它只有work ac满足了，",
+  "translated_subtitle": ""
+ },
+ "313": {
+  "start_time": 1196060,
+  "end_time": 1198210,
+  "original_subtitle": "但是再往后一个话啊以此类推，",
+  "translated_subtitle": ""
+ },
+ "314": {
+  "start_time": 1198220,
+  "end_time": 1199890,
+  "original_subtitle": "我们就发现只有workc满足，",
+  "translated_subtitle": ""
+ },
+ "315": {
+  "start_time": 1200260,
+  "end_time": 1202680,
+  "original_subtitle": "所以workc在对针对你这个请求，",
+  "translated_subtitle": ""
+ },
+ "316": {
+  "start_time": 1202690,
+  "end_time": 1204920,
+  "original_subtitle": "它的kp命中是最高的。",
+  "translated_subtitle": ""
+ },
+ "317": {
+  "start_time": 1210680,
+  "end_time": 1215760,
+  "original_subtitle": "对，然后其实这个索引该是那它经过了前后六七次的一个迭代，",
+  "translated_subtitle": ""
+ },
+ "318": {
+  "start_time": 1216180,
+  "end_time": 1218780,
+  "original_subtitle": "啊它其实就是一个账本对吧？",
+  "translated_subtitle": ""
+ },
+ "319": {
+  "start_time": 1218790,
+  "end_time": 1222380,
+  "original_subtitle": "也就是一个账本去记录我上的q个多少状态，",
+  "translated_subtitle": ""
+ },
+ "320": {
+  "start_time": 1222390,
+  "end_time": 1225380,
+  "original_subtitle": "那最早的话它其实是一个拿衣服的啊 nty,",
+  "translated_subtitle": ""
+ },
+ "321": {
+  "start_time": 1226180,
+  "end_time": 1232750,
+  "original_subtitle": "n的一个date,所以我们可以看到每一个wker他都有一个",
+  "translated_subtitle": ""
+ },
+ "322": {
+  "start_time": 1232760,
+  "end_time": 1235110,
+  "original_subtitle": "position加上开始报的一个账本，",
+  "translated_subtitle": ""
+ },
+ "323": {
+  "start_time": 1235120,
+  "end_time": 1236590,
+  "original_subtitle": "然后你每个请求进来的话，",
+  "translated_subtitle": ""
+ },
+ "324": {
+  "start_time": 1236600,
+  "end_time": 1241430,
+  "original_subtitle": "我得一个一个我可去便利这个 h是ma去看",
+  "translated_subtitle": ""
+ },
+ "325": {
+  "start_time": 1241640,
+  "end_time": 1244780,
+  "original_subtitle": "啊到底有哪些球队是命中的，",
+  "translated_subtitle": ""
+ },
+ "326": {
+  "start_time": 1244790,
+  "end_time": 1249540,
+  "original_subtitle": "所以它的计算复杂度是啊 ow乘b啊 w的话就是w的数量，",
+  "translated_subtitle": ""
+ },
+ "327": {
+  "start_time": 1249550,
+  "end_time": 1253580,
+  "original_subtitle": "啊 b就是你每个w上的这个还是m的一个深度，",
+  "translated_subtitle": ""
+ },
+ "328": {
+  "start_time": 1255220,
+  "end_time": 1258010,
+  "original_subtitle": "然后后来呢我们就想那能不能有更好的一些数据结构，",
+  "translated_subtitle": ""
+ },
+ "329": {
+  "start_time": 1258020,
+  "end_time": 1259810,
+  "original_subtitle": "啊那我们就会想要不要用redis,",
+  "translated_subtitle": ""
+ },
+ "330": {
+  "start_time": 1259820,
+  "end_time": 1260410,
+  "original_subtitle": "tree",
+  "translated_subtitle": ""
+ },
+ "331": {
+  "start_time": 1260680,
+  "end_time": 1262310,
+  "original_subtitle": "啊 rd才能解决一个问题，",
+  "translated_subtitle": ""
+ },
+ "332": {
+  "start_time": 1262320,
+  "end_time": 1268590,
+  "original_subtitle": "就是它能解决这个位置，啊就是你的父节点一定是要命中的，",
+  "translated_subtitle": ""
+ },
+ "333": {
+  "start_time": 1268600,
+  "end_time": 1274190,
+  "original_subtitle": "那它对应的就是说你的这个啊可以多前面的这些话都是命中之后，",
+  "translated_subtitle": ""
+ },
+ "334": {
+  "start_time": 1274410,
+  "end_time": 1277630,
+  "original_subtitle": "啊我们再来看它的子节点上的个运中，",
+  "translated_subtitle": ""
+ },
+ "335": {
+  "start_time": 1278320,
+  "end_time": 1281390,
+  "original_subtitle": "这个也符合我们这个啊 PP为us的一个算法，",
+  "translated_subtitle": ""
+ },
+ "336": {
+  "start_time": 1281400,
+  "end_time": 1285500,
+  "original_subtitle": "啊所以我们可以看到他首先要在",
+  "translated_subtitle": ""
+ },
+ "337": {
+  "start_time": 1286330,
+  "end_time": 1291690,
+  "original_subtitle": "啊 h1ne这个一中，然后再到ht然后最后他才能选到w一w二这样",
+  "translated_subtitle": ""
+ },
+ "338": {
+  "start_time": 1291700,
+  "end_time": 1294740,
+  "original_subtitle": "的两个w格，啊还是前面三个点都一个，",
+  "translated_subtitle": ""
+ },
+ "339": {
+  "start_time": 1295300,
+  "end_time": 1298460,
+  "original_subtitle": "然后最后我们就在想能不能去再让它变快一点，",
+  "translated_subtitle": ""
+ },
+ "340": {
+  "start_time": 1298850,
+  "end_time": 1303240,
+  "original_subtitle": "啊所以说我们用了这种position的in加上加速这种方式，",
+  "translated_subtitle": ""
+ },
+ "341": {
+  "start_time": 1303790,
+  "end_time": 1309060,
+  "original_subtitle": "啊这个就比较适合我们现在这种agent体co顶这种特agent,",
+  "translated_subtitle": ""
+ },
+ "342": {
+  "start_time": 1309070,
+  "end_time": 1311220,
+  "original_subtitle": "这的话大家如果看agent x的话，",
+  "translated_subtitle": ""
+ },
+ "343": {
+  "start_time": 1311620,
+  "end_time": 1316330,
+  "original_subtitle": "就知道他的这个实际理论命中是97%非常非常高，",
+  "translated_subtitle": ""
+ },
+ "344": {
+  "start_time": 1316740,
+  "end_time": 1320590,
+  "original_subtitle": "那就意味着你你的这些worker上面的这个应用可能就是",
+  "translated_subtitle": ""
+ },
+ "345": {
+  "start_time": 1321130,
+  "end_time": 1327310,
+  "original_subtitle": "非常高的，所以我们就避免了一个一个的开始说去相关运用我们做一个",
+  "translated_subtitle": ""
+ },
+ "346": {
+  "start_time": 1327320,
+  "end_time": 1331960,
+  "original_subtitle": "跳跃的方式，比如说我们跳到128 128个包，",
+  "translated_subtitle": ""
+ },
+ "347": {
+  "start_time": 1331970,
+  "end_time": 1333320,
+  "original_subtitle": "然后跳到256个包，",
+  "translated_subtitle": ""
+ },
+ "348": {
+  "start_time": 1333820,
+  "end_time": 1337020,
+  "original_subtitle": "然后去看每一个w他是不是前面这些报告全部命中，",
+  "translated_subtitle": ""
+ },
+ "349": {
+  "start_time": 1337030,
+  "end_time": 1339620,
+  "original_subtitle": "如果全部命中的话，我就再往后跳，",
+  "translated_subtitle": ""
+ },
+ "350": {
+  "start_time": 1339630,
+  "end_time": 1342430,
+  "original_subtitle": "如果没有命中的话，我再往后推这个控制，",
+  "translated_subtitle": ""
+ },
+ "351": {
+  "start_time": 1342440,
+  "end_time": 1348130,
+  "original_subtitle": "啊嗯所以我们就引进到了这样的一个记忆结构。",
+  "translated_subtitle": ""
+ },
+ "352": {
+  "start_time": 1349930,
+  "end_time": 1352050,
+  "original_subtitle": "那最后我们可以看它有啥用，",
+  "translated_subtitle": ""
+ },
+ "353": {
+  "start_time": 1352060,
+  "end_time": 1354640,
+  "original_subtitle": "就是说我们眼睛这数据结构有什么用，",
+  "translated_subtitle": ""
+ },
+ "354": {
+  "start_time": 1355020,
+  "end_time": 1359680,
+  "original_subtitle": "就是说大家可能现在在各大公司都在管理非常大的问题，",
+  "translated_subtitle": ""
+ },
+ "355": {
+  "start_time": 1359690,
+  "end_time": 1363380,
+  "original_subtitle": "比如说几千个几千个节点上万个节点去做你的s",
+  "translated_subtitle": ""
+ },
+ "356": {
+  "start_time": 1364080,
+  "end_time": 1370230,
+  "original_subtitle": "那我们还是希望我们的老能够实时的掌控",
+  "translated_subtitle": ""
+ },
+ "357": {
+  "start_time": 1370530,
+  "end_time": 1373860,
+  "original_subtitle": "你所有w克的配置，老的情况，",
+  "translated_subtitle": ""
+ },
+ "358": {
+  "start_time": 1373870,
+  "end_time": 1377140,
+  "original_subtitle": "它的增删，然后还有你每个星球它的运动情况，",
+  "translated_subtitle": ""
+ },
+ "359": {
+  "start_time": 1377150,
+  "end_time": 1378700,
+  "original_subtitle": "这个数据量其实是非常大的，",
+  "translated_subtitle": ""
+ },
+ "360": {
+  "start_time": 1378710,
+  "end_time": 1380620,
+  "original_subtitle": "它的kp里面是非常大的，",
+  "translated_subtitle": ""
+ },
+ "361": {
+  "start_time": 1382040,
+  "end_time": 1387140,
+  "original_subtitle": "那我们需要让这个老板能够每秒处理尽可能多的",
+  "translated_subtitle": ""
+ },
+ "362": {
+  "start_time": 1387530,
+  "end_time": 1393580,
+  "original_subtitle": "这样的r生OS,就是你的w rker发送发送过来这个增三的这样的",
+  "translated_subtitle": ""
+ },
+ "363": {
+  "start_time": 1393590,
+  "end_time": 1396350,
+  "original_subtitle": "一些里原子，我需要马上把它消化掉去，",
+  "translated_subtitle": ""
+ },
+ "364": {
+  "start_time": 1396580,
+  "end_time": 1400080,
+  "original_subtitle": "把这部分信息呢去增加到我们的边上，",
+  "translated_subtitle": ""
+ },
+ "365": {
+  "start_time": 1400090,
+  "end_time": 1402440,
+  "original_subtitle": "把这个数进行一个更新和扩展，",
+  "translated_subtitle": ""
+ },
+ "366": {
+  "start_time": 1403140,
+  "end_time": 1403820,
+  "original_subtitle": "这是一方面。",
+  "translated_subtitle": ""
+ },
+ "367": {
+  "start_time": 1403830,
+  "end_time": 1406260,
+  "original_subtitle": "第二方面呢就是我的请求进来，",
+  "translated_subtitle": ""
+ },
+ "368": {
+  "start_time": 1406270,
+  "end_time": 1410100,
+  "original_subtitle": "我还要去找哪一个，我可是命中最高的对吧？",
+  "translated_subtitle": ""
+ },
+ "369": {
+  "start_time": 1410110,
+  "end_time": 1412380,
+  "original_subtitle": "这个也是你rrp的一个查询过程，",
+  "translated_subtitle": ""
+ },
+ "370": {
+  "start_time": 1412390,
+  "end_time": 1414860,
+  "original_subtitle": "所以这两个都是属于我们or operations.",
+  "translated_subtitle": ""
+ },
+ "371": {
+  "start_time": 1415310,
+  "end_time": 1419220,
+  "original_subtitle": "那我们希望让这个 operations每秒能够处理越多越好。",
+  "translated_subtitle": ""
+ },
+ "372": {
+  "start_time": 1420470,
+  "end_time": 1422300,
+  "original_subtitle": "那现在经过我们这个数据结构迭代，",
+  "translated_subtitle": ""
+ },
+ "373": {
+  "start_time": 1422310,
+  "end_time": 1425890,
+  "original_subtitle": "呢那其实它可以处理170million个啊 R",
+  "translated_subtitle": ""
+ },
+ "374": {
+  "start_time": 1425900,
+  "end_time": 1426890,
+  "original_subtitle": "operations per second.",
+  "translated_subtitle": ""
+ },
+ "375": {
+  "start_time": 1427670,
+  "end_time": 1432300,
+  "original_subtitle": "所以我们现在看就是处理这种上万的in fe的这种集群的话，",
+  "translated_subtitle": ""
+ },
+ "376": {
+  "start_time": 1432310,
+  "end_time": 1433860,
+  "original_subtitle": "其实这个就不可能成为一个瓶颈，",
+  "translated_subtitle": ""
+ },
+ "377": {
+  "start_time": 1433870,
+  "end_time": 1437060,
+  "original_subtitle": "啊这种应该性索引的查询就不会查询和更新，",
+  "translated_subtitle": ""
+ },
+ "378": {
+  "start_time": 1437070,
+  "end_time": 1437900,
+  "original_subtitle": "不会成为瓶颈。",
+  "translated_subtitle": ""
+ },
+ "379": {
+  "start_time": 1439590,
+  "end_time": 1444890,
+  "original_subtitle": "好，然后最后呢就是啊那可能有些用户啊他们有自己的高聘策略，",
+  "translated_subtitle": ""
+ },
+ "380": {
+  "start_time": 1444900,
+  "end_time": 1447080,
+  "original_subtitle": "啊他不想用我们的po OS方式，",
+  "translated_subtitle": ""
+ },
+ "381": {
+  "start_time": 1447090,
+  "end_time": 1450160,
+  "original_subtitle": "因为我们他POS方式也只是我们自己的理解，",
+  "translated_subtitle": ""
+ },
+ "382": {
+  "start_time": 1450560,
+  "end_time": 1452510,
+  "original_subtitle": "但是很重要的就是嗯",
+  "translated_subtitle": ""
+ },
+ "383": {
+  "start_time": 1452700,
+  "end_time": 1457460,
+  "original_subtitle": "这个 map这个思维很重要是吧？",
+  "translated_subtitle": ""
+ },
+ "384": {
+  "start_time": 1457460,
+  "end_time": 1461460,
+  "original_subtitle": "那我们把它打包成了一个独立的k个inex词的一个系统，",
+  "translated_subtitle": ""
+ },
+ "385": {
+  "start_time": 1461800,
+  "end_time": 1469450,
+  "original_subtitle": "那他会不断的去把这个 rp啊给你一个相关的查询API然后你的策略",
+  "translated_subtitle": ""
+ },
+ "386": {
+  "start_time": 1469460,
+  "end_time": 1473530,
+  "original_subtitle": "是可以API去查到目前当前的时间，",
+  "translated_subtitle": ""
+ },
+ "387": {
+  "start_time": 1473710,
+  "end_time": 1476200,
+  "original_subtitle": "你哪些wker有哪一些特别还在，",
+  "translated_subtitle": ""
+ },
+ "388": {
+  "start_time": 1477360,
+  "end_time": 1484040,
+  "original_subtitle": "啊我们可以看到啊左边的话就是wker不停的去把这个 kvr是通过",
+  "translated_subtitle": ""
+ },
+ "389": {
+  "start_time": 1484050,
+  "end_time": 1488240,
+  "original_subtitle": "这样q消息队列去发挥渠到我们的这个独立的应该是进程，",
+  "translated_subtitle": ""
+ },
+ "390": {
+  "start_time": 1488600,
+  "end_time": 1492830,
+  "original_subtitle": "然后我们会通过这个 post呃 query这样的一些pi去发布实",
+  "translated_subtitle": ""
+ },
+ "391": {
+  "start_time": 1492840,
+  "end_time": 1495190,
+  "original_subtitle": "这个对这个 rr去进行发布，",
+  "translated_subtitle": ""
+ },
+ "392": {
+  "start_time": 1495790,
+  "end_time": 1499690,
+  "original_subtitle": "啊然后各位的这个老特自定义的老特",
+  "translated_subtitle": ""
+ },
+ "393": {
+  "start_time": 1499920,
+  "end_time": 1506020,
+  "original_subtitle": "个就是通过这个来去查询到唉你们想要的这个 KB命中的情况。",
+  "translated_subtitle": ""
+ },
+ "394": {
+  "start_time": 1508340,
+  "end_time": 1512600,
+  "original_subtitle": "好，上面其实是有点像是上个时代的公司，",
+  "translated_subtitle": ""
+ },
+ "395": {
+  "start_time": 1512610,
+  "end_time": 1515990,
+  "original_subtitle": "就是去年我们聊的这种啊",
+  "translated_subtitle": ""
+ },
+ "396": {
+  "start_time": 1516560,
+  "end_time": 1517880,
+  "original_subtitle": "request的级别的schedule,",
+  "translated_subtitle": ""
+ },
+ "397": {
+  "start_time": 1518370,
+  "end_time": 1520270,
+  "original_subtitle": "但是这个非常重要，这是基础，",
+  "translated_subtitle": ""
+ },
+ "398": {
+  "start_time": 1520280,
+  "end_time": 1523310,
+  "original_subtitle": "然后到了今年的话，我们会去研究更多的这种a前结构，",
+  "translated_subtitle": ""
+ },
+ "399": {
+  "start_time": 1523320,
+  "end_time": 1524950,
+  "original_subtitle": "a前这个这个东西。",
+  "translated_subtitle": ""
+ },
+ "400": {
+  "start_time": 1525480,
+  "end_time": 1530240,
+  "original_subtitle": "啊我们北身这个定义呢就是比较呃如果给他一个简单的定义的话，",
+  "translated_subtitle": ""
+ },
+ "401": {
+  "start_time": 1530250,
+  "end_time": 1533380,
+  "original_subtitle": "就是这种阿里斯加上一个一个很聪明的模型，",
+  "translated_subtitle": ""
+ },
+ "402": {
+  "start_time": 1533840,
+  "end_time": 1534110,
+  "original_subtitle": "就是说",
+  "translated_subtitle": ""
+ },
+ "403": {
+  "start_time": 1534420,
+  "end_time": 1536730,
+  "original_subtitle": "可以包什么的这些啊这种，",
+  "translated_subtitle": ""
+ },
+ "404": {
+  "start_time": 1536740,
+  "end_time": 1542250,
+  "original_subtitle": "然后它的范式就是啊顺序的llm后GPU上的，",
+  "translated_subtitle": ""
+ },
+ "405": {
+  "start_time": 1542260,
+  "end_time": 1547850,
+  "original_subtitle": "然后CPU上面的突破，lm后最后直到它最后完成所有的循环完成，",
+  "translated_subtitle": ""
+ },
+ "406": {
+  "start_time": 1547860,
+  "end_time": 1548330,
+  "original_subtitle": "它",
+  "translated_subtitle": ""
+ },
+ "407": {
+  "start_time": 1548750,
+  "end_time": 1554410,
+  "original_subtitle": "想做到的事情啊就跟大家用，然后的就是一样的一个体验。",
+  "translated_subtitle": ""
+ },
+ "408": {
+  "start_time": 1554820,
+  "end_time": 1560610,
+  "original_subtitle": "啊那现在我们也看到很多的公司其实在自己研发这么一套一监督人啊去",
+  "translated_subtitle": ""
+ },
+ "409": {
+  "start_time": 1560620,
+  "end_time": 1565410,
+  "original_subtitle": "节省成本，或者说呃做自己的一些定制化的一些 r然去在自己的内部",
+  "translated_subtitle": ""
+ },
+ "410": {
+  "start_time": 1565420,
+  "end_time": 1566570,
+  "original_subtitle": "业务上面产生效果。",
+  "translated_subtitle": ""
+ },
+ "411": {
+  "start_time": 1567360,
+  "end_time": 1572370,
+  "original_subtitle": "嗯好，我们可以呃先从一些basic子写呃 basic些讲起，",
+  "translated_subtitle": ""
+ },
+ "412": {
+  "start_time": 1572570,
+  "end_time": 1578360,
+  "original_subtitle": "那我们现在看到这个 s稍a啊 a真对的时代的SOA和去年其实发生",
+  "translated_subtitle": ""
+ },
+ "413": {
+  "start_time": 1578370,
+  "end_time": 1581280,
+  "original_subtitle": "了很大的变化，那在一个传统的一f里面，",
+  "translated_subtitle": ""
+ },
+ "414": {
+  "start_time": 1581290,
+  "end_time": 1587520,
+  "original_subtitle": "呢可能我们只关注ttttpot和快安全ls啊香港PPS这样的",
+  "translated_subtitle": ""
+ },
+ "415": {
+  "start_time": 1587630,
+  "end_time": 1592960,
+  "original_subtitle": "一些技术指标，但是到了本身这个呢噢我们要求其实有一些变化，",
+  "translated_subtitle": ""
+ },
+ "416": {
+  "start_time": 1593260,
+  "end_time": 1597310,
+  "original_subtitle": "第一个呢就是啊我们更关注这个垂直的安全的问题，",
+  "translated_subtitle": ""
+ },
+ "417": {
+  "start_time": 1598640,
+  "end_time": 1602040,
+  "original_subtitle": "我问你一个告呃问你AA这你一个问题，",
+  "translated_subtitle": ""
+ },
+ "418": {
+  "start_time": 1602050,
+  "end_time": 1605640,
+  "original_subtitle": "我是我期待你在最短时间内你能完成这个任务，",
+  "translated_subtitle": ""
+ },
+ "419": {
+  "start_time": 1605650,
+  "end_time": 1607480,
+  "original_subtitle": "给我最终答案，这个很重要。",
+  "translated_subtitle": ""
+ },
+ "420": {
+  "start_time": 1607490,
+  "end_time": 1610820,
+  "original_subtitle": "啊第二个就是t to first answer talk,",
+  "translated_subtitle": ""
+ },
+ "421": {
+  "start_time": 1611530,
+  "end_time": 1613990,
+  "original_subtitle": "那我们知道他要想很长的时间，",
+  "translated_subtitle": ""
+ },
+ "422": {
+  "start_time": 1614310,
+  "end_time": 1617230,
+  "original_subtitle": "做很长时间的突破，然后最后再给你你想要的答案，",
+  "translated_subtitle": ""
+ },
+ "423": {
+  "start_time": 1617240,
+  "end_time": 1621300,
+  "original_subtitle": "那我们希望让他思考，不吐字之前思考时间尽可能短，",
+  "translated_subtitle": ""
+ },
+ "424": {
+  "start_time": 1621310,
+  "end_time": 1622020,
+  "original_subtitle": "这个也是个。",
+  "translated_subtitle": ""
+ },
+ "425": {
+  "start_time": 1622030,
+  "end_time": 1625850,
+  "original_subtitle": "So然后第三个的话就嗯不用多说，",
+  "translated_subtitle": ""
+ },
+ "426": {
+  "start_time": 1625860,
+  "end_time": 1629370,
+  "original_subtitle": "我们希望我们的系统的吞吐吐字的速率越高越好，",
+  "translated_subtitle": ""
+ },
+ "427": {
+  "start_time": 1629610,
+  "end_time": 1630980,
+  "original_subtitle": "因为这个跟成本直接挂钩，",
+  "translated_subtitle": ""
+ },
+ "428": {
+  "start_time": 1630990,
+  "end_time": 1634230,
+  "original_subtitle": "然后像一些社区，呢比如说AA阵特，",
+  "translated_subtitle": ""
+ },
+ "429": {
+  "start_time": 1634240,
+  "end_time": 1638830,
+  "original_subtitle": "啊他们会觉得你的so下最大的并发的a阵子30的数量，",
+  "translated_subtitle": ""
+ },
+ "430": {
+  "start_time": 1638840,
+  "end_time": 1640740,
+  "original_subtitle": "这是他一个测评指标。",
+  "translated_subtitle": ""
+ },
+ "431": {
+  "start_time": 1640740,
+  "end_time": 1646250,
+  "original_subtitle": "然后第五个呢就是全局的一个KB开始的基图人，",
+  "translated_subtitle": ""
+ },
+ "432": {
+  "start_time": 1647150,
+  "end_time": 1651270,
+  "original_subtitle": "啊那我们刚才啊知道它的理论命中，",
+  "translated_subtitle": ""
+ },
+ "433": {
+  "start_time": 1651280,
+  "end_time": 1654430,
+  "original_subtitle": "啊现在这种agent x它理论命中可能是97%,",
+  "translated_subtitle": ""
+ },
+ "434": {
+  "start_time": 1654440,
+  "end_time": 1659420,
+  "original_subtitle": "但是你这套实际的a那个 in fr infra算这套软件能不能让",
+  "translated_subtitle": ""
+ },
+ "435": {
+  "start_time": 1659430,
+  "end_time": 1662100,
+  "original_subtitle": "你的系统实际达到97%?",
+  "translated_subtitle": ""
+ },
+ "436": {
+  "start_time": 1662110,
+  "end_time": 1662460,
+  "original_subtitle": "呢",
+  "translated_subtitle": ""
+ },
+ "437": {
+  "start_time": 1663170,
+  "end_time": 1665250,
+  "original_subtitle": "不一定的，所以它肯定是越薄越好。",
+  "translated_subtitle": ""
+ },
+ "438": {
+  "start_time": 1665620,
+  "end_time": 1668840,
+  "original_subtitle": "我我可以举一个例子，就是说它为什么越薄越好，",
+  "translated_subtitle": ""
+ },
+ "439": {
+  "start_time": 1668850,
+  "end_time": 1673180,
+  "original_subtitle": "啊大家可以想，比如说你的kv开始命中，",
+  "translated_subtitle": ""
+ },
+ "440": {
+  "start_time": 1673190,
+  "end_time": 1675900,
+  "original_subtitle": "从95%降到了90%,",
+  "translated_subtitle": ""
+ },
+ "441": {
+  "start_time": 1676450,
+  "end_time": 1683340,
+  "original_subtitle": "换句话说你需要两倍的pre费要的计算计算算力去做微p",
+  "translated_subtitle": ""
+ },
+ "442": {
+  "start_time": 1684310,
+  "end_time": 1686350,
+  "original_subtitle": "所以它的成本节省是非常恐怖的。",
+  "translated_subtitle": ""
+ },
+ "443": {
+  "start_time": 1692020,
+  "end_time": 1698880,
+  "original_subtitle": "然后呃我们的呃研呃学习研究方向呢主要还是针对s便和anx的",
+  "translated_subtitle": ""
+ },
+ "444": {
+  "start_time": 1698890,
+  "end_time": 1702290,
+  "original_subtitle": "trace s啊那简单介绍一下agx的trace s",
+  "translated_subtitle": ""
+ },
+ "445": {
+  "start_time": 1702560,
+  "end_time": 1704510,
+  "original_subtitle": "嗯这是一个开源的一个 Case子，",
+  "translated_subtitle": ""
+ },
+ "446": {
+  "start_time": 1704520,
+  "end_time": 1708710,
+  "original_subtitle": "然后大家如果去看那个上面s下面拿拿s斯的提交，",
+  "translated_subtitle": ""
+ },
+ "447": {
+  "start_time": 1708720,
+  "end_time": 1712310,
+  "original_subtitle": "啊大家都会用这个现在词的规范去做一些提交，",
+  "translated_subtitle": ""
+ },
+ "448": {
+  "start_time": 1713480,
+  "end_time": 1719600,
+  "original_subtitle": "它里面会有这个393条实际的扣子的实际的对话的一个轨迹，",
+  "translated_subtitle": ""
+ },
+ "449": {
+  "start_time": 1719610,
+  "end_time": 1721920,
+  "original_subtitle": "然后他一共有啊98,000个请求，",
+  "translated_subtitle": ""
+ },
+ "450": {
+  "start_time": 1721930,
+  "end_time": 1727470,
+  "original_subtitle": "啊然后他最后的输出呢你的提交呢就是一个拜托的曲线，",
+  "translated_subtitle": ""
+ },
+ "451": {
+  "start_time": 1727870,
+  "end_time": 1731640,
+  "original_subtitle": "纵轴的话就是你的TPS或是GP你的吞吐输出存吐，",
+  "translated_subtitle": ""
+ },
+ "452": {
+  "start_time": 1731650,
+  "end_time": 1733480,
+  "original_subtitle": "你的横轴的话可以有很多了，",
+  "translated_subtitle": ""
+ },
+ "453": {
+  "start_time": 1733490,
+  "end_time": 1736880,
+  "original_subtitle": "但是一般来说的话是你的这个交互速率就是TPS的字。",
+  "translated_subtitle": ""
+ },
+ "454": {
+  "start_time": 1738970,
+  "end_time": 1742240,
+  "original_subtitle": "好，然后我们下面可以看到它这些请求里面的一些分布对吧？",
+  "translated_subtitle": ""
+ },
+ "455": {
+  "start_time": 1743050,
+  "end_time": 1749720,
+  "original_subtitle": "它它的这个 section的长度从这个32k到256呃到512k",
+  "translated_subtitle": ""
+ },
+ "456": {
+  "start_time": 1749730,
+  "end_time": 1752040,
+  "original_subtitle": "不等，但是我们可以看到它是非常长的。",
+  "translated_subtitle": ""
+ },
+ "457": {
+  "start_time": 1752460,
+  "end_time": 1756450,
+  "original_subtitle": "然后下面的话呢这一行呢就是我们去做真正的三位的提交的话，",
+  "translated_subtitle": ""
+ },
+ "458": {
+  "start_time": 1756460,
+  "end_time": 1758930,
+  "original_subtitle": "它是需要满足这样一些要求，",
+  "translated_subtitle": ""
+ },
+ "459": {
+  "start_time": 1758940,
+  "end_time": 1760970,
+  "original_subtitle": "啊我们需要去完成跟它对齐。",
+  "translated_subtitle": ""
+ },
+ "460": {
+  "start_time": 1763560,
+  "end_time": 1765280,
+  "original_subtitle": "那刚才不是说了那么多条吗？",
+  "translated_subtitle": ""
+ },
+ "461": {
+  "start_time": 1765290,
+  "end_time": 1768760,
+  "original_subtitle": "那我就拿出一条来看看它长什么样子，",
+  "translated_subtitle": ""
+ },
+ "462": {
+  "start_time": 1768770,
+  "end_time": 1770160,
+  "original_subtitle": "它有什么样的特征，好。",
+  "translated_subtitle": ""
+ },
+ "463": {
+  "start_time": 1770160,
+  "end_time": 1776820,
+  "original_subtitle": "可以看到上面的话这一条ST审他一共花了60轮，",
+  "translated_subtitle": ""
+ },
+ "464": {
+  "start_time": 1777400,
+  "end_time": 1783250,
+  "original_subtitle": "才完成60轮，那每一轮的话它会分三个部分，",
+  "translated_subtitle": ""
+ },
+ "465": {
+  "start_time": 1784660,
+  "end_time": 1786620,
+  "original_subtitle": "一个是GP上面，一个是CPU上的，",
+  "translated_subtitle": ""
+ },
+ "466": {
+  "start_time": 1787150,
+  "end_time": 1792480,
+  "original_subtitle": "那绿色的话就是你基本上的目料蓝色的话就是CPU上的以后，",
+  "translated_subtitle": ""
+ },
+ "467": {
+  "start_time": 1792720,
+  "end_time": 1795330,
+  "original_subtitle": "然后黄色的话就是CPU上的q高的，",
+  "translated_subtitle": ""
+ },
+ "468": {
+  "start_time": 1796030,
+  "end_time": 1799170,
+  "original_subtitle": "他突破的话其实可以做很多事情，比如说web search10，",
+  "translated_subtitle": ""
+ },
+ "469": {
+  "start_time": 1799640,
+  "end_time": 1806600,
+  "original_subtitle": "啊比如说代码编译，啊这些其实都会占用CPU非常大的一个一个核数和",
+  "translated_subtitle": ""
+ },
+ "470": {
+  "start_time": 1806610,
+  "end_time": 1813260,
+  "original_subtitle": "它的一个啊耗时，啊所以我们可以看到他们每一轮从0~60他每一轮的",
+  "translated_subtitle": ""
+ },
+ "471": {
+  "start_time": 1813270,
+  "end_time": 1813860,
+  "original_subtitle": "这个",
+  "translated_subtitle": ""
+ },
+ "472": {
+  "start_time": 1814310,
+  "end_time": 1816220,
+  "original_subtitle": "不同阶段的分布的一个情况。",
+  "translated_subtitle": ""
+ },
+ "473": {
+  "start_time": 1816230,
+  "end_time": 1819070,
+  "original_subtitle": "第二个特征呢就是下面这个图，",
+  "translated_subtitle": ""
+ },
+ "474": {
+  "start_time": 1819080,
+  "end_time": 1823730,
+  "original_subtitle": "就是啊我们发现基本上所有的这种啊 Agent型，",
+  "translated_subtitle": ""
+ },
+ "475": {
+  "start_time": 1823740,
+  "end_time": 1827380,
+  "original_subtitle": "它的asl都是线性啊单独递增的，",
+  "translated_subtitle": ""
+ },
+ "476": {
+  "start_time": 1827650,
+  "end_time": 1830960,
+  "original_subtitle": "从们最早的话可能就是400多个头，",
+  "translated_subtitle": ""
+ },
+ "477": {
+  "start_time": 1831320,
+  "end_time": 1833930,
+  "original_subtitle": "那可能他就是你跟他的一个p子对吧？",
+  "translated_subtitle": ""
+ },
+ "478": {
+  "start_time": 1834170,
+  "end_time": 1837180,
+  "original_subtitle": "就是我我我请你拉下这个给他的微口，",
+  "translated_subtitle": ""
+ },
+ "479": {
+  "start_time": 1837190,
+  "end_time": 1839180,
+  "original_subtitle": "然后请你解决里面的一个群，",
+  "translated_subtitle": ""
+ },
+ "480": {
+  "start_time": 1840580,
+  "end_time": 1843380,
+  "original_subtitle": "他就会去不断的去思考，",
+  "translated_subtitle": ""
+ },
+ "481": {
+  "start_time": 1843600,
+  "end_time": 1846020,
+  "original_subtitle": "对吧？去做以后然后去叫突破，",
+  "translated_subtitle": ""
+ },
+ "482": {
+  "start_time": 1846030,
+  "end_time": 1849940,
+  "original_subtitle": "然后你每一轮的这个请求的response和你突破的",
+  "translated_subtitle": ""
+ },
+ "483": {
+  "start_time": 1849950,
+  "end_time": 1853300,
+  "original_subtitle": "response都会康开的到你下一轮的SL,",
+  "translated_subtitle": ""
+ },
+ "484": {
+  "start_time": 1854460,
+  "end_time": 1856390,
+  "original_subtitle": "所以你的每一轮SL会越来越长，",
+  "translated_subtitle": ""
+ },
+ "485": {
+  "start_time": 1857030,
+  "end_time": 1861420,
+  "original_subtitle": "我们可以看到它最后嗯一直增长到了219 219个，",
+  "translated_subtitle": ""
+ },
+ "486": {
+  "start_time": 1862290,
+  "end_time": 1868000,
+  "original_subtitle": "所以高KB互用和SS l很长且不增长，",
+  "translated_subtitle": ""
+ },
+ "487": {
+  "start_time": 1868220,
+  "end_time": 1871540,
+  "original_subtitle": "是a阵子agent子的最重要的两个特性。",
+  "translated_subtitle": ""
+ },
+ "488": {
+  "start_time": 1874870,
+  "end_time": 1877910,
+  "original_subtitle": "那从嗯 Vr demo的角度，",
+  "translated_subtitle": ""
+ },
+ "489": {
+  "start_time": 1877920,
+  "end_time": 1881030,
+  "original_subtitle": "啊那未来的这一套真的银银刷会长什么样子？",
+  "translated_subtitle": ""
+ },
+ "490": {
+  "start_time": 1881490,
+  "end_time": 1883870,
+  "original_subtitle": "啊我们觉得主要是3层对吧？",
+  "translated_subtitle": ""
+ },
+ "491": {
+  "start_time": 1883880,
+  "end_time": 1884990,
+  "original_subtitle": "啊的话是20层，",
+  "translated_subtitle": ""
+ },
+ "492": {
+  "start_time": 1885400,
+  "end_time": 1891890,
+  "original_subtitle": "啊大家会有自己的一些嗯定制化的一些开源的二啊啊客户，",
+  "translated_subtitle": ""
+ },
+ "493": {
+  "start_time": 1891900,
+  "end_time": 1895370,
+  "original_subtitle": "可能会有o客户合同话，一套业务的话，",
+  "translated_subtitle": ""
+ },
+ "494": {
+  "start_time": 1895690,
+  "end_time": 1897480,
+  "original_subtitle": "然后中间的话我们会认为他是调度，",
+  "translated_subtitle": ""
+ },
+ "495": {
+  "start_time": 1898840,
+  "end_time": 1903080,
+  "original_subtitle": "会有一个前端会有一个或者说我们o编程，",
+  "translated_subtitle": ""
+ },
+ "496": {
+  "start_time": 1903090,
+  "end_time": 1905310,
+  "original_subtitle": "然后还有我们的PP开产品，",
+  "translated_subtitle": ""
+ },
+ "497": {
+  "start_time": 1905320,
+  "end_time": 1909670,
+  "original_subtitle": "我们的多级这个管理和KB的ptp的传输。",
+  "translated_subtitle": ""
+ },
+ "498": {
+  "start_time": 1909670,
+  "end_time": 1911090,
+  "original_subtitle": "嗯",
+  "translated_subtitle": ""
+ },
+ "499": {
+  "start_time": 1911570,
+  "end_time": 1913720,
+  "original_subtitle": "嗯好，下面的话就比较好理解，",
+  "translated_subtitle": ""
+ },
+ "500": {
+  "start_time": 1913730,
+  "end_time": 1918580,
+  "original_subtitle": "就是我们实际的GP上的任务还是要我们高效的引擎去执行的，",
+  "translated_subtitle": ""
+ },
+ "501": {
+  "start_time": 1918590,
+  "end_time": 1924160,
+  "original_subtitle": "啊包括希浪这样明天这样这样的一些大家熟能时的耳熟能详的一些优秀",
+  "translated_subtitle": ""
+ },
+ "502": {
+  "start_time": 1924170,
+  "end_time": 1925160,
+  "original_subtitle": "安全词给",
+  "translated_subtitle": ""
+ },
+ "503": {
+  "start_time": 1926010,
+  "end_time": 1928050,
+  "original_subtitle": "然后这里有一个点其实比较有意思，",
+  "translated_subtitle": ""
+ },
+ "504": {
+  "start_time": 1928060,
+  "end_time": 1930660,
+  "original_subtitle": "就是中间的这个 N先生啊 a证，",
+  "translated_subtitle": ""
+ },
+ "505": {
+  "start_time": 1931250,
+  "end_time": 1935130,
+  "original_subtitle": "那然后在做一些什么就r那 s知道的一些信息，",
+  "translated_subtitle": ""
+ },
+ "506": {
+  "start_time": 1936760,
+  "end_time": 1941110,
+  "original_subtitle": "会把它传递啊通过请求体传递到然后平台走，",
+  "translated_subtitle": ""
+ },
+ "507": {
+  "start_time": 1941610,
+  "end_time": 1945830,
+  "original_subtitle": "那什么信息比较重要，呢就比如说哪一些PP开始重要，",
+  "translated_subtitle": ""
+ },
+ "508": {
+  "start_time": 1945840,
+  "end_time": 1950420,
+  "original_subtitle": "哪些可p开始不重要，嗯那那我们想哪一些可p开始不重要，",
+  "translated_subtitle": ""
+ },
+ "509": {
+  "start_time": 1950650,
+  "end_time": 1953340,
+  "original_subtitle": "比如说think I头可能这个就不重要，",
+  "translated_subtitle": ""
+ },
+ "510": {
+  "start_time": 1953350,
+  "end_time": 1955380,
+  "original_subtitle": "因为想完了就就给丢掉了，",
+  "translated_subtitle": ""
+ },
+ "511": {
+  "start_time": 1955390,
+  "end_time": 1956500,
+  "original_subtitle": "因为我能问你想要做。",
+  "translated_subtitle": ""
+ },
+ "512": {
+  "start_time": 1957410,
+  "end_time": 1959880,
+  "original_subtitle": "然后还有就是agent三agent的这些小的子，",
+  "translated_subtitle": ""
+ },
+ "513": {
+  "start_time": 1959890,
+  "end_time": 1965380,
+  "original_subtitle": "他的培训也不重，我只是需要你的结果到我我织件的里面去做下一步",
+  "translated_subtitle": ""
+ },
+ "514": {
+  "start_time": 1965390,
+  "end_time": 1967770,
+  "original_subtitle": "宣传，就所以我觉得这样的一个例子，",
+  "translated_subtitle": ""
+ },
+ "515": {
+  "start_time": 1967780,
+  "end_time": 1970110,
+  "original_subtitle": "然后第二个可能就是",
+  "translated_subtitle": ""
+ },
+ "516": {
+  "start_time": 1970590,
+  "end_time": 1972110,
+  "original_subtitle": "啊然问题对吧？",
+  "translated_subtitle": ""
+ },
+ "517": {
+  "start_time": 1972120,
+  "end_time": 1974510,
+  "original_subtitle": "你这些s10他可能有不同的优先词，",
+  "translated_subtitle": ""
+ },
+ "518": {
+  "start_time": 1974520,
+  "end_time": 1982260,
+  "original_subtitle": "啊他可能有VP用户，那我们需要在啊这一层去把这些",
+  "translated_subtitle": ""
+ },
+ "519": {
+  "start_time": 1982270,
+  "end_time": 1986920,
+  "original_subtitle": "信息传递到我们的边来，等等还有很多意思，",
+  "translated_subtitle": ""
+ },
+ "520": {
+  "start_time": 1990230,
+  "end_time": 1994950,
+  "original_subtitle": "那其实这个也是我们的一个内部实验的一个提交，",
+  "translated_subtitle": ""
+ },
+ "521": {
+  "start_time": 1994960,
+  "end_time": 2000540,
+  "original_subtitle": "啊我们的30是这样的，我们用了4个节点32保本GP,",
+  "translated_subtitle": ""
+ },
+ "522": {
+  "start_time": 2001110,
+  "end_time": 2007290,
+  "original_subtitle": "啊然后选用了g2m5.2这样的模用来批发的啊位置的可p开，",
+  "translated_subtitle": ""
+ },
+ "523": {
+  "start_time": 2007300,
+  "end_time": 2015240,
+  "original_subtitle": "啊然后可以看到我们的提交呢就是遵循啊三米的这样一个要求，",
+  "translated_subtitle": ""
+ },
+ "524": {
+  "start_time": 2015600,
+  "end_time": 2021030,
+  "original_subtitle": "啊随着我们的cency不断的卡ssc不断的增大，",
+  "translated_subtitle": ""
+ },
+ "525": {
+  "start_time": 2021040,
+  "end_time": 2027230,
+  "original_subtitle": "我们的曲线从右往左会是这样的一条偏向右上方的一个判断球曲线，",
+  "translated_subtitle": ""
+ },
+ "526": {
+  "start_time": 2027510,
+  "end_time": 2031030,
+  "original_subtitle": "那我们去做一些那个研法啊需要做的事情，",
+  "translated_subtitle": ""
+ },
+ "527": {
+  "start_time": 2031040,
+  "end_time": 2034390,
+  "original_subtitle": "就是把这条曲线不断的去往右上角去推，",
+  "translated_subtitle": ""
+ },
+ "528": {
+  "start_time": 2034800,
+  "end_time": 2036220,
+  "original_subtitle": "啊它的性能就是越来越好。",
+  "translated_subtitle": ""
+ },
+ "529": {
+  "start_time": 2036220,
+  "end_time": 2041330,
+  "original_subtitle": "横轴就是我们的TPS的uer，就是我们每秒每个用户读多少字，",
+  "translated_subtitle": ""
+ },
+ "530": {
+  "start_time": 2041610,
+  "end_time": 2045000,
+  "original_subtitle": "众轴的话就是我们的GPS的GP啊那个基本样，",
+  "translated_subtitle": ""
+ },
+ "531": {
+  "start_time": 2046890,
+  "end_time": 2051640,
+  "original_subtitle": "推出大概的一个设置，软件设置的话是我们用了demo的demo发量",
+  "translated_subtitle": ""
+ },
+ "532": {
+  "start_time": 2051650,
+  "end_time": 2056380,
+  "original_subtitle": "加上s希浪加上还开始加工这样的一个国际化成的一个西",
+  "translated_subtitle": ""
+ },
+ "533": {
+  "start_time": 2056830,
+  "end_time": 2063250,
+  "original_subtitle": "一个方案，然后这个简单介绍一下就是 de保其实提供了一些能力，",
+  "translated_subtitle": ""
+ },
+ "534": {
+  "start_time": 2063700,
+  "end_time": 2067320,
+  "original_subtitle": "就是可以给大家一个agent的学习可观测性。",
+  "translated_subtitle": ""
+ },
+ "535": {
+  "start_time": 2067970,
+  "end_time": 2071810,
+  "original_subtitle": "就是我们现在其实有8个s18个对话，",
+  "translated_subtitle": ""
+ },
+ "536": {
+  "start_time": 2071820,
+  "end_time": 2078060,
+  "original_subtitle": "然后每1个对话它有一些llm那就是这个蓝色的在这上，",
+  "translated_subtitle": ""
+ },
+ "537": {
+  "start_time": 2078070,
+  "end_time": 2079100,
+  "original_subtitle": "然后还有一些",
+  "translated_subtitle": ""
+ },
+ "538": {
+  "start_time": 2079620,
+  "end_time": 2084580,
+  "original_subtitle": "啊 to,是啊这样一些棕色绿色的这样一些CP上的突破的一些执行，",
+  "translated_subtitle": ""
+ },
+ "539": {
+  "start_time": 2084980,
+  "end_time": 2087810,
+  "original_subtitle": "那我们可以通过这样的的这样一些工具，",
+  "translated_subtitle": ""
+ },
+ "540": {
+  "start_time": 2087820,
+  "end_time": 2090970,
+  "original_subtitle": "啊可以让大家很清晰的看到你每个时间出",
+  "translated_subtitle": ""
+ },
+ "541": {
+  "start_time": 2091600,
+  "end_time": 2097350,
+  "original_subtitle": "情况，啊他的突破执行情况啊有没有一些空号，啊所以我们可能这个",
+  "translated_subtitle": ""
+ },
+ "542": {
+  "start_time": 2097510,
+  "end_time": 2105270,
+  "original_subtitle": "觉得他有一点像这个 a选时代的一个啊 ssss好，",
+  "translated_subtitle": ""
+ },
+ "543": {
+  "start_time": 2105280,
+  "end_time": 2108420,
+  "original_subtitle": "然后我们再聊一些聊一些细节，",
+  "translated_subtitle": ""
+ },
+ "544": {
+  "start_time": 2108430,
+  "end_time": 2111050,
+  "original_subtitle": "就是我们做这么一套实验，",
+  "translated_subtitle": ""
+ },
+ "545": {
+  "start_time": 2111060,
+  "end_time": 2113610,
+  "original_subtitle": "我们发现了一些什么有意思的东西，",
+  "translated_subtitle": ""
+ },
+ "546": {
+  "start_time": 2113620,
+  "end_time": 2117220,
+  "original_subtitle": "第一个的话，就是",
+  "translated_subtitle": ""
+ },
+ "547": {
+  "start_time": 2117860,
+  "end_time": 2122030,
+  "original_subtitle": "我们一个基地的存储，它能存多少克斯？",
+  "translated_subtitle": ""
+ },
+ "548": {
+  "start_time": 2122530,
+  "end_time": 2125650,
+  "original_subtitle": "这个事情呢那这样这样的5.",
+  "translated_subtitle": ""
+ },
+ "549": {
+  "start_time": 2125660,
+  "end_time": 2128330,
+  "original_subtitle": "2呢它是1个mla加dsa的一个功能，",
+  "translated_subtitle": ""
+ },
+ "550": {
+  "start_time": 2128850,
+  "end_time": 2132160,
+  "original_subtitle": "那我们发现每个头它会占用55.",
+  "translated_subtitle": ""
+ },
+ "551": {
+  "start_time": 2132170,
+  "end_time": 2133930,
+  "original_subtitle": "9,KB的4个空间，",
+  "translated_subtitle": ""
+ },
+ "552": {
+  "start_time": 2134380,
+  "end_time": 2137420,
+  "original_subtitle": "其中mla占44点，sa占9.",
+  "translated_subtitle": ""
+ },
+ "553": {
+  "start_time": 2137430,
+  "end_time": 2142810,
+  "original_subtitle": "8.好，那第二个就是我们要选择啊我们用pd分离对吧？",
+  "translated_subtitle": ""
+ },
+ "554": {
+  "start_time": 2142820,
+  "end_time": 2146290,
+  "original_subtitle": "那我们用p分离的话，我们要选择一些运行策略，",
+  "translated_subtitle": ""
+ },
+ "555": {
+  "start_time": 2146860,
+  "end_time": 2149340,
+  "original_subtitle": "那我们怎么选？呢其实我们有很多维度，",
+  "translated_subtitle": ""
+ },
+ "556": {
+  "start_time": 2151200,
+  "end_time": 2157550,
+  "original_subtitle": "每一个token对唉 Token的啊就是你不同的运行方式下，",
+  "translated_subtitle": ""
+ },
+ "557": {
+  "start_time": 2157560,
+  "end_time": 2160070,
+  "original_subtitle": "你相同的版本能存下多少to,",
+  "translated_subtitle": ""
+ },
+ "558": {
+  "start_time": 2160080,
+  "end_time": 2165520,
+  "original_subtitle": "k其实就是一个很重要的运行方式的一个选择维度。",
+  "translated_subtitle": ""
+ },
+ "559": {
+  "start_time": 2166120,
+  "end_time": 2167640,
+  "original_subtitle": "那如果我们使用TP的话，",
+  "translated_subtitle": ""
+ },
+ "560": {
+  "start_time": 2168500,
+  "end_time": 2175110,
+  "original_subtitle": "因为你的天水是切分的，你每一个r你8张每一个软他都有一份可以开始",
+  "translated_subtitle": ""
+ },
+ "561": {
+  "start_time": 2175120,
+  "end_time": 2179620,
+  "original_subtitle": "的推出，嗯所以你有一个惩罚的一开始惩罚的一个复值税，",
+  "translated_subtitle": ""
+ },
+ "562": {
+  "start_time": 2180120,
+  "end_time": 2183080,
+  "original_subtitle": "那你一个GB的存储你只能存2.",
+  "translated_subtitle": ""
+ },
+ "563": {
+  "start_time": 2183090,
+  "end_time": 2187150,
+  "original_subtitle": "2k都很少，他就有可能更快的会去读书，",
+  "translated_subtitle": ""
+ },
+ "564": {
+  "start_time": 2187160,
+  "end_time": 2191070,
+  "original_subtitle": "会去以为闪会去包落到你的二CP平台。",
+  "translated_subtitle": ""
+ },
+ "565": {
+  "start_time": 2192320,
+  "end_time": 2197120,
+  "original_subtitle": "那同呃那作为对比我们的第一批这样的运营方式，",
+  "translated_subtitle": ""
+ },
+ "566": {
+  "start_time": 2197130,
+  "end_time": 2199920,
+  "original_subtitle": "我一个基地就能存17.9k的套作。",
+  "translated_subtitle": ""
+ },
+ "567": {
+  "start_time": 2200940,
+  "end_time": 2204380,
+  "original_subtitle": "因为我们每一个DP还有一个独立的天线的计算，",
+  "translated_subtitle": ""
+ },
+ "568": {
+  "start_time": 2204390,
+  "end_time": 2206500,
+  "original_subtitle": "你每个企业会报到一个独立的机p上，",
+  "translated_subtitle": ""
+ },
+ "569": {
+  "start_time": 2206970,
+  "end_time": 2208460,
+  "original_subtitle": "对以他没有这个惩罚的购置税，",
+  "translated_subtitle": ""
+ },
+ "570": {
+  "start_time": 2208470,
+  "end_time": 2211640,
+  "original_subtitle": "啊所以它看起来就是1个更好的方案，",
+  "translated_subtitle": ""
+ },
+ "571": {
+  "start_time": 2211650,
+  "end_time": 2216750,
+  "original_subtitle": "对吧？那那当然我们后面2个列就是我每1个节点能存多少，",
+  "translated_subtitle": ""
+ },
+ "572": {
+  "start_time": 2217470,
+  "end_time": 2219680,
+  "original_subtitle": "4个节点我整套衣服能存多少，",
+  "translated_subtitle": ""
+ },
+ "573": {
+  "start_time": 2219690,
+  "end_time": 2221130,
+  "original_subtitle": "那我们可以看到",
+  "translated_subtitle": ""
+ },
+ "574": {
+  "start_time": 2221410,
+  "end_time": 2223520,
+  "original_subtitle": "他这个 Gp的话就能存5个命令，",
+  "translated_subtitle": ""
+ },
+ "575": {
+  "start_time": 2223530,
+  "end_time": 2225920,
+  "original_subtitle": "但是我第一批我就能存30.",
+  "translated_subtitle": ""
+ },
+ "576": {
+  "start_time": 2225930,
+  "end_time": 2227420,
+  "original_subtitle": "6个米令，这是非常多的。",
+  "translated_subtitle": ""
+ },
+ "577": {
+  "start_time": 2230490,
+  "end_time": 2233200,
+  "original_subtitle": "好，那我们可以看到中间它其实不是一个乘8的关系，",
+  "translated_subtitle": ""
+ },
+ "578": {
+  "start_time": 2233210,
+  "end_time": 2235160,
+  "original_subtitle": "啊刚才不是说要要可以可以乘8,",
+  "translated_subtitle": ""
+ },
+ "579": {
+  "start_time": 2235170,
+  "end_time": 2239840,
+  "original_subtitle": "嘛那主要还是因为啊第一批它除了这个",
+  "translated_subtitle": ""
+ },
+ "580": {
+  "start_time": 2240400,
+  "end_time": 2245650,
+  "original_subtitle": "啊 exper啊对他除了天生不切合，",
+  "translated_subtitle": ""
+ },
+ "581": {
+  "start_time": 2245660,
+  "end_time": 2251080,
+  "original_subtitle": "但其他都是要切分的，啊所以他",
+  "translated_subtitle": ""
+ },
+ "582": {
+  "start_time": 2251460,
+  "end_time": 2257650,
+  "original_subtitle": "嗯每一层啊会有啊更多的庭审的权重占用，",
+  "translated_subtitle": ""
+ },
+ "583": {
+  "start_time": 2257660,
+  "end_time": 2261850,
+  "original_subtitle": "然后包括还有一些啊稠密层啊一些f分啊零点的一些占用，",
+  "translated_subtitle": ""
+ },
+ "584": {
+  "start_time": 2261860,
+  "end_time": 2265250,
+  "original_subtitle": "所以它会比GP要多占去将近100分字对吧？",
+  "translated_subtitle": ""
+ },
+ "585": {
+  "start_time": 2265250,
+  "end_time": 2266460,
+  "original_subtitle": "所以分给这一",
+  "translated_subtitle": ""
+ },
+ "586": {
+  "start_time": 2266480,
+  "end_time": 2269740,
+  "original_subtitle": "开始的这部分的钱存就会少一点点。",
+  "translated_subtitle": ""
+ },
+ "587": {
+  "start_time": 2273330,
+  "end_time": 2276130,
+  "original_subtitle": "那我们后面其实列了4个点，",
+  "translated_subtitle": ""
+ },
+ "588": {
+  "start_time": 2276140,
+  "end_time": 2279650,
+  "original_subtitle": "就是我们做的那一块，我们要追追寻什么东西，",
+  "translated_subtitle": ""
+ },
+ "589": {
+  "start_time": 2279660,
+  "end_time": 2282660,
+  "original_subtitle": "要培训什么东西。那第一个呢就是",
+  "translated_subtitle": ""
+ },
+ "590": {
+  "start_time": 2283450,
+  "end_time": 2287370,
+  "original_subtitle": "很很直接，我们希望我实际的kv开始命中，",
+  "translated_subtitle": ""
+ },
+ "591": {
+  "start_time": 2287380,
+  "end_time": 2290520,
+  "original_subtitle": "要等于我的理论kv开始运动，",
+  "translated_subtitle": ""
+ },
+ "592": {
+  "start_time": 2291360,
+  "end_time": 2292990,
+  "original_subtitle": "那什么是理论可以开始运动？",
+  "translated_subtitle": ""
+ },
+ "593": {
+  "start_time": 2293200,
+  "end_time": 2298000,
+  "original_subtitle": "大家如果研究过ax或者ok的s",
+  "translated_subtitle": ""
+ },
+ "594": {
+  "start_time": 2298450,
+  "end_time": 2302480,
+  "original_subtitle": "就会知道它是个j三l它是一个啊这样的个数据，",
+  "translated_subtitle": ""
+ },
+ "595": {
+  "start_time": 2302490,
+  "end_time": 2306920,
+  "original_subtitle": "呢啊它会占有的带有每个请求的一个时间戳，",
+  "translated_subtitle": ""
+ },
+ "596": {
+  "start_time": 2306930,
+  "end_time": 2311040,
+  "original_subtitle": "啊然后它的每个请求体里面的这个它不会有英文，",
+  "translated_subtitle": ""
+ },
+ "597": {
+  "start_time": 2311050,
+  "end_time": 2313400,
+  "original_subtitle": "但是它会有hhid它会有hhid",
+  "translated_subtitle": ""
+ },
+ "598": {
+  "start_time": 2314450,
+  "end_time": 2316210,
+  "original_subtitle": "其实你通过这个 J三l的case,",
+  "translated_subtitle": ""
+ },
+ "599": {
+  "start_time": 2316220,
+  "end_time": 2322970,
+  "original_subtitle": "s你就可以分析出你这个 TS它最高的理论的这个开是一用，",
+  "translated_subtitle": ""
+ },
+ "600": {
+  "start_time": 2324910,
+  "end_time": 2327210,
+  "original_subtitle": "所以a加x的话它就是97%左右。",
+  "translated_subtitle": ""
+ },
+ "601": {
+  "start_time": 2327210,
+  "end_time": 2328580,
+  "original_subtitle": "可以这你说。",
+  "translated_subtitle": ""
+ },
+ "602": {
+  "start_time": 2329420,
+  "end_time": 2332660,
+  "original_subtitle": "但是你实际的一法很有可能达不到97%,",
+  "translated_subtitle": ""
+ },
+ "603": {
+  "start_time": 2333250,
+  "end_time": 2335260,
+  "original_subtitle": "因为刚才呃我们同学也提到了，",
+  "translated_subtitle": ""
+ },
+ "604": {
+  "start_time": 2335270,
+  "end_time": 2336900,
+  "original_subtitle": "你的来ppm是很有限的，",
+  "translated_subtitle": ""
+ },
+ "605": {
+  "start_time": 2336910,
+  "end_time": 2342510,
+  "original_subtitle": "只有那么一点点，一个节点可能就是几百几百个g但是我的",
+  "translated_subtitle": ""
+ },
+ "606": {
+  "start_time": 2343040,
+  "end_time": 2346120,
+  "original_subtitle": "s省o是很多，我每一个s省有那么多轮，",
+  "translated_subtitle": ""
+ },
+ "607": {
+  "start_time": 2346130,
+  "end_time": 2350870,
+  "original_subtitle": "我一个ST省可能还有300k的一个SL平均那个 s那这么多的PP",
+  "translated_subtitle": ""
+ },
+ "608": {
+  "start_time": 2350880,
+  "end_time": 2355330,
+  "original_subtitle": "开始存，哪他可能就存不下那存不下的话，",
+  "translated_subtitle": ""
+ },
+ "609": {
+  "start_time": 2355760,
+  "end_time": 2357810,
+  "original_subtitle": "还要不就是往l二CP",
+  "translated_subtitle": ""
+ },
+ "610": {
+  "start_time": 2358470,
+  "end_time": 2362180,
+  "original_subtitle": "啊还开始里面啊 logo的这个还开始怎么去放，",
+  "translated_subtitle": ""
+ },
+ "611": {
+  "start_time": 2362190,
+  "end_time": 2366140,
+  "original_subtitle": "要不就是到l三你mk一个非常大的一个尺寸里去放，",
+  "translated_subtitle": ""
+ },
+ "612": {
+  "start_time": 2366710,
+  "end_time": 2369520,
+  "original_subtitle": "如果还是放不下，那就很不好意思，",
+  "translated_subtitle": ""
+ },
+ "613": {
+  "start_time": 2369530,
+  "end_time": 2371080,
+  "original_subtitle": "你就部分要要重算了，",
+  "translated_subtitle": ""
+ },
+ "614": {
+  "start_time": 2371730,
+  "end_time": 2375180,
+  "original_subtitle": "啊这个在a阵子的高频发下是非常容易出现的事情，",
+  "translated_subtitle": ""
+ },
+ "615": {
+  "start_time": 2375190,
+  "end_time": 2378140,
+  "original_subtitle": "唉这个是我们非常不愿意看到的。",
+  "translated_subtitle": ""
+ },
+ "616": {
+  "start_time": 2379090,
+  "end_time": 2385040,
+  "original_subtitle": "好，那左边的话其实就是看到啊我们的一个初始的一个设置，",
+  "translated_subtitle": ""
+ },
+ "617": {
+  "start_time": 2385270,
+  "end_time": 2387230,
+  "original_subtitle": "啊就是GPU",
+  "translated_subtitle": ""
+ },
+ "618": {
+  "start_time": 2387880,
+  "end_time": 2391200,
+  "original_subtitle": "我们4个节点一共有1710个基地，",
+  "translated_subtitle": ""
+ },
+ "619": {
+  "start_time": 2391710,
+  "end_time": 2394880,
+  "original_subtitle": "然后g二的话就是还开始我们的logo的",
+  "translated_subtitle": ""
+ },
+ "620": {
+  "start_time": 2395160,
+  "end_time": 2398930,
+  "original_subtitle": "cpup memory和loading4个节点一共有2048个，",
+  "translated_subtitle": ""
+ },
+ "621": {
+  "start_time": 2399510,
+  "end_time": 2404740,
+  "original_subtitle": "然后到了G 3,我们的这个共享的CP的是我们一共1024个g啊",
+  "translated_subtitle": ""
+ },
+ "622": {
+  "start_time": 2404750,
+  "end_time": 2406140,
+  "original_subtitle": "我们就拿这个作为一个基准，",
+  "translated_subtitle": ""
+ },
+ "623": {
+  "start_time": 2406150,
+  "end_time": 2407380,
+  "original_subtitle": "你们去看看它会发生什么，",
+  "translated_subtitle": ""
+ },
+ "624": {
+  "start_time": 2407390,
+  "end_time": 2414440,
+  "original_subtitle": "那我们会发现右边的话，绿色是你实际达到的一图，",
+  "translated_subtitle": ""
+ },
+ "625": {
+  "start_time": 2415440,
+  "end_time": 2418560,
+  "original_subtitle": "这个淡紫色是你理论的一个地，",
+  "translated_subtitle": ""
+ },
+ "626": {
+  "start_time": 2418570,
+  "end_time": 2422220,
+  "original_subtitle": "你会发现他在并发64和96的时候，",
+  "translated_subtitle": ""
+ },
+ "627": {
+  "start_time": 2422230,
+  "end_time": 2426930,
+  "original_subtitle": "你实际的是能跟上你的理论的，",
+  "translated_subtitle": ""
+ },
+ "628": {
+  "start_time": 2426940,
+  "end_time": 2431410,
+  "original_subtitle": "但是你到了s卡等于128的时候他就跟不上，",
+  "translated_subtitle": ""
+ },
+ "629": {
+  "start_time": 2432170,
+  "end_time": 2432970,
+  "original_subtitle": "那为什么用不上？",
+  "translated_subtitle": ""
+ },
+ "630": {
+  "start_time": 2433530,
+  "end_time": 2437620,
+  "original_subtitle": "因为我们可以通过计算，是因为它的G 3有点小，",
+  "translated_subtitle": ""
+ },
+ "631": {
+  "start_time": 2437630,
+  "end_time": 2439620,
+  "original_subtitle": "它的共享成ok实是有点小，",
+  "translated_subtitle": ""
+ },
+ "632": {
+  "start_time": 2439950,
+  "end_time": 2446850,
+  "original_subtitle": "它里面只能存过去41分钟的你三做有产生的这个开始，",
+  "translated_subtitle": ""
+ },
+ "633": {
+  "start_time": 2447970,
+  "end_time": 2451320,
+  "original_subtitle": "啊这不是还有家庭扣的，他只能存41分钟，",
+  "translated_subtitle": ""
+ },
+ "634": {
+  "start_time": 2451330,
+  "end_time": 2455720,
+  "original_subtitle": "那你41分钟之前的那些s的历史可以开始，",
+  "translated_subtitle": ""
+ },
+ "635": {
+  "start_time": 2455730,
+  "end_time": 2457910,
+  "original_subtitle": "他就会从l三被吸出去了，",
+  "translated_subtitle": ""
+ },
+ "636": {
+  "start_time": 2457920,
+  "end_time": 2458870,
+  "original_subtitle": "也会被指出了。",
+  "translated_subtitle": ""
+ },
+ "637": {
+  "start_time": 2458870,
+  "end_time": 2463580,
+  "original_subtitle": "所以就就很不幸我们发现了这个实际的PPT突是从",
+  "translated_subtitle": ""
+ },
+ "638": {
+  "start_time": 2463910,
+  "end_time": 2466850,
+  "original_subtitle": "95.8%掉到91.9%,",
+  "translated_subtitle": ""
+ },
+ "639": {
+  "start_time": 2466860,
+  "end_time": 2470370,
+  "original_subtitle": "唉也就意味着这4%的k个开是你要去做重算，",
+  "translated_subtitle": ""
+ },
+ "640": {
+  "start_time": 2470380,
+  "end_time": 2472460,
+  "original_subtitle": "会消耗你很多的这个算力。",
+  "translated_subtitle": ""
+ },
+ "641": {
+  "start_time": 2474840,
+  "end_time": 2480980,
+  "original_subtitle": "好，那我们那我们就想现在我们多级存储设置多大？",
+  "translated_subtitle": ""
+ },
+ "642": {
+  "start_time": 2480990,
+  "end_time": 2481190,
+  "original_subtitle": "呢",
+  "translated_subtitle": ""
+ },
+ "643": {
+  "start_time": 2481810,
+  "end_time": 2485820,
+  "original_subtitle": "怎么设置对吧？因为我们的GPU的hpm就这么多，",
+  "translated_subtitle": ""
+ },
+ "644": {
+  "start_time": 2486150,
+  "end_time": 2490060,
+  "original_subtitle": "那我们的CPU也很贵对吧？",
+  "translated_subtitle": ""
+ },
+ "645": {
+  "start_time": 2490070,
+  "end_time": 2494020,
+  "original_subtitle": "我们也不能设的很大，但是我们又要做多点。",
+  "translated_subtitle": ""
+ },
+ "646": {
+  "start_time": 2494020,
+  "end_time": 2496980,
+  "original_subtitle": "所以一个最简单的算式就是",
+  "translated_subtitle": ""
+ },
+ "647": {
+  "start_time": 2497400,
+  "end_time": 2504450,
+  "original_subtitle": "我这些ST10,我ax有这么多的s乘以它的平均的一个康ot斯的",
+  "translated_subtitle": ""
+ },
+ "648": {
+  "start_time": 2504460,
+  "end_time": 2509620,
+  "original_subtitle": "长度，比如说我有啊我的s选n就是我的并发就是我实际的并发，",
+  "translated_subtitle": ""
+ },
+ "649": {
+  "start_time": 2509630,
+  "end_time": 2511660,
+  "original_subtitle": "就比如说左边的那个16~128,",
+  "translated_subtitle": ""
+ },
+ "650": {
+  "start_time": 2512200,
+  "end_time": 2514350,
+  "original_subtitle": "然后慷慨词的话平均刚慨数是300多，",
+  "translated_subtitle": ""
+ },
+ "651": {
+  "start_time": 2515000,
+  "end_time": 2518570,
+  "original_subtitle": "这个我们从这个企业知道大家线上的自己个人项目，",
+  "translated_subtitle": ""
+ },
+ "652": {
+  "start_time": 2518990,
+  "end_time": 2521670,
+  "original_subtitle": "然后再乘以一个荣荣誉，啊",
+  "translated_subtitle": ""
+ },
+ "653": {
+  "start_time": 2522170,
+  "end_time": 2525080,
+  "original_subtitle": "乘以一个冗余，这个冗余大家可以根据自己的税计算，",
+  "translated_subtitle": ""
+ },
+ "654": {
+  "start_time": 2525090,
+  "end_time": 2528080,
+  "original_subtitle": "我这边其实是用一个1.5百 1.",
+  "translated_subtitle": ""
+ },
+ "655": {
+  "start_time": 2528090,
+  "end_time": 2528840,
+  "original_subtitle": "5倍的一个用余。",
+  "translated_subtitle": ""
+ },
+ "656": {
+  "start_time": 2528840,
+  "end_time": 2533710,
+  "original_subtitle": "好，然后我们现在",
+  "translated_subtitle": ""
+ },
+ "657": {
+  "start_time": 2533860,
+  "end_time": 2541530,
+  "original_subtitle": "嗯有很多种方式去设置这个 L二本地的一个开始嗯啊比较传统一点，",
+  "translated_subtitle": ""
+ },
+ "658": {
+  "start_time": 2541920,
+  "end_time": 2545920,
+  "original_subtitle": "有可能我们会用great school这样的一些还开始的一种",
+  "translated_subtitle": ""
+ },
+ "659": {
+  "start_time": 2545930,
+  "end_time": 2549880,
+  "original_subtitle": "方式，那他的意思就是说我hbm里面有哪些可以开始，",
+  "translated_subtitle": ""
+ },
+ "660": {
+  "start_time": 2549890,
+  "end_time": 2554750,
+  "original_subtitle": "我会异步的同时的去放到我的GPU里面，",
+  "translated_subtitle": ""
+ },
+ "661": {
+  "start_time": 2556680,
+  "end_time": 2557340,
+  "original_subtitle": "然后",
+  "translated_subtitle": ""
+ },
+ "662": {
+  "start_time": 2557810,
+  "end_time": 2561970,
+  "original_subtitle": "但是现在就有一些唉新的方式对吧？",
+  "translated_subtitle": ""
+ },
+ "663": {
+  "start_time": 2562400,
+  "end_time": 2568990,
+  "original_subtitle": "唉比如说现在有林肯m林特em的意思就是说我的l二我可以设置基本上",
+  "translated_subtitle": ""
+ },
+ "664": {
+  "start_time": 2569000,
+  "end_time": 2573230,
+  "original_subtitle": "等0,但是我会把所有的CPU给到一个非常大的",
+  "translated_subtitle": ""
+ },
+ "665": {
+  "start_time": 2573720,
+  "end_time": 2577390,
+  "original_subtitle": "l三的一个monk的开始这个也有好处，",
+  "translated_subtitle": ""
+ },
+ "666": {
+  "start_time": 2577400,
+  "end_time": 2581110,
+  "original_subtitle": "因为你这部分的开始是所有节点所有地图上的可见的，",
+  "translated_subtitle": ""
+ },
+ "667": {
+  "start_time": 2581690,
+  "end_time": 2586760,
+  "original_subtitle": "你就基本上不太可能有啊 PP不命中的情况，",
+  "translated_subtitle": ""
+ },
+ "668": {
+  "start_time": 2587750,
+  "end_time": 2592820,
+  "original_subtitle": "啊但是它其实也有一些就是有一些推倒，",
+  "translated_subtitle": ""
+ },
+ "669": {
+  "start_time": 2593470,
+  "end_time": 2600970,
+  "original_subtitle": "就比如说你有l二的话，你本地是可以被你本地或异地的l2到l1的",
+  "translated_subtitle": ""
+ },
+ "670": {
+  "start_time": 2600980,
+  "end_time": 2602730,
+  "original_subtitle": "搬运它是会比较快的，",
+  "translated_subtitle": ""
+ },
+ "671": {
+  "start_time": 2603220,
+  "end_time": 2608450,
+  "original_subtitle": "但是你如果在l三的话，你很有可能这部分的开始在别的节点上的CPU",
+  "translated_subtitle": ""
+ },
+ "672": {
+  "start_time": 2608460,
+  "end_time": 2611050,
+  "original_subtitle": "命中了，它是有一个像你的master进程，",
+  "translated_subtitle": ""
+ },
+ "673": {
+  "start_time": 2611060,
+  "end_time": 2613810,
+  "original_subtitle": "我可以是有一个向你master进程去查询的一个过程，",
+  "translated_subtitle": ""
+ },
+ "674": {
+  "start_time": 2614600,
+  "end_time": 2616120,
+  "original_subtitle": "这个过程其实是有开销的。",
+  "translated_subtitle": ""
+ },
+ "675": {
+  "start_time": 2616130,
+  "end_time": 2620400,
+  "original_subtitle": "第二个就是其他节点CPU往你的这个节点CPU的rdma传输也是有",
+  "translated_subtitle": ""
+ },
+ "676": {
+  "start_time": 2620410,
+  "end_time": 2623430,
+  "original_subtitle": "开销的，所以它在速度上它的来电性上会慢一点，",
+  "translated_subtitle": ""
+ },
+ "677": {
+  "start_time": 2623440,
+  "end_time": 2625540,
+  "original_subtitle": "所以这两种方式各有优劣。",
+  "translated_subtitle": ""
+ },
+ "678": {
+  "start_time": 2625540,
+  "end_time": 2630360,
+  "original_subtitle": "嗯第二个问题，",
+  "translated_subtitle": ""
+ },
+ "679": {
+  "start_time": 2630800,
+  "end_time": 2634720,
+  "original_subtitle": "就是我的抵扣的 cency我的抵扣的cency比较高，",
+  "translated_subtitle": ""
+ },
+ "680": {
+  "start_time": 2635900,
+  "end_time": 2638870,
+  "original_subtitle": "它它决定了我的这个实际的输出增吐，",
+  "translated_subtitle": ""
+ },
+ "681": {
+  "start_time": 2640000,
+  "end_time": 2644060,
+  "original_subtitle": "所以那就跟刚才这个 TP8和d一批8又结合起来，",
+  "translated_subtitle": ""
+ },
+ "682": {
+  "start_time": 2645580,
+  "end_time": 2648170,
+  "original_subtitle": "因为我TP8",
+  "translated_subtitle": ""
+ },
+ "683": {
+  "start_time": 2648870,
+  "end_time": 2652280,
+  "original_subtitle": "他这么呃这个附近的一个版本，",
+  "translated_subtitle": ""
+ },
+ "684": {
+  "start_time": 2652290,
+  "end_time": 2656070,
+  "original_subtitle": "它里面能存托的数比第一批少将近8倍，",
+  "translated_subtitle": ""
+ },
+ "685": {
+  "start_time": 2656490,
+  "end_time": 2659110,
+  "original_subtitle": "它能承载的30o的并发，",
+  "translated_subtitle": ""
+ },
+ "686": {
+  "start_time": 2659120,
+  "end_time": 2661660,
+  "original_subtitle": "会比他会比第一批少很多，",
+  "translated_subtitle": ""
+ },
+ "687": {
+  "start_time": 2663270,
+  "end_time": 2669780,
+  "original_subtitle": "那就意味着它会极大的在高频发下限制你的o的吞吐。",
+  "translated_subtitle": ""
+ },
+ "688": {
+  "start_time": 2670090,
+  "end_time": 2674330,
+  "original_subtitle": "啊那左下角的图其实就能看出来对吧？",
+  "translated_subtitle": ""
+ },
+ "689": {
+  "start_time": 2674340,
+  "end_time": 2678470,
+  "original_subtitle": "那个灰线灰线的话就是",
+  "translated_subtitle": ""
+ },
+ "690": {
+  "start_time": 2678880,
+  "end_time": 2681670,
+  "original_subtitle": "GP他到了可开c等于32之后，",
+  "translated_subtitle": ""
+ },
+ "691": {
+  "start_time": 2681680,
+  "end_time": 2683470,
+  "original_subtitle": "它就会有一个雪崩的效应，",
+  "translated_subtitle": ""
+ },
+ "692": {
+  "start_time": 2683480,
+  "end_time": 2689020,
+  "original_subtitle": "那为什么会有雪崩？是我的存储限制了，",
+  "translated_subtitle": ""
+ },
+ "693": {
+  "start_time": 2689030,
+  "end_time": 2692060,
+  "original_subtitle": "我只有这么多空位能够填你的个快速，",
+  "translated_subtitle": ""
+ },
+ "694": {
+  "start_time": 2693380,
+  "end_time": 2694250,
+  "original_subtitle": "但是",
+  "translated_subtitle": ""
+ },
+ "695": {
+  "start_time": 2695130,
+  "end_time": 2697570,
+  "original_subtitle": "我现在有非常多的频方，我有非常多的请求，",
+  "translated_subtitle": ""
+ },
+ "696": {
+  "start_time": 2697580,
+  "end_time": 2704960,
+  "original_subtitle": "我我我一定要进来，所以比如说新浪s他就可以去把之前的",
+  "translated_subtitle": ""
+ },
+ "697": {
+  "start_time": 2704970,
+  "end_time": 2709560,
+  "original_subtitle": "一些过去特啊过去文字的一些kp开始去把它输出，",
+  "translated_subtitle": ""
+ },
+ "698": {
+  "start_time": 2709920,
+  "end_time": 2711540,
+  "original_subtitle": "然后让你新的请求能够进来，",
+  "translated_subtitle": ""
+ },
+ "699": {
+  "start_time": 2711550,
+  "end_time": 2714750,
+  "original_subtitle": "那你新的请求进来了之后，",
+  "translated_subtitle": ""
+ },
+ "700": {
+  "start_time": 2714760,
+  "end_time": 2721380,
+  "original_subtitle": "呢那他就会有很多的这个 Pp开始的，",
+  "translated_subtitle": ""
+ },
+ "701": {
+  "start_time": 2721810,
+  "end_time": 2725600,
+  "original_subtitle": "啊 rp他有很多kp开始呃很很多请求需要去做rp",
+  "translated_subtitle": ""
+ },
+ "702": {
+  "start_time": 2726650,
+  "end_time": 2731920,
+  "original_subtitle": "所以你会发现你的啊你的p节点一直是满一直在满载运行，",
+  "translated_subtitle": ""
+ },
+ "703": {
+  "start_time": 2731930,
+  "end_time": 2736920,
+  "original_subtitle": "但是他其实只是在做r他没有真正在做啊以后，",
+  "translated_subtitle": ""
+ },
+ "704": {
+  "start_time": 2736930,
+  "end_time": 2738200,
+  "original_subtitle": "所以你会发现",
+  "translated_subtitle": ""
+ },
+ "705": {
+  "start_time": 2738620,
+  "end_time": 2741520,
+  "original_subtitle": "你的input子的思路基本上没有变，",
+  "translated_subtitle": ""
+ },
+ "706": {
+  "start_time": 2741530,
+  "end_time": 2743520,
+  "original_subtitle": "但是你的out的会降得非常厉害，",
+  "translated_subtitle": ""
+ },
+ "707": {
+  "start_time": 2744130,
+  "end_time": 2746280,
+  "original_subtitle": "啊但是你的算力就白白白白浪费了。",
+  "translated_subtitle": ""
+ },
+ "708": {
+  "start_time": 2746490,
+  "end_time": 2751070,
+  "original_subtitle": "所以这是一个抵扣卡r跟运行方式选择的一个重要的一个一个问题，",
+  "translated_subtitle": ""
+ },
+ "709": {
+  "start_time": 2751080,
+  "end_time": 2753230,
+  "original_subtitle": "但是我们第一次的话就没有这问题，",
+  "translated_subtitle": ""
+ },
+ "710": {
+  "start_time": 2754640,
+  "end_time": 2760240,
+  "original_subtitle": "互联网其实也是类似的是第一批的话我们开且看到要拉动的问题，",
+  "translated_subtitle": ""
+ },
+ "711": {
+  "start_time": 2760250,
+  "end_time": 2763080,
+  "original_subtitle": "它是一个线性的一个一个增长，",
+  "translated_subtitle": ""
+ },
+ "712": {
+  "start_time": 2768460,
+  "end_time": 2772200,
+  "original_subtitle": "然后我们还有很多工作需要在上层做，",
+  "translated_subtitle": ""
+ },
+ "713": {
+  "start_time": 2772210,
+  "end_time": 2773440,
+  "original_subtitle": "就是上层的",
+  "translated_subtitle": ""
+ },
+ "714": {
+  "start_time": 2774230,
+  "end_time": 2777300,
+  "original_subtitle": "30这个30感觉的这种材。",
+  "translated_subtitle": ""
+ },
+ "715": {
+  "start_time": 2778840,
+  "end_time": 2785020,
+  "original_subtitle": "那我我比如说最简单的一种方式就是哈的听听就是CT赛事，",
+  "translated_subtitle": ""
+ },
+ "716": {
+  "start_time": 2785030,
+  "end_time": 2786220,
+  "original_subtitle": "大家可能听过CT赛事，",
+  "translated_subtitle": ""
+ },
+ "717": {
+  "start_time": 2786990,
+  "end_time": 2791550,
+  "original_subtitle": "就是为了我去满足我的高配开始命中，",
+  "translated_subtitle": ""
+ },
+ "718": {
+  "start_time": 2791870,
+  "end_time": 2796450,
+  "original_subtitle": "那有1个最直接的方式就是我第一轮先做kbv尔，",
+  "translated_subtitle": ""
+ },
+ "719": {
+  "start_time": 2796460,
+  "end_time": 2799210,
+  "original_subtitle": "我把你4个节点全部先用我的3线解码，",
+  "translated_subtitle": ""
+ },
+ "720": {
+  "start_time": 2800040,
+  "end_time": 2801080,
+  "original_subtitle": "但是第二轮怎么办？",
+  "translated_subtitle": ""
+ },
+ "721": {
+  "start_time": 2801090,
+  "end_time": 2806600,
+  "original_subtitle": "呢我可以一体，我把后面的后续的这些情况呢都还是打原来这个过动，",
+  "translated_subtitle": ""
+ },
+ "722": {
+  "start_time": 2807300,
+  "end_time": 2810270,
+  "original_subtitle": "那大家可以想这个 PP命中一定是最高的，",
+  "translated_subtitle": ""
+ },
+ "723": {
+  "start_time": 2810680,
+  "end_time": 2814050,
+  "original_subtitle": "但是他有什么问题它可能会造成一些股票的过热，",
+  "translated_subtitle": ""
+ },
+ "724": {
+  "start_time": 2814970,
+  "end_time": 2820390,
+  "original_subtitle": "他为什么会过热？呢就是我们的ST选o其实有点完整对吧？",
+  "translated_subtitle": ""
+ },
+ "725": {
+  "start_time": 2820400,
+  "end_time": 2823110,
+  "original_subtitle": "他他的他每个s选o定在了你的WR上，",
+  "translated_subtitle": ""
+ },
+ "726": {
+  "start_time": 2823120,
+  "end_time": 2827020,
+  "original_subtitle": "他他的轮次是不一样的，我有可能一个10轮就结束了，",
+  "translated_subtitle": ""
+ },
+ "727": {
+  "start_time": 2827030,
+  "end_time": 2828260,
+  "original_subtitle": "有可能200轮才结束，",
+  "translated_subtitle": ""
+ },
+ "728": {
+  "start_time": 2828580,
+  "end_time": 2831420,
+  "original_subtitle": "那就我一直定死在这个 W特上，它就会过热。",
+  "translated_subtitle": ""
+ },
+ "729": {
+  "start_time": 2831680,
+  "end_time": 2833960,
+  "original_subtitle": "啊第二个你的s10长度asl,",
+  "translated_subtitle": ""
+ },
+ "730": {
+  "start_time": 2833970,
+  "end_time": 2835800,
+  "original_subtitle": "每一轮ISL是不一样的，",
+  "translated_subtitle": ""
+ },
+ "731": {
+  "start_time": 2835810,
+  "end_time": 2837700,
+  "original_subtitle": "那平均I SL可以方差特别大，",
+  "translated_subtitle": ""
+ },
+ "732": {
+  "start_time": 2838040,
+  "end_time": 2841230,
+  "original_subtitle": "所以它就会造成这种它的题目的下的负载这的问题，",
+  "translated_subtitle": ""
+ },
+ "733": {
+  "start_time": 2841240,
+  "end_time": 2843570,
+  "original_subtitle": "我们可以看到这些红色的",
+  "translated_subtitle": ""
+ },
+ "734": {
+  "start_time": 2844000,
+  "end_time": 2848150,
+  "original_subtitle": "一共有32,在左边有一共32个dpr然后这些红色的话就是这些",
+  "translated_subtitle": ""
+ },
+ "735": {
+  "start_time": 2848160,
+  "end_time": 2853300,
+  "original_subtitle": "dpr它是过热的，啊所以这个对系统来说是比较不好的。",
+  "translated_subtitle": ""
+ },
+ "736": {
+  "start_time": 2853300,
+  "end_time": 2859530,
+  "original_subtitle": "那在老体策略上啊刚我也提出了一些自己的想法，",
+  "translated_subtitle": ""
+ },
+ "737": {
+  "start_time": 2860470,
+  "end_time": 2863150,
+  "original_subtitle": "那有没尔这是我们之前聊过的，",
+  "translated_subtitle": ""
+ },
+ "738": {
+  "start_time": 2863160,
+  "end_time": 2865460,
+  "original_subtitle": "但是他有一些他有些问题，",
+  "translated_subtitle": ""
+ },
+ "739": {
+  "start_time": 2865470,
+  "end_time": 2871320,
+  "original_subtitle": "就比如说他是不知道这些请求是属于同一个s对吧？",
+  "translated_subtitle": ""
+ },
+ "740": {
+  "start_time": 2871320,
+  "end_time": 2876050,
+  "original_subtitle": "他请求这个他没有，这个但是我们会把这些请",
+  "translated_subtitle": ""
+ },
+ "741": {
+  "start_time": 2876620,
+  "end_time": 2882130,
+  "original_subtitle": "s选ID那首先我们要是让这个语法建立起这个 si选的尔的概念，",
+  "translated_subtitle": ""
+ },
+ "742": {
+  "start_time": 2882140,
+  "end_time": 2886200,
+  "original_subtitle": "我们知信报告那有了这个信息之后，",
+  "translated_subtitle": ""
+ },
+ "743": {
+  "start_time": 2886210,
+  "end_time": 2888520,
+  "original_subtitle": "最简单就是我们可以做这个",
+  "translated_subtitle": ""
+ },
+ "744": {
+  "start_time": 2888990,
+  "end_time": 2894260,
+  "original_subtitle": "啊印章，连他的冰啊就是刚才说的CT3我们可训这样做，",
+  "translated_subtitle": ""
+ },
+ "745": {
+  "start_time": 2894490,
+  "end_time": 2896930,
+  "original_subtitle": "然后但是我们要解决过热问题，",
+  "translated_subtitle": ""
+ },
+ "746": {
+  "start_time": 2896940,
+  "end_time": 2900480,
+  "original_subtitle": "那解决过热问题的话，我们也提出了s的问题，",
+  "translated_subtitle": ""
+ },
+ "747": {
+  "start_time": 2900490,
+  "end_time": 2905470,
+  "original_subtitle": "他的意思就是说我可以建议这些，",
+  "translated_subtitle": ""
+ },
+ "748": {
+  "start_time": 2905840,
+  "end_time": 2909450,
+  "original_subtitle": "但是拼在你这些光里执行一直执行，",
+  "translated_subtitle": ""
+ },
+ "749": {
+  "start_time": 2910020,
+  "end_time": 2914900,
+  "original_subtitle": "直到你这些光谢谢谢谢谢谢，",
+  "translated_subtitle": ""
+ },
+ "750": {
+  "start_time": 2918970,
+  "end_time": 2920980,
+  "original_subtitle": "包括你们不是这个请求队列的时候，",
+  "translated_subtitle": ""
+ },
+ "751": {
+  "start_time": 2920990,
+  "end_time": 2923140,
+  "original_subtitle": "你可以去算这样的一种方式，",
+  "translated_subtitle": ""
+ },
+ "752": {
+  "start_time": 2923590,
+  "end_time": 2925760,
+  "original_subtitle": "那我过热了以后那怎么办？",
+  "translated_subtitle": ""
+ },
+ "753": {
+  "start_time": 2926770,
+  "end_time": 2932600,
+  "original_subtitle": "我就会把你这个请求绕到下一轮这这个8个客，",
+  "translated_subtitle": ""
+ },
+ "754": {
+  "start_time": 2932610,
+  "end_time": 2935520,
+  "original_subtitle": "嘛我下一轮我的这个负担最轻的1个，",
+  "translated_subtitle": ""
+ },
+ "755": {
+  "start_time": 2935530,
+  "end_time": 2943030,
+  "original_subtitle": "我就把它绕，同时我还要把之前你这个让上算我们的这些PP开始",
+  "translated_subtitle": ""
+ },
+ "756": {
+  "start_time": 2944140,
+  "end_time": 2945500,
+  "original_subtitle": "同步的是吧？",
+  "translated_subtitle": ""
+ },
+ "757": {
+  "start_time": 2945510,
+  "end_time": 2947100,
+  "original_subtitle": "因为你肯定不希望请求过去，",
+  "translated_subtitle": ""
+ },
+ "758": {
+  "start_time": 2947110,
+  "end_time": 2948820,
+  "original_subtitle": "他还要重算这部分可以利用，",
+  "translated_subtitle": ""
+ },
+ "759": {
+  "start_time": 2950040,
+  "end_time": 2954370,
+  "original_subtitle": "所以这就是单我最近就单现在提出的这个 PPC啊这样一个概念，",
+  "translated_subtitle": ""
+ },
+ "760": {
+  "start_time": 2954980,
+  "end_time": 2957580,
+  "original_subtitle": "当然你也可以选择一些更简单的方式，",
+  "translated_subtitle": ""
+ },
+ "761": {
+  "start_time": 2957590,
+  "end_time": 2959650,
+  "original_subtitle": "啊比如说什么给",
+  "translated_subtitle": ""
+ },
+ "762": {
+  "start_time": 2960100,
+  "end_time": 2962500,
+  "original_subtitle": "我们有一个G 3的一个一个池子，",
+  "translated_subtitle": ""
+ },
+ "763": {
+  "start_time": 2962750,
+  "end_time": 2965530,
+  "original_subtitle": "啊这些CPU的一方人全部都是互相可见，",
+  "translated_subtitle": ""
+ },
+ "764": {
+  "start_time": 2965540,
+  "end_time": 2967670,
+  "original_subtitle": "互相rdma能够PPP传输的，",
+  "translated_subtitle": ""
+ },
+ "765": {
+  "start_time": 2967680,
+  "end_time": 2970760,
+  "original_subtitle": "那我把它注册到rdma注册到同样的一个池子里，",
+  "translated_subtitle": ""
+ },
+ "766": {
+  "start_time": 2971440,
+  "end_time": 2972190,
+  "original_subtitle": "那",
+  "translated_subtitle": ""
+ },
+ "767": {
+  "start_time": 2973210,
+  "end_time": 2975970,
+  "original_subtitle": "在请求围绕到其他的这个课上之后，",
+  "translated_subtitle": ""
+ },
+ "768": {
+  "start_time": 2975980,
+  "end_time": 2978890,
+  "original_subtitle": "它对应的这个开始也能非常快的去拉取到对应，",
+  "translated_subtitle": ""
+ },
+ "769": {
+  "start_time": 2978900,
+  "end_time": 2981990,
+  "original_subtitle": "这个嗯所以我们其实有两种变的方法。",
+  "translated_subtitle": ""
+ },
+ "770": {
+  "start_time": 2982000,
+  "end_time": 2989600,
+  "original_subtitle": "嗯然后第四个呢嗯也有最后一个就是我们要有一个",
+  "translated_subtitle": ""
+ },
+ "771": {
+  "start_time": 2989610,
+  "end_time": 2990680,
+  "original_subtitle": "很好的",
+  "translated_subtitle": ""
+ },
+ "772": {
+  "start_time": 2991170,
+  "end_time": 2992180,
+  "original_subtitle": "准入机制，",
+  "translated_subtitle": ""
+ },
+ "773": {
+  "start_time": 2992630,
+  "end_time": 2994270,
+  "original_subtitle": "啊我们叫阿童一选工作，",
+  "translated_subtitle": ""
+ },
+ "774": {
+  "start_time": 2994930,
+  "end_time": 2998530,
+  "original_subtitle": "那其实就是解决刚才那个 TP包含卡瑞t8,",
+  "translated_subtitle": ""
+ },
+ "775": {
+  "start_time": 2998540,
+  "end_time": 3001060,
+  "original_subtitle": "高含二瑞4下那个突出血崩的问题，",
+  "translated_subtitle": ""
+ },
+ "776": {
+  "start_time": 3001400,
+  "end_time": 3006720,
+  "original_subtitle": "因为他在不断的去请求，不断的把它打断退出到对列，",
+  "translated_subtitle": ""
+ },
+ "777": {
+  "start_time": 3007290,
+  "end_time": 3008660,
+  "original_subtitle": "天一开始也没什么，",
+  "translated_subtitle": ""
+ },
+ "778": {
+  "start_time": 3009510,
+  "end_time": 3009830,
+  "original_subtitle": "对吧？",
+  "translated_subtitle": ""
+ },
+ "779": {
+  "start_time": 3009840,
+  "end_time": 3013470,
+  "original_subtitle": "他会在不断的去反复这个过程去去重新这个锐，",
+  "translated_subtitle": ""
+ },
+ "780": {
+  "start_time": 3013480,
+  "end_time": 3019580,
+  "original_subtitle": "那我们想有没有个办法在我们的存储已经打满的情况下，",
+  "translated_subtitle": ""
+ },
+ "781": {
+  "start_time": 3019590,
+  "end_time": 3022790,
+  "original_subtitle": "已经用了95%了，我就不要再往里塞行程了，",
+  "translated_subtitle": ""
+ },
+ "782": {
+  "start_time": 3023300,
+  "end_time": 3024450,
+  "original_subtitle": "那我能不能去",
+  "translated_subtitle": ""
+ },
+ "783": {
+  "start_time": 3026300,
+  "end_time": 3034060,
+  "original_subtitle": "POS暂停一些请求，啊我让他等一下啊他等一下那其实是可以的。",
+  "translated_subtitle": ""
+ },
+ "784": {
+  "start_time": 3034060,
+  "end_time": 3040310,
+  "original_subtitle": "然后等到你的这个请呃存储空间缓过来点，我再把这个作用啊进入安全，",
+  "translated_subtitle": ""
+ },
+ "785": {
+  "start_time": 3040840,
+  "end_time": 3045640,
+  "original_subtitle": "那我们怎么去决定哪一些请求要被暂停，",
+  "translated_subtitle": ""
+ },
+ "786": {
+  "start_time": 3045650,
+  "end_time": 3051420,
+  "original_subtitle": "呢有两种，呃比如说两简单来说有两个判题，",
+  "translated_subtitle": ""
+ },
+ "787": {
+  "start_time": 3051430,
+  "end_time": 3053970,
+  "original_subtitle": "第一个是你们这三种的状态，",
+  "translated_subtitle": ""
+ },
+ "788": {
+  "start_time": 3054690,
+  "end_time": 3057070,
+  "original_subtitle": "你是在做GP上的q报，",
+  "translated_subtitle": ""
+ },
+ "789": {
+  "start_time": 3057920,
+  "end_time": 3065650,
+  "original_subtitle": "噢不GPU上的lm口你头影CP上那你如果在用个CP上去报的话，",
+  "translated_subtitle": ""
+ },
+ "790": {
+  "start_time": 3065660,
+  "end_time": 3069210,
+  "original_subtitle": "你这部分之前的历史的这个开始是不需要存在这样的，",
+  "translated_subtitle": ""
+ },
+ "791": {
+  "start_time": 3069650,
+  "end_time": 3072040,
+  "original_subtitle": "没有必要，因为我现在本身是没有用，",
+  "translated_subtitle": ""
+ },
+ "792": {
+  "start_time": 3072050,
+  "end_time": 3073840,
+  "original_subtitle": "你那能不能我就把你ps掉了，",
+  "translated_subtitle": ""
+ },
+ "793": {
+  "start_time": 3073850,
+  "end_time": 3080090,
+  "original_subtitle": "对列去好了。对吧？呃但是你现在做你投一的形式我肯定不能停你我不能",
+  "translated_subtitle": ""
+ },
+ "794": {
+  "start_time": 3080100,
+  "end_time": 3081890,
+  "original_subtitle": "停止你，因为你正在做保先生，",
+  "translated_subtitle": ""
+ },
+ "795": {
+  "start_time": 3081900,
+  "end_time": 3083560,
+  "original_subtitle": "啊你告诉他们。",
+  "translated_subtitle": ""
+ },
+ "796": {
+  "start_time": 3084900,
+  "end_time": 3088220,
+  "original_subtitle": "第二个呢就是我每个s选过去的历史长短，",
+  "translated_subtitle": ""
+ },
+ "797": {
+  "start_time": 3089720,
+  "end_time": 3091870,
+  "original_subtitle": "嗯我这些筛选可能已经算了是吧？",
+  "translated_subtitle": ""
+ },
+ "798": {
+  "start_time": 3091880,
+  "end_time": 3093430,
+  "original_subtitle": "有40k的，有120k的，",
+  "translated_subtitle": ""
+ },
+ "799": {
+  "start_time": 3093440,
+  "end_time": 3098160,
+  "original_subtitle": "有30k的，那我肯定选这个之前算的只有30k对吧？",
+  "translated_subtitle": ""
+ },
+ "800": {
+  "start_time": 3098170,
+  "end_time": 3099360,
+  "original_subtitle": "他又在做突破，",
+  "translated_subtitle": ""
+ },
+ "801": {
+  "start_time": 3099680,
+  "end_time": 3101520,
+  "original_subtitle": "他又在他历史只有30天，",
+  "translated_subtitle": ""
+ },
+ "802": {
+  "start_time": 3101530,
+  "end_time": 3106220,
+  "original_subtitle": "那我肯定先停他，所以我们不断的会去对这些s选去打分，",
+  "translated_subtitle": ""
+ },
+ "803": {
+  "start_time": 3106640,
+  "end_time": 3110400,
+  "original_subtitle": "啊去看他停止你代价是不是最低的，",
+  "translated_subtitle": ""
+ },
+ "804": {
+  "start_time": 3110610,
+  "end_time": 3112660,
+  "original_subtitle": "然后去一次性把它们全部停掉，",
+  "translated_subtitle": ""
+ },
+ "805": {
+  "start_time": 3113300,
+  "end_time": 3114060,
+  "original_subtitle": "然后再",
+  "translated_subtitle": ""
+ },
+ "806": {
+  "start_time": 3114580,
+  "end_time": 3116420,
+  "original_subtitle": "合适的机会再把他们给送过来。",
+  "translated_subtitle": ""
+ },
+ "807": {
+  "start_time": 3118840,
+  "end_time": 3120740,
+  "original_subtitle": "那我们也是做了一些被创作的测试，",
+  "translated_subtitle": ""
+ },
+ "808": {
+  "start_time": 3120750,
+  "end_time": 3126910,
+  "original_subtitle": "啊呃简单来说就是我们在比较高的他r下，",
+  "translated_subtitle": ""
+ },
+ "809": {
+  "start_time": 3126920,
+  "end_time": 3128590,
+  "original_subtitle": "然我们的存储空间",
+  "translated_subtitle": ""
+ },
+ "810": {
+  "start_time": 3130060,
+  "end_time": 3134500,
+  "original_subtitle": "产生这种挤压挤压式的血同效应的时后就会启用这三代一种，",
+  "translated_subtitle": ""
+ },
+ "811": {
+  "start_time": 3134510,
+  "end_time": 3139990,
+  "original_subtitle": "它会比比如说s上的这种内置的lu或者sru这样的一些策略，",
+  "translated_subtitle": ""
+ },
+ "812": {
+  "start_time": 3140210,
+  "end_time": 3141410,
+  "original_subtitle": "没有这明显说，",
+  "translated_subtitle": ""
+ },
+ "813": {
+  "start_time": 3141800,
+  "end_time": 3146380,
+  "original_subtitle": "那就会啊无论是在安全安的来NC啊 T两t啊 t都会有一个很好的",
+  "translated_subtitle": ""
+ },
+ "814": {
+  "start_time": 3146390,
+  "end_time": 3148220,
+  "original_subtitle": "一个效果，它主要就是避免雪崩，",
+  "translated_subtitle": ""
+ },
+ "815": {
+  "start_time": 3148230,
+  "end_time": 3153180,
+  "original_subtitle": "吧嗯这个也是相关的一个词，",
+  "translated_subtitle": ""
+ },
+ "816": {
+  "start_time": 3153530,
+  "end_time": 3155870,
+  "original_subtitle": "是代表它效果很好，",
+  "translated_subtitle": ""
+ },
+ "817": {
+  "start_time": 3156300,
+  "end_time": 3160010,
+  "original_subtitle": "实测的一些结果，然后我们可以看到他在一个小时的测试中，",
+  "translated_subtitle": ""
+ },
+ "818": {
+  "start_time": 3160020,
+  "end_time": 3162970,
+  "original_subtitle": "三个一的准入他会pass45次，",
+  "translated_subtitle": ""
+ },
+ "819": {
+  "start_time": 3162980,
+  "end_time": 3164970,
+  "original_subtitle": "然后会是送771度的。",
+  "translated_subtitle": ""
+ },
+ "820": {
+  "start_time": 3171140,
+  "end_time": 3178520,
+  "original_subtitle": "那刚才其实也也说这个准入啊不错，",
+  "translated_subtitle": ""
+ },
+ "821": {
+  "start_time": 3178820,
+  "end_time": 3183020,
+  "original_subtitle": "啊结合有没有什么好处，那其实也有好处，",
+  "translated_subtitle": ""
+ },
+ "822": {
+  "start_time": 3183240,
+  "end_time": 3186220,
+  "original_subtitle": "就是我们刚才其实通过对ST的打分，",
+  "translated_subtitle": ""
+ },
+ "823": {
+  "start_time": 3186230,
+  "end_time": 3188100,
+  "original_subtitle": "我们其实得到了一个很抽象的结论，",
+  "translated_subtitle": ""
+ },
+ "824": {
+  "start_time": 3188110,
+  "end_time": 3192370,
+  "original_subtitle": "就是哪些s在下一轮调度的时候哪些重要哪些不重要，",
+  "translated_subtitle": ""
+ },
+ "825": {
+  "start_time": 3193200,
+  "end_time": 3197080,
+  "original_subtitle": "那我们可以把这些不重要的赛事去往g二或者G 3的情况，",
+  "translated_subtitle": ""
+ },
+ "826": {
+  "start_time": 3198150,
+  "end_time": 3199800,
+  "original_subtitle": "一些顶是吧？",
+  "translated_subtitle": ""
+ },
+ "827": {
+  "start_time": 3199810,
+  "end_time": 3201680,
+  "original_subtitle": "我们会把它预预先的往下放，",
+  "translated_subtitle": ""
+ },
+ "828": {
+  "start_time": 3201690,
+  "end_time": 3206110,
+  "original_subtitle": "然后把啊我们看一个很重要的赛事去往这个 GP来去，",
+  "translated_subtitle": ""
+ },
+ "829": {
+  "start_time": 3207490,
+  "end_time": 3210730,
+  "original_subtitle": "啊这个也是我们啊三个前的一用了，",
+  "translated_subtitle": ""
+ },
+ "830": {
+  "start_time": 3210740,
+  "end_time": 3217840,
+  "original_subtitle": "嗯那最后呢那其实就是啊我们的这种准入机制啊",
+  "translated_subtitle": ""
+ },
+ "831": {
+  "start_time": 3218630,
+  "end_time": 3224500,
+  "original_subtitle": "和kp的老师在rl的rr阶段也也有所应用，",
+  "translated_subtitle": ""
+ },
+ "832": {
+  "start_time": 3225180,
+  "end_time": 3230610,
+  "original_subtitle": "那我们其实把demo作为了world的一个r后端，",
+  "translated_subtitle": ""
+ },
+ "833": {
+  "start_time": 3231860,
+  "end_time": 3233980,
+  "original_subtitle": "啊已经呃已经进行了一个投入，",
+  "translated_subtitle": ""
+ },
+ "834": {
+  "start_time": 3233990,
+  "end_time": 3239090,
+  "original_subtitle": "那可以看到啊我们在这个比较高的rpr下，",
+  "translated_subtitle": ""
+ },
+ "835": {
+  "start_time": 3239650,
+  "end_time": 3243360,
+  "original_subtitle": "我们的PP不要老再加上我们的三个a的，",
+  "translated_subtitle": ""
+ },
+ "836": {
+  "start_time": 3243370,
+  "end_time": 3246600,
+  "original_subtitle": "啊到之前几个月之前他们当时的一个实现，",
+  "translated_subtitle": ""
+ },
+ "837": {
+  "start_time": 3246610,
+  "end_time": 3251100,
+  "original_subtitle": "也就是司机第三会有2.5倍左右速度的提升。",
+  "translated_subtitle": ""
+ },
+ "838": {
+  "start_time": 3251700,
+  "end_time": 3254850,
+  "original_subtitle": "呃这个对rl的r其实非常好，",
+  "translated_subtitle": ""
+ },
+ "839": {
+  "start_time": 3254860,
+  "end_time": 3260450,
+  "original_subtitle": "啊因为首先唉真正的rl他他长得非常像粉丝对吧？",
+  "translated_subtitle": ""
+ },
+ "840": {
+  "start_time": 3260460,
+  "end_time": 3262290,
+  "original_subtitle": "他他其实占了",
+  "translated_subtitle": ""
+ },
+ "841": {
+  "start_time": 3262450,
+  "end_time": 3265630,
+  "original_subtitle": "这个 R的占了整个ro的70%的时间，",
+  "translated_subtitle": ""
+ },
+ "842": {
+  "start_time": 3265640,
+  "end_time": 3269310,
+  "original_subtitle": "它又很像一粉丝，然后它的主要的追求目标呢是思路，",
+  "translated_subtitle": ""
+ },
+ "843": {
+  "start_time": 3269320,
+  "end_time": 3274840,
+  "original_subtitle": "而不是tpot这样的一些SS所以我们的这种啊编排策略会帮助大家在",
+  "translated_subtitle": ""
+ },
+ "844": {
+  "start_time": 3274850,
+  "end_time": 3277480,
+  "original_subtitle": "r呃 rr上取得一个好的效果。",
+  "translated_subtitle": ""
+ },
+ "845": {
+  "start_time": 3277480,
+  "end_time": 3278210,
+  "original_subtitle": "嗯",
+  "translated_subtitle": ""
+ },
+ "846": {
+  "start_time": 3279920,
+  "end_time": 3285470,
+  "original_subtitle": "好，这个啊最后呢那其实就是一些SS和未来的一些工作，",
+  "translated_subtitle": ""
+ },
+ "847": {
+  "start_time": 3285480,
+  "end_time": 3289550,
+  "original_subtitle": "那左边的话其实就是相关的一些PR啊我们写一些太报了，",
+  "translated_subtitle": ""
+ },
+ "848": {
+  "start_time": 3289560,
+  "end_time": 3295350,
+  "original_subtitle": "啊大家可以去看一下，啊就是对应着我刚才讲的这些知点的一些细节。",
+  "translated_subtitle": ""
+ },
+ "849": {
+  "start_time": 3296320,
+  "end_time": 3299480,
+  "original_subtitle": "右边的话那其实就是未来啊做什么，",
+  "translated_subtitle": ""
+ },
+ "850": {
+  "start_time": 3299640,
+  "end_time": 3304610,
+  "original_subtitle": "嗯有一个有一个工作其实刚刚开始工刚刚讲的这个 c闻aion啊我们",
+  "translated_subtitle": ""
+ },
+ "851": {
+  "start_time": 3304620,
+  "end_time": 3307740,
+  "original_subtitle": "叫aic的a型，啊大家感兴趣可以去看一下。",
+  "translated_subtitle": ""
+ },
+ "852": {
+  "start_time": 3308060,
+  "end_time": 3314500,
+  "original_subtitle": "就是我整套这种编排可以比较多位达到我的安全执行，",
+  "translated_subtitle": ""
+ },
+ "853": {
+  "start_time": 3315080,
+  "end_time": 3317590,
+  "original_subtitle": "我做一个闭环的安全的c个没，",
+  "translated_subtitle": ""
+ },
+ "854": {
+  "start_time": 3317960,
+  "end_time": 3325340,
+  "original_subtitle": "一个高保真的仿真，它可以指导你在运行配置和对于开始多层级的这种",
+  "translated_subtitle": ""
+ },
+ "855": {
+  "start_time": 3325350,
+  "end_time": 3329090,
+  "original_subtitle": "操作的策略和数字空间大小上给予一些建议，",
+  "translated_subtitle": ""
+ },
+ "856": {
+  "start_time": 3329800,
+  "end_time": 3331270,
+  "original_subtitle": "我觉大家你们就可以看一下。",
+  "translated_subtitle": ""
+ },
+ "857": {
+  "start_time": 3331860,
+  "end_time": 3337560,
+  "original_subtitle": "然后第二个的话那其实就是在策略上的一些进一步的改进。",
+  "translated_subtitle": ""
+ },
+ "858": {
+  "start_time": 3338210,
+  "end_time": 3340320,
+  "original_subtitle": "吧啊刚才我们其实看到了",
+  "translated_subtitle": ""
+ },
+ "859": {
+  "start_time": 3341520,
+  "end_time": 3343040,
+  "original_subtitle": "有提到了这种骚作的冰体，",
+  "translated_subtitle": ""
+ },
+ "860": {
+  "start_time": 3343050,
+  "end_time": 3349160,
+  "original_subtitle": "加上啊 Pvcr啊这种ppppp传输和高绑定结合的这样一种算法，",
+  "translated_subtitle": ""
+ },
+ "861": {
+  "start_time": 3349530,
+  "end_time": 3353430,
+  "original_subtitle": "然后还有这个三类阵它在这种高并发很有用，",
+  "translated_subtitle": ""
+ },
+ "862": {
+  "start_time": 3353440,
+  "end_time": 3355310,
+  "original_subtitle": "但是它在中低并发",
+  "translated_subtitle": ""
+ },
+ "863": {
+  "start_time": 3355820,
+  "end_time": 3358260,
+  "original_subtitle": "没有什么对吧？因为他他根本就不会p死，",
+  "translated_subtitle": ""
+ },
+ "864": {
+  "start_time": 3358270,
+  "end_time": 3364130,
+  "original_subtitle": "你这个压力不够，那我们在想他在中极压力这种准入策略能不能有更好的",
+  "translated_subtitle": ""
+ },
+ "865": {
+  "start_time": 3364140,
+  "end_time": 3366590,
+  "original_subtitle": "一些啊优化。",
+  "translated_subtitle": ""
+ },
+ "866": {
+  "start_time": 3367290,
+  "end_time": 3373050,
+  "original_subtitle": "那最后的话那其实就是这种啊我们叫这可可编程这种PP报嗯思，",
+  "translated_subtitle": ""
+ },
+ "867": {
+  "start_time": 3373060,
+  "end_time": 3375690,
+  "original_subtitle": "那就是我不同三选预报，它的优先级是不同，",
+  "translated_subtitle": ""
+ },
+ "868": {
+  "start_time": 3375700,
+  "end_time": 3378740,
+  "original_subtitle": "它的重要程度是不同，我的存储空间是有限的，",
+  "translated_subtitle": ""
+ },
+ "869": {
+  "start_time": 3379040,
+  "end_time": 3380610,
+  "original_subtitle": "那我会把哪一些",
+  "translated_subtitle": ""
+ },
+ "870": {
+  "start_time": 3380850,
+  "end_time": 3383820,
+  "original_subtitle": "不重要的吧去往底层去放，",
+  "translated_subtitle": ""
+ },
+ "871": {
+  "start_time": 3383830,
+  "end_time": 3387910,
+  "original_subtitle": "或者说提早丢弃，啊哪些重要的话会往上提，",
+  "translated_subtitle": ""
+ },
+ "872": {
+  "start_time": 3388210,
+  "end_time": 3389620,
+  "original_subtitle": "啊会往这样里面提。",
+  "translated_subtitle": ""
+ },
+ "873": {
+  "start_time": 3389620,
+  "end_time": 3393610,
+  "original_subtitle": "所以这个是我们目前看到的未来的几个工作。",
+  "translated_subtitle": ""
+ },
+ "874": {
+  "start_time": 3395090,
+  "end_time": 3397440,
+  "original_subtitle": "Ok那我今天的分享可能就到这里，",
+  "translated_subtitle": ""
+ },
+ "875": {
+  "start_time": 3397450,
+  "end_time": 3402970,
+  "original_subtitle": "非常感谢大家嗯大家什做刚还有两分钟，",
+  "translated_subtitle": ""
+ },
+ "876": {
+  "start_time": 3402980,
+  "end_time": 3410880,
+  "original_subtitle": "啊还有这有两个问题，投",
+  "translated_subtitle": ""
+ },
+ "877": {
+  "start_time": 3410890,
+  "end_time": 3417310,
+  "original_subtitle": "做的最后一个PPT他那里这个产品他那个过去有一些合会的合会，",
+  "translated_subtitle": ""
+ },
+ "878": {
+  "start_time": 3417730,
+  "end_time": 3425560,
+  "original_subtitle": "都有这中安二的最后一个p嗯哪一个目标二噢目标二这个到",
+  "translated_subtitle": ""
+ },
+ "879": {
+  "start_time": 3425570,
+  "end_time": 3432850,
+  "original_subtitle": "最后。这个就是肯你不是我目标我就是再往前冲200.",
+  "translated_subtitle": ""
+ },
+ "880": {
+  "start_time": 3435440,
+  "end_time": 3438510,
+  "original_subtitle": "噢我老公听到我说这个啊对就是不好意思，",
+  "translated_subtitle": ""
+ },
+ "881": {
+  "start_time": 3438520,
+  "end_time": 3443830,
+  "original_subtitle": "吧你说最后一个问题，这个你那个问题是那对您大概就讲了这个问题，",
+  "translated_subtitle": ""
+ },
+ "882": {
+  "start_time": 3443840,
+  "end_time": 3446150,
+  "original_subtitle": "但是这个问题大概是怎么解决的？",
+  "translated_subtitle": ""
+ },
+ "883": {
+  "start_time": 3446150,
+  "end_time": 3446850,
+  "original_subtitle": "有一个具体",
+  "translated_subtitle": ""
+ },
+ "884": {
+  "start_time": 3447190,
+  "end_time": 3452380,
+  "original_subtitle": "唉对就是那个超的p体呃加上PPC啊啊最多都是认可，",
+  "translated_subtitle": ""
+ },
+ "885": {
+  "start_time": 3452390,
+  "end_time": 3456140,
+  "original_subtitle": "啊呃这是最有可能噢搞的清楚。",
+  "translated_subtitle": ""
+ },
+ "886": {
+  "start_time": 3459270,
+  "end_time": 3460420,
+  "original_subtitle": "看看还有没有其他的问题，",
+  "translated_subtitle": ""
+ },
+ "887": {
+  "start_time": 3460430,
+  "end_time": 3460630,
+  "original_subtitle": "呃",
+  "translated_subtitle": ""
+ },
+ "888": {
+  "start_time": 3469340,
+  "end_time": 3473010,
+  "original_subtitle": "老师您好，其实我想问一下就是您刚才讲的就是那个",
+  "translated_subtitle": ""
+ },
+ "889": {
+  "start_time": 3473410,
+  "end_time": 3476100,
+  "original_subtitle": "单个的那个沃克的或者志愿的东西，",
+  "translated_subtitle": ""
+ },
+ "890": {
+  "start_time": 3476700,
+  "end_time": 3481970,
+  "original_subtitle": "就是如何通过那个现有的那个 Mm 你们要方便加微信，",
+  "translated_subtitle": ""
+ },
+ "891": {
+  "start_time": 3481980,
+  "end_time": 3487690,
+  "original_subtitle": "吗现有加呃对你也也也在研究快开始写来这行了对吧？",
+  "translated_subtitle": ""
+ },
+ "892": {
+  "start_time": 3487700,
+  "end_time": 3488050,
+  "original_subtitle": "啊",
+  "translated_subtitle": ""
+ },
+ "893": {
+  "start_time": 3488250,
+  "end_time": 3490160,
+  "original_subtitle": "你在研究它们开始卸载这块对不对？",
+  "translated_subtitle": ""
+ },
+ "894": {
+  "start_time": 3490170,
+  "end_time": 3496160,
+  "original_subtitle": "呃我主要是在NLP还有a阵的那块噢加您，",
+  "translated_subtitle": ""
+ },
+ "895": {
+  "start_time": 3496170,
+  "end_time": 3496960,
+  "original_subtitle": "吧好，",
+  "translated_subtitle": ""
+ },
+ "896": {
+  "start_time": 3498000,
+  "end_time": 3500350,
+  "original_subtitle": "现在呢就是这这个策略在现有，",
+  "translated_subtitle": ""
+ },
+ "897": {
+  "start_time": 3500360,
+  "end_time": 3506430,
+  "original_subtitle": "那个然后我们那个开源项目是有对应的设置一个有的，",
+  "translated_subtitle": ""
+ },
+ "898": {
+  "start_time": 3506440,
+  "end_time": 3508870,
+  "original_subtitle": "但是比较新，你需要更新到应该是1.",
+  "translated_subtitle": ""
+ },
+ "899": {
+  "start_time": 3508880,
+  "end_time": 3512710,
+  "original_subtitle": "5或者1.5.1以上的服装店才能开启这样的策略比较新。",
+  "translated_subtitle": ""
+ },
+ "900": {
+  "start_time": 3512900,
+  "end_time": 3517930,
+  "original_subtitle": "嗯另外一个我们想问的，就是因为您刚才讲的就是因为这种PT分离，",
+  "translated_subtitle": ""
+ },
+ "901": {
+  "start_time": 3517940,
+  "end_time": 3523690,
+  "original_subtitle": "嘛嗯但是有的时候就是其实我们起可能大部分的话其实这个不费了，",
+  "translated_subtitle": ""
+ },
+ "902": {
+  "start_time": 3523700,
+  "end_time": 3527210,
+  "original_subtitle": "这个后者其实还是在一个 ok里面嗯在一个ok里面，",
+  "translated_subtitle": ""
+ },
+ "903": {
+  "start_time": 3527220,
+  "end_time": 3527730,
+  "original_subtitle": "呢然后",
+  "translated_subtitle": ""
+ },
+ "904": {
+  "start_time": 3527780,
+  "end_time": 3533830,
+  "original_subtitle": "后可能更多的是你能要通过人机去做的这个代理，或者说这种拓展。",
+  "translated_subtitle": ""
+ },
+ "905": {
+  "start_time": 3534060,
+  "end_time": 3537730,
+  "original_subtitle": "那这种情况下就是我想在这个融资代理之前的话，",
+  "translated_subtitle": ""
+ },
+ "906": {
+  "start_time": 3537740,
+  "end_time": 3540730,
+  "original_subtitle": "再把这个 k为这个片区再加一层，",
+  "translated_subtitle": ""
+ },
+ "907": {
+  "start_time": 3540740,
+  "end_time": 3543970,
+  "original_subtitle": "啊不知道你们这边有没有什么好的这个建议，",
+  "translated_subtitle": ""
+ },
+ "908": {
+  "start_time": 3543980,
+  "end_time": 3546730,
+  "original_subtitle": "呃我没有太理解可v开始加一层意思。",
+  "translated_subtitle": ""
+ },
+ "909": {
+  "start_time": 3547480,
+  "end_time": 3553150,
+  "original_subtitle": "呃就是比如说呃这底层的这个 logo上面还有一个这个像这个 m",
+  "translated_subtitle": ""
+ },
+ "910": {
+  "start_time": 3553160,
+  "end_time": 3554740,
+  "original_subtitle": "太长，噢",
+  "translated_subtitle": ""
+ },
+ "911": {
+  "start_time": 3555190,
+  "end_time": 3559560,
+  "original_subtitle": "嗯底层就是通过这个 vm这个引擎嗯们上面上面，",
+  "translated_subtitle": ""
+ },
+ "912": {
+  "start_time": 3559570,
+  "end_time": 3565150,
+  "original_subtitle": "呢通过我们这个客户开始是放到这个 m们开始这个这个框架里面的这个",
+  "translated_subtitle": ""
+ },
+ "913": {
+  "start_time": 3565160,
+  "end_time": 3568830,
+  "original_subtitle": "管理，嗯然后最上层是通过这个技术的一概念。",
+  "translated_subtitle": ""
+ },
+ "914": {
+  "start_time": 3570100,
+  "end_time": 3573530,
+  "original_subtitle": "Ok就是下面的话其实是有多个这个 work本，",
+  "translated_subtitle": ""
+ },
+ "915": {
+  "start_time": 3573540,
+  "end_time": 3578730,
+  "original_subtitle": "就是我想问一下就是像这种嗯第于这这样的一层这种",
+  "translated_subtitle": ""
+ },
+ "916": {
+  "start_time": 3579190,
+  "end_time": 3585860,
+  "original_subtitle": "嗯或者价格的话，呃是不是有什么运营呃这种优化调整这种策略？",
+  "translated_subtitle": ""
+ },
+ "917": {
+  "start_time": 3588040,
+  "end_time": 3593080,
+  "original_subtitle": "我我很难去给一个策略，因为这种策略非常多，",
+  "translated_subtitle": ""
+ },
+ "918": {
+  "start_time": 3593090,
+  "end_time": 3597040,
+  "original_subtitle": "比如说你的red r through8分钟有0可梦有非常非常多",
+  "translated_subtitle": ""
+ },
+ "919": {
+  "start_time": 3597050,
+  "end_time": 3602470,
+  "original_subtitle": "这种方式，但是我现在可能认为比较好的就是你的l2就是本地的CP把",
+  "translated_subtitle": ""
+ },
+ "920": {
+  "start_time": 3602480,
+  "end_time": 3603470,
+  "original_subtitle": "它设置的很小，",
+  "translated_subtitle": ""
+ },
+ "921": {
+  "start_time": 3604170,
+  "end_time": 3610370,
+  "original_subtitle": "设置0,然后你们没看去用那个很大的一个共享的CPU或者ssc的",
+  "translated_subtitle": ""
+ },
+ "922": {
+  "start_time": 3610380,
+  "end_time": 3613270,
+  "original_subtitle": "事情，所有的节点都可以互相看到对方，",
+  "translated_subtitle": ""
+ },
+ "923": {
+  "start_time": 3613280,
+  "end_time": 3617980,
+  "original_subtitle": "你不会有任何的kps对啊对，",
+  "translated_subtitle": ""
+ },
+ "924": {
+  "start_time": 3617990,
+  "end_time": 3619220,
+  "original_subtitle": "我觉得这样会比较好。",
+  "translated_subtitle": ""
+ },
+ "925": {
+  "start_time": 3619220,
+  "end_time": 3623370,
+  "original_subtitle": "好，",
+  "translated_subtitle": ""
+ },
+ "926": {
+  "start_time": 3624030,
+  "end_time": 3625190,
+  "original_subtitle": "好，谢谢大家。",
+  "translated_subtitle": ""
+ },
+ "927": {
+  "start_time": 3628700,
+  "end_time": 3631810,
+  "original_subtitle": "谢谢卢老师的分享，今天我们4场分享已经结束，",
+  "translated_subtitle": ""
+ },
+ "928": {
+  "start_time": 3631820,
+  "end_time": 3635290,
+  "original_subtitle": "那这个呢是我们的问卷，欢迎大家扫码进行反馈，",
+  "translated_subtitle": ""
+ },
+ "929": {
+  "start_time": 3635300,
+  "end_time": 3637770,
+  "original_subtitle": "嗯今天呢我们大语言模型训练与推理，",
+  "translated_subtitle": ""
+ },
+ "930": {
+  "start_time": 3637780,
+  "end_time": 3640570,
+  "original_subtitle": "感谢大家的陪伴，我们今天的分会场结束了，",
+  "translated_subtitle": ""
+ },
+ "931": {
+  "start_time": 3640580,
+  "end_time": 3643650,
+  "original_subtitle": "但大家稍停一下，我的同事提醒一下",
+  "translated_subtitle": ""
+ },
+ "932": {
+  "start_time": 3643720,
+  "end_time": 3649930,
+  "original_subtitle": "下大家今天还有重要的活动，欢迎大家参与，唉谢谢各位介。",
+  "translated_subtitle": ""
+ },
+ "933": {
+  "start_time": 3649930,
+  "end_time": 3654100,
+  "original_subtitle": "到现在啊我以前的福利，哈",
+  "translated_subtitle": ""
+ },
+ "934": {
+  "start_time": 3654240,
+  "end_time": 3657510,
+  "original_subtitle": "那今天晚上呢我们也准备了一个礼拜的下的活动，",
+  "translated_subtitle": ""
+ },
+ "935": {
+  "start_time": 3657520,
+  "end_time": 3661230,
+  "original_subtitle": "在我们旁边的那个吧里边大家可能觉得有点距离，",
+  "translated_subtitle": ""
+ },
+ "936": {
+  "start_time": 3661240,
+  "end_time": 3665790,
+  "original_subtitle": "当然我们的理解给各位开发者们朋友们准备了那个接驳的大巴车，",
+  "translated_subtitle": ""
+ },
+ "937": {
+  "start_time": 3665800,
+  "end_time": 3669230,
+  "original_subtitle": "然后可以直接从啊这个我们的a馆北广",
+  "translated_subtitle": ""
+ },
+ "938": {
+  "start_time": 3669300,
+  "end_time": 3672230,
+  "original_subtitle": "广场，然后在5:30的时候就坐车过去，",
+  "translated_subtitle": ""
+ },
+ "939": {
+  "start_time": 3672240,
+  "end_time": 3675200,
+  "original_subtitle": "那也可以零具体跟我们的呃专家们，",
+  "translated_subtitle": ""
+ },
+ "940": {
+  "start_time": 3675210,
+  "end_time": 3678710,
+  "original_subtitle": "可以跟我们的其他的b列开发者们一起沟通交流，",
+  "translated_subtitle": ""
+ },
+ "941": {
+  "start_time": 3678720,
+  "end_time": 3681680,
+  "original_subtitle": "好吧？Ok那今天这场三人就到这里，",
+  "translated_subtitle": ""
+ },
+ "942": {
+  "start_time": 3681690,
+  "end_time": 3682540,
+  "original_subtitle": "谢谢各位谢谢。",
+  "translated_subtitle": ""
+ },
+ "943": {
+  "start_time": 3682540,
+  "end_time": 3683250,
+  "original_subtitle": "各位支持，",
+  "translated_subtitle": ""
+ },
+ "944": {
+  "start_time": 3683440,
+  "end_time": 3685660,
+  "original_subtitle": "谢谢各位开发的朋友，谢谢大家参与。",
+  "translated_subtitle": ""
+ },
+ "945": {
+  "start_time": 3754970,
+  "end_time": 3755600,
+  "original_subtitle": "嗯可以谢谢谢。",
+  "translated_subtitle": ""
+ },
+ "946": {
+  "start_time": 3781850,
+  "end_time": 3782440,
+  "original_subtitle": "下午的他",
+  "translated_subtitle": ""
+ },
+ "947": {
+  "start_time": 3812470,
+  "end_time": 3813400,
+  "original_subtitle": "那个部分是还",
+  "translated_subtitle": ""
+ },
+ "948": {
+  "start_time": 3836740,
+  "end_time": 3837070,
+  "original_subtitle": "还还。",
+  "translated_subtitle": ""
+ }
+}

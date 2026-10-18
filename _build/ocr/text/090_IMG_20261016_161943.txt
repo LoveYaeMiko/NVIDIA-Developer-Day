@@ -1,0 +1,18 @@
+# 90  IMG_20261016_161943.jpg  (4064x3048)
+Goal3: Agentic Routing Strategy
+KV-aware Router  Hard Affinity  SoftAffinity
+每轮独立打分，看全局  首轮定终身，不看负载  默认留原地，过载reroute+KVCR
+看：缓存前缀块+in-flight负载  看：X-Dynamo-Session-ID  看：绑定当建议+过载值
+DynamoKV Router
+@routethis turn:rank1 full-rank6  ②hint:prefixis in rank 1 host DRAM
+GPUKV
+bound  Dynamo KVCR
+session  soft→rank1
+KVCRhostDRAM  full  deliver一GPU·prefill onlythe new tail  free
+prefix  copy
+③NIXLpeer-to-peer pull
+rank full -→route to free rank
+bound
+on soft→rank1
+full  free  KV
+G3 pool·one copy  nVIDIA.

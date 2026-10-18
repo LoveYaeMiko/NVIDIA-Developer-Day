@@ -1,0 +1,16 @@
+# 48  IMG_20261016_143826.jpg  (4064x3048)
+STEP 3:Optimize the MoE
+e  layer1_f_layero_b
+About30%-50%oftheMoEpartisEPcommunication.  ifib
+Wewant tohide thecommunicationbehind computation.
+Two solutionsnow:  Iflbwith loss
+1.Cross-batch EP overlapping  layer1_flayero_b
+More suitable for cross-NVLink domain scenarios  layero_fJayer1_b
+The block sizesare determined bythe silicon time extracted fromnsysreport.
+Increase memory overhead
+2.Fine-grained overlapping with Megakernel
+1.Relatively easier to fuse inside NVLink domain  Overlapped
+2.Betterutilize thememory  Computation  ExpertFFNs1  ExpertFFNs2
+Communication  Dispatch1  Dispatch2  Combine1  Combine2
+Time
+The graphbelowisfrom theMoKblog from Cursor.

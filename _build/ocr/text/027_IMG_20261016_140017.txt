@@ -1,0 +1,19 @@
+# 27  IMG_20261016_140017.jpg  (4064x3048)
+Optimization 6: A Single Active Dispatch Warp
+· Active dispatch warps default to 1 (configurable 1 / 2 / 4): all 4 physical warps remain, the extra ones skip dispatch and only rejoin at the kernel tail
+·Why it is faster: 1 warp/SM (~132 rows in flight) already exceeds the NVLink bandwidth-delay product; measured 1 > 2 > 4 warps — a deeper read queue  lengthenseveryround trip andcompeteswith theGEMMfor L2
+·Compact pull buffer: SMEM slots only for active warps, freeing 21 KiB per CTA for the GEMM's AB stages
+dispatchwarpgroup(4physicalwarps)
+issue pull  before:4slots=4xhidden_bytes  after:1slot
+dispatch warpO-ACTIVE  peerrankrows
+prep·barrier·pull-token-back  (NVSHMEM,overNVLink)  sloto  sloto
+slot1
+warp1-idle:skipsdispatch,rejoins atkernel tail  bulkload  3x7168B=21KiBperCTA
+slot2  returned to the GEMM ABstages
+SMEMpullslot  slot3
+warp2-idle  (1row in flight)
+warp3-idle  bulkstore
+local token pool
+warp runs thedispatch body  (GMEM)
+4/EP8:1>2>4warps-~132rows in fight per GPU already exceed the NVLink bandwidth-delay product;a deeper read queue only lengthens eachrequest's RTT and competes with the GEMMfor L2 /issue slots
+nVIDIA

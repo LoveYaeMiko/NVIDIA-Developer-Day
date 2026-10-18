@@ -1,0 +1,10 @@
+# 47  IMG_20261016_143743.jpg  (4064x3048)
+STEP 2: Optimize the Hybrid Attention
+Speedup (module-level):  Throughput uplift from STEP 2
+Compact sparse attention:25%-30%  (compared with the conflg after STEP 1)
+Compact FP8Indexer:25%-35%
+Group-ObatchedGEMM:50%-60%  +4.6%
+at64Kcontextlength
+These gains come from faster execution.
+The indexer accounts for a larger share of step time at 1M.  +9.0%
+at1M contextlength

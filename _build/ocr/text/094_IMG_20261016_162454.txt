@@ -1,0 +1,17 @@
+# 94  IMG_20261016_162454.jpg  (4064x3048)
+ThunderAgent + KV offload
+ThunderAgent·router  G1  G195%
+program table  GPU
+A·decoding  D.idle,kept hot
+A running  resume一refill
+G2
+B  waiting tool
+Host  Acopy  Bcopy
+C·offloaded
+pause一cold→offloaded  G260%
+paused
+G3
+pause when  95%  Pool  A BC·onesharedcopy
+admit whil  om
+TA never moves KV ·it only changes who is cold·the tiers do the moving
+nVIDIA

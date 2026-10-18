@@ -1,0 +1,24 @@
+# VID_20261016_105447_043
+己的内部研究，我们了解到，混合使用专家模型将改变AI的构建和部
+署方式
+Accelerated Computing
+FirstprinciplesacceleratingbeyondtheG.
+·Interconnects-NVL72
+HybridSSM,MoE-training datasets
+·Neural netarchitectures
+己的内部研究，我
+.Optimizers
+署方式
+Post-training foragenticworkloads
+Brevityof LLMresponse
+OneofNemotron's twoj
+Acceleratedr
+nVIDIA
+First principle
+.Interco
+.Numer
+.Hybrid:
+.Neural
+.Optimiz
+·Brevity
+.Post-tr:

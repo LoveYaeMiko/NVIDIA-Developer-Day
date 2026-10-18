@@ -1,0 +1,42 @@
+# 092 hi-res re-OCR of IMG_20261016_162300.jpg (4064x3048)
+[0.97] ThunderAgent · how it decides
+[0.91] one tick every 5 s·util =c of active programs ÷GPu KV pool
+[0.98] admit·resume
+[0.99] pause
+[0.95] 0.80 target
+[0.99] 0.95pause
+[0.99] 0.85resume ceiling
+[0.90] Pause order S=1/c+1{ACTING}·ACTING weightx2^(-t)
+[0.97] State machine per program, transitions only at tool boundaries
+[0.99] toolcall
+[0.99] P2
+[0.99] ACTING
+[0.93] C=40K
+[0.79] 1st
+[0.99] REASONING
+[0.99] ACTING
+[0.99] toolreturns
+[0.99] P3
+[0.99] ACTING
+[0.95] c=120K
+[0.99] 2nd
+[1.00] resume
+[0.99] pause
+[0.93] C=30K
+[0.99] 3rd
+[0.92] util<0.85·S=1/c+
+[0.99] util>0.95
+[0.99] P4
+[0.99] REASONING
+[0.93] IREASONING)
+[0.99] P1
+[0.86] ING
+[0.92] c=180K
+[0.99] last
+[0.99] PAUSED
+[0.95] RE
+[0.96] waiting onat
+[0.95] lose·then smallest context →cheapest to recompute
+[0.92] resume -worker with most free Kv·wait >18o0 s→forced resume
+[0.92] nVIDIA
+[0.89] nVIDIA

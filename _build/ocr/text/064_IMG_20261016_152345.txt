@@ -1,0 +1,30 @@
+# 64  IMG_20261016_152345.jpg  (4064x3048)
+KVTC: Throughput Under Memory Pressure
+Compressionprevents the cache-capacity cliff  Setup:GLM-5.1-FP8TP=8on1nodewith8xHopperGPUSXM141GB(NVLink900GiB/sPCleGen5465GiB/s/GPU）LLM+LMCache128GiBCPU-DRAML18K-tokenchunksNUMAinterleave=allprefixcachingoffKVTCCR8x
+Problem-Vanilla degrades as memory shrinks  Resilience-KVTCholdsperformanceunderpressure
+Capacity sweep·concurrency=16·Higherisbetter  KVTC  Vanilla
+Concurrency=16  Outputtok/s  LMCachehitrate
+Outputtok/s  Hitrate  Outputtok/s
+Eviction pressure  80%  140  Host memory constrained  124.7
+120  50.0040%  60%
+80  120
+40  0
+20%
+11.9%  2.49x
+0  96  100
+400  300  200
+Host memory capacity(GiB)-decreasing
+Takeaway:Vanillahitsacapacitycliffasmemoryshrinks:cacheevictionlowershitrateand throughput.  80
+Low overhead-Capacity sufficient(4o0 GiB)  60
+Throughput delta:+3.6%to-2.1%·~4.7xsmallerhost-memoryfootprint  50.0
+40  300  200  96
+MeanTTFTV/K  400
+Output tok/sV/K  Athroughput
+Concurrency  vlkcvanila/kvtc  Host memory capacity(GiB)→decreasing
+38.3/38.1  -0.5%  0.58/0.53s
+72.8/71.8  -1.4%  0.57/0.56s
+129.4/126.7  -2.1%  0.71/0.67s  2.49x  -64%  +62.8pp
+8  127.1/131.0  +3.1%  13.1/12.9s  Outputthroughput  Mean TTFT  LMCachehitrate
+125.8/130.3  +3.6%  36.54/36.54s  at96GiB/c16  108.8→39.1s  11.9%→74.7%
+16
+ity,KVTCreducesmemoryfootprintby~4.7xwithnegligibleperformanceoverhead.  nVIDI/

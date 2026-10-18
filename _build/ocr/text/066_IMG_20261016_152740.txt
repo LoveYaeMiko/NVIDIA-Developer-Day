@@ -1,0 +1,18 @@
+# 66  IMG_20261016_152740.jpg  (4064x3048)
+nvCOMP-ANS: Compression and Serving Results  TTFTgains are strongestat low concurrency in thisbenchmark
+LOSSLESS COMPRESSION  ~1.4x  ~1.1x
+Original bytes / compressed bytes  BF16KV cache
+FP8KV cache
+TTFT speedup by concurrency (c)
+20.0%  16.9%  18.7%  +18.7%
+10.0%  5.7%  8.2%  P90 TTFT speedup at c = 2
+1.8%  4.2%  3.2%3.0%
+0.0%  2.1%  +8.2% mean TTFT speedup
+-10.0%  Throughput  unchanged
+-5.6%
+2
+8  Output throughput change:
+MeanTTFTP9OTTFT
+TFT speedup =baseline latency / nvCOMP latency -1.Bars show means.Pg0varies widely at c=3 and 8  -1.9% to +2.4% acrossc= 1-8
+E2E  SGLang +FlexKV(CPU only)/ GLM-5.1-FP8/BF16KV1128K input / 8xHopper GPU
+github.com/taco-project/FlexkV/pul/18a

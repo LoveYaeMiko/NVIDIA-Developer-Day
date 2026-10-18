@@ -1,0 +1,4256 @@
+{
+  "source": "VID_20261016_105447.mp4",
+  "duration_ms": 900000,
+  "language": "autodialect",
+  "orders": [
+    "DKHJQ20261018150940127L0aIpsrJBd5uF2CR"
+  ],
+  "chunks": [
+    {
+      "index": 1,
+      "offset_ms": 0,
+      "duration_ms": 900025,
+      "order_id": "DKHJQ20261018150940127L0aIpsrJBd5uF2CR"
+    }
+  ],
+  "text": "I'm so honored to be here today uh in china for this amazing developer day to talk about uh the work that we're all doing together as a community um in open source, artificial intelligence. and um Ii wanted to say i've always had a special appreciation for the work that is happening, especially here in china. I have the uh opportunity uh many years ago to work at baidu and um the innovation, the hard work, the creativity, the amazing technology that's being built here in china, I think, is an inspiration um to everyone around the world. And so it's a great honor for me uh to be here uh to talk talk about what we're doing uh together with you to try to move open source technology for ai forward. Ai is the biggest computational challenge of our time. and uh What we're doing is transforming computation into useful intelligence that helps people solve problems in new ways. One way to think about the process of transforming computation into intelligence is through what we call scaling laws. And uh these days I see four uh ongoing scaling laws that are driving up uh our ability to transform compute into intelligence. So let's talk about that and what their implications are. The first has to do with pre training, and this is where um modern artificial intelligence started. um We're going to take a model and we're going to train it on all of the information that humanity has been able to produce on the entire internet in every language, in every subject and as many different kinds of uh domains as we can. And what we find is that as we train our models on more data uh and we make our models bigger, andwe transformed the quality of the data were able to um use ai to sort through all of the information we have find the very best and most important parts of that and then use that to improve the quality of our data. We find that all of this compute transforms into a stronger uh model that has a better understanding of the universe and everything in it and how they interact. The base model and the point of pre training is to establish the iq of our our artificial intelligence. This is where the foundation of capabilities um come from the the world, understanding um the the model needs to draw from uh all of this information in order to reason and help people solve problems. so uh We find that as we continue to scale pre training uh both in the size of the data, the quality of the data, the size of the model, the quality of the optimization processes, all of these are different ways of transforming computation into raw intelligence. Now once we have a base model, uh we want to use it to solve problems, but we need to teach the model how to work with people and how to reason in ways that are useful. And we call that uh process post training. Post training is a fantastically diverse computational problem. We have uh a lot of uh environments where the model gets to interact with uh things like coding uh compilers, um operating systems, maybe uh computer interfaces or tools of different kinds. um This is where the model learns how to apply its knowledge to solve problems. andBecause of that, uh we need uh really interesting systems for the systems that combine a lot of gp us for learning and an inference uh as the model is trying things out when doing inference uh as well as cp us where the model is um uh experimenting and learning how its attempts problem solve actually come across in the real world. um The systems for this require uh amazing networking. uh you knowAll of these cp us and gp us in this complex system need to be brought together. and um uh soThis is a fantastic uh challenge for accelerated computing post training. andWe find as we continue to scale the compute that goes into post training models become dramatically more useful. um One of the uh uh things I was most inspired recently uh by, for example, was uh uh glm uh 5.2 to 5.3 um when and some of you may have seen that um just really incredible uh leap in capabilities that came from uh you know really excellent uh post training. and uh soSo this is a good example, but there are many others of how we are finding ways as a community to transform compute into intelligence starring poing. Now, once the model has been created, uh ifif we in pre training and learned about the universe, post training and learned how to solve problems and use tools, uh then we want to go deploy it. and um When we deploy the model, uh we find that it is also able to transform compute into useful problem, solving intelligence through reasoning. um This happens at test time. So when you ask the model how it solves the problem, it needs to go think and the longer it has to think, and the more deeply it can reason, uh the more useful the model is in a way that's not too dissimilar to how you and I uh used to solve our math tests when we were in school you know having having a little bit longer time uh to solve the the math problems. Actually, you knowwe could use that to get better results you know within limits, right? um uh you knowAfter a while you just kind of start to spend. um But uh this is yet another way that we're finding that uh compute can be transformed into intelligence this time during inferences. Finally, we have agents you know these days. Artificial intelligence is not just a thing that you ask questions to every once in a while. These days artificial intelligence is a fleet of agents that work for each of us, day and night solving our most important problems. And each of us is becoming the ceo of our own company uh has all of these agents constantly working uh for us to solve problems. uh andThat's yet another dimension of how we transform compute into intelligence you know as the size of your agent team grows as those agents work. um you know uh Longer time for you, they can get more done. soWhen you think about this, um uh these are four different compounding scaling laws, each one of them is a different dimension of how we transform compute into intelligence. And each of them has profound implications for accelerated computing, for the systems that we build for the software that we built for the way that ai is integrated uh into uh the solutions that businesses around the world need. andIt's true that compute is now intelligence you know with all of these uh scaling laws happening at the same time. There's so many different ways that we're transforming comp computer into intelligence. um Now, at the same time, we have limited compute as a planet. We are building compute at a rate that uh is completely unthinkable, um uh even just a few years ago you know back when I was um a graduate student, um in 2008, I published a paper on on training and I models on the gpu and back then in 2008, almost 20 years ago, uh people thought that was kind of crazy. They're like we don't really need what what are we going do with bigger models? What are we gonna do with bigger data sets? These days, um you knowthe world has changed, right? um Everyone. uh It has started to deeply understand the importance of compute and we're building compute at a scale that's um uh unprecedented and and just absolutely enormous. um and uh That's the reason why ai is growing so fast, why we're able to build and deploy ai and in better ways. And yet we know that we are running at the limit, you knowthere's different kinds of limits they could be um economic. you know how can you know howHow many uh billions of dollars of of um data centers can we afford to build? um They could be political. you knowSometimes people don't want to have lots of data centers uh in their neighborhood. They could be um uh uh physical as in like you know power constraints or land constraints. you knowIf uh we're we're talking about building compute at a scale that uh you know these sorts of constraints really start to to matter, um all of these constraints uh then imply if compute is intelligence, but we have a limit on the amount of compute. It implies that efficiency is also intelligence. and uh This is the biggest computational challenge of our time. um It's also something that invidia just deeply loves to work with invi as a company as as being you was just explaining uh is an accelerated computing company. We love to uh find ways of rethinking the entire compute stack um from transistors to uh libraries. Compilers frame works um all of the different chips in the middle applications, algorithms. All of those can be refined in order to provide transformational uh acceleration, transformational efficiency, benefits. And in today's environment, that means transformational intelligence efficiency have now become intelligence and so for all of us that are involved in building artificial intelligence, um and especially those of us in the open community that that are building open technologies for artificial intelligence efficiency is the is the foundation. Compute efficiency is the foundation of intelligence, the more efficient we can make our systems for building and deploying ai, the more intelligence we can have. It follows from this that ai is not a one size fits all problem. uh We need systems of models of different sizes and and uh capacities. And mean you uh talked about that, I think really really nicely. Just a moment ago we need specialized ai um specialized ai that that can um you know be really excellent at the things that matter most that is also a form of efficiency. um and uh andAnd that I think implies we need to open technologies for ai because in order to um kind create those systems in order to specialize uh uh those models, uh people need the ability to innovate. They need to be able to uh uh solve problems um you know under their own steam, uh using the special perspectives of data that they have um uh to to get dramatically better efficiency for the problems that matter most to them. In order to support that that in video, we have a project called nemotron um where we are building open models uh along with open data and of course the ways to go with those models. Um This is a little bit different from uh many of the other projects around the industry that provide open weights uh for their models. uh We are actually going beyond that. We're providing not just the weights, but also the data sets, the environments, the technologies that we use to build these models, um the software that we used to build it um uh as as well as the recipes for the research. um Umitron uh is built this way because we're trying to enable the community to build better ai because we know that if we can make the community more efficient at building ai then that can be more intelligence for the entire community. you know um A lot of the work that goes into building ai is um uh fairly straightforward work that can be shared, um work that it takes a lot of compute a lot of uh smart people to you know improve our data sets and so forth. But if we can put that out there, if we can share that with each other, it can increase the speed at which the entire community moves and can create increase the efficiency at which we all build ai and that's a videos goal. Why are we building the neutron in this way that that is as open as it is is? Because we know that the more efficient we can make the community building ai the more intelligence we can all have uh to work with which increases in videos opportunity. um soThis is aligned with our business goal. um Another way of thinking about what I just said is that etron has two jobs. uh The first job is to help in videodia build the systems of the future, help nvidia understand what is accelerating computing need more artificial intelligence. And then the second is to make the ecosystem more efficient to accelerate the ecosystem. So i'll talk about both of those for a second. um you knowThe first job for you neutron is really about in video. uh it'sIt's about how do we think about the end to end problem of accelerating artificial intelligence? Let's think of a few examples. O okay so with blackwell, we built a networking system called ndl 72, which allows for 72 blackwell gp us to read and write each other's memory at full speed and very low latency. Now why did we make this big bet to build blackwell with nbl 72? This is a very challenging technology to build the software for it is challenging. The hardware is challenging. theThe reason why we did that was actually because of the community because of developers like you who we interactted with. And because of nemotrons own internal research, we understood that uh mixture of experts models were going to transform the way that ai was built and deployed. andWe thought about what kind of system is necessary for uh building and deploying mixture, experts models, um and uh because we went through that process and we developed in bl 72, um it's been much easier and much more efficient uh for the world uh to build and deploy uh the the very best models of today. uh Numericism and sparsity, a are also uh really important for us, you knowa lot of the gains in efficiency, and therefore, the gains in intelligence that the community has have come from being smarter about how we do arithmetic. um you knowBack when I started doing deep learning uh you know20 years ago, we mostly did everything in fp 32, 32 bit floating point formats. These days, most training happens in 8 bit arithmetic, so that's 4 times.",
+  "segments": [
+    {
+      "index": 1,
+      "start": 1590,
+      "end": 15410,
+      "speaker": "",
+      "text": "I'm so honored to be here today uh in china for this amazing developer day to talk about uh the work that we're all doing together as a community um in open source, artificial intelligence."
+    },
+    {
+      "index": 2,
+      "start": 15720,
+      "end": 30730,
+      "speaker": "",
+      "text": "and um Ii wanted to say i've always had a special appreciation for the work that is happening, especially here in china. I have the uh opportunity uh many years ago to work at baidu and"
+    },
+    {
+      "index": 3,
+      "start": 30750,
+      "end": 41830,
+      "speaker": "",
+      "text": "um the innovation, the hard work, the creativity, the amazing technology that's being built here in china, I think, is an inspiration um to everyone around the world."
+    },
+    {
+      "index": 4,
+      "start": 41830,
+      "end": 45590,
+      "speaker": "",
+      "text": "And so it's a great honor for me uh to be here uh to talk"
+    },
+    {
+      "index": 5,
+      "start": 45610,
+      "end": 58770,
+      "speaker": "",
+      "text": "talk about what we're doing uh together with you to try to move open source technology for ai forward. Ai is the biggest computational challenge of our time."
+    },
+    {
+      "index": 6,
+      "start": 58980,
+      "end": 69290,
+      "speaker": "",
+      "text": "and uh What we're doing is transforming computation into useful intelligence that helps people solve problems in new ways."
+    },
+    {
+      "index": 7,
+      "start": 69440,
+      "end": 80370,
+      "speaker": "",
+      "text": "One way to think about the process of transforming computation into intelligence is through what we call scaling laws. And uh these days I see four"
+    },
+    {
+      "index": 8,
+      "start": 80430,
+      "end": 92260,
+      "speaker": "",
+      "text": "uh ongoing scaling laws that are driving up uh our ability to transform compute into intelligence. So let's talk about that and what their implications are."
+    },
+    {
+      "index": 9,
+      "start": 93020,
+      "end": 108030,
+      "speaker": "",
+      "text": "The first has to do with pre training, and this is where um modern artificial intelligence started. um We're going to take a model and we're going to train it on all of the information that humanity has been able to produce"
+    },
+    {
+      "index": 10,
+      "start": 108050,
+      "end": 115330,
+      "speaker": "",
+      "text": "on the entire internet in every language, in every subject and as many different kinds of uh domains as we can."
+    },
+    {
+      "index": 11,
+      "start": 115330,
+      "end": 123910,
+      "speaker": "",
+      "text": "And what we find is that as we train our models on more data uh and we make our models bigger,"
+    },
+    {
+      "index": 12,
+      "start": 124210,
+      "end": 137970,
+      "speaker": "",
+      "text": "andwe transformed the quality of the data were able to um use ai to sort through all of the information we have find the very best and most important parts of that and then use that to improve the quality of our data."
+    },
+    {
+      "index": 13,
+      "start": 138320,
+      "end": 148130,
+      "speaker": "",
+      "text": "We find that all of this compute transforms into a stronger uh model that has a better understanding of the universe and everything in it and how they interact."
+    },
+    {
+      "index": 14,
+      "start": 148770,
+      "end": 160010,
+      "speaker": "",
+      "text": "The base model and the point of pre training is to establish the iq of our our artificial intelligence. This is where the foundation of capabilities um"
+    },
+    {
+      "index": 15,
+      "start": 160080,
+      "end": 171910,
+      "speaker": "",
+      "text": "come from the the world, understanding um the the model needs to draw from uh all of this information in order to reason and help people solve problems."
+    },
+    {
+      "index": 16,
+      "start": 171930,
+      "end": 187330,
+      "speaker": "",
+      "text": "so uh We find that as we continue to scale pre training uh both in the size of the data, the quality of the data, the size of the model, the quality of the optimization processes, all of these are different ways of transforming computation into raw intelligence."
+    },
+    {
+      "index": 17,
+      "start": 188250,
+      "end": 201310,
+      "speaker": "",
+      "text": "Now once we have a base model, uh we want to use it to solve problems, but we need to teach the model how to work with people and how to reason in ways that are useful. And we call that uh process post training."
+    },
+    {
+      "index": 18,
+      "start": 202040,
+      "end": 212390,
+      "speaker": "",
+      "text": "Post training is a fantastically diverse computational problem. We have uh a lot of uh environments where the model gets to interact"
+    },
+    {
+      "index": 19,
+      "start": 212460,
+      "end": 226840,
+      "speaker": "",
+      "text": "with uh things like coding uh compilers, um operating systems, maybe uh computer interfaces or tools of different kinds. um This is where the model learns how to apply its knowledge to solve problems."
+    },
+    {
+      "index": 20,
+      "start": 227050,
+      "end": 239690,
+      "speaker": "",
+      "text": "andBecause of that, uh we need uh really interesting systems for the systems that combine a lot of gp us for learning and an inference uh as the model is trying things out when doing inference"
+    },
+    {
+      "index": 21,
+      "start": 239770,
+      "end": 250570,
+      "speaker": "",
+      "text": "uh as well as cp us where the model is um uh experimenting and learning how its attempts problem solve actually come across in the real world."
+    },
+    {
+      "index": 22,
+      "start": 250830,
+      "end": 265830,
+      "speaker": "",
+      "text": "um The systems for this require uh amazing networking. uh you knowAll of these cp us and gp us in this complex system need to be brought together. and um uh soThis is a fantastic uh challenge for accelerated computing post training."
+    },
+    {
+      "index": 23,
+      "start": 265970,
+      "end": 281130,
+      "speaker": "",
+      "text": "andWe find as we continue to scale the compute that goes into post training models become dramatically more useful. um One of the uh uh things I was most inspired recently uh by, for example, was uh"
+    },
+    {
+      "index": 24,
+      "start": 281260,
+      "end": 296090,
+      "speaker": "",
+      "text": "uh glm uh 5.2 to 5.3 um when and some of you may have seen that um just really incredible uh leap in capabilities that came from uh you know really excellent uh post training."
+    },
+    {
+      "index": 25,
+      "start": 296410,
+      "end": 304990,
+      "speaker": "",
+      "text": "and uh soSo this is a good example, but there are many others of how we are finding ways as a community to transform compute into intelligence starring poing."
+    },
+    {
+      "index": 26,
+      "start": 305660,
+      "end": 314090,
+      "speaker": "",
+      "text": "Now, once the model has been created, uh ifif we in pre training and learned about the universe, post training and learned how to solve problems and use tools,"
+    },
+    {
+      "index": 27,
+      "start": 314230,
+      "end": 325850,
+      "speaker": "",
+      "text": "uh then we want to go deploy it. and um When we deploy the model, uh we find that it is also able to transform compute into useful problem, solving intelligence through reasoning."
+    },
+    {
+      "index": 28,
+      "start": 326230,
+      "end": 331450,
+      "speaker": "",
+      "text": "um This happens at test time. So when you ask the model how it solves the problem,"
+    },
+    {
+      "index": 29,
+      "start": 331660,
+      "end": 343050,
+      "speaker": "",
+      "text": "it needs to go think and the longer it has to think, and the more deeply it can reason, uh the more useful the model is in a way that's not too dissimilar to how you and I"
+    },
+    {
+      "index": 30,
+      "start": 343070,
+      "end": 350910,
+      "speaker": "",
+      "text": "uh used to solve our math tests when we were in school you know having having a little bit longer time uh to solve the the math problems."
+    },
+    {
+      "index": 31,
+      "start": 350910,
+      "end": 358930,
+      "speaker": "",
+      "text": "Actually, you knowwe could use that to get better results you know within limits, right? um uh you knowAfter a while you just kind of start to spend."
+    },
+    {
+      "index": 32,
+      "start": 359440,
+      "end": 367690,
+      "speaker": "",
+      "text": "um But uh this is yet another way that we're finding that uh compute can be transformed into intelligence this time during inferences."
+    },
+    {
+      "index": 33,
+      "start": 368870,
+      "end": 379610,
+      "speaker": "",
+      "text": "Finally, we have agents you know these days. Artificial intelligence is not just a thing that you ask questions to every once in a while. These days artificial intelligence is a fleet of agents"
+    },
+    {
+      "index": 34,
+      "start": 379630,
+      "end": 394070,
+      "speaker": "",
+      "text": "that work for each of us, day and night solving our most important problems. And each of us is becoming the ceo of our own company uh has all of these agents constantly working uh for us to solve problems."
+    },
+    {
+      "index": 35,
+      "start": 394330,
+      "end": 406930,
+      "speaker": "",
+      "text": "uh andThat's yet another dimension of how we transform compute into intelligence you know as the size of your agent team grows as those agents work. um you know uh Longer time for you, they can get more done."
+    },
+    {
+      "index": 36,
+      "start": 408080,
+      "end": 423090,
+      "speaker": "",
+      "text": "soWhen you think about this, um uh these are four different compounding scaling laws, each one of them is a different dimension of how we transform compute into intelligence. And each of them has profound implications for accelerated computing,"
+    },
+    {
+      "index": 37,
+      "start": 423110,
+      "end": 432090,
+      "speaker": "",
+      "text": "for the systems that we build for the software that we built for the way that ai is integrated uh into uh the solutions that businesses around the world need."
+    },
+    {
+      "index": 38,
+      "start": 433330,
+      "end": 442610,
+      "speaker": "",
+      "text": "andIt's true that compute is now intelligence you know with all of these uh scaling laws happening at the same time. There's so many different ways that we're transforming comp computer into intelligence."
+    },
+    {
+      "index": 39,
+      "start": 442610,
+      "end": 449330,
+      "speaker": "",
+      "text": "um Now, at the same time, we have limited compute as a planet."
+    },
+    {
+      "index": 40,
+      "start": 449510,
+      "end": 464520,
+      "speaker": "",
+      "text": "We are building compute at a rate that uh is completely unthinkable, um uh even just a few years ago you know back when I was um a graduate student, um in 2008, I published a paper on on training and"
+    },
+    {
+      "index": 41,
+      "start": 464540,
+      "end": 476070,
+      "speaker": "",
+      "text": "I models on the gpu and back then in 2008, almost 20 years ago, uh people thought that was kind of crazy. They're like we don't really need what what are we going do with bigger models? What are we gonna do with bigger data sets?"
+    },
+    {
+      "index": 42,
+      "start": 476170,
+      "end": 491180,
+      "speaker": "",
+      "text": "These days, um you knowthe world has changed, right? um Everyone. uh It has started to deeply understand the importance of compute and we're building compute at a scale that's um uh unprecedented and and just absolutely enormous."
+    },
+    {
+      "index": 43,
+      "start": 491590,
+      "end": 499070,
+      "speaker": "",
+      "text": "um and uh That's the reason why ai is growing so fast, why we're able to build and deploy ai and in better ways."
+    },
+    {
+      "index": 44,
+      "start": 499070,
+      "end": 506460,
+      "speaker": "",
+      "text": "And yet we know that we are running at the limit, you knowthere's different kinds of limits they could be um economic."
+    },
+    {
+      "index": 45,
+      "start": 506480,
+      "end": 520050,
+      "speaker": "",
+      "text": "you know how can you know howHow many uh billions of dollars of of um data centers can we afford to build? um They could be political. you knowSometimes people don't want to have lots of data centers uh in their neighborhood."
+    },
+    {
+      "index": 46,
+      "start": 520410,
+      "end": 535540,
+      "speaker": "",
+      "text": "They could be um uh uh physical as in like you know power constraints or land constraints. you knowIf uh we're we're talking about building compute at a scale that uh you know these sorts of constraints really start to to matter,"
+    },
+    {
+      "index": 47,
+      "start": 535940,
+      "end": 547310,
+      "speaker": "",
+      "text": "um all of these constraints uh then imply if compute is intelligence, but we have a limit on the amount of compute. It implies that efficiency is also intelligence."
+    },
+    {
+      "index": 48,
+      "start": 548880,
+      "end": 553700,
+      "speaker": "",
+      "text": "and uh This is the biggest computational challenge of our time."
+    },
+    {
+      "index": 49,
+      "start": 553700,
+      "end": 559170,
+      "speaker": "",
+      "text": "um It's also something that invidia just deeply loves to work with"
+    },
+    {
+      "index": 50,
+      "start": 559360,
+      "end": 573130,
+      "speaker": "",
+      "text": "invi as a company as as being you was just explaining uh is an accelerated computing company. We love to uh find ways of rethinking the entire compute stack um from transistors to"
+    },
+    {
+      "index": 51,
+      "start": 573280,
+      "end": 584130,
+      "speaker": "",
+      "text": "uh libraries. Compilers frame works um all of the different chips in the middle applications, algorithms. All of those can be refined in order to provide transformational"
+    },
+    {
+      "index": 52,
+      "start": 585080,
+      "end": 587960,
+      "speaker": "",
+      "text": "uh acceleration, transformational efficiency, benefits."
+    },
+    {
+      "index": 53,
+      "start": 587960,
+      "end": 592250,
+      "speaker": "",
+      "text": "And in today's environment, that means transformational intelligence"
+    },
+    {
+      "index": 54,
+      "start": 592680,
+      "end": 595220,
+      "speaker": "",
+      "text": "efficiency have now become intelligence"
+    },
+    {
+      "index": 55,
+      "start": 595670,
+      "end": 609090,
+      "speaker": "",
+      "text": "and so for all of us that are involved in building artificial intelligence, um and especially those of us in the open community that that are building open technologies for artificial intelligence efficiency is the is the foundation."
+    },
+    {
+      "index": 56,
+      "start": 609190,
+      "end": 617350,
+      "speaker": "",
+      "text": "Compute efficiency is the foundation of intelligence, the more efficient we can make our systems for building and deploying ai, the more intelligence we can have."
+    },
+    {
+      "index": 57,
+      "start": 619430,
+      "end": 632650,
+      "speaker": "",
+      "text": "It follows from this that ai is not a one size fits all problem. uh We need systems of models of different sizes and and uh capacities. And mean you uh talked about that, I think really really nicely."
+    },
+    {
+      "index": 58,
+      "start": 632670,
+      "end": 644970,
+      "speaker": "",
+      "text": "Just a moment ago we need specialized ai um specialized ai that that can um you know be really excellent at the things that matter most that is also a form of efficiency."
+    },
+    {
+      "index": 59,
+      "start": 645300,
+      "end": 660310,
+      "speaker": "",
+      "text": "um and uh andAnd that I think implies we need to open technologies for ai because in order to um kind create those systems in order to specialize uh uh those models, uh people need the ability to innovate. They need"
+    },
+    {
+      "index": 60,
+      "start": 660330,
+      "end": 673430,
+      "speaker": "",
+      "text": "to be able to uh uh solve problems um you know under their own steam, uh using the special perspectives of data that they have um uh to to get dramatically better efficiency for the problems that matter most to them."
+    },
+    {
+      "index": 61,
+      "start": 675310,
+      "end": 688090,
+      "speaker": "",
+      "text": "In order to support that that in video, we have a project called nemotron um where we are building open models uh along with open data and of course the ways to go with those models. Um"
+    },
+    {
+      "index": 62,
+      "start": 688700,
+      "end": 701650,
+      "speaker": "",
+      "text": "This is a little bit different from uh many of the other projects around the industry that provide open weights uh for their models. uh We are actually going beyond that. We're providing not just the weights, but also the data sets, the environments,"
+    },
+    {
+      "index": 63,
+      "start": 701760,
+      "end": 709860,
+      "speaker": "",
+      "text": "the technologies that we use to build these models, um the software that we used to build it um uh as as well as the recipes for the research."
+    },
+    {
+      "index": 64,
+      "start": 710590,
+      "end": 726130,
+      "speaker": "",
+      "text": "um Umitron uh is built this way because we're trying to enable the community to build better ai because we know that if we can make the community more efficient at building ai then that can be more intelligence for the entire community."
+    },
+    {
+      "index": 65,
+      "start": 726330,
+      "end": 732530,
+      "speaker": "",
+      "text": "you know um A lot of the work that goes into building ai is um"
+    },
+    {
+      "index": 66,
+      "start": 732680,
+      "end": 743070,
+      "speaker": "",
+      "text": "uh fairly straightforward work that can be shared, um work that it takes a lot of compute a lot of uh smart people to you know improve our data sets and so forth."
+    },
+    {
+      "index": 67,
+      "start": 743100,
+      "end": 754010,
+      "speaker": "",
+      "text": "But if we can put that out there, if we can share that with each other, it can increase the speed at which the entire community moves and can create increase the efficiency at which we all build ai and that's a videos goal."
+    },
+    {
+      "index": 68,
+      "start": 754030,
+      "end": 764870,
+      "speaker": "",
+      "text": "Why are we building the neutron in this way that that is as open as it is is? Because we know that the more efficient we can make the community building ai the more intelligence we can all have"
+    },
+    {
+      "index": 69,
+      "start": 764890,
+      "end": 771370,
+      "speaker": "",
+      "text": "uh to work with which increases in videos opportunity. um soThis is aligned with our business goal."
+    },
+    {
+      "index": 70,
+      "start": 774130,
+      "end": 785960,
+      "speaker": "",
+      "text": "um Another way of thinking about what I just said is that etron has two jobs. uh The first job is to help in videodia build the systems of the future, help nvidia understand what is accelerating computing need"
+    },
+    {
+      "index": 71,
+      "start": 786130,
+      "end": 794500,
+      "speaker": "",
+      "text": "more artificial intelligence. And then the second is to make the ecosystem more efficient to accelerate the ecosystem. So i'll talk about both of those for a second."
+    },
+    {
+      "index": 72,
+      "start": 795950,
+      "end": 808010,
+      "speaker": "",
+      "text": "um you knowThe first job for you neutron is really about in video. uh it'sIt's about how do we think about the end to end problem of accelerating artificial intelligence? Let's think of a few examples."
+    },
+    {
+      "index": 73,
+      "start": 808120,
+      "end": 820240,
+      "speaker": "",
+      "text": "O okay so with blackwell, we built a networking system called ndl 72, which allows for 72 blackwell gp us to read and write each other's memory at full speed and very low latency."
+    },
+    {
+      "index": 74,
+      "start": 820340,
+      "end": 831530,
+      "speaker": "",
+      "text": "Now why did we make this big bet to build blackwell with nbl 72? This is a very challenging technology to build the software for it is challenging. The hardware is challenging."
+    },
+    {
+      "index": 75,
+      "start": 831650,
+      "end": 837290,
+      "speaker": "",
+      "text": "theThe reason why we did that was actually because of the community because of developers like you"
+    },
+    {
+      "index": 76,
+      "start": 837410,
+      "end": 848850,
+      "speaker": "",
+      "text": "who we interactted with. And because of nemotrons own internal research, we understood that uh mixture of experts models were going to transform the way that ai was built and deployed."
+    },
+    {
+      "index": 77,
+      "start": 848960,
+      "end": 855930,
+      "speaker": "",
+      "text": "andWe thought about what kind of system is necessary for uh building and deploying mixture, experts models,"
+    },
+    {
+      "index": 78,
+      "start": 856360,
+      "end": 870410,
+      "speaker": "",
+      "text": "um and uh because we went through that process and we developed in bl 72, um it's been much easier and much more efficient uh for the world uh to build and deploy uh the the very best models of today."
+    },
+    {
+      "index": 79,
+      "start": 871770,
+      "end": 885760,
+      "speaker": "",
+      "text": "uh Numericism and sparsity, a are also uh really important for us, you knowa lot of the gains in efficiency, and therefore, the gains in intelligence that the community has have come from being smarter about how we do arithmetic."
+    },
+    {
+      "index": 80,
+      "start": 885910,
+      "end": 893450,
+      "speaker": "",
+      "text": "um you knowBack when I started doing deep learning uh you know20 years ago, we mostly did everything in fp 32,"
+    },
+    {
+      "index": 81,
+      "start": 893640,
+      "end": 900000,
+      "speaker": "",
+      "text": "32 bit floating point formats. These days, most training happens in 8 bit arithmetic, so that's 4 times."
+    }
+  ],
+  "cues": [
+    {
+      "index": 1,
+      "start": 1600,
+      "end": 3910,
+      "speaker": "",
+      "text": "I'm so honored to be here today"
+    },
+    {
+      "index": 2,
+      "start": 3920,
+      "end": 6430,
+      "speaker": "",
+      "text": "uh in china for this amazing"
+    },
+    {
+      "index": 3,
+      "start": 6440,
+      "end": 8430,
+      "speaker": "",
+      "text": "developer day to talk about uh"
+    },
+    {
+      "index": 4,
+      "start": 8440,
+      "end": 9750,
+      "speaker": "",
+      "text": "the work that we're all doing"
+    },
+    {
+      "index": 5,
+      "start": 9760,
+      "end": 12950,
+      "speaker": "",
+      "text": "together as a community um in"
+    },
+    {
+      "index": 6,
+      "start": 12960,
+      "end": 13830,
+      "speaker": "",
+      "text": "open source,"
+    },
+    {
+      "index": 7,
+      "start": 13840,
+      "end": 15350,
+      "speaker": "",
+      "text": "artificial intelligence."
+    },
+    {
+      "index": 8,
+      "start": 15730,
+      "end": 17760,
+      "speaker": "",
+      "text": "and um Ii wanted to say i've"
+    },
+    {
+      "index": 9,
+      "start": 17770,
+      "end": 19280,
+      "speaker": "",
+      "text": "always had a special"
+    },
+    {
+      "index": 10,
+      "start": 19290,
+      "end": 21920,
+      "speaker": "",
+      "text": "appreciation for the work that"
+    },
+    {
+      "index": 11,
+      "start": 21930,
+      "end": 22800,
+      "speaker": "",
+      "text": "is happening,"
+    },
+    {
+      "index": 12,
+      "start": 22810,
+      "end": 24960,
+      "speaker": "",
+      "text": "especially here in china."
+    },
+    {
+      "index": 13,
+      "start": 24970,
+      "end": 27320,
+      "speaker": "",
+      "text": "I have the uh opportunity uh"
+    },
+    {
+      "index": 14,
+      "start": 27330,
+      "end": 30160,
+      "speaker": "",
+      "text": "many years ago to work at baidu"
+    },
+    {
+      "index": 15,
+      "start": 30170,
+      "end": 30680,
+      "speaker": "",
+      "text": "and"
+    },
+    {
+      "index": 16,
+      "start": 30760,
+      "end": 33070,
+      "speaker": "",
+      "text": "um the innovation,"
+    },
+    {
+      "index": 17,
+      "start": 33080,
+      "end": 33990,
+      "speaker": "",
+      "text": "the hard work,"
+    },
+    {
+      "index": 18,
+      "start": 34000,
+      "end": 35350,
+      "speaker": "",
+      "text": "the creativity,"
+    },
+    {
+      "index": 19,
+      "start": 35360,
+      "end": 36790,
+      "speaker": "",
+      "text": "the amazing technology that's"
+    },
+    {
+      "index": 20,
+      "start": 36800,
+      "end": 38270,
+      "speaker": "",
+      "text": "being built here in china,"
+    },
+    {
+      "index": 21,
+      "start": 38280,
+      "end": 40390,
+      "speaker": "",
+      "text": "I think, is an inspiration um to"
+    },
+    {
+      "index": 22,
+      "start": 40400,
+      "end": 41830,
+      "speaker": "",
+      "text": "everyone around the world."
+    },
+    {
+      "index": 23,
+      "start": 41840,
+      "end": 44030,
+      "speaker": "",
+      "text": "And so it's a great honor for me"
+    },
+    {
+      "index": 24,
+      "start": 44040,
+      "end": 45550,
+      "speaker": "",
+      "text": "uh to be here uh to talk"
+    },
+    {
+      "index": 25,
+      "start": 45650,
+      "end": 47590,
+      "speaker": "",
+      "text": "talk about what we're doing uh"
+    },
+    {
+      "index": 26,
+      "start": 47600,
+      "end": 49570,
+      "speaker": "",
+      "text": "together with you to try to"
+    },
+    {
+      "index": 27,
+      "start": 49580,
+      "end": 51220,
+      "speaker": "",
+      "text": "move open source technology for"
+    },
+    {
+      "index": 28,
+      "start": 51230,
+      "end": 51880,
+      "speaker": "",
+      "text": "ai forward."
+    },
+    {
+      "index": 29,
+      "start": 54840,
+      "end": 56920,
+      "speaker": "",
+      "text": "Ai is the biggest computational"
+    },
+    {
+      "index": 30,
+      "start": 56930,
+      "end": 58740,
+      "speaker": "",
+      "text": "challenge of our time."
+    },
+    {
+      "index": 31,
+      "start": 59020,
+      "end": 61520,
+      "speaker": "",
+      "text": "and uh What we're doing is"
+    },
+    {
+      "index": 32,
+      "start": 61530,
+      "end": 63920,
+      "speaker": "",
+      "text": "transforming computation into"
+    },
+    {
+      "index": 33,
+      "start": 63930,
+      "end": 65680,
+      "speaker": "",
+      "text": "useful intelligence that helps"
+    },
+    {
+      "index": 34,
+      "start": 65690,
+      "end": 67720,
+      "speaker": "",
+      "text": "people solve problems in new"
+    },
+    {
+      "index": 35,
+      "start": 67730,
+      "end": 68480,
+      "speaker": "",
+      "text": "ways."
+    },
+    {
+      "index": 36,
+      "start": 69450,
+      "end": 70800,
+      "speaker": "",
+      "text": "One way to think about the"
+    },
+    {
+      "index": 37,
+      "start": 70810,
+      "end": 72320,
+      "speaker": "",
+      "text": "process of transforming"
+    },
+    {
+      "index": 38,
+      "start": 72330,
+      "end": 74160,
+      "speaker": "",
+      "text": "computation into intelligence"
+    },
+    {
+      "index": 39,
+      "start": 74170,
+      "end": 75960,
+      "speaker": "",
+      "text": "is through what we call scaling"
+    },
+    {
+      "index": 40,
+      "start": 75970,
+      "end": 79520,
+      "speaker": "",
+      "text": "laws. And uh these days I see"
+    },
+    {
+      "index": 41,
+      "start": 79530,
+      "end": 80320,
+      "speaker": "",
+      "text": "four"
+    },
+    {
+      "index": 42,
+      "start": 80470,
+      "end": 82790,
+      "speaker": "",
+      "text": "uh ongoing scaling laws that"
+    },
+    {
+      "index": 43,
+      "start": 82800,
+      "end": 85670,
+      "speaker": "",
+      "text": "are driving up uh our ability"
+    },
+    {
+      "index": 44,
+      "start": 85680,
+      "end": 87590,
+      "speaker": "",
+      "text": "to transform compute into"
+    },
+    {
+      "index": 45,
+      "start": 87600,
+      "end": 88070,
+      "speaker": "",
+      "text": "intelligence."
+    },
+    {
+      "index": 46,
+      "start": 88080,
+      "end": 90660,
+      "speaker": "",
+      "text": "So let's talk about that and"
+    },
+    {
+      "index": 47,
+      "start": 90670,
+      "end": 92140,
+      "speaker": "",
+      "text": "what their implications are."
+    },
+    {
+      "index": 48,
+      "start": 93030,
+      "end": 94540,
+      "speaker": "",
+      "text": "The first has to do with pre"
+    },
+    {
+      "index": 49,
+      "start": 94550,
+      "end": 96980,
+      "speaker": "",
+      "text": "training, and this is where um"
+    },
+    {
+      "index": 50,
+      "start": 96990,
+      "end": 98460,
+      "speaker": "",
+      "text": "modern artificial intelligence"
+    },
+    {
+      "index": 51,
+      "start": 98470,
+      "end": 100780,
+      "speaker": "",
+      "text": "started. um We're going to take"
+    },
+    {
+      "index": 52,
+      "start": 100790,
+      "end": 103020,
+      "speaker": "",
+      "text": "a model and we're going to"
+    },
+    {
+      "index": 53,
+      "start": 103030,
+      "end": 104700,
+      "speaker": "",
+      "text": "train it on all of the"
+    },
+    {
+      "index": 54,
+      "start": 104710,
+      "end": 106900,
+      "speaker": "",
+      "text": "information that humanity has"
+    },
+    {
+      "index": 55,
+      "start": 106910,
+      "end": 107980,
+      "speaker": "",
+      "text": "been able to produce"
+    },
+    {
+      "index": 56,
+      "start": 108090,
+      "end": 110200,
+      "speaker": "",
+      "text": "on the entire internet in every"
+    },
+    {
+      "index": 57,
+      "start": 110210,
+      "end": 112360,
+      "speaker": "",
+      "text": "language, in every subject and"
+    },
+    {
+      "index": 58,
+      "start": 112370,
+      "end": 114080,
+      "speaker": "",
+      "text": "as many different kinds of uh"
+    },
+    {
+      "index": 59,
+      "start": 114090,
+      "end": 115330,
+      "speaker": "",
+      "text": "domains as we can."
+    },
+    {
+      "index": 60,
+      "start": 116000,
+      "end": 118480,
+      "speaker": "",
+      "text": "And what we find is that as we"
+    },
+    {
+      "index": 61,
+      "start": 118490,
+      "end": 121070,
+      "speaker": "",
+      "text": "train our models on more data"
+    },
+    {
+      "index": 62,
+      "start": 121450,
+      "end": 122870,
+      "speaker": "",
+      "text": "uh and we make our models"
+    },
+    {
+      "index": 63,
+      "start": 122880,
+      "end": 123870,
+      "speaker": "",
+      "text": "bigger,"
+    },
+    {
+      "index": 64,
+      "start": 124250,
+      "end": 126300,
+      "speaker": "",
+      "text": "andwe transformed the quality of"
+    },
+    {
+      "index": 65,
+      "start": 126310,
+      "end": 128860,
+      "speaker": "",
+      "text": "the data were able to um use ai"
+    },
+    {
+      "index": 66,
+      "start": 128870,
+      "end": 130740,
+      "speaker": "",
+      "text": "to sort through all of the"
+    },
+    {
+      "index": 67,
+      "start": 130750,
+      "end": 132500,
+      "speaker": "",
+      "text": "information we have find the"
+    },
+    {
+      "index": 68,
+      "start": 132510,
+      "end": 133860,
+      "speaker": "",
+      "text": "very best and most important"
+    },
+    {
+      "index": 69,
+      "start": 133870,
+      "end": 135970,
+      "speaker": "",
+      "text": "parts of that and then use that"
+    },
+    {
+      "index": 70,
+      "start": 135980,
+      "end": 137250,
+      "speaker": "",
+      "text": "to improve the quality of our"
+    },
+    {
+      "index": 71,
+      "start": 137260,
+      "end": 137930,
+      "speaker": "",
+      "text": "data."
+    },
+    {
+      "index": 72,
+      "start": 138330,
+      "end": 140360,
+      "speaker": "",
+      "text": "We find that all of this compute"
+    },
+    {
+      "index": 73,
+      "start": 140370,
+      "end": 142880,
+      "speaker": "",
+      "text": "transforms into a stronger uh"
+    },
+    {
+      "index": 74,
+      "start": 142890,
+      "end": 144080,
+      "speaker": "",
+      "text": "model that has a better"
+    },
+    {
+      "index": 75,
+      "start": 144090,
+      "end": 145880,
+      "speaker": "",
+      "text": "understanding of the universe"
+    },
+    {
+      "index": 76,
+      "start": 145890,
+      "end": 147240,
+      "speaker": "",
+      "text": "and everything in it and how"
+    },
+    {
+      "index": 77,
+      "start": 147250,
+      "end": 148080,
+      "speaker": "",
+      "text": "they interact."
+    },
+    {
+      "index": 78,
+      "start": 148780,
+      "end": 150730,
+      "speaker": "",
+      "text": "The base model and the point of"
+    },
+    {
+      "index": 79,
+      "start": 150740,
+      "end": 152730,
+      "speaker": "",
+      "text": "pre training is to establish"
+    },
+    {
+      "index": 80,
+      "start": 152740,
+      "end": 156330,
+      "speaker": "",
+      "text": "the iq of our our artificial"
+    },
+    {
+      "index": 81,
+      "start": 156340,
+      "end": 157130,
+      "speaker": "",
+      "text": "intelligence."
+    },
+    {
+      "index": 82,
+      "start": 157140,
+      "end": 158610,
+      "speaker": "",
+      "text": "This is where the foundation of"
+    },
+    {
+      "index": 83,
+      "start": 158620,
+      "end": 159970,
+      "speaker": "",
+      "text": "capabilities um"
+    },
+    {
+      "index": 84,
+      "start": 160090,
+      "end": 161880,
+      "speaker": "",
+      "text": "come from the the world,"
+    },
+    {
+      "index": 85,
+      "start": 161890,
+      "end": 164720,
+      "speaker": "",
+      "text": "understanding um the the model"
+    },
+    {
+      "index": 86,
+      "start": 164730,
+      "end": 167120,
+      "speaker": "",
+      "text": "needs to draw from uh all of"
+    },
+    {
+      "index": 87,
+      "start": 167130,
+      "end": 169120,
+      "speaker": "",
+      "text": "this information in order to"
+    },
+    {
+      "index": 88,
+      "start": 169130,
+      "end": 170920,
+      "speaker": "",
+      "text": "reason and help people solve"
+    },
+    {
+      "index": 89,
+      "start": 170930,
+      "end": 171840,
+      "speaker": "",
+      "text": "problems."
+    },
+    {
+      "index": 90,
+      "start": 171970,
+      "end": 174100,
+      "speaker": "",
+      "text": "so uh We find that as we"
+    },
+    {
+      "index": 91,
+      "start": 174110,
+      "end": 175650,
+      "speaker": "",
+      "text": "continue to scale pre training"
+    },
+    {
+      "index": 92,
+      "start": 175660,
+      "end": 177820,
+      "speaker": "",
+      "text": "uh both in the size of the"
+    },
+    {
+      "index": 93,
+      "start": 177830,
+      "end": 179680,
+      "speaker": "",
+      "text": "data, the quality of the data,"
+    },
+    {
+      "index": 94,
+      "start": 179690,
+      "end": 181230,
+      "speaker": "",
+      "text": "the size of the model,"
+    },
+    {
+      "index": 95,
+      "start": 181240,
+      "end": 182780,
+      "speaker": "",
+      "text": "the quality of the optimization"
+    },
+    {
+      "index": 96,
+      "start": 182790,
+      "end": 183090,
+      "speaker": "",
+      "text": "processes,"
+    },
+    {
+      "index": 97,
+      "start": 183100,
+      "end": 184950,
+      "speaker": "",
+      "text": "all of these are different ways"
+    },
+    {
+      "index": 98,
+      "start": 184960,
+      "end": 185880,
+      "speaker": "",
+      "text": "of transforming computation"
+    },
+    {
+      "index": 99,
+      "start": 185890,
+      "end": 187280,
+      "speaker": "",
+      "text": "into raw intelligence."
+    },
+    {
+      "index": 100,
+      "start": 188260,
+      "end": 190210,
+      "speaker": "",
+      "text": "Now once we have a base model,"
+    },
+    {
+      "index": 101,
+      "start": 190220,
+      "end": 191810,
+      "speaker": "",
+      "text": "uh we want to use it to solve"
+    },
+    {
+      "index": 102,
+      "start": 191820,
+      "end": 193850,
+      "speaker": "",
+      "text": "problems, but we need to teach"
+    },
+    {
+      "index": 103,
+      "start": 193860,
+      "end": 195090,
+      "speaker": "",
+      "text": "the model how to work with"
+    },
+    {
+      "index": 104,
+      "start": 195100,
+      "end": 196890,
+      "speaker": "",
+      "text": "people and how to reason in"
+    },
+    {
+      "index": 105,
+      "start": 196900,
+      "end": 198170,
+      "speaker": "",
+      "text": "ways that are useful."
+    },
+    {
+      "index": 106,
+      "start": 198180,
+      "end": 200410,
+      "speaker": "",
+      "text": "And we call that uh process post"
+    },
+    {
+      "index": 107,
+      "start": 200420,
+      "end": 201250,
+      "speaker": "",
+      "text": "training."
+    },
+    {
+      "index": 108,
+      "start": 202050,
+      "end": 203840,
+      "speaker": "",
+      "text": "Post training is a fantastically"
+    },
+    {
+      "index": 109,
+      "start": 203850,
+      "end": 206440,
+      "speaker": "",
+      "text": "diverse computational problem."
+    },
+    {
+      "index": 110,
+      "start": 206450,
+      "end": 209080,
+      "speaker": "",
+      "text": "We have uh a lot of uh"
+    },
+    {
+      "index": 111,
+      "start": 209090,
+      "end": 211040,
+      "speaker": "",
+      "text": "environments where the model"
+    },
+    {
+      "index": 112,
+      "start": 211050,
+      "end": 212320,
+      "speaker": "",
+      "text": "gets to interact"
+    },
+    {
+      "index": 113,
+      "start": 212470,
+      "end": 214980,
+      "speaker": "",
+      "text": "with uh things like coding uh"
+    },
+    {
+      "index": 114,
+      "start": 214990,
+      "end": 216100,
+      "speaker": "",
+      "text": "compilers,"
+    },
+    {
+      "index": 115,
+      "start": 216110,
+      "end": 217820,
+      "speaker": "",
+      "text": "um operating systems,"
+    },
+    {
+      "index": 116,
+      "start": 217830,
+      "end": 220540,
+      "speaker": "",
+      "text": "maybe uh computer interfaces or"
+    },
+    {
+      "index": 117,
+      "start": 220550,
+      "end": 222540,
+      "speaker": "",
+      "text": "tools of different kinds."
+    },
+    {
+      "index": 118,
+      "start": 222550,
+      "end": 223740,
+      "speaker": "",
+      "text": "um This is where the model"
+    },
+    {
+      "index": 119,
+      "start": 223750,
+      "end": 225260,
+      "speaker": "",
+      "text": "learns how to apply its"
+    },
+    {
+      "index": 120,
+      "start": 225270,
+      "end": 226780,
+      "speaker": "",
+      "text": "knowledge to solve problems."
+    },
+    {
+      "index": 121,
+      "start": 227060,
+      "end": 228410,
+      "speaker": "",
+      "text": "andBecause of that,"
+    },
+    {
+      "index": 122,
+      "start": 228420,
+      "end": 230650,
+      "speaker": "",
+      "text": "uh we need uh really interesting"
+    },
+    {
+      "index": 123,
+      "start": 230660,
+      "end": 232090,
+      "speaker": "",
+      "text": "systems for the systems that"
+    },
+    {
+      "index": 124,
+      "start": 232100,
+      "end": 234410,
+      "speaker": "",
+      "text": "combine a lot of gp us for"
+    },
+    {
+      "index": 125,
+      "start": 234420,
+      "end": 237130,
+      "speaker": "",
+      "text": "learning and an inference uh as"
+    },
+    {
+      "index": 126,
+      "start": 237140,
+      "end": 238530,
+      "speaker": "",
+      "text": "the model is trying things out"
+    },
+    {
+      "index": 127,
+      "start": 238540,
+      "end": 239650,
+      "speaker": "",
+      "text": "when doing inference"
+    },
+    {
+      "index": 128,
+      "start": 239810,
+      "end": 242140,
+      "speaker": "",
+      "text": "uh as well as cp us where the"
+    },
+    {
+      "index": 129,
+      "start": 242150,
+      "end": 244780,
+      "speaker": "",
+      "text": "model is um uh experimenting"
+    },
+    {
+      "index": 130,
+      "start": 244790,
+      "end": 246980,
+      "speaker": "",
+      "text": "and learning how its attempts"
+    },
+    {
+      "index": 131,
+      "start": 246990,
+      "end": 248660,
+      "speaker": "",
+      "text": "problem solve actually come"
+    },
+    {
+      "index": 132,
+      "start": 248670,
+      "end": 250500,
+      "speaker": "",
+      "text": "across in the real world."
+    },
+    {
+      "index": 133,
+      "start": 250870,
+      "end": 253160,
+      "speaker": "",
+      "text": "um The systems for this require"
+    },
+    {
+      "index": 134,
+      "start": 253170,
+      "end": 254600,
+      "speaker": "",
+      "text": "uh amazing networking."
+    },
+    {
+      "index": 135,
+      "start": 254610,
+      "end": 256240,
+      "speaker": "",
+      "text": "uh you knowAll of these cp us"
+    },
+    {
+      "index": 136,
+      "start": 256250,
+      "end": 257600,
+      "speaker": "",
+      "text": "and gp us in this complex"
+    },
+    {
+      "index": 137,
+      "start": 257610,
+      "end": 258600,
+      "speaker": "",
+      "text": "system need to be brought"
+    },
+    {
+      "index": 138,
+      "start": 258610,
+      "end": 261310,
+      "speaker": "",
+      "text": "together. and um uh soThis is a"
+    },
+    {
+      "index": 139,
+      "start": 261320,
+      "end": 263390,
+      "speaker": "",
+      "text": "fantastic uh challenge for"
+    },
+    {
+      "index": 140,
+      "start": 263400,
+      "end": 264630,
+      "speaker": "",
+      "text": "accelerated computing post"
+    },
+    {
+      "index": 141,
+      "start": 264640,
+      "end": 265790,
+      "speaker": "",
+      "text": "training."
+    },
+    {
+      "index": 142,
+      "start": 266010,
+      "end": 268420,
+      "speaker": "",
+      "text": "andWe find as we continue to"
+    },
+    {
+      "index": 143,
+      "start": 268430,
+      "end": 270220,
+      "speaker": "",
+      "text": "scale the compute that goes"
+    },
+    {
+      "index": 144,
+      "start": 270230,
+      "end": 271660,
+      "speaker": "",
+      "text": "into post training models"
+    },
+    {
+      "index": 145,
+      "start": 271670,
+      "end": 272740,
+      "speaker": "",
+      "text": "become dramatically more"
+    },
+    {
+      "index": 146,
+      "start": 272750,
+      "end": 276450,
+      "speaker": "",
+      "text": "useful. um One of the uh uh"
+    },
+    {
+      "index": 147,
+      "start": 276460,
+      "end": 277650,
+      "speaker": "",
+      "text": "things I was most inspired"
+    },
+    {
+      "index": 148,
+      "start": 277660,
+      "end": 279450,
+      "speaker": "",
+      "text": "recently uh by,"
+    },
+    {
+      "index": 149,
+      "start": 279460,
+      "end": 280010,
+      "speaker": "",
+      "text": "for example,"
+    },
+    {
+      "index": 150,
+      "start": 280020,
+      "end": 281050,
+      "speaker": "",
+      "text": "was uh"
+    },
+    {
+      "index": 151,
+      "start": 281270,
+      "end": 283660,
+      "speaker": "",
+      "text": "uh glm uh 5."
+    },
+    {
+      "index": 152,
+      "start": 283670,
+      "end": 286980,
+      "speaker": "",
+      "text": "2 to 5.3 um when and some of you"
+    },
+    {
+      "index": 153,
+      "start": 286990,
+      "end": 288740,
+      "speaker": "",
+      "text": "may have seen that um just"
+    },
+    {
+      "index": 154,
+      "start": 288750,
+      "end": 290980,
+      "speaker": "",
+      "text": "really incredible uh leap in"
+    },
+    {
+      "index": 155,
+      "start": 290990,
+      "end": 293540,
+      "speaker": "",
+      "text": "capabilities that came from uh"
+    },
+    {
+      "index": 156,
+      "start": 293550,
+      "end": 295380,
+      "speaker": "",
+      "text": "you know really excellent uh"
+    },
+    {
+      "index": 157,
+      "start": 295390,
+      "end": 296060,
+      "speaker": "",
+      "text": "post training."
+    },
+    {
+      "index": 158,
+      "start": 296420,
+      "end": 298130,
+      "speaker": "",
+      "text": "and uh soSo this is a good"
+    },
+    {
+      "index": 159,
+      "start": 298140,
+      "end": 299090,
+      "speaker": "",
+      "text": "example, but there are many"
+    },
+    {
+      "index": 160,
+      "start": 299100,
+      "end": 300850,
+      "speaker": "",
+      "text": "others of how we are finding"
+    },
+    {
+      "index": 161,
+      "start": 300860,
+      "end": 301930,
+      "speaker": "",
+      "text": "ways as a community to"
+    },
+    {
+      "index": 162,
+      "start": 301940,
+      "end": 303530,
+      "speaker": "",
+      "text": "transform compute into"
+    },
+    {
+      "index": 163,
+      "start": 303540,
+      "end": 304570,
+      "speaker": "",
+      "text": "intelligence starring poing."
+    },
+    {
+      "index": 164,
+      "start": 305670,
+      "end": 307260,
+      "speaker": "",
+      "text": "Now, once the model has been"
+    },
+    {
+      "index": 165,
+      "start": 307270,
+      "end": 309540,
+      "speaker": "",
+      "text": "created, uh ifif we in pre"
+    },
+    {
+      "index": 166,
+      "start": 309550,
+      "end": 310500,
+      "speaker": "",
+      "text": "training and learned about the"
+    },
+    {
+      "index": 167,
+      "start": 310510,
+      "end": 311980,
+      "speaker": "",
+      "text": "universe, post training and"
+    },
+    {
+      "index": 168,
+      "start": 311990,
+      "end": 313060,
+      "speaker": "",
+      "text": "learned how to solve problems"
+    },
+    {
+      "index": 169,
+      "start": 313070,
+      "end": 314060,
+      "speaker": "",
+      "text": "and use tools,"
+    },
+    {
+      "index": 170,
+      "start": 314240,
+      "end": 315830,
+      "speaker": "",
+      "text": "uh then we want to go deploy"
+    },
+    {
+      "index": 171,
+      "start": 315840,
+      "end": 317950,
+      "speaker": "",
+      "text": "it. and um When we deploy the"
+    },
+    {
+      "index": 172,
+      "start": 317960,
+      "end": 320310,
+      "speaker": "",
+      "text": "model, uh we find that it is"
+    },
+    {
+      "index": 173,
+      "start": 320320,
+      "end": 322270,
+      "speaker": "",
+      "text": "also able to transform compute"
+    },
+    {
+      "index": 174,
+      "start": 322280,
+      "end": 323470,
+      "speaker": "",
+      "text": "into useful problem,"
+    },
+    {
+      "index": 175,
+      "start": 323480,
+      "end": 325070,
+      "speaker": "",
+      "text": "solving intelligence through"
+    },
+    {
+      "index": 176,
+      "start": 325080,
+      "end": 325830,
+      "speaker": "",
+      "text": "reasoning."
+    },
+    {
+      "index": 177,
+      "start": 326240,
+      "end": 327910,
+      "speaker": "",
+      "text": "um This happens at test time."
+    },
+    {
+      "index": 178,
+      "start": 327920,
+      "end": 330230,
+      "speaker": "",
+      "text": "So when you ask the model how it"
+    },
+    {
+      "index": 179,
+      "start": 330240,
+      "end": 331430,
+      "speaker": "",
+      "text": "solves the problem,"
+    },
+    {
+      "index": 180,
+      "start": 331670,
+      "end": 333860,
+      "speaker": "",
+      "text": "it needs to go think and the"
+    },
+    {
+      "index": 181,
+      "start": 333870,
+      "end": 335140,
+      "speaker": "",
+      "text": "longer it has to think,"
+    },
+    {
+      "index": 182,
+      "start": 335150,
+      "end": 336500,
+      "speaker": "",
+      "text": "and the more deeply it can"
+    },
+    {
+      "index": 183,
+      "start": 336510,
+      "end": 339020,
+      "speaker": "",
+      "text": "reason, uh the more useful the"
+    },
+    {
+      "index": 184,
+      "start": 339030,
+      "end": 340940,
+      "speaker": "",
+      "text": "model is in a way that's not"
+    },
+    {
+      "index": 185,
+      "start": 340950,
+      "end": 342980,
+      "speaker": "",
+      "text": "too dissimilar to how you and I"
+    },
+    {
+      "index": 186,
+      "start": 343110,
+      "end": 345030,
+      "speaker": "",
+      "text": "uh used to solve our math tests"
+    },
+    {
+      "index": 187,
+      "start": 345040,
+      "end": 346990,
+      "speaker": "",
+      "text": "when we were in school you know"
+    },
+    {
+      "index": 188,
+      "start": 347000,
+      "end": 348390,
+      "speaker": "",
+      "text": "having having a little bit"
+    },
+    {
+      "index": 189,
+      "start": 348400,
+      "end": 350350,
+      "speaker": "",
+      "text": "longer time uh to solve the the"
+    },
+    {
+      "index": 190,
+      "start": 350360,
+      "end": 350910,
+      "speaker": "",
+      "text": "math problems."
+    },
+    {
+      "index": 191,
+      "start": 350920,
+      "end": 352590,
+      "speaker": "",
+      "text": "Actually, you knowwe could use"
+    },
+    {
+      "index": 192,
+      "start": 352600,
+      "end": 354060,
+      "speaker": "",
+      "text": "that to get better results you"
+    },
+    {
+      "index": 193,
+      "start": 354070,
+      "end": 355060,
+      "speaker": "",
+      "text": "know within limits,"
+    },
+    {
+      "index": 194,
+      "start": 355070,
+      "end": 357100,
+      "speaker": "",
+      "text": "right? um uh you knowAfter a"
+    },
+    {
+      "index": 195,
+      "start": 357110,
+      "end": 358140,
+      "speaker": "",
+      "text": "while you just kind of start to"
+    },
+    {
+      "index": 196,
+      "start": 358150,
+      "end": 358900,
+      "speaker": "",
+      "text": "spend."
+    },
+    {
+      "index": 197,
+      "start": 359450,
+      "end": 361320,
+      "speaker": "",
+      "text": "um But uh this is yet another"
+    },
+    {
+      "index": 198,
+      "start": 361330,
+      "end": 363440,
+      "speaker": "",
+      "text": "way that we're finding that uh"
+    },
+    {
+      "index": 199,
+      "start": 363450,
+      "end": 365600,
+      "speaker": "",
+      "text": "compute can be transformed into"
+    },
+    {
+      "index": 200,
+      "start": 365610,
+      "end": 366840,
+      "speaker": "",
+      "text": "intelligence this time during"
+    },
+    {
+      "index": 201,
+      "start": 366850,
+      "end": 367480,
+      "speaker": "",
+      "text": "inferences."
+    },
+    {
+      "index": 202,
+      "start": 368880,
+      "end": 370710,
+      "speaker": "",
+      "text": "Finally, we have agents you know"
+    },
+    {
+      "index": 203,
+      "start": 370720,
+      "end": 371310,
+      "speaker": "",
+      "text": "these days."
+    },
+    {
+      "index": 204,
+      "start": 371320,
+      "end": 372910,
+      "speaker": "",
+      "text": "Artificial intelligence is not"
+    },
+    {
+      "index": 205,
+      "start": 372920,
+      "end": 374150,
+      "speaker": "",
+      "text": "just a thing that you ask"
+    },
+    {
+      "index": 206,
+      "start": 374160,
+      "end": 375550,
+      "speaker": "",
+      "text": "questions to every once in a"
+    },
+    {
+      "index": 207,
+      "start": 375560,
+      "end": 377030,
+      "speaker": "",
+      "text": "while. These days artificial"
+    },
+    {
+      "index": 208,
+      "start": 377040,
+      "end": 378630,
+      "speaker": "",
+      "text": "intelligence is a fleet of"
+    },
+    {
+      "index": 209,
+      "start": 378640,
+      "end": 379110,
+      "speaker": "",
+      "text": "agents"
+    },
+    {
+      "index": 210,
+      "start": 379640,
+      "end": 381270,
+      "speaker": "",
+      "text": "that work for each of us,"
+    },
+    {
+      "index": 211,
+      "start": 381280,
+      "end": 383110,
+      "speaker": "",
+      "text": "day and night solving our most"
+    },
+    {
+      "index": 212,
+      "start": 383120,
+      "end": 384390,
+      "speaker": "",
+      "text": "important problems."
+    },
+    {
+      "index": 213,
+      "start": 384400,
+      "end": 386430,
+      "speaker": "",
+      "text": "And each of us is becoming the"
+    },
+    {
+      "index": 214,
+      "start": 386440,
+      "end": 389750,
+      "speaker": "",
+      "text": "ceo of our own company uh has"
+    },
+    {
+      "index": 215,
+      "start": 389760,
+      "end": 391390,
+      "speaker": "",
+      "text": "all of these agents constantly"
+    },
+    {
+      "index": 216,
+      "start": 391400,
+      "end": 393190,
+      "speaker": "",
+      "text": "working uh for us to solve"
+    },
+    {
+      "index": 217,
+      "start": 393200,
+      "end": 394030,
+      "speaker": "",
+      "text": "problems."
+    },
+    {
+      "index": 218,
+      "start": 394370,
+      "end": 395790,
+      "speaker": "",
+      "text": "uh andThat's yet another"
+    },
+    {
+      "index": 219,
+      "start": 395800,
+      "end": 397490,
+      "speaker": "",
+      "text": "dimension of how we transform"
+    },
+    {
+      "index": 220,
+      "start": 397500,
+      "end": 398850,
+      "speaker": "",
+      "text": "compute into intelligence you"
+    },
+    {
+      "index": 221,
+      "start": 398860,
+      "end": 401230,
+      "speaker": "",
+      "text": "know as the size of your agent"
+    },
+    {
+      "index": 222,
+      "start": 401240,
+      "end": 402830,
+      "speaker": "",
+      "text": "team grows as those agents"
+    },
+    {
+      "index": 223,
+      "start": 402840,
+      "end": 404840,
+      "speaker": "",
+      "text": "work. um you know uh Longer"
+    },
+    {
+      "index": 224,
+      "start": 404850,
+      "end": 405520,
+      "speaker": "",
+      "text": "time for you,"
+    },
+    {
+      "index": 225,
+      "start": 405530,
+      "end": 406720,
+      "speaker": "",
+      "text": "they can get more done."
+    },
+    {
+      "index": 226,
+      "start": 408090,
+      "end": 409720,
+      "speaker": "",
+      "text": "soWhen you think about this,"
+    },
+    {
+      "index": 227,
+      "start": 409730,
+      "end": 412040,
+      "speaker": "",
+      "text": "um uh these are four different"
+    },
+    {
+      "index": 228,
+      "start": 412050,
+      "end": 413680,
+      "speaker": "",
+      "text": "compounding scaling laws,"
+    },
+    {
+      "index": 229,
+      "start": 413690,
+      "end": 416360,
+      "speaker": "",
+      "text": "each one of them is a different"
+    },
+    {
+      "index": 230,
+      "start": 416370,
+      "end": 418080,
+      "speaker": "",
+      "text": "dimension of how we transform"
+    },
+    {
+      "index": 231,
+      "start": 418090,
+      "end": 419320,
+      "speaker": "",
+      "text": "compute into intelligence."
+    },
+    {
+      "index": 232,
+      "start": 419330,
+      "end": 420680,
+      "speaker": "",
+      "text": "And each of them has profound"
+    },
+    {
+      "index": 233,
+      "start": 420690,
+      "end": 422160,
+      "speaker": "",
+      "text": "implications for accelerated"
+    },
+    {
+      "index": 234,
+      "start": 422170,
+      "end": 423040,
+      "speaker": "",
+      "text": "computing,"
+    },
+    {
+      "index": 235,
+      "start": 423120,
+      "end": 424350,
+      "speaker": "",
+      "text": "for the systems that we build"
+    },
+    {
+      "index": 236,
+      "start": 424360,
+      "end": 425550,
+      "speaker": "",
+      "text": "for the software that we built"
+    },
+    {
+      "index": 237,
+      "start": 425560,
+      "end": 426710,
+      "speaker": "",
+      "text": "for the way that ai is"
+    },
+    {
+      "index": 238,
+      "start": 426720,
+      "end": 429750,
+      "speaker": "",
+      "text": "integrated uh into uh the"
+    },
+    {
+      "index": 239,
+      "start": 429760,
+      "end": 431030,
+      "speaker": "",
+      "text": "solutions that businesses"
+    },
+    {
+      "index": 240,
+      "start": 431040,
+      "end": 432070,
+      "speaker": "",
+      "text": "around the world need."
+    },
+    {
+      "index": 241,
+      "start": 433370,
+      "end": 434930,
+      "speaker": "",
+      "text": "andIt's true that compute is now"
+    },
+    {
+      "index": 242,
+      "start": 434940,
+      "end": 436250,
+      "speaker": "",
+      "text": "intelligence you know with all"
+    },
+    {
+      "index": 243,
+      "start": 436260,
+      "end": 437730,
+      "speaker": "",
+      "text": "of these uh scaling laws"
+    },
+    {
+      "index": 244,
+      "start": 437740,
+      "end": 439250,
+      "speaker": "",
+      "text": "happening at the same time."
+    },
+    {
+      "index": 245,
+      "start": 439260,
+      "end": 440530,
+      "speaker": "",
+      "text": "There's so many different ways"
+    },
+    {
+      "index": 246,
+      "start": 440540,
+      "end": 441450,
+      "speaker": "",
+      "text": "that we're transforming comp"
+    },
+    {
+      "index": 247,
+      "start": 441460,
+      "end": 442610,
+      "speaker": "",
+      "text": "computer into intelligence."
+    },
+    {
+      "index": 248,
+      "start": 442620,
+      "end": 446240,
+      "speaker": "",
+      "text": "um Now, at the same time,"
+    },
+    {
+      "index": 249,
+      "start": 446250,
+      "end": 448400,
+      "speaker": "",
+      "text": "we have limited compute as a"
+    },
+    {
+      "index": 250,
+      "start": 448410,
+      "end": 449280,
+      "speaker": "",
+      "text": "planet."
+    },
+    {
+      "index": 251,
+      "start": 449520,
+      "end": 451310,
+      "speaker": "",
+      "text": "We are building compute at a"
+    },
+    {
+      "index": 252,
+      "start": 451320,
+      "end": 453430,
+      "speaker": "",
+      "text": "rate that uh is completely"
+    },
+    {
+      "index": 253,
+      "start": 453440,
+      "end": 454310,
+      "speaker": "",
+      "text": "unthinkable,"
+    },
+    {
+      "index": 254,
+      "start": 454320,
+      "end": 456590,
+      "speaker": "",
+      "text": "um uh even just a few years ago"
+    },
+    {
+      "index": 255,
+      "start": 456600,
+      "end": 459230,
+      "speaker": "",
+      "text": "you know back when I was um a"
+    },
+    {
+      "index": 256,
+      "start": 459240,
+      "end": 460270,
+      "speaker": "",
+      "text": "graduate student,"
+    },
+    {
+      "index": 257,
+      "start": 460280,
+      "end": 461550,
+      "speaker": "",
+      "text": "um in 2008,"
+    },
+    {
+      "index": 258,
+      "start": 461560,
+      "end": 463590,
+      "speaker": "",
+      "text": "I published a paper on on"
+    },
+    {
+      "index": 259,
+      "start": 463600,
+      "end": 464510,
+      "speaker": "",
+      "text": "training and"
+    },
+    {
+      "index": 260,
+      "start": 464550,
+      "end": 466580,
+      "speaker": "",
+      "text": "I models on the gpu and back"
+    },
+    {
+      "index": 261,
+      "start": 466590,
+      "end": 467860,
+      "speaker": "",
+      "text": "then in 2008,"
+    },
+    {
+      "index": 262,
+      "start": 467870,
+      "end": 468860,
+      "speaker": "",
+      "text": "almost 20 years ago,"
+    },
+    {
+      "index": 263,
+      "start": 468870,
+      "end": 470660,
+      "speaker": "",
+      "text": "uh people thought that was kind"
+    },
+    {
+      "index": 264,
+      "start": 470670,
+      "end": 472260,
+      "speaker": "",
+      "text": "of crazy. They're like we don't"
+    },
+    {
+      "index": 265,
+      "start": 472270,
+      "end": 473380,
+      "speaker": "",
+      "text": "really need what what are we"
+    },
+    {
+      "index": 266,
+      "start": 473390,
+      "end": 474380,
+      "speaker": "",
+      "text": "going do with bigger models?"
+    },
+    {
+      "index": 267,
+      "start": 474390,
+      "end": 475340,
+      "speaker": "",
+      "text": "What are we gonna do with bigger"
+    },
+    {
+      "index": 268,
+      "start": 475350,
+      "end": 475980,
+      "speaker": "",
+      "text": "data sets?"
+    },
+    {
+      "index": 269,
+      "start": 476180,
+      "end": 476970,
+      "speaker": "",
+      "text": "These days,"
+    },
+    {
+      "index": 270,
+      "start": 476980,
+      "end": 478330,
+      "speaker": "",
+      "text": "um you knowthe world has"
+    },
+    {
+      "index": 271,
+      "start": 478340,
+      "end": 479450,
+      "speaker": "",
+      "text": "changed, right?"
+    },
+    {
+      "index": 272,
+      "start": 479460,
+      "end": 480970,
+      "speaker": "",
+      "text": "um Everyone."
+    },
+    {
+      "index": 273,
+      "start": 480980,
+      "end": 482770,
+      "speaker": "",
+      "text": "uh It has started to deeply"
+    },
+    {
+      "index": 274,
+      "start": 482780,
+      "end": 484170,
+      "speaker": "",
+      "text": "understand the importance of"
+    },
+    {
+      "index": 275,
+      "start": 484180,
+      "end": 485690,
+      "speaker": "",
+      "text": "compute and we're building"
+    },
+    {
+      "index": 276,
+      "start": 485700,
+      "end": 488210,
+      "speaker": "",
+      "text": "compute at a scale that's um uh"
+    },
+    {
+      "index": 277,
+      "start": 488220,
+      "end": 489930,
+      "speaker": "",
+      "text": "unprecedented and and just"
+    },
+    {
+      "index": 278,
+      "start": 489940,
+      "end": 491130,
+      "speaker": "",
+      "text": "absolutely enormous."
+    },
+    {
+      "index": 279,
+      "start": 491600,
+      "end": 494430,
+      "speaker": "",
+      "text": "um and uh That's the reason why"
+    },
+    {
+      "index": 280,
+      "start": 494440,
+      "end": 495670,
+      "speaker": "",
+      "text": "ai is growing so fast,"
+    },
+    {
+      "index": 281,
+      "start": 495680,
+      "end": 496910,
+      "speaker": "",
+      "text": "why we're able to build and"
+    },
+    {
+      "index": 282,
+      "start": 496920,
+      "end": 499070,
+      "speaker": "",
+      "text": "deploy ai and in better ways."
+    },
+    {
+      "index": 283,
+      "start": 499080,
+      "end": 501230,
+      "speaker": "",
+      "text": "And yet we know that we are"
+    },
+    {
+      "index": 284,
+      "start": 501240,
+      "end": 502430,
+      "speaker": "",
+      "text": "running at the limit,"
+    },
+    {
+      "index": 285,
+      "start": 502440,
+      "end": 504110,
+      "speaker": "",
+      "text": "you knowthere's different kinds"
+    },
+    {
+      "index": 286,
+      "start": 504120,
+      "end": 505950,
+      "speaker": "",
+      "text": "of limits they could be um"
+    },
+    {
+      "index": 287,
+      "start": 505960,
+      "end": 506430,
+      "speaker": "",
+      "text": "economic."
+    },
+    {
+      "index": 288,
+      "start": 506520,
+      "end": 508960,
+      "speaker": "",
+      "text": "you know how can you know howHow"
+    },
+    {
+      "index": 289,
+      "start": 508970,
+      "end": 511030,
+      "speaker": "",
+      "text": "many uh billions of dollars of"
+    },
+    {
+      "index": 290,
+      "start": 511040,
+      "end": 512390,
+      "speaker": "",
+      "text": "of um data centers can we"
+    },
+    {
+      "index": 291,
+      "start": 512400,
+      "end": 513470,
+      "speaker": "",
+      "text": "afford to build?"
+    },
+    {
+      "index": 292,
+      "start": 513480,
+      "end": 515430,
+      "speaker": "",
+      "text": "um They could be political."
+    },
+    {
+      "index": 293,
+      "start": 515440,
+      "end": 516990,
+      "speaker": "",
+      "text": "you knowSometimes people don't"
+    },
+    {
+      "index": 294,
+      "start": 517000,
+      "end": 518390,
+      "speaker": "",
+      "text": "want to have lots of data"
+    },
+    {
+      "index": 295,
+      "start": 518400,
+      "end": 519350,
+      "speaker": "",
+      "text": "centers uh in their"
+    },
+    {
+      "index": 296,
+      "start": 519360,
+      "end": 519990,
+      "speaker": "",
+      "text": "neighborhood."
+    },
+    {
+      "index": 297,
+      "start": 520450,
+      "end": 524620,
+      "speaker": "",
+      "text": "They could be um uh uh physical"
+    },
+    {
+      "index": 298,
+      "start": 524630,
+      "end": 526300,
+      "speaker": "",
+      "text": "as in like you know power"
+    },
+    {
+      "index": 299,
+      "start": 526310,
+      "end": 527580,
+      "speaker": "",
+      "text": "constraints or land"
+    },
+    {
+      "index": 300,
+      "start": 527590,
+      "end": 528100,
+      "speaker": "",
+      "text": "constraints."
+    },
+    {
+      "index": 301,
+      "start": 528110,
+      "end": 529380,
+      "speaker": "",
+      "text": "you knowIf uh we're we're"
+    },
+    {
+      "index": 302,
+      "start": 529390,
+      "end": 531340,
+      "speaker": "",
+      "text": "talking about building compute"
+    },
+    {
+      "index": 303,
+      "start": 531350,
+      "end": 532860,
+      "speaker": "",
+      "text": "at a scale that uh you know"
+    },
+    {
+      "index": 304,
+      "start": 532870,
+      "end": 533780,
+      "speaker": "",
+      "text": "these sorts of constraints"
+    },
+    {
+      "index": 305,
+      "start": 533790,
+      "end": 535420,
+      "speaker": "",
+      "text": "really start to to matter,"
+    },
+    {
+      "index": 306,
+      "start": 535950,
+      "end": 538220,
+      "speaker": "",
+      "text": "um all of these constraints uh"
+    },
+    {
+      "index": 307,
+      "start": 538230,
+      "end": 540100,
+      "speaker": "",
+      "text": "then imply if compute is"
+    },
+    {
+      "index": 308,
+      "start": 540110,
+      "end": 540860,
+      "speaker": "",
+      "text": "intelligence,"
+    },
+    {
+      "index": 309,
+      "start": 540870,
+      "end": 542380,
+      "speaker": "",
+      "text": "but we have a limit on the"
+    },
+    {
+      "index": 310,
+      "start": 542390,
+      "end": 543540,
+      "speaker": "",
+      "text": "amount of compute."
+    },
+    {
+      "index": 311,
+      "start": 543550,
+      "end": 545460,
+      "speaker": "",
+      "text": "It implies that efficiency is"
+    },
+    {
+      "index": 312,
+      "start": 545470,
+      "end": 547220,
+      "speaker": "",
+      "text": "also intelligence."
+    },
+    {
+      "index": 313,
+      "start": 548920,
+      "end": 551400,
+      "speaker": "",
+      "text": "and uh This is the biggest"
+    },
+    {
+      "index": 314,
+      "start": 551410,
+      "end": 553240,
+      "speaker": "",
+      "text": "computational challenge of our"
+    },
+    {
+      "index": 315,
+      "start": 553250,
+      "end": 553700,
+      "speaker": "",
+      "text": "time."
+    },
+    {
+      "index": 316,
+      "start": 553940,
+      "end": 555670,
+      "speaker": "",
+      "text": "um It's also something that"
+    },
+    {
+      "index": 317,
+      "start": 555680,
+      "end": 558310,
+      "speaker": "",
+      "text": "invidia just deeply loves to"
+    },
+    {
+      "index": 318,
+      "start": 558320,
+      "end": 559150,
+      "speaker": "",
+      "text": "work with"
+    },
+    {
+      "index": 319,
+      "start": 559450,
+      "end": 561360,
+      "speaker": "",
+      "text": "invi as a company as as being"
+    },
+    {
+      "index": 320,
+      "start": 561370,
+      "end": 563560,
+      "speaker": "",
+      "text": "you was just explaining uh is"
+    },
+    {
+      "index": 321,
+      "start": 563570,
+      "end": 564760,
+      "speaker": "",
+      "text": "an accelerated computing"
+    },
+    {
+      "index": 322,
+      "start": 564770,
+      "end": 567310,
+      "speaker": "",
+      "text": "company. We love to uh find"
+    },
+    {
+      "index": 323,
+      "start": 567320,
+      "end": 569350,
+      "speaker": "",
+      "text": "ways of rethinking the entire"
+    },
+    {
+      "index": 324,
+      "start": 569360,
+      "end": 571270,
+      "speaker": "",
+      "text": "compute stack um from"
+    },
+    {
+      "index": 325,
+      "start": 571280,
+      "end": 573110,
+      "speaker": "",
+      "text": "transistors to"
+    },
+    {
+      "index": 326,
+      "start": 573290,
+      "end": 574120,
+      "speaker": "",
+      "text": "uh libraries."
+    },
+    {
+      "index": 327,
+      "start": 574130,
+      "end": 576880,
+      "speaker": "",
+      "text": "Compilers frame works um all of"
+    },
+    {
+      "index": 328,
+      "start": 576890,
+      "end": 577720,
+      "speaker": "",
+      "text": "the different chips in the"
+    },
+    {
+      "index": 329,
+      "start": 577730,
+      "end": 579720,
+      "speaker": "",
+      "text": "middle applications,"
+    },
+    {
+      "index": 330,
+      "start": 579730,
+      "end": 580480,
+      "speaker": "",
+      "text": "algorithms."
+    },
+    {
+      "index": 331,
+      "start": 580490,
+      "end": 582200,
+      "speaker": "",
+      "text": "All of those can be refined in"
+    },
+    {
+      "index": 332,
+      "start": 582210,
+      "end": 582880,
+      "speaker": "",
+      "text": "order to provide"
+    },
+    {
+      "index": 333,
+      "start": 582890,
+      "end": 584080,
+      "speaker": "",
+      "text": "transformational"
+    },
+    {
+      "index": 334,
+      "start": 585090,
+      "end": 585920,
+      "speaker": "",
+      "text": "uh acceleration,"
+    },
+    {
+      "index": 335,
+      "start": 585930,
+      "end": 587120,
+      "speaker": "",
+      "text": "transformational efficiency,"
+    },
+    {
+      "index": 336,
+      "start": 587130,
+      "end": 587960,
+      "speaker": "",
+      "text": "benefits."
+    },
+    {
+      "index": 337,
+      "start": 587970,
+      "end": 589280,
+      "speaker": "",
+      "text": "And in today's environment,"
+    },
+    {
+      "index": 338,
+      "start": 589290,
+      "end": 590800,
+      "speaker": "",
+      "text": "that means transformational"
+    },
+    {
+      "index": 339,
+      "start": 590810,
+      "end": 592160,
+      "speaker": "",
+      "text": "intelligence"
+    },
+    {
+      "index": 340,
+      "start": 592690,
+      "end": 594280,
+      "speaker": "",
+      "text": "efficiency have now become"
+    },
+    {
+      "index": 341,
+      "start": 594290,
+      "end": 595160,
+      "speaker": "",
+      "text": "intelligence"
+    },
+    {
+      "index": 342,
+      "start": 595680,
+      "end": 597150,
+      "speaker": "",
+      "text": "and so for all of us that are"
+    },
+    {
+      "index": 343,
+      "start": 597160,
+      "end": 599430,
+      "speaker": "",
+      "text": "involved in building artificial"
+    },
+    {
+      "index": 344,
+      "start": 599440,
+      "end": 600310,
+      "speaker": "",
+      "text": "intelligence,"
+    },
+    {
+      "index": 345,
+      "start": 600320,
+      "end": 602470,
+      "speaker": "",
+      "text": "um and especially those of us in"
+    },
+    {
+      "index": 346,
+      "start": 602480,
+      "end": 604310,
+      "speaker": "",
+      "text": "the open community that that"
+    },
+    {
+      "index": 347,
+      "start": 604320,
+      "end": 605550,
+      "speaker": "",
+      "text": "are building open technologies"
+    },
+    {
+      "index": 348,
+      "start": 605560,
+      "end": 606790,
+      "speaker": "",
+      "text": "for artificial intelligence"
+    },
+    {
+      "index": 349,
+      "start": 606800,
+      "end": 608150,
+      "speaker": "",
+      "text": "efficiency is the is the"
+    },
+    {
+      "index": 350,
+      "start": 608160,
+      "end": 609030,
+      "speaker": "",
+      "text": "foundation."
+    },
+    {
+      "index": 351,
+      "start": 609200,
+      "end": 610390,
+      "speaker": "",
+      "text": "Compute efficiency is the"
+    },
+    {
+      "index": 352,
+      "start": 610400,
+      "end": 611510,
+      "speaker": "",
+      "text": "foundation of intelligence,"
+    },
+    {
+      "index": 353,
+      "start": 611520,
+      "end": 613150,
+      "speaker": "",
+      "text": "the more efficient we can make"
+    },
+    {
+      "index": 354,
+      "start": 613160,
+      "end": 614430,
+      "speaker": "",
+      "text": "our systems for building and"
+    },
+    {
+      "index": 355,
+      "start": 614440,
+      "end": 615470,
+      "speaker": "",
+      "text": "deploying ai,"
+    },
+    {
+      "index": 356,
+      "start": 615480,
+      "end": 616790,
+      "speaker": "",
+      "text": "the more intelligence we can"
+    },
+    {
+      "index": 357,
+      "start": 616800,
+      "end": 617310,
+      "speaker": "",
+      "text": "have."
+    },
+    {
+      "index": 358,
+      "start": 619440,
+      "end": 621270,
+      "speaker": "",
+      "text": "It follows from this that ai is"
+    },
+    {
+      "index": 359,
+      "start": 621280,
+      "end": 622590,
+      "speaker": "",
+      "text": "not a one size fits all"
+    },
+    {
+      "index": 360,
+      "start": 622600,
+      "end": 624870,
+      "speaker": "",
+      "text": "problem. uh We need systems of"
+    },
+    {
+      "index": 361,
+      "start": 624880,
+      "end": 626950,
+      "speaker": "",
+      "text": "models of different sizes and"
+    },
+    {
+      "index": 362,
+      "start": 626960,
+      "end": 628750,
+      "speaker": "",
+      "text": "and uh capacities."
+    },
+    {
+      "index": 363,
+      "start": 628760,
+      "end": 630550,
+      "speaker": "",
+      "text": "And mean you uh talked about"
+    },
+    {
+      "index": 364,
+      "start": 630560,
+      "end": 631710,
+      "speaker": "",
+      "text": "that, I think really really"
+    },
+    {
+      "index": 365,
+      "start": 631720,
+      "end": 632590,
+      "speaker": "",
+      "text": "nicely."
+    },
+    {
+      "index": 366,
+      "start": 632680,
+      "end": 634710,
+      "speaker": "",
+      "text": "Just a moment ago we need"
+    },
+    {
+      "index": 367,
+      "start": 634720,
+      "end": 637030,
+      "speaker": "",
+      "text": "specialized ai um specialized"
+    },
+    {
+      "index": 368,
+      "start": 637040,
+      "end": 639790,
+      "speaker": "",
+      "text": "ai that that can um you know be"
+    },
+    {
+      "index": 369,
+      "start": 639800,
+      "end": 641630,
+      "speaker": "",
+      "text": "really excellent at the things"
+    },
+    {
+      "index": 370,
+      "start": 641640,
+      "end": 643510,
+      "speaker": "",
+      "text": "that matter most that is also a"
+    },
+    {
+      "index": 371,
+      "start": 643520,
+      "end": 644830,
+      "speaker": "",
+      "text": "form of efficiency."
+    },
+    {
+      "index": 372,
+      "start": 645310,
+      "end": 648220,
+      "speaker": "",
+      "text": "um and uh andAnd that I think"
+    },
+    {
+      "index": 373,
+      "start": 648230,
+      "end": 649420,
+      "speaker": "",
+      "text": "implies we need to open"
+    },
+    {
+      "index": 374,
+      "start": 649430,
+      "end": 651340,
+      "speaker": "",
+      "text": "technologies for ai because in"
+    },
+    {
+      "index": 375,
+      "start": 651350,
+      "end": 653860,
+      "speaker": "",
+      "text": "order to um kind create those"
+    },
+    {
+      "index": 376,
+      "start": 653870,
+      "end": 655460,
+      "speaker": "",
+      "text": "systems in order to specialize"
+    },
+    {
+      "index": 377,
+      "start": 655470,
+      "end": 657420,
+      "speaker": "",
+      "text": "uh uh those models,"
+    },
+    {
+      "index": 378,
+      "start": 657430,
+      "end": 659260,
+      "speaker": "",
+      "text": "uh people need the ability to"
+    },
+    {
+      "index": 379,
+      "start": 659270,
+      "end": 660260,
+      "speaker": "",
+      "text": "innovate. They need"
+    },
+    {
+      "index": 380,
+      "start": 660370,
+      "end": 662990,
+      "speaker": "",
+      "text": "to be able to uh uh solve"
+    },
+    {
+      "index": 381,
+      "start": 663000,
+      "end": 664890,
+      "speaker": "",
+      "text": "problems um you know under"
+    },
+    {
+      "index": 382,
+      "start": 664900,
+      "end": 665660,
+      "speaker": "",
+      "text": "their own steam,"
+    },
+    {
+      "index": 383,
+      "start": 665980,
+      "end": 667440,
+      "speaker": "",
+      "text": "uh using the special"
+    },
+    {
+      "index": 384,
+      "start": 667450,
+      "end": 668720,
+      "speaker": "",
+      "text": "perspectives of data that they"
+    },
+    {
+      "index": 385,
+      "start": 668730,
+      "end": 670440,
+      "speaker": "",
+      "text": "have um uh to to get"
+    },
+    {
+      "index": 386,
+      "start": 670450,
+      "end": 671640,
+      "speaker": "",
+      "text": "dramatically better efficiency"
+    },
+    {
+      "index": 387,
+      "start": 671650,
+      "end": 672640,
+      "speaker": "",
+      "text": "for the problems that matter"
+    },
+    {
+      "index": 388,
+      "start": 672650,
+      "end": 673400,
+      "speaker": "",
+      "text": "most to them."
+    },
+    {
+      "index": 389,
+      "start": 675350,
+      "end": 676830,
+      "speaker": "",
+      "text": "In order to support that that in"
+    },
+    {
+      "index": 390,
+      "start": 676840,
+      "end": 678390,
+      "speaker": "",
+      "text": "video, we have a project called"
+    },
+    {
+      "index": 391,
+      "start": 678400,
+      "end": 680310,
+      "speaker": "",
+      "text": "nemotron um where we are"
+    },
+    {
+      "index": 392,
+      "start": 680320,
+      "end": 683190,
+      "speaker": "",
+      "text": "building open models uh along"
+    },
+    {
+      "index": 393,
+      "start": 683200,
+      "end": 684870,
+      "speaker": "",
+      "text": "with open data and of course"
+    },
+    {
+      "index": 394,
+      "start": 684880,
+      "end": 685870,
+      "speaker": "",
+      "text": "the ways to go with those"
+    },
+    {
+      "index": 395,
+      "start": 685880,
+      "end": 688070,
+      "speaker": "",
+      "text": "models. Um"
+    },
+    {
+      "index": 396,
+      "start": 688710,
+      "end": 690020,
+      "speaker": "",
+      "text": "This is a little bit different"
+    },
+    {
+      "index": 397,
+      "start": 690030,
+      "end": 691660,
+      "speaker": "",
+      "text": "from uh many of the other"
+    },
+    {
+      "index": 398,
+      "start": 691670,
+      "end": 693020,
+      "speaker": "",
+      "text": "projects around the industry"
+    },
+    {
+      "index": 399,
+      "start": 693030,
+      "end": 694820,
+      "speaker": "",
+      "text": "that provide open weights uh"
+    },
+    {
+      "index": 400,
+      "start": 694830,
+      "end": 696020,
+      "speaker": "",
+      "text": "for their models."
+    },
+    {
+      "index": 401,
+      "start": 696030,
+      "end": 697820,
+      "speaker": "",
+      "text": "uh We are actually going beyond"
+    },
+    {
+      "index": 402,
+      "start": 697830,
+      "end": 699060,
+      "speaker": "",
+      "text": "that. We're providing not just"
+    },
+    {
+      "index": 403,
+      "start": 699070,
+      "end": 699420,
+      "speaker": "",
+      "text": "the weights,"
+    },
+    {
+      "index": 404,
+      "start": 699430,
+      "end": 700540,
+      "speaker": "",
+      "text": "but also the data sets,"
+    },
+    {
+      "index": 405,
+      "start": 700550,
+      "end": 701580,
+      "speaker": "",
+      "text": "the environments,"
+    },
+    {
+      "index": 406,
+      "start": 701770,
+      "end": 703360,
+      "speaker": "",
+      "text": "the technologies that we use to"
+    },
+    {
+      "index": 407,
+      "start": 703370,
+      "end": 704480,
+      "speaker": "",
+      "text": "build these models,"
+    },
+    {
+      "index": 408,
+      "start": 704490,
+      "end": 705920,
+      "speaker": "",
+      "text": "um the software that we used to"
+    },
+    {
+      "index": 409,
+      "start": 705930,
+      "end": 708360,
+      "speaker": "",
+      "text": "build it um uh as as well as"
+    },
+    {
+      "index": 410,
+      "start": 708370,
+      "end": 709840,
+      "speaker": "",
+      "text": "the recipes for the research."
+    },
+    {
+      "index": 411,
+      "start": 710630,
+      "end": 713910,
+      "speaker": "",
+      "text": "um Umitron uh is built this way"
+    },
+    {
+      "index": 412,
+      "start": 713920,
+      "end": 715590,
+      "speaker": "",
+      "text": "because we're trying to enable"
+    },
+    {
+      "index": 413,
+      "start": 715600,
+      "end": 717110,
+      "speaker": "",
+      "text": "the community to build better"
+    },
+    {
+      "index": 414,
+      "start": 717120,
+      "end": 719150,
+      "speaker": "",
+      "text": "ai because we know that if we"
+    },
+    {
+      "index": 415,
+      "start": 719160,
+      "end": 720510,
+      "speaker": "",
+      "text": "can make the community more"
+    },
+    {
+      "index": 416,
+      "start": 720520,
+      "end": 723340,
+      "speaker": "",
+      "text": "efficient at building ai then"
+    },
+    {
+      "index": 417,
+      "start": 723350,
+      "end": 724660,
+      "speaker": "",
+      "text": "that can be more intelligence"
+    },
+    {
+      "index": 418,
+      "start": 724670,
+      "end": 726100,
+      "speaker": "",
+      "text": "for the entire community."
+    },
+    {
+      "index": 419,
+      "start": 726370,
+      "end": 729080,
+      "speaker": "",
+      "text": "you know um A lot of the work"
+    },
+    {
+      "index": 420,
+      "start": 729090,
+      "end": 731460,
+      "speaker": "",
+      "text": "that goes into building ai is"
+    },
+    {
+      "index": 421,
+      "start": 731690,
+      "end": 732510,
+      "speaker": "",
+      "text": "um"
+    },
+    {
+      "index": 422,
+      "start": 732690,
+      "end": 734600,
+      "speaker": "",
+      "text": "uh fairly straightforward work"
+    },
+    {
+      "index": 423,
+      "start": 734610,
+      "end": 735840,
+      "speaker": "",
+      "text": "that can be shared,"
+    },
+    {
+      "index": 424,
+      "start": 735850,
+      "end": 738120,
+      "speaker": "",
+      "text": "um work that it takes a lot of"
+    },
+    {
+      "index": 425,
+      "start": 738130,
+      "end": 739920,
+      "speaker": "",
+      "text": "compute a lot of uh smart"
+    },
+    {
+      "index": 426,
+      "start": 739930,
+      "end": 741720,
+      "speaker": "",
+      "text": "people to you know improve our"
+    },
+    {
+      "index": 427,
+      "start": 741730,
+      "end": 743040,
+      "speaker": "",
+      "text": "data sets and so forth."
+    },
+    {
+      "index": 428,
+      "start": 743110,
+      "end": 744260,
+      "speaker": "",
+      "text": "But if we can put that out"
+    },
+    {
+      "index": 429,
+      "start": 744270,
+      "end": 745300,
+      "speaker": "",
+      "text": "there, if we can share that"
+    },
+    {
+      "index": 430,
+      "start": 745310,
+      "end": 745980,
+      "speaker": "",
+      "text": "with each other,"
+    },
+    {
+      "index": 431,
+      "start": 745990,
+      "end": 747780,
+      "speaker": "",
+      "text": "it can increase the speed at"
+    },
+    {
+      "index": 432,
+      "start": 747790,
+      "end": 748860,
+      "speaker": "",
+      "text": "which the entire community"
+    },
+    {
+      "index": 433,
+      "start": 748870,
+      "end": 750180,
+      "speaker": "",
+      "text": "moves and can create increase"
+    },
+    {
+      "index": 434,
+      "start": 750190,
+      "end": 751460,
+      "speaker": "",
+      "text": "the efficiency at which we all"
+    },
+    {
+      "index": 435,
+      "start": 751470,
+      "end": 753340,
+      "speaker": "",
+      "text": "build ai and that's a videos"
+    },
+    {
+      "index": 436,
+      "start": 753350,
+      "end": 753980,
+      "speaker": "",
+      "text": "goal."
+    },
+    {
+      "index": 437,
+      "start": 754040,
+      "end": 755390,
+      "speaker": "",
+      "text": "Why are we building the neutron"
+    },
+    {
+      "index": 438,
+      "start": 755400,
+      "end": 757190,
+      "speaker": "",
+      "text": "in this way that that is as"
+    },
+    {
+      "index": 439,
+      "start": 757200,
+      "end": 758670,
+      "speaker": "",
+      "text": "open as it is is?"
+    },
+    {
+      "index": 440,
+      "start": 758680,
+      "end": 760030,
+      "speaker": "",
+      "text": "Because we know that the more"
+    },
+    {
+      "index": 441,
+      "start": 760040,
+      "end": 760990,
+      "speaker": "",
+      "text": "efficient we can make the"
+    },
+    {
+      "index": 442,
+      "start": 761000,
+      "end": 762950,
+      "speaker": "",
+      "text": "community building ai the more"
+    },
+    {
+      "index": 443,
+      "start": 762960,
+      "end": 764830,
+      "speaker": "",
+      "text": "intelligence we can all have"
+    },
+    {
+      "index": 444,
+      "start": 764900,
+      "end": 767090,
+      "speaker": "",
+      "text": "uh to work with which increases"
+    },
+    {
+      "index": 445,
+      "start": 767100,
+      "end": 768650,
+      "speaker": "",
+      "text": "in videos opportunity."
+    },
+    {
+      "index": 446,
+      "start": 768660,
+      "end": 770370,
+      "speaker": "",
+      "text": "um soThis is aligned with our"
+    },
+    {
+      "index": 447,
+      "start": 770380,
+      "end": 771330,
+      "speaker": "",
+      "text": "business goal."
+    },
+    {
+      "index": 448,
+      "start": 774140,
+      "end": 775650,
+      "speaker": "",
+      "text": "um Another way of thinking about"
+    },
+    {
+      "index": 449,
+      "start": 775660,
+      "end": 776890,
+      "speaker": "",
+      "text": "what I just said is that etron"
+    },
+    {
+      "index": 450,
+      "start": 776900,
+      "end": 778250,
+      "speaker": "",
+      "text": "has two jobs."
+    },
+    {
+      "index": 451,
+      "start": 778260,
+      "end": 780330,
+      "speaker": "",
+      "text": "uh The first job is to help in"
+    },
+    {
+      "index": 452,
+      "start": 780340,
+      "end": 781490,
+      "speaker": "",
+      "text": "videodia build the systems of"
+    },
+    {
+      "index": 453,
+      "start": 781500,
+      "end": 782290,
+      "speaker": "",
+      "text": "the future,"
+    },
+    {
+      "index": 454,
+      "start": 782300,
+      "end": 784170,
+      "speaker": "",
+      "text": "help nvidia understand what is"
+    },
+    {
+      "index": 455,
+      "start": 784180,
+      "end": 785890,
+      "speaker": "",
+      "text": "accelerating computing need"
+    },
+    {
+      "index": 456,
+      "start": 786140,
+      "end": 787610,
+      "speaker": "",
+      "text": "more artificial intelligence."
+    },
+    {
+      "index": 457,
+      "start": 787620,
+      "end": 789090,
+      "speaker": "",
+      "text": "And then the second is to make"
+    },
+    {
+      "index": 458,
+      "start": 789100,
+      "end": 790730,
+      "speaker": "",
+      "text": "the ecosystem more efficient to"
+    },
+    {
+      "index": 459,
+      "start": 790740,
+      "end": 792410,
+      "speaker": "",
+      "text": "accelerate the ecosystem."
+    },
+    {
+      "index": 460,
+      "start": 792420,
+      "end": 793610,
+      "speaker": "",
+      "text": "So i'll talk about both of those"
+    },
+    {
+      "index": 461,
+      "start": 793620,
+      "end": 794450,
+      "speaker": "",
+      "text": "for a second."
+    },
+    {
+      "index": 462,
+      "start": 795960,
+      "end": 798750,
+      "speaker": "",
+      "text": "um you knowThe first job for you"
+    },
+    {
+      "index": 463,
+      "start": 798760,
+      "end": 800030,
+      "speaker": "",
+      "text": "neutron is really about in"
+    },
+    {
+      "index": 464,
+      "start": 800040,
+      "end": 802310,
+      "speaker": "",
+      "text": "video. uh it'sIt's about how do"
+    },
+    {
+      "index": 465,
+      "start": 802320,
+      "end": 803670,
+      "speaker": "",
+      "text": "we think about the end to end"
+    },
+    {
+      "index": 466,
+      "start": 803680,
+      "end": 804790,
+      "speaker": "",
+      "text": "problem of accelerating"
+    },
+    {
+      "index": 467,
+      "start": 804800,
+      "end": 805990,
+      "speaker": "",
+      "text": "artificial intelligence?"
+    },
+    {
+      "index": 468,
+      "start": 806000,
+      "end": 807910,
+      "speaker": "",
+      "text": "Let's think of a few examples."
+    },
+    {
+      "index": 469,
+      "start": 808130,
+      "end": 809880,
+      "speaker": "",
+      "text": "O okay so with blackwell,"
+    },
+    {
+      "index": 470,
+      "start": 809890,
+      "end": 812240,
+      "speaker": "",
+      "text": "we built a networking system"
+    },
+    {
+      "index": 471,
+      "start": 812250,
+      "end": 813920,
+      "speaker": "",
+      "text": "called ndl 72,"
+    },
+    {
+      "index": 472,
+      "start": 813930,
+      "end": 816120,
+      "speaker": "",
+      "text": "which allows for 72 blackwell gp"
+    },
+    {
+      "index": 473,
+      "start": 816130,
+      "end": 817200,
+      "speaker": "",
+      "text": "us to read and write each"
+    },
+    {
+      "index": 474,
+      "start": 817210,
+      "end": 818680,
+      "speaker": "",
+      "text": "other's memory at full speed"
+    },
+    {
+      "index": 475,
+      "start": 818690,
+      "end": 820160,
+      "speaker": "",
+      "text": "and very low latency."
+    },
+    {
+      "index": 476,
+      "start": 820350,
+      "end": 822300,
+      "speaker": "",
+      "text": "Now why did we make this big bet"
+    },
+    {
+      "index": 477,
+      "start": 822310,
+      "end": 824140,
+      "speaker": "",
+      "text": "to build blackwell with nbl"
+    },
+    {
+      "index": 478,
+      "start": 824150,
+      "end": 826380,
+      "speaker": "",
+      "text": "72? This is a very challenging"
+    },
+    {
+      "index": 479,
+      "start": 826390,
+      "end": 827780,
+      "speaker": "",
+      "text": "technology to build the"
+    },
+    {
+      "index": 480,
+      "start": 827790,
+      "end": 828900,
+      "speaker": "",
+      "text": "software for it is"
+    },
+    {
+      "index": 481,
+      "start": 828910,
+      "end": 829780,
+      "speaker": "",
+      "text": "challenging."
+    },
+    {
+      "index": 482,
+      "start": 829790,
+      "end": 831460,
+      "speaker": "",
+      "text": "The hardware is challenging."
+    },
+    {
+      "index": 483,
+      "start": 831660,
+      "end": 832970,
+      "speaker": "",
+      "text": "theThe reason why we did that"
+    },
+    {
+      "index": 484,
+      "start": 832980,
+      "end": 834770,
+      "speaker": "",
+      "text": "was actually because of the"
+    },
+    {
+      "index": 485,
+      "start": 834780,
+      "end": 836490,
+      "speaker": "",
+      "text": "community because of developers"
+    },
+    {
+      "index": 486,
+      "start": 836500,
+      "end": 837290,
+      "speaker": "",
+      "text": "like you"
+    },
+    {
+      "index": 487,
+      "start": 837420,
+      "end": 838770,
+      "speaker": "",
+      "text": "who we interactted with."
+    },
+    {
+      "index": 488,
+      "start": 838780,
+      "end": 840490,
+      "speaker": "",
+      "text": "And because of nemotrons own"
+    },
+    {
+      "index": 489,
+      "start": 840500,
+      "end": 841490,
+      "speaker": "",
+      "text": "internal research,"
+    },
+    {
+      "index": 490,
+      "start": 841500,
+      "end": 844290,
+      "speaker": "",
+      "text": "we understood that uh mixture of"
+    },
+    {
+      "index": 491,
+      "start": 844300,
+      "end": 846050,
+      "speaker": "",
+      "text": "experts models were going to"
+    },
+    {
+      "index": 492,
+      "start": 846060,
+      "end": 847690,
+      "speaker": "",
+      "text": "transform the way that ai was"
+    },
+    {
+      "index": 493,
+      "start": 847700,
+      "end": 848770,
+      "speaker": "",
+      "text": "built and deployed."
+    },
+    {
+      "index": 494,
+      "start": 848970,
+      "end": 850560,
+      "speaker": "",
+      "text": "andWe thought about what kind of"
+    },
+    {
+      "index": 495,
+      "start": 850570,
+      "end": 853240,
+      "speaker": "",
+      "text": "system is necessary for uh"
+    },
+    {
+      "index": 496,
+      "start": 853250,
+      "end": 854200,
+      "speaker": "",
+      "text": "building and deploying"
+    },
+    {
+      "index": 497,
+      "start": 854210,
+      "end": 855760,
+      "speaker": "",
+      "text": "mixture, experts models,"
+    },
+    {
+      "index": 498,
+      "start": 856370,
+      "end": 859440,
+      "speaker": "",
+      "text": "um and uh because we went"
+    },
+    {
+      "index": 499,
+      "start": 859450,
+      "end": 860400,
+      "speaker": "",
+      "text": "through that process and we"
+    },
+    {
+      "index": 500,
+      "start": 860410,
+      "end": 862640,
+      "speaker": "",
+      "text": "developed in bl 72,"
+    },
+    {
+      "index": 501,
+      "start": 862650,
+      "end": 864120,
+      "speaker": "",
+      "text": "um it's been much easier and"
+    },
+    {
+      "index": 502,
+      "start": 864130,
+      "end": 865520,
+      "speaker": "",
+      "text": "much more efficient uh for the"
+    },
+    {
+      "index": 503,
+      "start": 865530,
+      "end": 868520,
+      "speaker": "",
+      "text": "world uh to build and deploy uh"
+    },
+    {
+      "index": 504,
+      "start": 868530,
+      "end": 869760,
+      "speaker": "",
+      "text": "the the very best models of"
+    },
+    {
+      "index": 505,
+      "start": 869770,
+      "end": 870320,
+      "speaker": "",
+      "text": "today."
+    },
+    {
+      "index": 506,
+      "start": 871780,
+      "end": 873530,
+      "speaker": "",
+      "text": "uh Numericism and sparsity,"
+    },
+    {
+      "index": 507,
+      "start": 873540,
+      "end": 875570,
+      "speaker": "",
+      "text": "a are also uh really important"
+    },
+    {
+      "index": 508,
+      "start": 875580,
+      "end": 877130,
+      "speaker": "",
+      "text": "for us, you knowa lot of the"
+    },
+    {
+      "index": 509,
+      "start": 877140,
+      "end": 878850,
+      "speaker": "",
+      "text": "gains in efficiency,"
+    },
+    {
+      "index": 510,
+      "start": 878860,
+      "end": 879410,
+      "speaker": "",
+      "text": "and therefore,"
+    },
+    {
+      "index": 511,
+      "start": 879420,
+      "end": 880730,
+      "speaker": "",
+      "text": "the gains in intelligence that"
+    },
+    {
+      "index": 512,
+      "start": 880740,
+      "end": 882570,
+      "speaker": "",
+      "text": "the community has have come"
+    },
+    {
+      "index": 513,
+      "start": 882580,
+      "end": 884490,
+      "speaker": "",
+      "text": "from being smarter about how we"
+    },
+    {
+      "index": 514,
+      "start": 884500,
+      "end": 885690,
+      "speaker": "",
+      "text": "do arithmetic."
+    },
+    {
+      "index": 515,
+      "start": 885920,
+      "end": 887670,
+      "speaker": "",
+      "text": "um you knowBack when I started"
+    },
+    {
+      "index": 516,
+      "start": 887680,
+      "end": 889710,
+      "speaker": "",
+      "text": "doing deep learning uh you know"
+    },
+    {
+      "index": 517,
+      "start": 889720,
+      "end": 890990,
+      "speaker": "",
+      "text": "20 years ago,"
+    },
+    {
+      "index": 518,
+      "start": 891000,
+      "end": 892550,
+      "speaker": "",
+      "text": "we mostly did everything in fp"
+    },
+    {
+      "index": 519,
+      "start": 892560,
+      "end": 893430,
+      "speaker": "",
+      "text": "32,"
+    },
+    {
+      "index": 520,
+      "start": 893650,
+      "end": 895680,
+      "speaker": "",
+      "text": "32 bit floating point formats."
+    },
+    {
+      "index": 521,
+      "start": 895690,
+      "end": 896400,
+      "speaker": "",
+      "text": "These days,"
+    },
+    {
+      "index": 522,
+      "start": 896410,
+      "end": 898240,
+      "speaker": "",
+      "text": "most training happens in 8 bit"
+    },
+    {
+      "index": 523,
+      "start": 898250,
+      "end": 898840,
+      "speaker": "",
+      "text": "arithmetic,"
+    },
+    {
+      "index": 524,
+      "start": 898850,
+      "end": 899920,
+      "speaker": "",
+      "text": "so that's 4 times."
+    }
+  ]
+}

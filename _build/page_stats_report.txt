@@ -1,0 +1,107 @@
+﻿pages: 96 total chars: 60024 mean score: 0.947
+
+-- weak pages (chars<60 or score<0.80) --
+{'index': 31, 'boxes': 12, 'chars': 701, 'mean_score': 0.76, 'heading': 'Optimization 10: Scheduler Groups and the fc1_done Spin'}
+
+-- near duplicates --
+(4, 5, 0.912)
+(39, 40, 0.989)
+(41, 42, 0.99)
+
+-- all headings --
+  1 20261016_133219 | MegaMoE recap
+  2 20261016_133323 | MegaMoE support matrix
+  3 20261016_133406 | MegaMoE on Blackwell
+  4 20261016_133511 | MegaMoE on Blackwell
+  5 20261016_133516 | MegaMoE on Blackwell
+  6 20261016_133541 | MegaMoE on Blackwell
+  7 20261016_133624 | MegaMoE on Blackwell
+  8 20261016_133702 | From a 32x4 Trick to a Full TMEM Transpose
+  9 20261016_133758 | CuteDSL MegaMoE on Blackwell
+ 10 20261016_133919 | CuteDSLMegaMoEonBlackwell
+ 11 20261016_133933 | CuteDSL MegaMoE on Blackwell
+ 12 20261016_134013 | MegaMoE on Blackwell
+ 13 20261016_134107 | MegaMoEonBlackwell
+ 14 20261016_134143 | MegaMoE on Blackwell
+ 15 20261016_134320 | CuteDSL MegaMoE on Blackwell
+ 16 20261016_134421 | MegaMoEonBlackwell
+ 17 20261016_134505 | Overall Architecture: One Kernel Does Everything
+ 18 20261016_134614 | Warp Specialization
+ 19 20261016_134742 | The swapAB Variant: the Cure for Small Token Counts
+ 20 20261016_134913 | Fp8 Quantization: per_tensor vs. blockwise
+ 21 20261016_135050 | Optimization 1: Cooperative Warp-group Scheduling
+ 22 20261016_135216 | Optimization 2: Task-tile Ping-pong
+ 23 20261016_135339 | Optimization 3:Multi-CTA CGA +TMA Multicast
+ 24 20261016_135520 | Optimization 4: Mainloop & Store Pipelines
+ 25 20261016_135654 | Optimization 5: All-Register Epilogue Fusion Chain
+ 26 20261016_135815 | Why Gate/Up Interleave = 8: the WGMMA Register Layout
+ 27 20261016_140017 | Optimization 6: A Single Active Dispatch Warp
+ 28 20261016_140037 | Optimization 7: Folding the Producer Warpgroup + Register
+ 29 20261016_140152 | Optimization 8: Early fc1_done Publish
+ 30 20261016_140322 | Optimization9:BlockwiseFC2Dual-Accumulator Overlap
+ 31 20261016_140546 | Optimization 10: Scheduler Groups and the fc1_done Spin
+ 32 20261016_140802 | Optimization 11: 16-byte FC2 Output Stores
+ 33 20261016_140940 | Token Sweep Results
+ 34 20261016_141107 | Summary
+ 35 20261016_141318 | Two Challenges Define Training at Scale
+ 36 20261016_141551 | One Playbook, Two Workloads
+ 37 20261016_141647 | DeepSeek-V4-Pro Overview
+ 38 20261016_141929 | Model Features Drive Optimizations
+ 39 20261016_142005 | Choose the Parallel Layout
+ 40 20261016_142038 | Choose the Parallel Layout
+ 41 20261016_142409 | Context Length Drives Memory Policy
+ 42 20261016_142509 | Context Length Drives Memory Policy
+ 43 20261016_142618 | The Starting Points
+ 44 20261016_142735 | STEP 1: Runtime Overhead and Memory Trade-offs
+ 45 20261016_143215 | WheretheStepTime Goes
+ 46 20261016_143336 | STEP 2:Optimize the Hybrid Attention
+ 47 20261016_143743 | STEP 2: Optimize the Hybrid Attention
+ 48 20261016_143826 | STEP 3:Optimize the MoE
+ 49 20261016_144159 | STEP 3: Optimize the MoE
+ 50 20261016_144338 | STEP 4:Balance CP Workloads
+ 51 20261016_144455 | STEP4I Balance CP Workloads
+ 52 20261016_144928 | Lessons for Scalable Training
+ 53 20261016_145841 | Motivation: KV Cache as a Serving Bottleneck
+ 54 20261016_145926 | KV Cache Is a Serving Bottleneck
+ 55 20261016_150308 | KV Cache Compression Methods
+ 56 20261016_150439 | Where KV Compression Fits
+ 57 20261016_150742 | TurboQuant: Online KV Quantization
+ 58 20261016_151001 | TurboQuant: Layout Compressed KV for Decode
+ 59 20261016_151154 | TurboQuant: Tiled MMA Decode Attention on 4-bit KV
+ 60 20261016_151529 | TurboQuant:Decode Performance
+ 61 20261016_151721 | KVTC: Compression for Storage and Transfer
+ 62 20261016_152028 | KVTC: Integration and Pipelined Decompression
+ 63 20261016_152301 | KVTC: Single-Request TTFT
+ 64 20261016_152345 | KVTC: Throughput Under Memory Pressure
+ 65 20261016_152532 | nvCOMP-ANS: Lossless KV Cache Transfer
+ 66 20261016_152740 | nvCOMP-ANS: Compression and Serving Results  TTFTgains are strongestat low concu
+ 67 20261016_152943 | Takeaways
+ 68 20261016_154557 | What Dynamo can do today
+ 69 20261016_154910 | KVRouter在生产环境中被广泛验证
+ 70 20261016_154929 | 请求进入后，KVRouter用两类信号为Worker打分
+ 71 20261016_155023 | Flash Indexer 在链路里做什么
+ 72 20261016_155112 | 索引里存的是一张“位置到worker"的地图
+ 73 20261016_155209 | GEN01/06  THROUGHPUT
+ 74 20261016_155304 | GEN04/06
+ 75 20261016_155341 | GEN06/06  THROUGHPUT
+ 76 20261016_155430 | 性能数据
+ 77 20261016_155614 | Standalone KV Indexer: 定位
+ 78 20261016_155653 | Standalone KV Indexer:架构
+ 79 20261016_155812 | SLAs of New Agentic Era
+ 80 20261016_160011 | AgentX Trace
+ 81 20261016_160122 | Single AgentX Session Characteristics
+ 82 20261016_160315 | 3 Layer Software Stack of Agentic Inference
+ 83 20261016_160511 | AgentX Dashboard
+ 84 20261016_160627 | Observability - Dynamo Provider Plugin
+ 85 20261016_160740 | How many tokens fit in 1 GB
+ 86 20261016_161018 | Goal 1: actual KV hit rate  theoretical max
+ 87 20261016_161359 | KV capacity for diff session cc
+ 88 20261016_161625 | Goal 2: decode concurrency must keep up
+ 89 20261016_161821 | Hard affinity mode DEP 下的负载均衡问题
+ 90 20261016_161943 | Goal3: Agentic Routing Strategy
+ 91 20261016_162206 | Goal 4 - Clever Session Gateway - Thunder Agent
+ 92 20261016_162300 | ThunderAgent · how it decides
+ 93 20261016_162412 | Agentic Serving ThunderAgent Benchmarks
+ 94 20261016_162454 | ThunderAgent + KV offload
+ 95 20261016_162604 | Thunderagent in RL rollout - Dynamo VeRL Integration
+ 96 20261016_162659 | Assets & Future Work

@@ -1,0 +1,167 @@
+1
+00:00:00,130 --> 00:00:01,600
+They're true and we do really
+
+2
+00:00:01,610 --> 00:00:03,040
+enjoy the work and we love
+
+3
+00:00:03,050 --> 00:00:03,960
+being in the community and
+
+4
+00:00:03,970 --> 00:00:05,320
+working with developers like
+
+5
+00:00:05,330 --> 00:00:07,040
+you. But we're actually doing
+
+6
+00:00:07,050 --> 00:00:07,880
+it because we think it's
+
+7
+00:00:07,890 --> 00:00:09,320
+necessary for our business.
+
+8
+00:00:09,330 --> 00:00:10,240
+We're doing it because it's
+
+9
+00:00:10,250 --> 00:00:11,880
+necessary for our future.
+
+10
+00:00:11,970 --> 00:00:13,360
+andIt's important for developers
+
+11
+00:00:13,370 --> 00:00:14,600
+to understand that.
+
+12
+00:00:14,610 --> 00:00:16,080
+So they'll understand the depth
+
+13
+00:00:16,090 --> 00:00:17,120
+of our commitment to this
+
+14
+00:00:17,130 --> 00:00:18,800
+work. It's the same as the
+
+15
+00:00:18,810 --> 00:00:20,560
+depth of our commitment to cuda
+
+16
+00:00:20,570 --> 00:00:21,680
+and the other things that we've
+
+17
+00:00:21,690 --> 00:00:22,880
+been building for years on the
+
+18
+00:00:22,890 --> 00:00:23,400
+video.
+
+19
+00:00:23,760 --> 00:00:25,520
+um uhWhen we understand you know
+
+20
+00:00:25,530 --> 00:00:26,600
+that something is very
+
+21
+00:00:26,610 --> 00:00:26,870
+important,
+
+22
+00:00:26,880 --> 00:00:29,030
+then you know we were all in and
+
+23
+00:00:29,040 --> 00:00:30,920
+we never give up that's how the
+
+24
+00:00:30,930 --> 00:00:32,540
+video works and open
+
+25
+00:00:32,550 --> 00:00:34,460
+technologies for AI is critical
+
+26
+00:00:34,470 --> 00:00:36,420
+to uh in videos future and to
+
+27
+00:00:36,430 --> 00:00:38,020
+many of uh of our features,
+
+28
+00:00:38,030 --> 00:00:39,180
+even you know all around the
+
+29
+00:00:39,190 --> 00:00:39,820
+industry.
+
+30
+00:00:41,150 --> 00:00:42,460
+okayNow I want to get a little
+
+31
+00:00:42,470 --> 00:00:43,900
+bit more specific about some of
+
+32
+00:00:43,910 --> 00:00:45,940
+the things that we're doing um
+
+33
+00:00:45,950 --> 00:00:47,180
+building a model is a
+
+34
+00:00:47,190 --> 00:00:49,220
+distributed systems problem.
+
+35
+00:00:49,230 --> 00:00:51,980
+umWe have a whole bunch of
+
+36
+00:00:51,990 --> 00:00:53,740
+stages. Each one of them is a
+
+37
+00:00:53,750 --> 00:00:54,980
+distributed system.
+
+38
+00:00:55,080 --> 00:00:56,390
+andThe accelerated computing
+
+39
+00:00:56,400 --> 00:00:57,430
+problem for each of them is
+
+40
+00:00:57,440 --> 00:00:58,310
+really important.
+
+41
+00:00:58,320 --> 00:01:00,150
+We have data preparation where
+
+42
+00:01:00,160 --> 00:01:00,910
+we need to.

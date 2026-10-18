@@ -1,0 +1,18 @@
+# 55  IMG_20261016_150308.jpg  (4064x3048)
+KV Cache Compression Methods
+Training-time & inference-time
+TRAINING-TIME  INFERENCE-TIME
+Architecture design  Runtime compression
+EXAMPLES
+Quantization  Storage sparsity  Compute sparsity
+MQA·GQA  RetainfewerKVentries  ReadfewerKV entriesorpages
+FewerbitsperKVelement
+MLA·CLA  161616
+FP16  Low-bit  full cache  retained  fullcachestaysresident
+Scales+protected outliers  Prune/evictKVs  Query-awaretop-Kreadsfor
+Kimi Linear·CSA/HCA·MSA  attention
+MEMI  MEMI  MEM=
+MEMREAD↓  MEMREADI  MEM READI
+ATTN=(+DQ)  ATTNI  ATTNI
+SERVING IMPACT  MEM=footprint · MEM READ=KV-cache bytes/ decode · ATTN=attentior
+nVIDIA

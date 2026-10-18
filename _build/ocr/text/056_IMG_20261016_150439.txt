@@ -1,0 +1,17 @@
+# 56  IMG_20261016_150439.jpg  (4064x3048)
+Where KV Compression Fits
+Online attention path or KV-cache backend
+REUSABLE MODULE
+KV-cache compression
+TurboQuant  KVTC  nvCOMP-ANS
+TWO INTEGRATION PATHS
+TRT-LLM  KV-cache backend  LMCache  FlexKv  Mooncake
+Inference engine  VLLM  SGLang
+Online path,e.g,INT8·TurboQuant  Offloadpath,e.g,KVTC·nvCOMP-ANS
+Compressed KV remains GPU-resident  Restore to standard KV before attention
+Capacity↑  KV bytes  TPOT  Transparent  Storage  Transfer↓  Capacity↑
+to inference engine  more effective KV  CPU/SSD/remote  prefix-hit potential
+batch/context/throughput  per decode step
+CHALLENGE  attention fusion·engine &model -specific integration  CONS  decompression overhead·no direct TpoT gain
+INTEGRATION RULE  KV-read savings > decompression overhead → Inference engine  Otherwise →KV-cache backend
+nVIDIA

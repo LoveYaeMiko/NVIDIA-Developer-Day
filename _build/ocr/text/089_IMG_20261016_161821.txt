@@ -1,0 +1,12 @@
+# 89  IMG_20261016_161821.jpg  (4064x3048)
+Hard affinity mode DEP 下的负载均衡问题
+AgentX·DEP dp8+ep8·cc 64·hard session affinity·1 hour·4 node 32 dp ranks
+Minutesat≥90%
+Device KV occupancy of the 32 dp ranks,one cell per minute (red = ≥90%,full)  (of61)
+node
+node2
+epou
+20  30  40  50  60
+Minutessince the startof themeasurementwindow(c64,3600 s)
+0%  30%  60%  90%full  100%
+KV aware routing for first round, then session affinity hard mode  nVIDIA

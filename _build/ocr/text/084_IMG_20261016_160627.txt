@@ -1,0 +1,28 @@
+# 84  IMG_20261016_160627.jpg  (4064x3048)
+Observability - Dynamo Provider Plugin
+00:02:30  00:03:00  00:03:10  00:04:00
+00:02:30  0:03.00  00:03:10
+8.3  0000000
+Y&DelaukWorkspace
+swebench_pL8taskcpl-batch-1780049.
+traj-astropy_astropy-693_（maln thread）
+swebench_pl_8taskpl-batch-1780049...
+traj-django_django-109(main thread
+tool:bash
+ench_pl8taskpi-batch-1780049.
+astropy_astropy-774_（malnthread)
+toolbash
+swebench.pL8taskpi-batch-1780049..
+toolbash  Qwan3.5-27B(21491ok)
+tool:bash
+Aswebench_pi8tr  1780049.
+traj-astropy_astro  thread  tool:bash  lool:bash
+tool:bash  tool:bash
+swebench_pL8task  58s344ms299ua10oLbagh
+tura-astropy_astro  tool:bash  Category tool
+tool:bash
+swcbench.pLatns
+traj-django_django
+swebench_pi_Btosk
+astropy
+②nVIDIA

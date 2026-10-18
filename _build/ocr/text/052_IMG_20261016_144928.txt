@@ -1,0 +1,16 @@
+# 52  IMG_20261016_144928.jpg  (4064x3048)
+Lessons for Scalable Training
+KEY TAKEAWAY
+·Parallelism and memory policy jointly determine feasibility.
+Use profiling to guide the optimization.
+Optimization priorities depend on the target workload.
+Get Started with Megatron Core  Referencerecipes forDeepSeek-V4-Pro
+三  -
+Composable parallelism for scalable dense and MoE training.  ghts  Setings
+FP8,fused kernels,and communication overlap optimized for NVIDIA GPUs.  Megatron-LM/eiamlesmoe_reopes/deepsek_pro/gb300/
+hubal depsek-v4-prorecipetor64k and1n
+Modularbuildingblocksfor custom models and training workflows.  Tols banchs1379cortahadfand44cen  iebehind701atro-:d4
+https:llgithub.com/NVIDlA/Megatron-LM
+DmSL4K266OPU_TP1PP4EAyam  [Dev]Updtec(NVI335)
+mTHO1_256OPUTPIPPP64CP84yal  deepsekod-pru recipes for64k and1m
+mTH045CCPU_TP1PECP16ym  deptee-v4-psorecpes lor64kand1m

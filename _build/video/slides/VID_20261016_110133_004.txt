@@ -1,0 +1,13 @@
+# VID_20261016_110133_004
+已的模拟器，这样您才能知道这些模型可以更好地理解世界并与之交
+互
+Accelerated Computing
+nVIDIA
+Firstprincipleacceleratingbeyond theG.
+·Interconnects-NVL72
+·Numerics and Sparsity-pretrain in NVFP4
+.Neuralnetarchitectures
+HybridSSM,MoE-training datasets
+.Optimizers
+·Post-training for agentic workloads
+·Brevity of LLMresponse

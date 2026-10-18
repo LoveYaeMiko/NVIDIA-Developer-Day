@@ -1,0 +1,11 @@
+# 44  IMG_20261016_142735.jpg  (4064x3048)
+STEP 1: Runtime Overhead and Memory Trade-offs
+Lots of Gpu idles are the main issue in the 64K case. Two methods to alleviate it:
+Fusion kernels
+. Some ops are easy to fuse, such as simple mathmetics and memory movements.
+CUDA Graphs
+Capture the static modules and replay. (we use padding to make packed sequences static!)
+kern..  void  kernel  kerne...
+w/oCUDAGraphs
+kernel  voidsm1.  kernel_c....  kern...
+WCUDAGraphs

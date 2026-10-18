@@ -1,0 +1,11 @@
+# 45  IMG_20261016_143215.jpg  (4064x3048)
+WheretheStepTime Goes
+Layertimedecomposition
+000200  100
+Percent%  Attn  Attn
+0020  Attn
+MoE  MoE
+MoE
+4K  64K  1M
+4Kisasparseproxycaseforcomparison  ContextLength
+MoEexpertsEPcommsIndexer+CPcommSparseAttnGroup-OProjOthers

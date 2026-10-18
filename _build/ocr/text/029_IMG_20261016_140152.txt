@@ -1,0 +1,16 @@
+# 29  IMG_20261016_140152.jpg  (4064x3048)
+Optimization 8: Early fc1_done Publish
+·As soon as the FC1 tile's TMA store lands, one epilogue thread immediately publishes fc1 _done with a release atomic add, instead of a
+batchedpublish at the.taskboundary
+·Under two-WGcooperative each WG adds +1 and theFC2wait threshold isx2-no cross-WG barrier
+Why it is faster:the publish point moves earlier, so the Fc2 tile passes its readiness check and issues its TMA load sooner -the
+FC1→FC2dependency chain shrinks
+·No extra warp / registers; the Mega default path, and the fallback for the next slide's store offload
+FC1 epiloguo,por tile -time 一
+before  R2S  TMA store  wait fornexttask  task-boundarybarrier  batched publishfc1_done
+AFC2 tile unblocked here
+R2S  TMA store lands  release-publish fc1_done  wait fornexttask  task-boundarybarrier
+AFC2 tile unblocked hore
+One opiloguo thread does a GPU-scope roloaso atomlc add right after the store;wo-WG cooperative: each WG adds +1 and the FC2 wait threshold doubles-no cross-WG barrier needed
+No extra warp or registers;default Mega path,and tho fallback for storo offload whonrogistorsrun short
+nVIDIA

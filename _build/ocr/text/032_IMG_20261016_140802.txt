@@ -1,0 +1,19 @@
+# 32  IMG_20261016_140802.jpg  (4064x3048)
+Optimization 11: 16-byte FC2 Output Stores
+PreviouslyFC2BF16output was written pair by pair in accumulator layout:8xSTG.32per lane per subtile(8xSTG.16 for swapAB),one warp-level store
+filling onlyhalfa sector
+·Non-swap:4x4 butterfly transpose inside the quad (4 shuffles) → each lane holds 8 consecutive columns of one row→one STG.128;cross-rank direct
+writedropsfrom8to2destinationlookups
+swapAB:channel-majoraccumulator,a three-level lane-group transpose(6 shuffles +6prmt)replaces7 STGs;local-pool path only
+Onewarp-level store:8halfsectors→16full sectors
+WGMMA accumulator layout.onerowr-each lane holds2adjacentBF16per8-columngroup
+lane0:c0c1|c8c9|c16c17|c24c25  lane 0:colsc0..c7（16B)
+lane1:c2c3|c10c11|c18c19|c26c27  4x4butterflytranspose  lane 1:colsc8...c15  1×STG.128
+4xshuffle（xor1,xor2)  perlaneperrow
+lane2:c4c5|c12c13|c20c21|c28c29  lane2:colsc16...c23
+lane3:c6c7|c14c15|c22c23|c30c31  lane3:colsc24...c31
+before:8xSTG.32per lane per subtile,  after:8 consecutive columns per lane- one 16-byte store;
+alf-sectorwrites  a.warp flls 16full32Bsectors instead of 8half sectors
+also cuts the cross-rank destination lookups from 8 to2per subtileswapAB（channel-major accumulator):three-level lane-group transpose,6 shuffle +6prmt→1STG.128,local-pool path only.
+jtives reused from the training-output(generate_c)path -no new PTX.Alignment relies on hidden being a multiple of 8.
+nVIDIA

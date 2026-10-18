@@ -1,0 +1,4 @@
+# VID_20261016_110316_002
+这与我们对CUDA的承诺之深一样，以及我们在NVIDIA多年来一直在
+构建的其他东西，当我们明白某些东西非常量要时，您就会知道
+aDistributed Systems Problem

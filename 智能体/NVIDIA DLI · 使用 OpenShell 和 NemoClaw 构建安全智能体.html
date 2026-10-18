@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html -->
+<html lang="zh-CN" data-learning-disclosures-ready="true" data-learning-print-ready="true" data-learning-hash-ready="true" data-locale-ui-mounted="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="dli-lab-allocation" content="a2382c08ae145cabef3a0c58db79196d7d0fcfb23efe5dd27baa82c3221292e6">
+
+  <meta name="nemoclaw-runtime" content="local">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVIDIA DLI · 使用 OpenShell 和 NemoClaw 构建安全智能体</title>
+<link rel="stylesheet" href="./NVIDIA DLI · 使用 OpenShell 和 NemoClaw 构建安全智能体_files/_style.css">
+<style>
+  :root {
+    --g:#76b900; --gd:#4a7a00; --gs:#aee23a;
+    --bg:#0d0d0d; --e1:#161616; --e2:#1e1e1e; --e3:#2a2a2a;
+    --tx:#f2f2f2; --td:#b0b0b0; --tf:#8a8a8a;
+    --mono:ui-monospace,"SF Mono",Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  /* Light theme: <html data-theme="light"> flips the palette (mirrors _lite_overlay.css). The
+     bundler injects the pre-paint init that sets data-theme; _shared.js mounts the toggle. */
+  :root[data-theme="light"] {
+    --g:#3f6900; --gd:#2f5500; --gs:#3f6900;
+    --bg:#ffffff; --e1:#f6f8fa; --e2:#eef1f4; --e3:#e1e6eb;
+    --tx:#1a1a1a; --td:#3b3b3b; --tf:#4b5563;
+  }
+  :root[data-theme="light"] body { background: var(--bg); color: var(--tx); }
+  :root[data-theme="light"] .howto .n,:root[data-theme="light"] .start-row a.primary{color:#fff}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--tx);
+               font-family: var(--sans); font-size: 15px; line-height: 1.55; }
+  a { color: var(--g); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--e2);
+         padding: 1px 6px; border-radius: 4px; color: var(--gs); }
+
+  /* Topbar (.topbar / .navpill / .key-pill / theme toggle) and <main> come from _style.css now,
+     matching the course pages exactly; only the landing-specific blocks below stay local. */
+
+  .hero { margin: .8em 0 1.8em; }
+  .hero .eyebrow { font-family: var(--mono); font-size: .72rem; color: var(--gs);
+                   text-transform: uppercase; letter-spacing: .12em; margin-bottom: .6em; }
+  .hero h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.1; margin: 0 0 .4em; letter-spacing: -0.01em; }
+  .hero h1 .accent { color: var(--g); }
+  .hero p.lead { font-size: 1.06rem; color: var(--td); }
+
+  .howto { display:flex; flex-wrap:wrap; gap:10px 26px; margin:0 0 1.8em;
+           padding:14px 18px; background:var(--e1); border:1px solid var(--e3);
+           border-radius:10px; font-size:.9rem; color:var(--td); }
+  .howto .step { display:flex; align-items:baseline; gap:9px; flex:1; min-width:240px; }
+  .howto .n { font-family:var(--mono); color:#000; background:var(--g);
+              border-radius:999px; width:20px; height:20px; display:inline-flex;
+              align-items:center; justify-content:center; font-size:.72rem;
+              font-weight:700; flex:none; transform:translateY(3px); }
+  .howto b { color:var(--tx); font-weight:600; }
+
+  .section { margin: 2.4em 0 1em; }
+  .section > h2 { font-size: 1.2rem; color: var(--tx); border-bottom: 1px solid var(--e3);
+                  padding-bottom: .35em; margin-bottom: .4em; }
+  .section .help { font-size: .92rem; color: var(--td); margin: .5em 0 1.1em; }
+  .objectives-layout { display:grid; grid-template-columns:minmax(0, .9fr) minmax(340px, 1.1fr);
+                       gap:24px; align-items:start; }
+  .objectives-layout ul { padding-left:1.3rem; }
+  .objectives-layout li { margin:.45em 0; }
+  figure.objectives-figure { margin:.5em 0 1.8em; }
+  figure.objectives-figure img { display:block; width:100%; height:auto; border:1px solid var(--e3);
+                                border-radius:var(--r); }
+  figure.objectives-figure figcaption { font-size:.88rem; color:var(--td); line-height:1.6; margin-top:.55em; }
+  figure.objectives-figure figcaption b { color:var(--gs); }
+  @media (max-width: 780px) {
+    .objectives-layout { grid-template-columns:1fr; }
+  }
+
+  /* Key panel is rendered by mountKeyPanel and styled by _style.css (.key-panel / .btn / .status). */
+
+  /* ── Module map ────────────────────────────────────────────────────── */
+  .module-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.2em 0; }
+  @media (max-width: 760px) { .module-grid { grid-template-columns: 1fr; } }
+  /* The card body (.mc-main) is one real link to the module's first page; the
+     per-page links are a SIBLING row below it. There is no nested <a> (which splits
+     in HTML) and no stretched-link guesswork. The whole body click target is a
+     genuine <a>. */
+  .module-card { background: var(--e1); border: 1px solid var(--e3); border-radius: 10px;
+                 overflow: hidden; transition: border-color .15s, transform .15s; }
+  .module-card:hover { border-color: var(--g); transform: translateY(-2px); }
+  .module-card .mc-main { display: block; padding: 18px 20px 12px; text-decoration: none; }
+  .module-card:hover .mc-main { background: rgba(118,185,0,.04); }
+  .module-card .num { font-family: var(--mono); font-size: .72rem; color: var(--tf);
+                      letter-spacing: .06em; text-transform: uppercase; }
+  .module-card h3 { font-size: 1.05rem; color: var(--gs); margin: .25em 0 .35em; }
+  .module-card:hover h3 { text-decoration: underline; }
+  .module-card p { font-size: .88rem; color: var(--td); margin: 0; line-height: 1.55; }
+  .module-card .pages { padding: 0 20px 15px; font-family: var(--mono);
+                        font-size: .72rem; color: var(--tf); }
+  .module-card .pages a { color: var(--td); }
+  .module-card .pages a:hover { color: var(--gs); }
+
+  .start-row { display: flex; gap: 12px; flex-wrap: wrap; margin: .4em 0 0; }
+  .start-row a { display: inline-flex; align-items: center; gap: 7px;
+                 padding: 11px 22px; border-radius: 8px; font-weight: 700; font-size: .92rem; }
+  .start-row a.primary { background: var(--g); color: #000; }
+  .start-row a.primary:hover { background: var(--gs); text-decoration: none; }
+  .start-row a.ghost { background: var(--e2); border: 1px solid var(--e3); color: var(--td); }
+  .start-row a.ghost:hover { border-color: var(--g); color: var(--gs); text-decoration: none; }
+
+  /* ── What this runs on ─────────────────────────────────────────────── */
+  .sys-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 1.1em 0; }
+  @media (max-width: 780px) { .sys-grid { grid-template-columns: 1fr; } }
+  .sys-card { background: var(--e1); border: 1px solid var(--e3); border-radius: 8px;
+              padding: 15px 17px; text-decoration: none; display: block;
+              transition: border-color .12s, background .12s; }
+  .sys-card:hover, .sys-card:focus-visible {
+    border-color: var(--g); background: var(--e2); text-decoration: none;
+  }
+  .sys-card .sys-label { font-family: var(--mono); font-size: .7rem; text-transform: uppercase;
+                         letter-spacing: .1em; color: var(--tf); margin-bottom: .35em; }
+  .sys-card .sys-name { font-weight: 700; font-size: .95rem; color: var(--gs); margin: 0 0 .35em; }
+  .sys-card .sys-desc { font-size: .85rem; color: var(--td); line-height: 1.5; }
+
+  .callout { border: 1px solid var(--e3); background: rgba(118,185,0,.07);
+             padding: 12px 18px; border-radius: 8px; margin: 1.4em 0;
+             font-size: .92rem; color: var(--td); }
+  .callout strong { color: var(--gs); }
+
+  footer { margin-top: 4em; padding-top: 1.6em; border-top: 1px solid var(--e3);
+           color: var(--tf); font-size: .82rem; }
+  footer a { color: var(--td); }
+</style>
+<link rel="stylesheet" href="./NVIDIA DLI · 使用 OpenShell 和 NemoClaw 构建安全智能体_files/_dli_activity_diagnostics.css" data-dli-diagnostic-style=""><link rel="icon" type="image/x-icon" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/assets/favicon.ico"><style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
+</style></head>
+<body>
+<div class="topbar">
+  <a class="logo" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html" data-solution-navigation="true">NVIDIA · 安全智能体</a>
+  <nav id="nav"><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/01a-loop.html" title="智能体" data-solution-navigation="true">1a</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/01b-react.html" title="ReAct 循环" data-solution-navigation="true">1b</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/01c-tools.html" title="规模化工具" data-solution-navigation="true">1c</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/02a-routing.html" title="工作流" data-solution-navigation="true">2a</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/02b-rag.html" title="索引智能体" data-solution-navigation="true">2b</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/02c-deep.html" title="深度智能体" data-solution-navigation="true">2c</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/03a-kickstart.html" title="连接 NemoClaw" data-solution-navigation="true">3a</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/03b-openclaw.html" title="OpenClaw" data-solution-navigation="true">3b</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/03c-always-on.html" title="持续运行" data-solution-navigation="true">3c</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/04a-safety.html" title="OpenShell" data-solution-navigation="true">4a</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/04b-modern-clis.html" title="现代 CLI" data-solution-navigation="true">4b</a><a class="navpill" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/04c-going-further.html" title="深入探索" data-solution-navigation="true">4c</a></nav>
+  <div class="spacer"></div>
+  <div class="activity-control" data-state="off">
+    <button type="button" class="activity-control-toggle" aria-expanded="false" aria-controls="activity-control-panel" aria-label="学习记录 0%. 未连接" title="学习记录: 未连接">
+      <span aria-hidden="true">🏃</span> <span data-activity-label="">0%</span>
+    </button>
+    <section id="activity-control-panel" class="activity-control-panel" hidden="" role="dialog" aria-label="课程活动与隐私">
+      <header><strong>课程活动</strong><button type="button" data-activity-close="" aria-label="关闭学习记录面板">×</button></header>
+      <p data-activity-notice="">此课程部署暂不支持远程进度同步。</p>
+      <p data-activity-http="">此实验环境使用 HTTP。网络中的其他人可能读取或篡改你的进度和会话。仅在接受此风险时启用同步。</p>
+      <p data-activity-status="" role="status" aria-live="polite" hidden=""></p>
+      <label id="activity-progress-label" for="activity-progress">本地验证进度： 0%</label>
+      <progress id="activity-progress" max="100" value="0" aria-labelledby="activity-progress-label" aria-valuetext="本地验证进度： 0%"></progress>
+      <p data-activity-sync=""></p>
+      <p>进度记录课程活动中已成功完成的检查点。</p>
+      <div class="activity-control-actions">
+        <button type="button" data-activity-enable="" disabled="">启用远程进度同步</button>
+        <button type="button" data-activity-refresh="" hidden="">刷新已保存的进度</button>
+        <button type="button" data-activity-disable="" hidden="">断开此标签页的连接</button>
+      </div>
+      <label class="activity-referral-choice"><input type="checkbox" data-activity-referrals="" disabled=""> 记录对已批准 NVIDIA 资源的选择</label>
+      <details class="activity-sync-details"><summary>同步详情</summary>
+    <div class="activity-sync-metrics"><div>此标签页中的进度<strong data-local="">0%</strong></div><div>Activity 已确认<strong data-confirmed="">尚未检查</strong></div></div>
+    <p data-guidance="">同步已关闭。启用远程进度以保存检查点。</p><dl><dt>上次确认</dt><dd data-confirmed-at="">尚未检查</dd><dt>Activity 报告的身份</dt><dd data-identity="">未报告</dd></dl>
+    <p><strong>此页面的近期请求</strong></p><ol data-requests=""></ol><p data-empty="">暂无请求。</p>
+    <p class="activity-diagnostic-privacy">报告包含进度、请求结果及耗时，不包含凭据、标识符或课程内容。此按钮不会上传数据。</p>
+    <button type="button" data-copy-diagnostic="">复制诊断报告</button>
+    <p role="status" data-copy-status=""></p><textarea data-diagnostic-report="" readonly="" hidden="" aria-label="复制诊断报告"></textarea></details><details>
+        <summary>数据、用途与保留期限</summary>
+        <p>启用同步后，课程会向 NVIDIA 发送课程版本、会话标识符和已完成的检查点，以保存你的进度。是否记录链接点击由你单独选择。服务还会接收 IP 地址等连接元数据。</p>
+        <p data-activity-browser-retention="">断开连接会停止后续同步，并清除此标签页的 Activity 会话。关闭标签页也会清除会话。这两种操作都不会删除已发送给 NVIDIA 的记录。</p>
+        <p data-activity-service-retention="">NVIDIA 隐私政策说明了服务数据的使用和保留方式，以及如何申请删除。一般保留标准会考虑你与 NVIDIA 持续互动的时间；本课程不承诺 Activity 服务另有特定的删除期限。</p>
+        <p>本课程不会向 Activity API 发送 API 密钥、提示词、模型回复、终端输出或工作区文件。</p>
+      </details>
+      <details>
+        <summary>服务状态</summary>
+        <p>同步为可选功能。服务不可用时，你可以继续练习，稍后重试。只有经 API 确认后，界面才会显示已保存的进度。</p>
+        <p data-activity-observation="">此标签页尚未测量任何连接。</p>
+      </details>
+      <p class="activity-control-links"><a data-activity-policy="" target="_blank" rel="noopener noreferrer" href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/">NVIDIA 隐私政策</a><a data-activity-rights="" target="_blank" rel="noopener noreferrer" href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/">隐私选择与请求</a></p>
+      <p data-activity-gpc="" hidden="">已启用全球隐私控制。资源选择记录将保持关闭。</p>
+    </section></div><button class="theme-toggle" type="button" aria-label="Toggle dark or light theme" title="Switch to light theme" style="flex: 0 0 auto; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; line-height: 1; cursor: pointer; background: transparent; color: var(--td); border: 1px solid var(--bd); border-radius: 7px;">☀</button><div class="language-menu"><button class="language-menu-button" type="button" aria-label="选择语言" aria-haspopup="menu" aria-expanded="false">🌐</button><div class="language-menu-popover" role="menu" hidden=""><a role="menuitem" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/web/nemoclaw/index.html?lang=en" lang="en" data-solution-navigation="true">English</a><a role="menuitem" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/es/nemoclaw/index.html?lang=es" lang="es-ES" data-solution-navigation="true">Español</a><a role="menuitem" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/pt/nemoclaw/index.html?lang=pt" lang="pt-BR" data-solution-navigation="true">Português (Brasil)</a><a role="menuitem" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/tw/nemoclaw/index.html?lang=tw" lang="zh-TW" data-solution-navigation="true">繁體中文（台灣）</a><a role="menuitem" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html?lang=zh" lang="zh-CN" aria-current="page" data-solution-navigation="true">简体中文</a></div></div><span class="key-pill set" id="key-status" onclick="document.getElementById('setup').scrollIntoView({behavior:'smooth'})" title="模型密钥已在本次会话中验证">密钥已设置 ✓</span>
+<label class="solution-mode-control" data-solution-mode=""><span>示例</span><select class="solution-mode-select" aria-label="示例"><option value="exercises">练习</option><option value="solutions">完整示例</option></select></label></div>
+
+<main>
+  <div class="hero">
+    <div class="eyebrow">课程主页</div>
+    <h1 id="course-title" class="heading-link-target" aria-label="使用 OpenShell 和 NemoClaw 构建安全智能体"><a class="heading-anchor" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#course-title" aria-label="Link to 使用 OpenShell 和 NemoClaw 构建安全智能体" title="复制此节链接" data-solution-navigation="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 13.4a4.5 4.5 0 0 0 6.36.01l2.12-2.12a4.5 4.5 0 0 0-6.36-6.36l-1.21 1.2m1.9 4.47a4.5 4.5 0 0 0-6.37-.01l-2.12 2.12a4.5 4.5 0 1 0 6.37 6.36l1.2-1.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="heading-permalink" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#course-title" data-solution-navigation="true">使用 <span class="accent">OpenShell</span> 和 <span class="accent">NemoClaw</span> 构建安全智能体</a></h1>
+    <h2 id="section" class="heading-link-target" aria-label="摘要"><a class="heading-anchor" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section" aria-label="Link to 摘要" title="复制此节链接" data-solution-navigation="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 13.4a4.5 4.5 0 0 0 6.36.01l2.12-2.12a4.5 4.5 0 0 0-6.36-6.36l-1.21 1.2m1.9 4.47a4.5 4.5 0 0 0-6.37-.01l-2.12 2.12a4.5 4.5 0 1 0 6.37 6.36l1.2-1.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="heading-permalink" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section" data-solution-navigation="true">摘要</a></h2>
+    <p class="lead" id="course-abstract">
+      现代智能体无处不在，其概念并不复杂：将模型连接到工具和记忆，再通过路由决策持续运行，直至完成任务。本课程将从零开始构建这样的系统，随后把这些理念与软件工程师和非技术用户都在使用的现代框架联系起来。您将从一次 API 调用起步，逐步学习智能体协作、有依据的检索、深度规划，以及如何使用 NVIDIA OpenClaw 和 NemoClaw™ 进行安全部署。
+    </p>
+  </div>
+
+  <div class="howto">
+    <div class="step"><span class="n">1</span><span>在下方<b>确认模型路由</b>。浏览器课程与本地智能体共用经过身份验证的课程中继。您可以选择目录中列出的任意兼容模型。</span></div>
+    <div class="step"><span class="n">2</span><span>按照默认路径依次<b>学习各模块</b>，也可以直接跳转到您需要完成的任务。每个页面最后都会提供一个可直接运行的交互页面，其 JavaScript 代码也可供查看和修改。</span></div>
+    <div class="step"><span class="n">3</span><span>在模块 3 和模块 4 中<b>使用本地 NemoClaw 运行时</b>。本 CPU 课程在 OpenShell 内启动 OpenClaw，并通过课程中继路由模型调用。打开<a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/services.html">服务</a>即可检查各个界面。</span></div>
+  </div>
+
+  <div class="section" id="learning-objectives">
+    <h2 id="section-2" class="heading-link-target" aria-label="学习目标"><a class="heading-anchor" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section-2" aria-label="Link to 学习目标" title="复制此节链接" data-solution-navigation="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 13.4a4.5 4.5 0 0 0 6.36.01l2.12-2.12a4.5 4.5 0 0 0-6.36-6.36l-1.21 1.2m1.9 4.47a4.5 4.5 0 0 0-6.37-.01l-2.12 2.12a4.5 4.5 0 1 0 6.37 6.36l1.2-1.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="heading-permalink" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section-2" data-solution-navigation="true">学习目标</a></h2>
+    <div class="objectives-layout">
+      <div>
+        <p id="learning-objectives-intro">完成本课程后，学员将能够：</p>
+        <ul>
+          <li id="learning-objective-1">构建基本的智能体循环，并识别其核心组件。</li>
+          <li id="learning-objective-2">在智能体系统中实现可靠的工具使用和函数调用。</li>
+          <li id="learning-objective-3">使用结构化路由模式设计和协调多智能体系统。</li>
+          <li id="learning-objective-4">使用 OpenShell 配置智能体身份，并确保智能体在沙箱中安全运行。</li>
+          <li id="learning-objective-5">部署和管理自主智能体，同时构建持久化技能库。</li>
+        </ul>
+      </div>
+      <figure class="objectives-figure">
+        <a href="https://build.nvidia.com/nvidia/nemoclaw-for-openclaw/nemoclawcard?ncid=ref-dli-146986" target="_blank" rel="noopener" aria-label="打开 NVIDIA Build blueprint 卡片">
+          <img src="./NVIDIA DLI · 使用 OpenShell 和 NemoClaw 构建安全智能体_files/nemoclaw-for-openclaw.jpg" alt="在本地 AI 工作站旁，NemoClaw 吉祥物手持 OpenShell 盾牌。" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+        </a>
+        <figcaption>
+          <b>本地工作站环境中用于 OpenClaw 的 NemoClaw。</b><br>来源：<a href="https://build.nvidia.com/nvidia/nemoclaw-for-openclaw/nemoclawcard?ncid=ref-dli-146986" target="_blank" rel="noopener">NVIDIA Build blueprint 卡片</a>。
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ── Key setup ─────────────────────────────────────────────────────── -->
+  <div class="section" id="setup">
+    <h2 id="section-3" class="heading-link-target" aria-label="模型路由"><a class="heading-anchor" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section-3" aria-label="Link to 模型路由" title="复制此节链接" data-solution-navigation="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 13.4a4.5 4.5 0 0 0 6.36.01l2.12-2.12a4.5 4.5 0 0 0-6.36-6.36l-1.21 1.2m1.9 4.47a4.5 4.5 0 0 0-6.37-.01l-2.12 2.12a4.5 4.5 0 1 0 6.37 6.36l1.2-1.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="heading-permalink" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section-3" data-solution-navigation="true">模型路由</a></h2>
+    <p class="help">课程主机向服务器端中继提供凭据。浏览器单元通过同源路由访问模型，不会暴露凭据。</p>
+    <div id="key-panel" data-state="ready" aria-busy="false"><div class="key-panel key-panel-saved key-panel-local">
+        <div class="relay-status">
+          <span class="relay-status-dot" aria-hidden="true"></span>
+          <span class="relay-status-copy">
+            <strong>课程模型中继已就绪</strong>
+            <span>凭据保留在课程主机上。</span>
+          </span>
+          <span class="relay-status-badge">已连接</span>
+        </div>
+        <div class="relay-routes" aria-label="课程模型路由">
+          <div class="relay-route">
+            <span class="relay-route-heading"><strong>对话</strong><code>/api/llm/v1</code></span>
+            <span class="relay-route-model">nvidia/nemotron-3.5-lightning-30b-a3b</span>
+          </div>
+          <div class="relay-route">
+            <span class="relay-route-heading"><strong>嵌入</strong><code>/api/llm/v1</code></span>
+            <span class="relay-route-model">nvidia/nemotron-3-embed-1b</span>
+          </div>
+        </div>
+        <details class="request-settings relay-request-settings">
+          <summary><span>高级请求处理</span><span class="relay-policy-summary">60 s 超时 · 不重试</span></summary>
+          <p>重试涵盖流式传输开始前的网络错误、HTTP 429 和临时 5xx 响应。</p>
+          <div class="relay-policy-fields">
+            <label><span>超时</span><span class="relay-policy-input"><input type="number" class="request-timeout" min="5" max="300" step="5" value="60"><small>秒</small></span></label>
+            <label><span>重试</span><input type="number" class="request-retries" min="0" max="5" step="1" value="0"></label>
+          </div>
+          <div class="relay-policy-actions"><button class="btn request-save-btn" type="button">保存更改</button><span class="request-status" role="status"></span></div>
+        </details>
+      </div></div>
+  </div><section class="section course-assistant-entry"><h2>课程助理</h2><p class="help">完成模型访问配置后，可使用各课时中的课程助理按钮。每个会话都保存在此浏览器中，并持续关联到会话开始时的页面，直至您明确选择当前页面。</p><button type="button" class="btn course-assistant-open">打开课程助理</button></section>
+
+  <details class="course-disclosure" id="using-the-course">
+    <summary>如何使用这些课时</summary>
+    <p>运行示例，检查输出，再修改一个输入并比较结果。每个单元格的代码控件都可显示 JavaScript；您可以先阅读和运行示例，再编辑代码。</p>
+    <p>点击章节标题或旁边的箭头，即可展开或折叠该章节。颜色用于辅助文字提示：蓝色表示信息，琥珀色表示注意事项，红色表示错误。请阅读文字，不要仅凭颜色判断。</p>
+    <p>使用<strong>章节</strong>查找章节。标题链接可以收藏或分享。提问时，助理可以参考当前章节。模型和会话控件是可选项；先围绕正在阅读的示例提问即可。</p>
+  </details>
+
+  <details class="course-disclosure" id="request-recovery">
+    <summary>模型请求失败时</summary>
+    <p><strong>停止</strong>会取消当前请求。仅凭请求中止消息，无法判断原因是取消操作、页面跳转还是连接中断。请保留可见错误和已有的部分输出。超时表示在设定的等待时间内没有收到响应头或流式数据。</p>
+    <p>对于只读模型示例，请检查上方的模型访问配置，稍等后重新运行一次。如果再次失败，需要记录课时和章节链接、单元格标签、所选模型、错误文本及时间，以便诊断。切勿附上 API 密钥。再次运行会修改文件、安排任务或创建会话的工具或命令前，请确认第一次尝试是否已经完成了该操作。</p>
+    <p>遇到 HTTP 401 或 403，请检查凭据或访问权限。HTTP 429 表示服务正在限制请求，请等待后再试。5xx 响应可能表示提供方或中继服务出现故障。设置中的<strong>请求处理</strong>控制等待时间及流式传输开始前的可选重试。延长等待时间或增加重试次数无法修复无效凭据。请通过本页底部的支持链接报告持续发生的问题。</p>
+  </details>
+
+  <!-- ── Module map ────────────────────────────────────────────────────── -->
+  <div class="section">
+    <h2 id="section-4" class="heading-link-target" aria-label="探索课程内容"><a class="heading-anchor" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section-4" aria-label="Link to 探索课程内容" title="复制此节链接" data-solution-navigation="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 13.4a4.5 4.5 0 0 0 6.36.01l2.12-2.12a4.5 4.5 0 0 0-6.36-6.36l-1.21 1.2m1.9 4.47a4.5 4.5 0 0 0-6.37-.01l-2.12 2.12a4.5 4.5 0 1 0 6.37 6.36l1.2-1.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="heading-permalink" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section-4" data-solution-navigation="true">探索课程内容</a></h2>
+    <p>以下模块可以按需选择，也可以按顺序学习。您可以自由跳转，但请注意，部分模块以前面的模块为基础。每个模块末尾都有一个可运行的交互作品，相关代码可供查看和修改。您可以在浏览器中修改示例、自行托管，或将此代码库作为上下文交给 coding agent，用于本地部署或应用开发。</p>
+
+    <div class="module-grid">
+      <div class="module-card">
+        <a class="mc-main" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/01a-loop.html" data-solution-navigation="true">
+          <div class="num">模块 1 · 约 1 小时 · 3 个页面</div>
+          <h3>智能体基础 · 循环 · ReAct · 工具</h3>
+          <p>构建最精简的智能体循环，加入 ReAct 推理，并将普通函数转换为模型可请求的工具调用。</p>
+        </a>
+        <div class="pages">
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/01a-loop.html" data-solution-navigation="true">1a 循环</a> ·
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/01b-react.html" data-solution-navigation="true">1b ReAct</a> ·
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/01c-tools.html" data-solution-navigation="true">1c 工具</a>
+        </div>
+      </div>
+      <div class="module-card">
+        <a class="mc-main" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/02a-routing.html" data-solution-navigation="true">
+          <div class="num">模块 2 · 约 1 小时 · 3 个页面</div>
+          <h3>高级模式 · 工作流 · RAG · 深度智能体</h3>
+          <p>跨调用路由任务，将课程资料作为工具进行检索，并使用可创建子智能体的规划器。</p>
+        </a>
+        <div class="pages">
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/02a-routing.html" data-solution-navigation="true">2a 工作流</a> ·
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/02b-rag.html" data-solution-navigation="true">2b RAG</a> ·
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/02c-deep.html" data-solution-navigation="true">2c 深度智能体</a>
+        </div>
+      </div>
+      <div class="module-card live">
+        <a class="mc-main" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/03a-kickstart.html" data-solution-navigation="true">
+          <div class="num">模块 3 · 约 1 小时 · 3 个页面</div>
+          <h3>NemoClaw 设置 · OpenClaw · 持续运行</h3>
+          <p>连接本地 NemoClaw 运行时。探索 OpenShell 内部的 OpenClaw 网关、工作区、技能和定时运行功能。</p>
+        </a>
+        <div class="pages">
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/03a-kickstart.html" data-solution-navigation="true">3a 快速入门</a> ·
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/03b-openclaw.html" data-solution-navigation="true">3b OpenClaw</a> ·
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/03c-always-on.html" data-solution-navigation="true">3c 持续运行</a>
+        </div>
+      </div>
+      <div class="module-card live">
+        <a class="mc-main" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/04a-safety.html" data-solution-navigation="true">
+          <div class="num">模块 4 · 约 1 小时 · 3 个页面</div>
+          <h3>OpenShell 安全机制 · 现代 CLI · 深入探索</h3>
+          <p>将关注点从 OpenClaw 的行为转向 NemoClaw 在其外围构建的 OpenShell 策略边界，然后对比 Hermes Agent、Deep Agents 以及其它现代 CLI 智能体。</p>
+        </a>
+        <div class="pages">
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/04a-safety.html" data-solution-navigation="true">4a OpenShell</a> ·
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/04b-modern-clis.html" data-solution-navigation="true">4b 现代 CLI</a> ·
+          <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/04c-going-further.html" data-solution-navigation="true">4c 进阶探索</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── What this runs on ─────────────────────────────────────────────── -->
+  <div class="section">
+    <h2 id="section-5" class="heading-link-target" aria-label="本课程的运行基础"><a class="heading-anchor" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section-5" aria-label="Link to 本课程的运行基础" title="复制此节链接" data-solution-navigation="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 13.4a4.5 4.5 0 0 0 6.36.01l2.12-2.12a4.5 4.5 0 0 0-6.36-6.36l-1.21 1.2m1.9 4.47a4.5 4.5 0 0 0-6.37-.01l-2.12 2.12a4.5 4.5 0 1 0 6.37 6.36l1.2-1.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="heading-permalink" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/index.html#section-5" data-solution-navigation="true">本课程的运行基础</a></h2>
+    <p class="help">
+      本课程通过浏览器使用以下三个系统。每张卡片都会说明相应系统的作用，并可打开相关服务或目录。
+    </p>
+    <div class="sys-grid">
+      <a class="sys-card models" href="https://build.nvidia.com/?ncid=ref-dli-146986" target="_blank" rel="noopener">
+        <div class="sys-label">模型</div>
+        <div class="sys-name">build.nvidia.com</div>
+        <div class="sys-desc">通过与 OpenAI 兼容的 API 使用由 NVIDIA 托管的 Nemotron 模型。调用时会使用 <code>nvapi-</code> 密钥和所选模型路由。</div>
+      </a>
+      <a class="sys-card search" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/glossary.html" data-solution-navigation="true">
+        <div class="sys-label">搜索</div>
+        <div class="sys-name">资料目录</div>
+        <div class="sys-desc"><code>webSearch</code> 会对课程术语表、论文和文章进行相关性排序。
+          <code>instantAnswer</code> 会返回一个匹配的术语表定义。打开目录即可查看来源和搜索请求。</div>
+      </a>
+      <a class="sys-card runtime" href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/services.html"><div class="sys-label">智能体技术栈</div><div class="sys-name">本地 NemoClaw 与 OpenShell</div><div class="sys-desc">NemoClaw 在本地 OpenShell sandbox 中运行 OpenClaw、Hermes 和 Deep Agents。课程通过这个经过身份验证的来源进行连接。</div></a>
+    </div>
+  </div>
+
+
+  <div class="callout">课程界面在此实验环境中运行。模型调用使用课程中继服务。模块 3 和 4 通过经过身份认证的课程网站来源，连接到环境提供的本地 NemoClaw 运行时。</div>
+
+  <details class="course-disclosure publication-disclosure" data-content-transparency="ai-assisted-human-reviewed"><summary>AI 辅助内容 · 人工审核</summary><p>本课程包含 AI 辅助编辑，并经过人工编辑审核。发布内容仍须遵守 NVIDIA 内容管控要求。技术图表和外部媒体的来源及许可记录见<a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/web/nemoclaw/SKILL.html" data-solution-navigation="true" data-language-fallback="en" title="此语言版本尚未提供；将打开英文页面。">图片来源<span class="language-fallback-badge" aria-label="此语言版本尚未提供；将打开英文页面。">EN</span></a> · <a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/web/nemoclaw/SKILL.html" data-solution-navigation="true" data-language-fallback="en" title="此语言版本尚未提供；将打开英文页面。">资料来源<span class="language-fallback-badge" aria-label="此语言版本尚未提供；将打开英文页面。">EN</span></a>.</p></details><footer>
+    <p>
+      在<a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/zh/nemoclaw/dependencies.html" data-solution-navigation="true">浏览器依赖项清单</a>中查看随课程发布的所有浏览器软件包、许可证和制品哈希值。
+    </p>
+    
+  </footer>
+<footer class="course-license-note">课程原创文字、示例代码和原始图表采用 <a href="https://github.com/NVDLI/NemoClawDLI/blob/main/LICENSE">Apache-2.0</a> 许可。注明名称的外部资料沿用各自条款；请参阅<a href="http://dli-2e7a0982d9ae45d38e5988ab627955a4-c12090.westus3.cloudapp.azure.com/lab/static/web/nemoclaw/SKILL.html" data-solution-navigation="true" data-language-fallback="en" title="此语言版本尚未提供；将打开英文页面。">来源说明<span class="language-fallback-badge" aria-label="此语言版本尚未提供；将打开英文页面。">EN</span></a>。<p>浏览器会保存对话和课程偏好设置；发送消息时，所选 AI 服务会处理输入。删除本地会话不会删除服务端记录。请使用虚构、非机密的数据，并遵守所选服务的条款。</p><p><a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/">NVIDIA 隐私政策</a> · <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/">隐私权利与请求</a> · <a href="https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf">NVIDIA API 试用条款</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 托管隐私说明</a></p></footer></main>
+
+<script type="module">
+import { buildNav, updateKeyPill, mountKeyPanel } from "./scripts/_shared.js";
+const nav = document.getElementById("nav");
+if (nav) nav.innerHTML = buildNav("index.html");
+const pill = document.getElementById("key-status");
+updateKeyPill(pill);
+// Reuse the course key panel so landing-page state stays consistent.
+mountKeyPanel(document.getElementById("key-panel"), { onSave: () => updateKeyPill(pill), onClear: () => updateKeyPill(pill) });
+</script>
+
+
+<button type="button" class="course-assistant-launcher" aria-label="打开助理" aria-controls="course-assistant-panel" aria-expanded="false" title="打开助理">助理</button><section class="course-assistant-shell">
+    <dialog id="course-assistant-panel" class="course-assistant-panel" aria-label="课程助理" aria-hidden="true" style="width: 480px;">
+      <div class="course-assistant-resizer" role="separator" aria-label="调整课程助理大小" aria-orientation="vertical" aria-valuemin="320" tabindex="0" title="拖动以调整大小 · 双击以恢复默认大小" aria-valuenow="480" aria-valuemax="1536"></div>
+      <header><div><span>助理</span><h2 data-course-assistant-title="">新会话</h2></div><button type="button" data-course-assistant-close="" aria-label="关闭课程助理">×</button></header>
+      <details class="course-assistant-options"><summary>会话选项</summary><div class="course-assistant-sessions"><label for="course-assistant-session">会话</label><select id="course-assistant-session" aria-label="会话"><option value="session-7b88922c-f7c0-4659-8e5f-90cbdbe2cda4">新会话 · overview</option></select><button type="button" data-course-assistant-new="">+ 新建</button><button type="button" data-course-assistant-delete="" aria-label="删除当前课程助理会话">删除</button><input type="text" maxlength="72" aria-label="重命名当前会话" placeholder="会话名称"><span role="status" aria-live="polite">已保存到本地 · 1/12 · 1 KB</span></div></details>
+      <p class="course-assistant-context"><span>关联页面: overview · 使用 OpenShell 和 NemoClaw 构建安全智能体 · 可使用课程地图、正文、代码和运行时源文件工具</span><button type="button" data-course-assistant-use-page="">刷新页面</button></p>
+      <div class="course-assistant-tabs" role="tablist"><button type="button" role="tab" aria-selected="true" data-course-assistant-view="chat">对话</button><button type="button" role="tab" aria-selected="false" data-course-assistant-view="artifact">交互内容</button><button type="button" role="tab" aria-selected="false" data-course-assistant-view="history">历史记录</button></div>
+      <div class="course-assistant-body"></div>
+      <section class="course-assistant-artifact" hidden="">
+        <label>交互内容标题<input type="text" maxlength="96" data-course-artifact-title=""></label>
+        <p class="course-artifact-api">API：await course.embed(...) 或 await helpers.embed(...)；helpers.cosineSim(a, b)。</p>
+        <div class="course-artifact-editors"><label>HTML<textarea data-course-artifact-html="" spellcheck="false"></textarea></label><label>JavaScript<textarea data-course-artifact-js="" spellcheck="false"></textarea></label></div>
+        <div class="course-artifact-actions"><button type="button" data-course-artifact-run="">▶ 运行</button><button type="button" data-course-artifact-clear="">清除预览</button><button type="button" data-course-artifact-delete="">删除交互内容</button><span role="status" aria-live="polite"></span></div>
+        <iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="课程交互内容预览" src="./NVIDIA DLI · 使用 OpenShell 和 NemoClaw 构建安全智能体_files/saved_resource.html"></iframe>
+      </section>
+      <section class="course-assistant-history" hidden=""><header><strong>已保存的会话活动</strong><button type="button" data-course-history-copy="">复制历史记录</button></header><pre tabindex="0">此会话尚无已保存的活动。</pre></section>
+    </dialog></section></body><deepl-input-controller translate="no" style="display: block !important; position: fixed !important; top: 0px !important; left: 0px !important; width: 0px !important; height: 0px !important; min-width: 0px !important; min-height: 0px !important; margin: 0px !important; padding: 0px !important; border: 0px !important; z-index: 2147483647 !important; transform: none !important; translate: none !important; rotate: none !important; scale: none !important; zoom: 1 !important; filter: none !important; contain: none !important; clip-path: none !important; mask: none !important; content-visibility: visible !important;"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"><div dir="ltr" data-dl-surface="inputTranslator" data-dl-impl="svelte" style="visibility: initial !important;"><div class="dl-input-translation-container svelte-95aucy"><div></div></div></div></template></deepl-input-controller></html>

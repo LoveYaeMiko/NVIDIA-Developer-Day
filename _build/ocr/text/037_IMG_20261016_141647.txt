@@ -1,0 +1,20 @@
+# 37  IMG_20261016_141647.jpg  (4064x3048)
+DeepSeek-V4-Pro Overview
+MTPModules  MTPLOS  1.6T
+Prediction Hend  Totalparameters
+TransformerBlockxL
+00000  Post-BlockMixing  49B
+DeepSeekMoE  Activated parametersper token
+Residual Mixing
+Pre-Block Mixing
+0000  Post-BlockMixing  00000
+00000  Pre-training recipe:
+CSA/HCA
+Residual Mixing
+Pre-BlockMixing  ooooo  4K  16K  64K  1M
+00000
+Embedding  dense  dense  dense/sparse  sparse
+←
+Input Tokens
+ThemodelgraphisfromDeepSeek-V4techreport.
+nVIDIA  nVIDU

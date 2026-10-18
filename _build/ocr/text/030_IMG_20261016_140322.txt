@@ -1,0 +1,17 @@
+# 30  IMG_20261016_140322.jpg  (4064x3048)
+Optimization9:BlockwiseFC2Dual-Accumulator Overlap
+Blockwise FC2 splits everyK tile into two halvesby activation scale;the old code ran the halves strictly serially,with fence→wait→
+FP32promote→re-issue inbetween,leaving the tensorcores idle
+The new code allocates a second accumulator register fragment and issues both halves'WGMMA back to back; after reading the weight
+scale it waits only for the first half,promotes it while the second half is still running on the tensor cores,then waits for the second
+Gating:accumulator size ≤ 64 registers,and (single-WG standalone kernel,or folded layout with epilogue registers ≥224) —relies on the
+previous slide's register refit
+When disabled the instruction sequence is identical to the old version (pure refactor); the per-tensor path and the FCl mainloop are
+unchanged
+oneK tile,split in twohalves by activation scale-—time
+before  WGMMAhalfA  wait  promoteA（FP32FMA)  WGMMAhalfB  wait  promote B(FP32FMA)
+tensorcores idle during everywait+promote
+ter  WGMMAhalfA→acc1  WGMMAhalfB→acc2  wait A only·promoteA  wait B·promoteB
+half B stilrunning on the tensor cores while Ais promoted
+Second accumulator register fragment;gated on accumulator S 64regs and (single WG,or folded layout with ≥224 epilogue regs）.Disabled instruction sequence identical to the old code
+nVIDIA

@@ -1,0 +1,301 @@
+== 页 1 | MegaMoE recap
+   - Theoreticalspeedup:1.42x
+   - L1  L2  L1  L2  L1  L2  Theoreticalspeedup:1.92x  Linear 1GEMM
+== 页 4 | MegaMoE on Blackwell
+   - ·GEMM Perfoptimizations
+   - ·Large tile size(256x256)
+   - ·Combine perf issues and optimizatio
+== 页 5 | MegaMoE on Blackwell
+   - ·GEMM Perf optimizations
+   - ·Large tile size (256x256)
+   - Combine perf issues and optimizations
+== 页 6 | MegaMoE on Blackwell
+   - Largetilesize(256x256)
+   - Using256x256insteadof256x192
+   - Overlapping acc trick to achieve nearly 2-stage acc for 256x256
+== 页 7 | MegaMoE on Blackwell
+   - Fuse TMEM 16dp and32dpopstotransp0se 16x32→32x16
+== 页 8 | From a 32x4 Trick to a Full TMEM Transpose
+   - From a 32x4 Trick to a Full TMEM Transpose
+   - 2xLDTM.16dp128b
+   - +STTM.32dp32b  Treateach LDTM/registerpermutation /STTM asabitpermutation over
+   - 16×8→32×4  thread bits,registerbits,TMEM-DPbits,and columnbits.
+   - 16×8→32×4  bit permutations  Cayley/BFS  simulatorreplay  overlap-safe in-place
+   - copy-pattern trick  +generator constraints  32×32and16x32→32×16  +CuTe silicon kernels  component
+== 页 14 | MegaMoE on Blackwell
+   - Perfect overlap with L1 mainloop
+== 页 16 | MegaMoEonBlackwell
+   - 32e4m3xe8m0
+   - 16e2m1xbf16  NVFP4E2M1  bf16amax  16
+== 页 18 | Warp Specialization
+   - cpi/WGMMAWG  4x(1-2)  200-2561  lssueWGMMA+SwiGLU / guant/store
+== 页 19 | The swapAB Variant: the Cure for Small Token Counts
+   - WGMMA'sN dimension goesdown to8→token tileas small as8,up to8xbetter utilization
+   - ·The transpose moves into the epilogue:FC1 via R2S SMEM addressing;FC2 drops TMA store and emits BF16 straight from registers (STG)
+   - non-swap:tokensonM-tileM64xN128  swapAB:tokensonN-tileM128/256xN8
+   - same8 tokens
+   - badding-56of64tokenrowswasted  N=8 tokens.all useful
+   - up to 8xbetter tileutilization
+== 页 20 | Fp8 Quantization: per_tensor vs. blockwise
+   - weight  per-expert scalar  128×128block
+   - accumulation  1xacc/2xacc（FP32promoteperKtile)  promotionbuiltin
+== 页 21 | Optimization 1: Cooperative Warp-group Scheduling
+   - ·Many heuristic-table buckets are still won by cooperative(e.g.blockwise ≥512 always uses (64,128): per_tensor 16384 uses(64,256))  prefetching
+   - One task tile:M64xN256(sWapAB:M256x token N)
+== 页 23 | Optimization 3:Multi-CTA CGA +TMA Multicast
+   - CGAcluster2x2(also2x1/1x2)-scheduler groupstasktilespercluster
+== 页 24 | Optimization 4: Mainloop & Store Pipelines
+   - ·WGMMA software pipelining (k_pipe_mmas=1):keep 1  FC2R2S+TMA storetwo-stagepipeline:two 4KiBSMEM
+   - TMA producer try_acquire peek:probes the next stage's  while thecurrentTMA S2G isinflight,the nextsubtile'sR2S
+   - ABpipeline stage count dynamicallyfills the228KB SMEM  Deferred drain: keep one store group in flight; drain only at
+   - (miscbudget is just 1KB)  phaseboundaries/kernel tail/when visibility is required
+   - ·SMEMreuse:FC1FP864x64andFC2BF1664x32areboth
+   - epi WG  R2S subtile0→stageo  R2S subtile1→stage1  R2Ssubtile2→stage0  R2S subtile3→stage1  SMEM stage0 (4KiB)
+== 页 25 | Optimization 5: All-Register Epilogue Fusion Chain
+   - ·R2S (singlepass through SMEM)→TMA bulk store  requant toFP8
+   - Mreduction  SMEM  R2S-—single pass through SMEM
+== 页 26 | Why Gate/Up Interleave = 8: the WGMMA Register Layout
+   - · non-swapAB (along N): gate in regs 8k..8k+3, paired  16  132:(d0,d1)  T33:(d0,d1)  T34:(d0,d1)  T35:(d0,d1)  T32:(d4,d5)  T33:(d4,dS)  T34:(d4,dS)  135:(d4,d5)  T32:(dXdY)  T33:(dxdY)  T34:(dxdY)  T
+   - up in 8k+4..8k+7
+== 页 27 | Optimization 6: A Single Active Dispatch Warp
+   - ·Why it is faster: 1 warp/SM (~132 rows in flight) already exceeds the NVLink bandwidth-delay product; measured 1 > 2 > 4 warps — a deeper read queue  lengthenseveryround trip andcompeteswith theGEMMf
+   - issue pull  before:4slots=4xhidden_bytes  after:1slot
+   - warp1-idle:skipsdispatch,rejoins atkernel tail  bulkload  3x7168B=21KiBperCTA
+== 页 28 | Optimization 7: Folding the Producer Warpgroup + Register
+   - · Effect: two-WG cooperative becomes viable; blockwise 512-32768 all switch to M64N256, +11..+30%, geomean +15.8%
+   - . Under the old layout the same tile was 14% slower: the layout, not register tuning, makes the two-WG mode usable
+== 页 29 | Optimization 8: Early fc1_done Publish
+   - Why it is faster:the publish point moves earlier, so the Fc2 tile passes its readiness check and issues its TMA load sooner -the
+   - before  R2S  TMA store  wait fornexttask  task-boundarybarrier  batched publishfc1_done
+   - R2S  TMA store lands  release-publish fc1_done  wait fornexttask  task-boundarybarrier
+== 页 31 | Optimization 10: Scheduler Groups and the fc1_done Spin
+   - At smallbuckets each expert has 1 token tile but 48 FC1 tiles:a group holds only 1-3 experts,so FC2 tiles follow right behind their own FC1 tiles while  those are still running
+   - Consequence: the activation TMA producer spends ~25% of its time spinning on fc1_done (IKET)
+== 页 32 | Optimization 11: 16-byte FC2 Output Stores
+   - PreviouslyFC2BF16output was written pair by pair in accumulator layout:8xSTG.32per lane per subtile(8xSTG.16 for swapAB),one warp-level store
+   - ·Non-swap:4x4 butterfly transpose inside the quad (4 shuffles) → each lane holds 8 consecutive columns of one row→one STG.128;cross-rank direct
+   - lane0:c0c1|c8c9|c16c17|c24c25  lane 0:colsc0..c7（16B)
+   - lane1:c2c3|c10c11|c18c19|c26c27  4x4butterflytranspose  lane 1:colsc8...c15  1×STG.128
+   - 4xshuffle（xor1,xor2)  perlaneperrow
+   - before:8xSTG.32per lane per subtile,  after:8 consecutive columns per lane- one 16-byte store;
+== 页 33 | Token Sweep Results
+   - . 4x H200, EP4, DeepSeek-V4-Pro shape, full MoE-layer forward; the number above each group = speedup (MegaMoE ÷ baseline)
+   - Per-Tensor:MegaMoEleads atall13buckets-1.02-1.11xupto512,1.24-1.35xfrom 1024up（peak1.35xat8192),geomean 1.16x
+   - 4xH200-EP4·DeepSeek-V4-Proshape·fullMoE-layerforward,p50over theslowestrank
+   - ik（slowestrank,usefulFLOPs)  1.33×1.24x  1.72x
+   - 1000  800  1.59x  1.51x
+   - 800  1.27x  1.33x
+== 页 36 | One Playbook, Two Workloads
+   - One Optimization Playbook  Measured throughput gains from the playbook
+   - 2.Attention Compute Efficiency  +59%
+   - at 64k context length
+== 页 37 | DeepSeek-V4-Pro Overview
+   - MTPModules  MTPLOS  1.6T
+   - 00000  Post-BlockMixing  49B
+   - Pre-BlockMixing  ooooo  4K  16K  64K  1M
+== 页 38 | Model Features Drive Optimizations
+   - MTP Modules  MTPLoSs  1.1.6T total/ 49B active:Model states limit memory
+   - headroom for faster execution.
+   - ResidualMixing  and buffers drive performance.
+== 页 39 | Choose the Parallel Layout
+   - Keep communication-heavy groups (such as EP,TP, and CP) within NVLink domains where practical for better throughput.
+== 页 40 | Choose the Parallel Layout
+   - Keep communication-heavy groups (such as EP, TP, and CP) within NVLink domains where practical for better throughput.
+== 页 41 | Context Length Drives Memory Policy
+   - 64K Context  IM Context
+   - 4,096 tokens/rank  16.384tokens/rank
+   - 4xmore tokens perrankat 1M,so we switch to a more aggressive memory policy.
+== 页 42 | Context Length Drives Memory Policy
+   - 64K Context  1M Context
+   - 4,096 tokens / rank  16,384 tokens / rank
+   - 4x more tokens per rank at 1M, so we switch to a more aggressive memory policy.
+== 页 43 | The Starting Points
+   - We use a 4K-context sparse proxy model to basically verify the needed features, including:
+== 页 44 | STEP 1: Runtime Overhead and Memory Trade-offs
+   - Lots of Gpu idles are the main issue in the 64K case. Two methods to alleviate it:
+== 页 45 | WheretheStepTime Goes
+   - 4K  64K  1M
+== 页 47 | STEP 2: Optimize the Hybrid Attention
+   - Speedup (module-level):  Throughput uplift from STEP 2
+   - Compact sparse attention:25%-30%  (compared with the conflg after STEP 1)
+   - Compact FP8Indexer:25%-35%
+   - Group-ObatchedGEMM:50%-60%  +4.6%
+   - These gains come from faster execution.
+   - The indexer accounts for a larger share of step time at 1M.  +9.0%
+== 页 48 | STEP 3:Optimize the MoE
+   - About30%-50%oftheMoEpartisEPcommunication.  ifib
+== 页 49 | STEP 3: Optimize the MoE
+   - 1.Fused execution  Throughput uplift from STEP 3
+   - Pipeline token transferswith expert computation.  +14.0%
+   - MOK canbring 30%-40% speedup on the MoE part in the  +4.6%
+== 页 51 | STEP4I Balance CP Workloads
+   - FTER  2xCP SEGMENTS.PAIRED DIAGONALL  NO measurable perf gain
+== 页 52 | Lessons for Scalable Training
+   - hubal depsek-v4-prorecipetor64k and1n
+   - mTHO1_256OPUTPIPPP64CP84yal  deepsekod-pru recipes for64k and1m
+== 页 53 | Motivation: KV Cache as a Serving Bottleneck
+   - Agenda  Performance Analysis: TurboQuant & KVTC & nvCOMP
+== 页 54 | KV Cache Is a Serving Bottleneck
+   - TPOT1  PrefillDecode notwork
+   - Maintain concurrency  Maintain TTFT/ TPOT  Optimizes the global
+== 页 56 | Where KV Compression Fits
+   - Capacity↑  KV bytes  TPOT  Transparent  Storage  Transfer↓  Capacity↑
+   - batch/context/throughput  per decode step
+   - CHALLENGE  attention fusion·engine &model -specific integration  CONS  decompression overhead·no direct TpoT gain
+== 页 57 | TurboQuant: Online KV Quantization
+   - Stored per vector  Centroid indices  Residual sign bits  Scalar norms  4.5X
+   - Llama-3.1-8B·≥4.5xnominalpayload
+== 页 58 | TurboQuant: Layout Compressed KV for Decode
+   - D=128·134Bpertoken  Field widths schematic  16tokens·2,144Bperpage/KVhead
+   - TokenO  K codes  16×64B=1,024B
+   - Kcodes  Knorm  Vcodes  Vscale  Vzero  Vcodes  16×64B=1,024B
+   - 64B  2B  64B  2B  2B
+   - Knorms  16×2B=32B
+   - K codes  Knorm  Vcodes  Vscale  Vzero  Vscales  16×2B=32B
+== 页 60 | TurboQuant:Decode Performance
+   - TurboQuant:Decode Performance
+   - Higher throughput at long context lengths
+   - Shared y-axis·Decode throughput (tokens/s)  1.28x  FAOOM
+   - 4,000  1.25x
+   - 3,00G  2.52x  4.54x
+   - 2.74x  4.84x
+== 页 61 | KVTC: Compression for Storage and Transfer
+   - oriented?  Attention  perlayer/head  dequant+inverse PCA  8x-64x  ≤0.8 pt
+   - Maxaccuracy drop with 16xCR
+== 页 63 | KVTC: Single-Request TTFT
+   - KVTC: Single-Request TTFT
+   - Smaller transfersreduceTTFTby5.5%to10.6%
+   - SETUP  GLM-5.1 FP8·8xHopper GPU,PCle Gen5·TP=8·vLLM+LMCache·Compression ratio:4.7x
+   - 1000  -8.4%
+   - 800  773ms
+   - 600  591ms  558ms
+== 页 64 | KVTC: Throughput Under Memory Pressure
+   - KVTC: Throughput Under Memory Pressure
+   - Compressionprevents the cache-capacity cliff  Setup:GLM-5.1-FP8TP=8on1nodewith8xHopperGPUSXM141GB(NVLink900GiB/sPCleGen5465GiB/s/GPU）LLM+LMCache128GiBCPU-DRAML18K-tokenchunksNUMAinterleave=allprefixca
+   - Problem-Vanilla degrades as memory shrinks  Resilience-KVTCholdsperformanceunderpressure
+   - Eviction pressure  80%  140  Host memory constrained  124.7
+   - 120  50.0040%  60%
+   - 11.9%  2.49x
+== 页 66 | nvCOMP-ANS: Compression and Serving Results  TTFTgains are strongestat
+   - nvCOMP-ANS: Compression and Serving Results  TTFTgains are strongestat low concurrency in thisbenchmark
+   - LOSSLESS COMPRESSION  ~1.4x  ~1.1x
+   - TTFT speedup by concurrency (c)
+   - 20.0%  16.9%  18.7%  +18.7%
+   - 10.0%  5.7%  8.2%  P90 TTFT speedup at c = 2
+   - 1.8%  4.2%  3.2%3.0%
+== 页 67 | Takeaways
+   - ·KVTC preserved throughput under memory pressure;
+   - · nvCOMP-ANS reduced TTFT at low concurrency with exact KV recovery.
+   - · Measure quality, TTFT, TPOT, throughput, and cache hit rate after codec and integration  costs.
+== 页 68 | What Dynamo can do today
+   - ~8.3K  244K+  9,000+
+== 页 69 | KVRouter在生产环境中被广泛验证
+   - 2XfasterTTFT&1.6XTPSwithKV  2xfasterTTFT&+2O%moreKVcache
+   - https://www.baseten.co/b  ow-baseten-achieved-2x-faster-inference-  https://www.nvidia.com/en-us/on-demand/session/gtc26-s81943/
+== 页 70 | 请求进入后，KVRouter用两类信号为Worker打分
+   - 缓存命中减少重复计算；实时负载防止缓存丰富的Worker过载
+== 页 71 | Flash Indexer 在链路里做什么
+   - 查询慢，会按  伏态旧，会错过可复用的KV  在高并发读写下，仍然快速返回“谁命中最多”，让prefix
+== 页 73 | GEN01/06  THROUGHPUT
+   - GEN01/06  THROUGHPUT
+   - Naive Nested Dict  385K  block ops/s
+   - 这质能工作，组查询路径很零：每个调求部要逐个Wo水or试一遍，看它的媛存能连续命中多深。
+   - 逾命中徽源  为什么还不够准
+   - Twohashes  qu  h1  h2  h3  h4  连续命中。
+== 页 74 | GEN04/06
+   - THROUGHPUT
+== 页 75 | GEN06/06  THROUGHPUT
+   - GEN06/06  THROUGHPUT
+   - 大多数slot是Single，直接命中；只有出
+== 页 76 | 性能数据
+   - ACHIEVEDVS.OFFERED THROUGHPUT (HIGHERIS BETTER)
+   - 200M  Concurrent Radi Tree  170M  385K  4M
+   - LGM  170M  440x / 42x
+   - 1.0M  810K  Benchmark setup
+   - 500k  385K  ·24-core Arrow Lake 285Kdesktop
+   - 200k  ·MooncakeFAsT'25 trace +mockengine
+== 页 79 | SLAs of New Agentic Era
+   - TTFT-Time to First Token  Trajectory E2E latency
+   - TPoT -Time per Output Token  Time toFirstAnswerToken
+   - RequestE2Elatency  System throughput
+   - 满足SLA的千卡QPS  AA-AgentPerf:SLo下最大并发agent数
+   - Global KVcache hitrate>90%
+== 页 80 | AgentX Trace
+   - 真实会话（ClaudeCode轨迹）  请求数  原生上下文窗口1，048,576,trace  每GPUtok/svsTTFTp90
+   - 请求p99近900K
+   - 32K-128K21%
+   - 128K-256K27%
+   - 256K-512K-30%
+   - 393务  25-75%处切入  Nlane-1小时  warmup预热  吞吐vs交互性
+== 页 81 | Single AgentX Session Characteristics
+   - 单步时延分解  66a
+   - 100s  tool / user gap（t顶60s)  47h  61a
+   - prell(TTFT)  devrvke  70g  120g
+   - 75s  1808  1328
+   - ISL增长曲线（累积输入 token，逐query）  峰值219K
+   - 100K  第42步：间隔46.7小时后恢复
+== 页 82 | 3 Layer Software Stack of Agentic Inference
+   - High throughput  Maxperformance  GPU-CPU-Disk-RDMASharedBlocks
+== 页 83 | AgentX Dashboard
+   - BENCH  Output throughput (tok/s)
+   - agentpert  accuracy  AIl  Per-user speedp50 (tok/s/user)  logY
+   - Performance  Trends  Capacity  Runs
+   - SGLang drect·agg·1xTP8·radix
+   - C48  Dynamo·agg·SGLang·4xTP8·
+   - Dynamo·agg·SGLang·4xDEP8·
+== 页 84 | Observability - Dynamo Provider Plugin
+   - toolbash  Qwan3.5-27B(21491ok)
+   - swebench_pL8task  58s344ms299ua10oLbagh
+== 页 85 | How many tokens fit in 1 GB
+   - How many tokens fit in 1 GB
+   - 55.9 KB  MLA43.9  DSA9.8
+   - 1GB  Per node·8 GPUs  4nodes
+   - TP8  2.2K  1.26M  5.0M
+   - 8xreplicated  ~33sessions
+   - DEP  17.9K  7.6M  30.6M
+== 页 86 | Goal 1: actual KV hit rate  theoretical max
+   - Goal 1: actual KV hit rate  theoretical max
+   - KV hit rate (%)
+   - Ideal vs actual hit rate
+   - G1 GPU·53GB/rank  30.6M(1,710GB)  70
+   - 37M(2,048GB)  60
+   - G2 Host·512GB/node  c64  c96  c128
+== 页 87 | KV capacity for diff session cc
+   - retention moves to G3-in-flight  150K·session peak~300k·57KB/token·headroom 1.5x·router sees G1+G3only
+   - Sessions cc  150K each  1.5  cache mode·today
+   - 2.4M  7.2M  460GB  ≈35GB  400GB
+   - 16  （400GB)  (in-flight / node)  DRAM→L3segment
+   - 4.8M  14.4M  490GB  ≈70GB  810GB
+   - 32  (810GB)  (in-flight /node)  DRAM→L3 segment
+== 页 88 | Goal 2: decode concurrency must keep up
+   - x1  x1  x1  x1  x]  #2  #3  #4  囍6  7
+   - 1.26M tokens/node  7.6M tokens/node(6x)
+   - Output throughput (tok/s)  Requests in flightyssetsession concurrency
+   - 101  6B  c16  C32
+   - C4B  C64  c95  c128  set sesaion concurenoy (lanes)
+== 页 89 | Hard affinity mode DEP 下的负载均衡问题
+   - Minutesat≥90%
+   - Device KV occupancy of the 32 dp ranks,one cell per minute (red = ≥90%,full)  (of61)
+   - Minutessince the startof themeasurementwindow(c64,3600 s)
+   - 0%  30%  60%  90%full  100%
+== 页 91 | Goal 4 - Clever Session Gateway - Thunder Agent
+   - Program状态机  全局控制回路每At=5s tick:resume→pause
+   - 97%  0.85resume上限
+== 页 92 | ThunderAgent · how it decides
+   - one tick every 5 s·util =c of active programs ÷GPu KV pool
+   - P2  ACTING  C=40K  1st
+   - P3  ACTING  c=120K  2nd
+   - C=30K  3rd  util<0.85·S=1/c+  util>0.95
+   - P1  RE  ANG  c=180K  last  PAUSED
+   - waiting onat  lose·then smallest context →cheapest to recompute  resume -worker with most free Kv·wait >18o0 s→forced resume
+== 页 93 | Agentic Serving ThunderAgent Benchmarks
+   - SWE-Bench Lite·GLM 5.2·8x NVIDIA Hopper GPUs·session concurrency = 32
+   - TTFTp50(ms)↓  TPOTp50(ms)↓  gen吞吐均值（tok/s)↑
+   - 时延：e2c均值-51%·TTFTp50-87%·TPOT减半|吞吐：均值×1.6
+== 页 94 | ThunderAgent + KV offload
+   - ThunderAgent·router  G1  G195%
+   - pause一cold→offloaded  G260%
+   - pause when  95%  Pool  A BC·onesharedcopy
+== 页 95 | Thunderagent in RL rollout - Dynamo VeRL Integration
+   - Uni-Agent SWE-Bench·Qwen3-Coder-30B-A3B-Instruct 8xNVIDIA Hopper GPUs·rollout-only
+   - +16.5%VSTA  +6.8%

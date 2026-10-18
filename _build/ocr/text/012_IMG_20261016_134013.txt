@@ -1,0 +1,13 @@
+# 12  IMG_20261016_134013.jpg  (4064x3048)
+MegaMoE on Blackwell
+Three modes for combine traffic
+Model: direct store over NVLink in L2 epilogue (DeepGEMM solution(long time ago))
+Dispatch  Dispatch
+Computation  L1  L2  L2  L2  L2
+Epilogue  Act  Act  Remote Store  Remote Store  Act  Act  Remote Store  Remote Store
+BurstNVLinktrafficmakes
+fc2 epiloguelonger
+nd good for low latency combine.epilogue warps can send out tokens directly.
+guebecomes longer,blocking L1/L2
+issuemakes nvfp4 worse since it halves mainloop
+nVIDIA

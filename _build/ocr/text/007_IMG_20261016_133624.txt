@@ -1,0 +1,12 @@
+# 7  IMG_20261016_133624.jpg  (4064x3048)
+MegaMoE on Blackwell
+Dynamic tileN with swapA/B
+Valid
+tokens
+Use swapAB to map N onto the token dimension to reduce tile quant  Token
+Dynamically tile N to skip unnecessary loads&computation
+Epilogue transpose  tileN
+Fuse TMEM 16dp and32dpopstotransp0se 16x32→32x16
+Human&LLM co-work to find the optimal TMEM solution  Weight  ACC  tileM
+View ofone CTA
+nVID

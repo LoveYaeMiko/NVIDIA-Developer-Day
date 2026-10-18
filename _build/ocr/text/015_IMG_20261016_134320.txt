@@ -1,0 +1,16 @@
+# 15  IMG_20261016_134320.jpg  (4064x3048)
+CuteDSL MegaMoE on Blackwell
+Adaptive NvLiNK traffic control
+·Measure each chunk's NVLinkround trip,EMA(Exponential Moving Average) it,
+andnanosleepthedeviation
+Reduceremote traffichead-of-line blocks
+·Used in mode 2 and 3 with combine that's not in epilogue warps
+Combine
+chunko  chunk1  chunk2  the last chunk
+to  tn
+w=tl-to
+TMAload:local→SMEM
+bulkstore-peer
+nanosleep
+nVIDIA
+VIOAUD
